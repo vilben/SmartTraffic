@@ -73,8 +73,6 @@ def getVehicleStats(veh_ids, vehicleClass=""):
                 or traci.vehicle.getVehicleClass(veh_id) == vehicleClass
             ):
                 veh_stats.append(getSingleVehilceStats(veh_id))
-            # else:
-            # print(f"{veh_id} is not of class {vehicleClass}, its {traci.vehicle.getVehicleClass(veh_id)}")
         except:
             pass
     return veh_stats
