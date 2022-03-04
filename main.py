@@ -1,3 +1,6 @@
+import argparse
+import logging
+
 import sumolib
 import traci
 
@@ -10,16 +13,34 @@ from src.vehicleControl import (
     setRandomVehicleColor,
 )
 
-SIM_STEPS = 2000
-WITH_GUI = False
+#
+# Setup of stuff
+#
+
+SIM_STEPS = 5000
 VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
-if WITH_GUI:
+parser = argparse.ArgumentParser(description='Yes something')
+parser.add_argument('--GUI', action='store_true', help='Define if GUI should be used')
+parser.add_argument('--DEBUG', action='store_true', help='Define if DEBUG should be used')
+
+args = parser.parse_args()
+
+DEBUG = args.DEBUG
+GUI = args.GUI
+
+if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
 else:
     sumoBinary = sumolib.checkBinary("sumo")
+
+
+if DEBUG:
+    logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
+else:
+    logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
@@ -48,13 +69,9 @@ while step < SIM_STEPS:
 
     for bus in allBusses:
         if bus.isOnTrack():
-            print("bus no ", bus.getId(), " drives on route:")
-            print(bus.getUpcomingRoute())
-            print("on this route, the upcoming traffic lights are:")
-            print(bus.getAllUpcomingTrafficLightsInOrder())
-            print("")
-
-    print("---- next step ----")
+            logging.debug("bus no {0} drives on route {1} \n on this route, the upcoming traffic lights are: \n {2}".format(bus.getId(), bus.getUpcomingRoute(), bus.getAllUpcomingTrafficLightsInOrder()))
+    
+    logging.debug("---- next step ----")
     step += 1
 
 if ENABLE_STATS:
