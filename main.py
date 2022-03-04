@@ -34,7 +34,6 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     if step % 10 == 0:
-        printAllvTypes()
         busId = addBus()
         bus = Bus(busId)
         allBusses.append(bus)
