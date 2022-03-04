@@ -11,7 +11,8 @@ from src.vehicleControl import (
 )
 
 SIM_STEPS = 5000
-WITH_GUI = True
+WITH_GUI = False
+DEBUG = True
 VIEW_ID = "View #0"
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
@@ -46,13 +47,15 @@ while step < SIM_STEPS:
 
     for bus in allBusses:
         if bus.isOnTrack():
-            print("bus no ", bus.getId(), " drives on route:")
-            print(bus.getUpcomingRoute())
-            print("on this route, the upcoming traffic lights are:")
-            print(bus.getAllUpcomingTrafficLightsInOrder())
-            print("")
+            if(DEBUG):
+                print("bus no ", bus.getId(), " drives on route:")
+                print(bus.getUpcomingRoute())
+                print("on this route, the upcoming traffic lights are:")
+                print(bus.getAllUpcomingTrafficLightsInOrder())
+                print("")
 
-    print("---- next step ----")
+    if(DEBUG):
+        print("---- next step ----")
     step += 1
 
 avgVehStats = util.getAvgVehicleStats(vehStats.values())
