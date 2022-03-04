@@ -4,11 +4,11 @@ import traci
 
 import src.util as util
 import src.tlsControl as tlsControl
-from src.vehicleControl import addBus, printVehicleTypes
 from src.vehicles.Bus import Bus
+from src.vehicleControl import addBus, printVehicleTypes, setRandomVehicleColor
 
 SIM_STEPS = 500
-WITH_GUI = False
+WITH_GUI = True
 VIEW_ID = "View #0"
 ZOOM_LVL = 2000
 # CENTER_X, CENTER_Y = 4577.56, 4533.25
@@ -28,9 +28,11 @@ traci.start(cmd)
 #     traci.gui.setOffset(VIEW_ID, CENTER_X, CENTER_Y)
 
 
-print(traci.trafficlight.getIDList())
+print(f'TLS: {traci.trafficlight.getIDList()}')
+print(f'Junctions: {traci.junction.getIDList()}')
 
-TLS_ID = "-1"
+
+TLS_ID = "10"
 sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
 
 printVehicleTypes()
@@ -41,28 +43,21 @@ step = 0
 while step < SIM_STEPS:
     traci.simulationStep()
 
-    # print TLS state & sleep for 100ms
-    # print("Step: {}".format(step))
-    # print("TLS state: {}".format(traci.trafficlight.getRedYellowGreenState(TLS_ID)))
-    # print("\n")
-    # sguTls.set_state(traci.trafficlight.getRedYellowGreenState(TLS_ID))
-    # sguTls.print_state()
-    # sleep(0.1)
+    if step % 10 == 0:
+        busId = addBus()
 
-    # curr_vehs = util.getAllVehiclesAtTLS(TLS_ID)
-    # for veh in curr_vehs:
-    #     if veh not in vehs_at_tls:
-    #         vehs_at_tls.append(veh)
+        bus = Bus(busId)
 
-    busId = addBus()
+        upcomingRoute = bus.getUpcomingRoute()
+        upcomingTls = bus.getAllUpcomingTrafficLightsInOrder()
 
-    bus = Bus(busId)
+        print(upcomingRoute)
+        print(upcomingTls)
 
-    upcomingRoute = bus.getUpcomingRoute()
-    upcomingTls = bus.getAllUpcomingTrafficLightsInOrder()
+    setRandomVehicleColor(util.getRandomColor())
 
-    print(upcomingRoute)
-    print(upcomingTls)
+
+
 
     step += 1
 

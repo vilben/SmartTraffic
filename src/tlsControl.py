@@ -14,7 +14,6 @@ class TLSControl:
         self.state_str = start_val
         self.__decodeMask()
         self.__decodeStartValue()
-        self.printState()
 
     def __decodeMask(self) -> None:
         """

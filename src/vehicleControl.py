@@ -1,4 +1,5 @@
 from cgitb import text
+import random
 import uuid
 import traci
 
@@ -16,10 +17,32 @@ def addBus() -> text:
     Returns the ID of the bus.
     """
     id = __getRandomId()
-    traci.vehicle.add(id, "", typeID="veh_passenger", personCapacity=25)
+    traci.vehicle.add(id, "", typeID="DEFAULT_VEHTYPE", personCapacity=25)
     traci.vehicle.setVehicleClass(id, "bus")
+    traci.vehicle.setShapeClass(id, "bus")
     traci.vehicle.setColor(id, (255, 0, 0, 255))
     return id
+
+def setVehicleColor(id, color):
+    """
+    Sets the color of the given vehicle.
+    """
+    traci.vehicle.setColor(id, color)
+
+def setRandomVehicleColor(color) -> text:
+    """
+    Sets a random vehicle's color.
+    """
+    id = getRandomVehicle()
+    setVehicleColor(id, color)
+    return id
+
+def getRandomVehicle() -> text:
+    """
+    Returns a random vehicle.
+    """
+    vehicleList = traci.vehicle.getIDList()
+    return vehicleList[random.randint(0, len(vehicleList) - 1)]
 
 
 def printVehicleTypes():
