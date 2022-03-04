@@ -30,6 +30,7 @@ def parseXml(inputFile):
     root = tree.getroot()
     return root
 
+
 def addHardcodedVTypesWithReallyUglyHack():
     XML = """
     <vType id="normal_car" vClass="passenger" maxSpeed="40" speedFactor="0.9" speedDev="0.2" sigma="0.5" color="white" guiShape="passenger" />
@@ -60,7 +61,8 @@ def main():
     tree = ET.ElementTree(root)
     print(f"writing {OUTPUT}")
     tree.write(OUTPUT)
-    addHardcodedVTypesWithReallyUglyHack()
+    if tree.findall("vType") == []:
+        addHardcodedVTypesWithReallyUglyHack()
 
 
 if __name__ == "__main__":
