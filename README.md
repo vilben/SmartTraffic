@@ -1,9 +1,14 @@
-pip install sumolib
-
-To convert edges and nodes to a net, run:
+First, you have to install the sumo modules:
 
 ```
-netconvert --node-files=hello.nod.xml --edge-files=hello.edg.xml --output-file=hello.net.xml
+pip install sumolib
+pip install traci
+```
+
+To generate a net from edges and nodes and what not... , run:
+
+```
+netconvert --node-files=nets/lucerne.nod.xml --edge-files=nets/lucerne.edg.xml --output-file=nets/lucerne.net.xml
 ```
 
 run with:
@@ -11,7 +16,15 @@ run with:
 ```
 sumo -c config/hello.sumocfg
 ```
+
 or
+
 ```
 sumo-gui -c config/hello.sumocfg
+```
+
+or run simulation with
+
+```
+python main.py
 ```
