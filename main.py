@@ -73,13 +73,17 @@ while step < SIM_STEPS:
 
     step += 1
 
-avg_veh_stats = util.getAvgVehicleStats(vehStats)
-avg_bus_stats = util.getAvgVehicleStats(busStats)
+avgVehStats = util.getAvgVehicleStats(vehStats.values())
+totalVehStats = util.getTotalVehicleStats(vehStats.values())
+avgBusStats = util.getAvgVehicleStats(busStats.values())
+totalBusStats = util.getTotalVehicleStats(busStats.values())
 
 # print vehicle statistics
-print(f"Vehicle statistics for {len(vehs_at_tls)} vehicles :")
-print("\n".join(["{}: {}".format(key, value) for key, value in avg_veh_stats.items()]))
-print(f"\nBus statistics for {len(busStats)} vehicles :")
-print("\n".join(["{}: {}".format(key, value) for key, value in avg_bus_stats.items()]))
+print(f"Vehicle statistics for {len(vehs_at_tls)} vehicles (avg, tot) :")
+print("\n".join(["{}: {}".format(key, value) for key, value in avgVehStats.items()]))
+print("\n".join(["{}: {}".format(key, value) for key, value in totalVehStats.items()]))
+print(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
+print("\n".join(["{}: {}".format(key, value) for key, value in avgBusStats.items()]))
+print("\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()]))
 
 traci.close()

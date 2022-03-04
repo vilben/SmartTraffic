@@ -53,6 +53,7 @@ def getSingleVehilceStats(veh_id):
         "co2": traci.vehicle.getCO2Emission(veh_id),
         "co": traci.vehicle.getCOEmission(veh_id),
         "hc": traci.vehicle.getHCEmission(veh_id),
+        "distance": traci.vehicle.getDistance(veh_id),
     }
     return veh_stats
 
@@ -76,7 +77,7 @@ def getVehicleStats(veh_ids, vehicleClass=""):
     return veh_stats
 
 
-def getAvgVehicleStats(veh_stats):
+def getAvgVehicleStats(vehStats):
     """
     Returns a dictionary containing the average statistics of the given vehicles.
     """
@@ -84,15 +85,35 @@ def getAvgVehicleStats(veh_stats):
         "co2": 0,
         "co": 0,
         "hc": 0,
+        "distance": 0,
     }
-    for veh_stat in veh_stats:
+    for veh_stat in vehStats:
         avg_veh_stats["co2"] += veh_stat["co2"]
         avg_veh_stats["co"] += veh_stat["co"]
         avg_veh_stats["hc"] += veh_stat["hc"]
-    avg_veh_stats["co2"] /= max(len(veh_stats), 1)
-    avg_veh_stats["co"] /= max(len(veh_stats), 1)
-    avg_veh_stats["hc"] /= max(len(veh_stats), 1)
+        avg_veh_stats["distance"] += veh_stat["distance"]
+    avg_veh_stats["co2"] /= max(len(vehStats), 1)
+    avg_veh_stats["co"] /= max(len(vehStats), 1)
+    avg_veh_stats["hc"] /= max(len(vehStats), 1)
+    avg_veh_stats["distance"] /= max(len(vehStats), 1)
     return avg_veh_stats
+
+def getTotalVehicleStats(vehStats):
+    """
+    Returns a dictionary containing the total statistics of the given vehicles.
+    """
+    total_veh_stats = {
+        "co2": 0,
+        "co": 0,
+        "hc": 0,
+        "distance": 0,
+    }
+    for veh_stat in vehStats:
+        total_veh_stats["co2"] += veh_stat["co2"]
+        total_veh_stats["co"] += veh_stat["co"]
+        total_veh_stats["hc"] += veh_stat["hc"]
+        total_veh_stats["distance"] += veh_stat["distance"]
+    return total_veh_stats
 
 
 def printAllTlsStates():
