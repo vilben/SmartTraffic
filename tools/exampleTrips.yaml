@@ -1,0 +1,45 @@
+depart_min: 0
+depart_max: 3000
+edges: 24
+generate_random: 100
+trips:
+  - trip:
+    from: 1
+    to: 9
+    count: 100
+  - trip:
+    from: 1
+    to: 23
+    count: 100
+  - trip:
+    from: 1
+    to: 24
+    count: 100
+  - trip:
+    from: 1
+    to: 4
+    count: 100
+  - trip:
+    from: 48
+    to: 9
+    count: 100
+  - trip:
+    from: 48
+    to: 1
+    count: 100
+  - trip:
+    from: 48
+    to: 3
+    count: 100
+  - trip:
+    from: 48
+    to: 14
+    count: 20
+  - trip:
+    from: 4
+    to: 9
+    count: 100
+  - trip:
+    from: 4
+    to: 24
+    count: 100
