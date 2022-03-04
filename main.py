@@ -7,7 +7,7 @@ import src.tlsControl as tlsControl
 from src.vehicleControl import addBus, printVehicleTypes, setRandomVehicleColor
 
 SIM_STEPS = 500
-WITH_GUI = True
+WITH_GUI = False
 VIEW_ID = "View #0"
 ZOOM_LVL = 2000
 # CENTER_X, CENTER_Y = 4577.56, 4533.25
@@ -52,7 +52,8 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     if step % 10 == 0:
-        addBus()
+        busId = addBus()
+        print(f'Added bus {busId}')
 
     setRandomVehicleColor(util.getRandomColor())
 
@@ -63,11 +64,15 @@ while step < SIM_STEPS:
 
     step += 1
 
-veh_stats = util.getVehicleStats(vehs_at_tls)
+veh_stats = util.getVehicleStats(traci.vehicle.getIDList())
+bus_stats = util.getVehicleStats(traci.vehicle.getIDList(), "bus")
 avg_veh_stats = util.getAvgVehicleStats(veh_stats)
+avg_bus_stats = util.getAvgVehicleStats(bus_stats)
 
 # print vehicle statistics
 print(f"Vehicle statistics for {len(vehs_at_tls)} vehicles :")
 print("\n".join(["{}: {}".format(key, value) for key, value in avg_veh_stats.items()]))
+print(f"\nBus statistics for {len(bus_stats)} vehicles :")
+print("\n".join(["{}: {}".format(key, value) for key, value in avg_bus_stats.items()]))
 
 traci.close()
