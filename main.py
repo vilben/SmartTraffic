@@ -4,6 +4,7 @@ import sumolib
 import traci
 
 import src.util as util
+from src import tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
 
@@ -58,8 +59,6 @@ allBusses = []
 
 allBusses.append(Bus("busRouteHorwLuzern1"))
 allBusses.append(Bus("busRouteEmmenAu1"))
-# allBusses.append(Bus("busRouteHorwLuzern1"))
-# allBusses.append(Bus("busRouteHorwLuzern1"))
 
 step = 0
 while step < SIM_STEPS:
@@ -70,9 +69,39 @@ while step < SIM_STEPS:
     #     bus = Bus(busId)
     #     allBusses.append(bus)
     #
-    # for bus in allBusses:
-    #     if bus.getNextTrafficLight():
-    #         print()
+    for bus in allBusses:
+
+        tls = bus.getNextTrafficLight()[0]
+
+        tlsId = bus.getNextTrafficLight()[0][0]
+
+        # print("tls", tlsId)
+        # print("triple", tls)
+        #
+        # # traci.trafficlight.setPhase(tlsId, 0)
+        # # traci.trafficlight.setRedYellowGreenState(tlsId, "G")
+        # tlsPhase = traci.trafficlight.getPhase(tlsId)
+        # print("phase", tlsPhase)
+        #
+        # program = traci.trafficlight.getProgram(tlsId)
+        #
+        # print("program", program)
+        #
+        # phaseName = traci.trafficlight.getPhaseName(tlsId)
+        #
+        # print("phaseName", phaseName)
+        #
+        # programLogic = traci.trafficlight.getAllProgramLogics(tlsId)
+        #
+        # print("programLogics", programLogic)
+        #
+        # tlsAllPhases = traci.trafficlight.phase
+
+        if tls[3] == 'r' or tls[3] == 'R' or tls[3] == 'y' or tls[3] == 'Y':
+            traci.trafficlight.setPhaseDuration(tlsId, 0)
+
+        # traci.trafficlight.setRedYellowGreenState(tlsId, "G")
+        # print("phase", phase)
 
 
 
@@ -83,15 +112,10 @@ while step < SIM_STEPS:
         for vehId in util.getAllVehilcesExcept("bus"):
             vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
-    for bus in allBusses:
-        if bus.isOnTrack():
-            logging.debug(
-                "bus no {0} drives on route {1} \n on this route, the upcoming traffic lights are: \n {2}".format(
-                    bus.getId(),
-                    bus.getUpcomingRoute(),
-                    bus.getAllUpcomingTrafficLightsInOrder(),
-                )
-            )
+    # for bus in allBusses:
+    #     if bus.isOnTrack():
+    #         if DEBUG:
+    #             logging.debug("nothing")
 
     logging.debug("---- next step ----")
     step += 1
