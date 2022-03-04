@@ -6,7 +6,6 @@ import src.tlsControl as tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import (
     addBus,
-    printAllvTypes,
     printVehicleTypes,
     setRandomVehicleColor,
 )
