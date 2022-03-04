@@ -11,8 +11,8 @@
     <edge id="e7" from="4" to="5" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e8" from="5" to="4" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
 
-    <edge id="e9" from="5" to="6" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
-    <edge id="e10" from="6" to="5" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
+    <edge id="e9" from="6" to="5" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
+    <edge id="e10" from="5" to="6" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
 
     <edge id="e11" from="5" to="7" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e12" from="7" to="5" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />

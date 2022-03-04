@@ -1,4 +1,14 @@
-<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!--    Horn - Luzern    -->
     <busStop id="A_bus" lane="e46_1" startPos="10.00" endPos="20.00"/>
     <busStop id="B_bus" lane="e42_1" startPos="50.00" endPos="60.00"/>
+
+    <!--    Au - Emmen    -->
+    <busStop id="C_bus" lane="e48_1" startPos="10.00" endPos="20.00"/>
+    <!--    Bahnhof    -->
+    <busStop id="D_bus" lane="e16_1" startPos="50.00" endPos="60.00"/>
+    <busStop id="E_bus" lane="e4_1" startPos="50.00" endPos="60.00"/>
+
+
 </additional>
