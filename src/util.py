@@ -54,6 +54,9 @@ def getSingleVehilceStats(veh_id):
         "co": traci.vehicle.getCOEmission(veh_id),
         "hc": traci.vehicle.getHCEmission(veh_id),
         "distance": traci.vehicle.getDistance(veh_id),
+        "nOfPeople": traci.vehicle.getPersonNumber(
+            veh_id
+        ),  # this is currently not working... (?)
     }
     return veh_stats
 
@@ -86,17 +89,21 @@ def getAvgVehicleStats(vehStats):
         "co": 0,
         "hc": 0,
         "distance": 0,
+        "nOfPeople": 0,
     }
     for veh_stat in vehStats:
         avg_veh_stats["co2"] += veh_stat["co2"]
         avg_veh_stats["co"] += veh_stat["co"]
         avg_veh_stats["hc"] += veh_stat["hc"]
         avg_veh_stats["distance"] += veh_stat["distance"]
+        avg_veh_stats["nOfPeople"] += veh_stat["nOfPeople"]
     avg_veh_stats["co2"] /= max(len(vehStats), 1)
     avg_veh_stats["co"] /= max(len(vehStats), 1)
     avg_veh_stats["hc"] /= max(len(vehStats), 1)
     avg_veh_stats["distance"] /= max(len(vehStats), 1)
+    avg_veh_stats["nOfPeople"] /= max(len(vehStats), 1)
     return avg_veh_stats
+
 
 def getTotalVehicleStats(vehStats):
     """
@@ -107,12 +114,14 @@ def getTotalVehicleStats(vehStats):
         "co": 0,
         "hc": 0,
         "distance": 0,
+        "nOfPeople": 0,
     }
     for veh_stat in vehStats:
         total_veh_stats["co2"] += veh_stat["co2"]
         total_veh_stats["co"] += veh_stat["co"]
         total_veh_stats["hc"] += veh_stat["hc"]
         total_veh_stats["distance"] += veh_stat["distance"]
+        total_veh_stats["nOfPeople"] += veh_stat["nOfPeople"]
     return total_veh_stats
 
 

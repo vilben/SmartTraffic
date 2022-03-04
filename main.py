@@ -5,7 +5,7 @@ import src.util as util
 from src.vehicleControl import addBus
 
 SIM_STEPS = 500
-WITH_GUI = False
+WITH_GUI = True
 VIEW_ID = "View #0"
 ZOOM_LVL = 2000
 # CENTER_X, CENTER_Y = 4577.56, 4533.25
