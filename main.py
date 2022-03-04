@@ -2,7 +2,7 @@ import sumolib
 import traci
 
 import src.util as util
-from src.vehicleControl import addBus
+from src.vehicleControl import addBus, printAllvTypes
 
 SIM_STEPS = 500
 WITH_GUI = True
@@ -23,6 +23,7 @@ traci.start(cmd)
 
 print(f"TLS: {traci.trafficlight.getIDList()}")
 print(f"Junctions: {traci.junction.getIDList()}")
+printAllvTypes()
 
 
 TLS_ID = "10"
@@ -35,6 +36,7 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     if step % 10 == 0:
+        printAllvTypes()
         busId = addBus()
 
     for busId in util.getAllVehiclesOfClass("bus"):
