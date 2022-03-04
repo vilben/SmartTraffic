@@ -8,7 +8,6 @@ from src import tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
 
-SIM_STEPS = 500
 VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
@@ -23,10 +22,13 @@ parser.add_argument(
 parser.add_argument(
     "--STATS", action="store_true", help="Define if STATS should be generated"
 )
-
+parser.add_argument(
+    '--STEPS', type=int, default=5000, help="Define maximal simulation steps"
+)
 
 args = parser.parse_args()
 
+SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 STATS = args.STATS
