@@ -9,8 +9,8 @@
     <edge id="e8" from="6" to="8" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
     <edge id="e9" from="8" to="9" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
     <edge id="e10" from="8" to="12" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
-    <edge id="e11" from="10" to="11" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
-    <edge id="e12" from="11" to="12" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
+    <edge id="e11" from="10" to="11" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
+    <edge id="e12" from="11" to="12" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e13" from="10" to="13" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e14" from="11" to="14" priority="2" numLanes="1" speed="14.0" sidewalkWidth="1" />
     <edge id="e15" from="12" to="15" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
@@ -19,8 +19,8 @@
     <edge id="e18" from="13" to="16" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e19" from="14" to="17" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
     <edge id="e20" from="15" to="18" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
-    <edge id="e21" from="16" to="17" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
-    <edge id="e22" from="17" to="18" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
+    <edge id="e21" from="16" to="17" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
+    <edge id="e22" from="17" to="18" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e23" from="16" to="19" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
     <edge id="e24" from="18" to="20" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
 
@@ -34,8 +34,8 @@
     <edge id="e32" to="6" from="8" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
     <edge id="e33" to="8" from="9" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
     <edge id="e34" to="8" from="12" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
-    <edge id="e35" to="10" from="11" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
-    <edge id="e36" to="11" from="12" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
+    <edge id="e35" to="10" from="11" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
+    <edge id="e36" to="11" from="12" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e37" to="10" from="13" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e38" to="11" from="14" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
     <edge id="e39" to="12" from="15" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
@@ -44,8 +44,8 @@
     <edge id="e42" to="13" from="16" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e43" to="14" from="17" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
     <edge id="e44" to="15" from="18" priority="2" numLanes="2" speed="14.0" sidewalkWidth="1" />
-    <edge id="e45" to="16" from="17" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
-    <edge id="e46" to="17" from="18" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
+    <edge id="e45" to="16" from="17" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
+    <edge id="e46" to="17" from="18" priority="1" numLanes="2" speed="14.0" sidewalkWidth="1" />
     <edge id="e47" to="16" from="19" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
     <edge id="e48" to="18" from="20" priority="2" numLanes="2" speed="30.0" sidewalkWidth="2" />
 </edges>
