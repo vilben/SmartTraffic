@@ -6,7 +6,7 @@ import src.util as util
 import src.tlsControl as tlsControl
 from src.vehicleControl import addBus, printVehicleTypes, setRandomVehicleColor
 
-SIM_STEPS = 500
+SIM_STEPS = 5000
 WITH_GUI = True
 VIEW_ID = "View #0"
 ZOOM_LVL = 2000
@@ -54,7 +54,7 @@ while step < SIM_STEPS:
     if step % 10 == 0:
         addBus()
 
-    setRandomVehicleColor(util.getRandomColor())
+    # setRandomVehicleColor(util.getRandomColor())
 
     curr_vehs = util.getAllVehiclesAtTLS(TLS_ID)
     for veh in curr_vehs:
