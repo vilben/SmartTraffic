@@ -4,6 +4,7 @@ import traci
 
 import src.util as util
 import src.tlsControl as tlsControl
+from src.vehicleControl import add_bus, print_vehicle_types
 
 SIM_STEPS = 500
 WITH_GUI = True
@@ -60,11 +61,18 @@ sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
 # sguTls.set("3", 1, "G")
 # sguTls.print_state()
 
+print_vehicle_types()
+
 vehs_at_tls = []
 
 step = 0
 while step < SIM_STEPS:
     traci.simulationStep()
+
+    if step % 10 == 0:
+        bus_id = add_bus()
+        print(f'added bus {bus_id}')
+
     # print TLS state & sleep for 100ms
     # print("Step: {}".format(step))
     # print("TLS state: {}".format(traci.trafficlight.getRedYellowGreenState(TLS_ID)))
