@@ -7,7 +7,7 @@ import src.util as util
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
 
-SIM_STEPS = 500
+SIM_STEPS = 5000
 VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
