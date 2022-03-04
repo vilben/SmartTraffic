@@ -1,19 +1,75 @@
 import sumolib
 import traci
 
-sumoBinary = sumolib.checkBinary("sumo-gui")
+import src.util as util
+import src.tlsControl as tlsControl
+from src.vehicles.Bus import Bus
+from src.vehicleControl import (
+    addBus,
+    printVehicleTypes,
+    setRandomVehicleColor,
+)
 
-cmd = [sumoBinary, "-c", "config/hello.sumocfg"]
+SIM_STEPS = 5000
+WITH_GUI = True
+VIEW_ID = "View #0"
+CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
+if WITH_GUI:
+    sumoBinary = sumolib.checkBinary("sumo-gui")
+else:
+    sumoBinary = sumolib.checkBinary("sumo")
+
+cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
 
+vehStats = {}
+busStats = {}
+
+vehs_at_tls = []
+allBusses = []
+
 step = 0
-while step < 1000:
+while step < SIM_STEPS:
     traci.simulationStep()
-    # whatever... tutorial stuff
-    # if traci.inductionloop.getLastStepVehicleNumber("0") > 0:
-    #     traci.trafficlight.setRedYellowGreenState("0", "GrGr")
+
+    if step % 10 == 0:
+        busId = addBus()
+        bus = Bus(busId)
+        allBusses.append(bus)
+
+    for busId in util.getAllVehiclesOfClass("bus"):
+        busStats[busId] = util.getSingleVehilceStats(busId)
+
+    for vehId in util.getAllVehilcesExcept("bus"):
+        vehStats[vehId] = util.getSingleVehilceStats(vehId)
+
+    for bus in allBusses:
+        if bus.isOnTrack():
+            print("bus no ", bus.getId(), " drives on route:")
+            print(bus.getUpcomingRoute())
+            print("on this route, the upcoming traffic lights are:")
+            print(bus.getAllUpcomingTrafficLightsInOrder())
+            print("")
+
+    print("---- next step ----")
     step += 1
 
-traci.close()
+avgVehStats = util.getAvgVehicleStats(vehStats.values())
+totalVehStats = util.getTotalVehicleStats(vehStats.values())
+avgBusStats = util.getAvgVehicleStats(busStats.values())
+totalBusStats = util.getTotalVehicleStats(busStats.values())
 
+# print vehicle statistics
+print(f"Vehicle statistics for {len(vehStats)} vehicles (avg, tot) :")
+print("\n".join(["{}: {}".format(key, value) for key, value in avgVehStats.items()]))
+print("\n")
+print("\n".join(["{}: {}".format(key, value) for key, value in totalVehStats.items()]))
+print("\n")
+print("\n")
+print(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
+print("\n".join(["{}: {}".format(key, value) for key, value in avgBusStats.items()]))
+print("\n")
+print("\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()]))
+
+traci.close()
