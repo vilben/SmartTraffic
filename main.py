@@ -83,16 +83,6 @@ while step < SIM_STEPS:
         for vehId in util.getAllVehilcesExcept("bus"):
             vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
-    for bus in allBusses:
-        if bus.isOnTrack():
-            logging.debug(
-                "bus no {0} drives on route {1} \n on this route, the upcoming traffic lights are: \n {2}".format(
-                    bus.getId(),
-                    bus.getUpcomingRoute(),
-                    bus.getAllUpcomingTrafficLightsInOrder(),
-                )
-            )
-
     logging.debug("---- next step ----")
     step += 1
 

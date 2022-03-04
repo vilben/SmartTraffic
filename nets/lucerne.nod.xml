@@ -25,4 +25,19 @@
 
     <node id="23" x="-50" y="-350" type="priority" />
     <node id="24" x="-50" y="-450" type="priority" />
+
+    <node id="25" x="-100" y="-1150" type="priority" />
+    <node id="26" x="-50" y="-1250" type="priority" />
+
+    <node id="27" x="750" y="-1300" type="priority" />
+    <node id="28" x="950" y="-1250" type="priority" />
+
+    <node id="29" x="1250" y="-650" type="priority" />
+    <node id="30" x="1250" y="-550" type="priority" />
+
+    <node id="31" x="1100" y="-200" type="priority" />
+    <node id="32" x="1000" y="-100" type="priority" />
+
+    <node id="33" x="850" y="0" type="priority" />
+    <node id="34" x="600" y="100" type="priority" />
 </nodes>
