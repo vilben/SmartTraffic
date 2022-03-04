@@ -63,9 +63,3 @@ def isVehicleKnown(vehicleId):
     Returns whether the given vehicle is known.
     """
     return vehicleId in traci.vehicle.getIDList()
-
-def printAllvTypes():
-    """
-    Prints all vehicle types.
-    """
-    print(traci.vehicletype.getIDList())
