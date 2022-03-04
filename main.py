@@ -27,8 +27,8 @@ traci.start(cmd)
 #     traci.gui.setOffset(VIEW_ID, CENTER_X, CENTER_Y)
 
 
-print(f'TLS: {traci.trafficlight.getIDList()}')
-print(f'Junctions: {traci.junction.getIDList()}')
+print(f"TLS: {traci.trafficlight.getIDList()}")
+print(f"Junctions: {traci.junction.getIDList()}")
 
 
 TLS_ID = "10"
@@ -47,15 +47,24 @@ printVehicleTypes()
 
 vehs_at_tls = []
 
+vehStats = {}
+busStats = {}
+
 step = 0
 while step < SIM_STEPS:
     traci.simulationStep()
 
     if step % 10 == 0:
         busId = addBus()
-        print(f'Added bus {busId}')
+        print(f"Added bus {busId}")
 
     setRandomVehicleColor(util.getRandomColor())
+
+    for busId in util.getAllVehiclesOfClass("bus"):
+        busStats[busId] = util.getSingleVehilceStats(busId)
+
+    for vehId in util.getAllVehilcesExcept("bus"):
+        vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
     curr_vehs = util.getAllVehiclesAtTLS(TLS_ID)
     for veh in curr_vehs:
@@ -64,15 +73,13 @@ while step < SIM_STEPS:
 
     step += 1
 
-veh_stats = util.getVehicleStats(traci.vehicle.getIDList())
-bus_stats = util.getVehicleStats(traci.vehicle.getIDList(), "bus")
-avg_veh_stats = util.getAvgVehicleStats(veh_stats)
-avg_bus_stats = util.getAvgVehicleStats(bus_stats)
+avg_veh_stats = util.getAvgVehicleStats(vehStats)
+avg_bus_stats = util.getAvgVehicleStats(busStats)
 
 # print vehicle statistics
 print(f"Vehicle statistics for {len(vehs_at_tls)} vehicles :")
 print("\n".join(["{}: {}".format(key, value) for key, value in avg_veh_stats.items()]))
-print(f"\nBus statistics for {len(bus_stats)} vehicles :")
+print(f"\nBus statistics for {len(busStats)} vehicles :")
 print("\n".join(["{}: {}".format(key, value) for key, value in avg_bus_stats.items()]))
 
 traci.close()

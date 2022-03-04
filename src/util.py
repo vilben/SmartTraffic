@@ -3,7 +3,7 @@ import random
 import traci
 
 
-def getAllVehiclesAtTLS(tls_id):
+def getAllVehiclesAtTLS(tls_id, vehicleClass=""):
     """
     Returns a list of vehicle IDs that pass the given traffic light.
     """
@@ -12,8 +12,49 @@ def getAllVehiclesAtTLS(tls_id):
     for id in ids:
         for lst in traci.vehicle.getNextTLS(id):
             if tls_id in lst:
-                vehs.append(id)
+                if (
+                    vehicleClass == ""
+                    or traci.vehicle.getVehicleClass(id) == vehicleClass
+                ):
+                    vehs.append(id)
     return vehs
+
+
+def getAllVehiclesOfClass(vehicleClass):
+    """
+    Returns a list of all vehicles of the given class.
+    """
+    ids = traci.vehicle.getIDList()
+    vehs = []
+    for id in ids:
+        if traci.vehicle.getVehicleClass(id) == vehicleClass:
+            vehs.append(id)
+    return vehs
+
+
+def getAllVehilcesExcept(vehicleClass):
+    """
+    Returns a list of all vehicles except the given class.
+    """
+    ids = traci.vehicle.getIDList()
+    vehs = []
+    for id in ids:
+        if traci.vehicle.getVehicleClass(id) != vehicleClass:
+            vehs.append(id)
+    return vehs
+
+
+def getSingleVehilceStats(veh_id):
+    """
+    Returns a dictionary containing the statistics of the given vehicle.
+    """
+    veh_stats = {
+        "id": veh_id,
+        "co2": traci.vehicle.getCO2Emission(veh_id),
+        "co": traci.vehicle.getCOEmission(veh_id),
+        "hc": traci.vehicle.getHCEmission(veh_id),
+    }
+    return veh_stats
 
 
 def getVehicleStats(veh_ids, vehicleClass=""):
@@ -27,16 +68,9 @@ def getVehicleStats(veh_ids, vehicleClass=""):
                 vehicleClass == ""
                 or traci.vehicle.getVehicleClass(veh_id) == vehicleClass
             ):
-                veh_stats.append(
-                    {
-                        "id": veh_id,
-                        "co2": traci.vehicle.getCO2Emission(veh_id),
-                        "co": traci.vehicle.getCOEmission(veh_id),
-                        "hc": traci.vehicle.getHCEmission(veh_id),
-                    }
-                )
-            #else:
-                #print(f"{veh_id} is not of class {vehicleClass}, its {traci.vehicle.getVehicleClass(veh_id)}")
+                veh_stats.append(getSingleVehilceStats(veh_id))
+            # else:
+            # print(f"{veh_id} is not of class {vehicleClass}, its {traci.vehicle.getVehicleClass(veh_id)}")
         except:
             pass
     return veh_stats
