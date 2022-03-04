@@ -1,7 +1,7 @@
 depart_min: 0
 depart_max: 3000
 edges: 24
-generate_random: 100
+generate_random: 10000
 trips:
   - trip:
     from: 1
