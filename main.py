@@ -8,7 +8,7 @@ from src import tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
 
-SIM_STEPS = 500
+SIM_STEPS = 10000
 VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
@@ -72,32 +72,11 @@ while step < SIM_STEPS:
     for bus in allBusses:
 
         tls = bus.getNextTrafficLight()[0]
+        tlsId = tls[0]
+        tlsPhase = tls[3]
 
-        tlsId = bus.getNextTrafficLight()[0][0]
-
-        # print("tls", tlsId)
-        # print("triple", tls)
-        #
-        # # traci.trafficlight.setPhase(tlsId, 0)
-        # # traci.trafficlight.setRedYellowGreenState(tlsId, "G")
-        # tlsPhase = traci.trafficlight.getPhase(tlsId)
-        # print("phase", tlsPhase)
-        #
-        # program = traci.trafficlight.getProgram(tlsId)
-        #
-        # print("program", program)
-        #
-        # phaseName = traci.trafficlight.getPhaseName(tlsId)
-        #
-        # print("phaseName", phaseName)
-        #
-        # programLogic = traci.trafficlight.getAllProgramLogics(tlsId)
-        #
-        # print("programLogics", programLogic)
-        #
-        # tlsAllPhases = traci.trafficlight.phase
-
-        if tls[3] == 'r' or tls[3] == 'R' or tls[3] == 'y' or tls[3] == 'Y':
+        # just skip stupid phases...
+        if tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
             traci.trafficlight.setPhaseDuration(tlsId, 0)
 
         # traci.trafficlight.setRedYellowGreenState(tlsId, "G")
