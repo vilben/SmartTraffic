@@ -50,3 +50,16 @@ def printVehicleTypes():
     Prints all vehicle types.
     """
     print(traci.vehicletype.getIDList())
+
+def followVehicleWithGUI(vehicleId, viewId):
+    """
+    Follows the given vehicle with the given GUI.
+    """
+    pos = traci.vehicle.getPosition(vehicleId)
+    traci.gui.setOffset(viewId, pos[0], pos[1])
+
+def isVehicleKnown(vehicleId):
+    """
+    Returns whether the given vehicle is known.
+    """
+    return vehicleId in traci.vehicle.getIDList()
