@@ -19,15 +19,22 @@ ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
 parser = argparse.ArgumentParser(description="Yes something")
-parser.add_argument("--GUI", action="store_true", help="Define if GUI should be used")
+parser.add_argument(
+    "--GUI", action="store_true", help="Define if GUI should be used"
+)
 parser.add_argument(
     "--DEBUG", action="store_true", help="Define if DEBUG should be used"
 )
+parser.add_argument(
+    "--STATS", action="store_true", help="Define if STATS should be generated"
+)
+
 
 args = parser.parse_args()
 
 DEBUG = args.DEBUG
 GUI = args.GUI
+STATS = args.STATS
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -37,7 +44,7 @@ else:
 
 if DEBUG:
     logging.basicConfig(
-        format="%(asctime)s %(message)s",
+        format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
         datefmt="%m/%d/%Y %I:%M:%S %p",
         level=logging.DEBUG,
     )
@@ -64,7 +71,7 @@ while step < SIM_STEPS:
         bus = Bus(busId)
         allBusses.append(bus)
 
-    if ENABLE_STATS:
+    if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):
             busStats[busId] = util.getSingleVehilceStats(busId)
 
@@ -84,7 +91,7 @@ while step < SIM_STEPS:
     logging.debug("---- next step ----")
     step += 1
 
-if ENABLE_STATS:
+if STATS:
     avgVehStats = util.getAvgVehicleStats(vehStats.values())
     totalVehStats = util.getTotalVehicleStats(vehStats.values())
     avgBusStats = util.getAvgVehicleStats(busStats.values())
