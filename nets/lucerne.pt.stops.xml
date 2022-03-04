@@ -6,7 +6,7 @@
 
     <!--    Au - Emmen    -->
     <busStop id="C_bus" lane="e48_1" startPos="10.00" endPos="20.00"/>
-    <!--    Bahnhof    -->
+    <!--    B_bus   -->
     <busStop id="D_bus" lane="e16_1" startPos="50.00" endPos="60.00"/>
     <busStop id="E_bus" lane="e4_1" startPos="50.00" endPos="60.00"/>
 
