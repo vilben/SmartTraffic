@@ -8,7 +8,7 @@ pip install traci
 To generate a net from edges and nodes and what not... , run:
 
 ```
-netconvert --node-files=nets/hello.nod.xml --edge-files=nets/hello.edg.xml --output-file=nets/hello.net.xml
+netconvert --node-files=nets/lucerne.nod.xml --edge-files=nets/lucerne.edg.xml --output-file=nets/lucerne.net.xml
 ```
 
 run with:

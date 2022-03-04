@@ -3,7 +3,7 @@ import traci
 
 sumoBinary = sumolib.checkBinary("sumo-gui")
 
-cmd = [sumoBinary, "-c", "config/hello.sumocfg"]
+cmd = [sumoBinary, "-c", "config/lucerne.sumo.cfg"]
 
 traci.start(cmd)
 
