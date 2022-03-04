@@ -4,7 +4,7 @@ import traci
 import src.util as util
 import src.tlsControl as tlsControl
 from src.vehicles.Bus import Bus
-from src.vehicleControl import addBus, printVehicleTypes, setRandomVehicleColor
+from src.vehicleControl import addBus, printVehicleTypes, setRandomVehicleColor, printAllvTypes
 
 SIM_STEPS = 500
 WITH_GUI = True
