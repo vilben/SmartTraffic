@@ -52,7 +52,8 @@ def getAvgVehicleStats(veh_stats):
     avg_veh_stats["hc"] /= len(veh_stats)
     return avg_veh_stats
 
-def get_all_tls_ids():
+
+def getAllTlsIds():
     """
     Returns a list of all traffic light IDs.
     """

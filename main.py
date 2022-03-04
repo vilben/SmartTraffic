@@ -5,6 +5,7 @@ import traci
 import src.util as util
 import src.tlsControl as tlsControl
 from src.vehicleControl import addBus, printVehicleTypes
+from src.vehicles.Bus import Bus
 
 SIM_STEPS = 500
 WITH_GUI = False
@@ -31,15 +32,6 @@ print(traci.trafficlight.getIDList())
 
 TLS_ID = "-1"
 sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
-# sguTls.print_state()
-# print("setting first light, second and third to green")
-# sguTls.set("1", 1, "g")
-# sguTls.set("1", 2, "g")
-# sguTls.print_state()
-# print("setting 3rd light, 0 and 1 to G")
-# sguTls.set("3", 0, "G")
-# sguTls.set("3", 1, "G")
-# sguTls.print_state()
 
 printVehicleTypes()
 
@@ -57,10 +49,20 @@ while step < SIM_STEPS:
     # sguTls.print_state()
     # sleep(0.1)
 
-    curr_vehs = util.getAllVehiclesAtTLS(TLS_ID)
-    for veh in curr_vehs:
-        if veh not in vehs_at_tls:
-            vehs_at_tls.append(veh)
+    # curr_vehs = util.getAllVehiclesAtTLS(TLS_ID)
+    # for veh in curr_vehs:
+    #     if veh not in vehs_at_tls:
+    #         vehs_at_tls.append(veh)
+
+    busId = addBus()
+
+    bus = Bus(busId)
+
+    upcomingRoute = bus.getUpcomingRoute()
+    upcomingTls = bus.getAllUpcomingTrafficLightsInOrder()
+
+    print(upcomingRoute)
+    print(upcomingTls)
 
     step += 1
 
