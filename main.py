@@ -51,6 +51,17 @@ while step < SIM_STEPS:
     for vehId in util.getAllVehilcesExcept("bus"):
         vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
+    for bus in allBusses:
+
+        if bus.isOnTrack():
+
+            print("bus no ", bus.getId(), " drives on route:")
+            print(bus.getUpcomingRoute())
+            print("on this route, the upcoming traffic lights are:")
+            print(bus.getAllUpcomingTrafficLightsInOrder())
+            print("")
+
+    print("---- next step ----")
     step += 1
 
 avgVehStats = util.getAvgVehicleStats(vehStats.values())
