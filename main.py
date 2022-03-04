@@ -31,13 +31,13 @@ traci.start(cmd)
 print(f'TLS: {traci.trafficlight.getIDList()}')
 print(f'Junctions: {traci.junction.getIDList()}')
 
-
 TLS_ID = "10"
 sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
 
 printVehicleTypes()
 
 vehs_at_tls = []
+allBusses = []
 
 step = 0
 while step < SIM_STEPS:
@@ -48,18 +48,16 @@ while step < SIM_STEPS:
 
         bus = Bus(busId)
 
-        upcomingRoute = bus.getUpcomingRoute()
-        upcomingTls = bus.getAllUpcomingTrafficLightsInOrder()
-
-        print(upcomingRoute)
-        print(upcomingTls)
+        allBusses.append(bus)
 
     setRandomVehicleColor(util.getRandomColor())
 
-
-
-
     step += 1
+
+    print("upcoming routes")
+    print(allBusses[0].getUpcomingRoute())
+    print("upcoming tls")
+    print(allBusses[0].getAllUpcomingTrafficLightsInOrder())
 
 veh_stats = util.getVehicleStats(vehs_at_tls)
 avg_veh_stats = util.getAvgVehicleStats(veh_stats)

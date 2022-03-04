@@ -1,5 +1,7 @@
 import traci
 
+from src.net.Net import Net
+
 
 class Bus:
 
@@ -18,33 +20,53 @@ class Bus:
     def getNextTrafficLight(self):
         return traci.vehicle.getNextTLS(self.__id)
 
+    def isOnTrack(self):
+        if self.getRoute() != (0,):
+            return True
+        else:
+            return False
+
+    def getRoute(self):
+        try:
+            return traci.vehicle.getRoute(self.__id)
+        except:
+            return 0,
+
+    def getNextEdgeId(self):
+        if self.isOnTrack():
+            laneId = traci.vehicle.getLaneID(self.__id)
+            edgeId = traci.lane.getEdgeID(laneId)
+            return edgeId
+        return 0
+
     def getUpcomingRoute(self):
-        routeEdges = traci.vehicle.getRoute(self.__id)
-        currentPosition = self.getCurrentPosition()
-
-        index = 0
-        isAfter = False
-
         upcomingRoute = []
 
-        for edge in routeEdges:
-            if edge == currentPosition or isAfter:
-                isAfter = True
-                upcomingRoute[index] = edge
-                index += 1
+        if self.isOnTrack():
+            try:
+                routeEdges = self.getRoute()
+                edgeId = self.getNextEdgeId()
+                isAfter = False
+
+                for edge in routeEdges:
+
+                    if edgeId == edge or isAfter:
+                        isAfter = True
+                        upcomingRoute.append(edgeId)
+            except Exception as e:
+                print("Fuck", e)
 
         return upcomingRoute
 
     def getAllUpcomingTrafficLightsInOrder(self):
         upcomingRoute = self.getUpcomingRoute()
-
         upcomingTrafficLights = []
-        index = 0
-
         for edge in upcomingRoute:
-            if traci.trafficlight.getIDList().__contains__(edge):
-                upcomingTrafficLights[index] = edge
-                index += 1
+            net = Net()
+            nodeId = net.getNodeIdOfEdge(edge)
+
+            if traci.trafficlight.getIDList().__contains__(nodeId):
+                upcomingTrafficLights.append(nodeId)
 
         return upcomingTrafficLights
 

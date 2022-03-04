@@ -1,4 +1,5 @@
 import traci
+import random
 
 
 def getAllVehiclesAtTLS(tls_id):
@@ -52,9 +53,11 @@ def getAvgVehicleStats(veh_stats):
     avg_veh_stats["hc"] /= len(veh_stats)
     return avg_veh_stats
 
+
 def printAllTlsStates():
     for tls_id in traci.trafficlight.getIDList():
         print(f'{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}')
+
 
 def getRandomColor():
     return (
