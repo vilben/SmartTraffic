@@ -10,9 +10,10 @@ from src.vehicleControl import (
     setRandomVehicleColor,
 )
 
-SIM_STEPS = 5000
-WITH_GUI = True
+SIM_STEPS = 2000
+WITH_GUI = False
 VIEW_ID = "View #0"
+ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
 if WITH_GUI:
@@ -38,11 +39,12 @@ while step < SIM_STEPS:
         bus = Bus(busId)
         allBusses.append(bus)
 
-    for busId in util.getAllVehiclesOfClass("bus"):
-        busStats[busId] = util.getSingleVehilceStats(busId)
+    if ENABLE_STATS:
+        for busId in util.getAllVehiclesOfClass("bus"):
+            busStats[busId] = util.getSingleVehilceStats(busId)
 
-    for vehId in util.getAllVehilcesExcept("bus"):
-        vehStats[vehId] = util.getSingleVehilceStats(vehId)
+        for vehId in util.getAllVehilcesExcept("bus"):
+            vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
     for bus in allBusses:
         if bus.isOnTrack():
@@ -55,21 +57,30 @@ while step < SIM_STEPS:
     print("---- next step ----")
     step += 1
 
-avgVehStats = util.getAvgVehicleStats(vehStats.values())
-totalVehStats = util.getTotalVehicleStats(vehStats.values())
-avgBusStats = util.getAvgVehicleStats(busStats.values())
-totalBusStats = util.getTotalVehicleStats(busStats.values())
+if ENABLE_STATS:
+    avgVehStats = util.getAvgVehicleStats(vehStats.values())
+    totalVehStats = util.getTotalVehicleStats(vehStats.values())
+    avgBusStats = util.getAvgVehicleStats(busStats.values())
+    totalBusStats = util.getTotalVehicleStats(busStats.values())
 
-# print vehicle statistics
-print(f"Vehicle statistics for {len(vehStats)} vehicles (avg, tot) :")
-print("\n".join(["{}: {}".format(key, value) for key, value in avgVehStats.items()]))
-print("\n")
-print("\n".join(["{}: {}".format(key, value) for key, value in totalVehStats.items()]))
-print("\n")
-print("\n")
-print(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
-print("\n".join(["{}: {}".format(key, value) for key, value in avgBusStats.items()]))
-print("\n")
-print("\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()]))
+    # print vehicle statistics
+    print(f"Vehicle statistics for {len(vehStats)} vehicles (avg, tot) :")
+    print(
+        "\n".join(["{}: {}".format(key, value) for key, value in avgVehStats.items()])
+    )
+    print("\n")
+    print(
+        "\n".join(["{}: {}".format(key, value) for key, value in totalVehStats.items()])
+    )
+    print("\n")
+    print("\n")
+    print(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
+    print(
+        "\n".join(["{}: {}".format(key, value) for key, value in avgBusStats.items()])
+    )
+    print("\n")
+    print(
+        "\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()])
+    )
 
 traci.close()
