@@ -1,7 +1,7 @@
 import traci
 
 from src.net.Net import Net
-
+from src.vehicleControl import isVehicleKnown
 
 class AbstractVehicle:
 
@@ -21,10 +21,7 @@ class AbstractVehicle:
         return traci.vehicle.getNextTLS(self.__id)
 
     def isOnTrack(self):
-        if self.getRoute() != (0,):
-            return True
-        else:
-            return False
+        return isVehicleKnown(self.getId())
 
     def getRoute(self):
         try:
