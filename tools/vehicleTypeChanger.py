@@ -1,3 +1,4 @@
+from operator import add
 import random
 import xml.etree.ElementTree as ET
 
@@ -29,6 +30,25 @@ def parseXml(inputFile):
     root = tree.getroot()
     return root
 
+def addHardcodedVTypesWithReallyUglyHack():
+    XML = """
+    <vType id="normal_car" vClass="passenger" maxSpeed="40" speedFactor="0.9" speedDev="0.2" sigma="0.5" color="white" guiShape="passenger" />
+    <vType id="sporty_car" vClass="passenger" maxSpeed="60" speedFactor="1.3" speedDev="0.1" sigma="0.1" color="red" guiShape="passenger/sedan" />
+    <vType id="trailer" vClass="trailer" maxSpeed="30" speedFactor="1" speedDev="0.05" color="gray" guiShape="truck/trailer" />
+    <vType id="coach" vClass="coach" maxSpeed="30" speedFactor="1" speedDev="0.05" color="green" guiShape="bus/coach" />
+    </routes>
+    """
+
+    # read all lines from INPUT file
+    with open(INPUT, "r") as f:
+        lines = f.readlines()
+        # remove last line
+        lines.pop()
+        lines.append(XML)
+        # write all lines to OUTPUT file
+        with open(OUTPUT, "w") as f:
+            f.writelines(lines)
+
 
 def main():
     print(f"parsing {INPUT}")
@@ -40,7 +60,7 @@ def main():
     tree = ET.ElementTree(root)
     print(f"writing {OUTPUT}")
     tree.write(OUTPUT)
-    pass
+    addHardcodedVTypesWithReallyUglyHack()
 
 
 if __name__ == "__main__":
