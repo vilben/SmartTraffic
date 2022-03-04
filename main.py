@@ -25,6 +25,7 @@ traci.start(cmd)
 
 print(f"TLS: {traci.trafficlight.getIDList()}")
 print(f"Junctions: {traci.junction.getIDList()}")
+printAllvTypes()
 
 TLS_ID = "10"
 sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
@@ -41,6 +42,7 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     if step % 10 == 0:
+        printAllvTypes()
         busId = addBus()
         bus = Bus(busId)
         allBusses.append(bus)
