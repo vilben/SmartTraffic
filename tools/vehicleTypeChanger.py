@@ -3,8 +3,8 @@ import random
 import xml.etree.ElementTree as ET
 
 
-INPUT = "../nets/lucerne.rou.xml"
-OUTPUT = "../nets/lucerne.rou.xml"
+INPUT = "nets/lucerne.rou.xml"
+OUTPUT = "nets/lucerne.rou.xml"
 
 VEHILCE_TYPES = [
     "normal_car",

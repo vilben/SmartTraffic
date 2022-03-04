@@ -1,19 +1,13 @@
 import argparse
 import logging
-
 import sumolib
 import traci
 
 import src.util as util
-import src.tlsControl as tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
 
-#
-# Setup of stuff
-#
-
-SIM_STEPS = 5000
+SIM_STEPS = 500
 VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
