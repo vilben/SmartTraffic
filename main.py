@@ -6,7 +6,7 @@ import src.tlsControl as tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus, printAllvTypes, printVehicleTypes, setRandomVehicleColor
 
-SIM_STEPS = 5000
+SIM_STEPS = 500
 WITH_GUI = True
 VIEW_ID = "View #0"
 ZOOM_LVL = 2000
@@ -53,15 +53,15 @@ while step < SIM_STEPS:
     for vehId in util.getAllVehilcesExcept("bus"):
         vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
-    for bus in allBusses:
-
-        if bus.isOnTrack():
-
-            print("bus no ", bus.getId(), " drives on route:")
-            print(bus.getUpcomingRoute())
-            print("on this route, the upcoming traffic lights are:")
-            print(bus.getAllUpcomingTrafficLightsInOrder())
-            print("")
+    # for bus in allBusses:
+    #
+    #     if bus.isOnTrack():
+    #
+    #         print("bus no ", bus.getId(), " drives on route:")
+    #         print(bus.getUpcomingRoute())
+    #         print("on this route, the upcoming traffic lights are:")
+    #         print(bus.getAllUpcomingTrafficLightsInOrder())
+    #         print("")
 
     print("---- next step ----")
     step += 1
