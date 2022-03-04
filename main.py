@@ -2,7 +2,9 @@ import sumolib
 import traci
 
 import src.util as util
-from src.vehicleControl import addBus, printAllvTypes
+import src.tlsControl as tlsControl
+from src.vehicles.Bus import Bus
+from src.vehicleControl import addBus, printVehicleTypes, setRandomVehicleColor
 
 SIM_STEPS = 500
 WITH_GUI = True
@@ -25,11 +27,15 @@ print(f"TLS: {traci.trafficlight.getIDList()}")
 print(f"Junctions: {traci.junction.getIDList()}")
 printAllvTypes()
 
-
 TLS_ID = "10"
+sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
 
 vehStats = {}
 busStats = {}
+printVehicleTypes()
+
+vehs_at_tls = []
+allBusses = []
 
 step = 0
 while step < SIM_STEPS:
@@ -38,6 +44,8 @@ while step < SIM_STEPS:
     if step % 10 == 0:
         printAllvTypes()
         busId = addBus()
+        bus = Bus(busId)
+        allBusses.append(bus)
 
     for busId in util.getAllVehiclesOfClass("bus"):
         busStats[busId] = util.getSingleVehilceStats(busId)
@@ -45,6 +53,17 @@ while step < SIM_STEPS:
     for vehId in util.getAllVehilcesExcept("bus"):
         vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
+    for bus in allBusses:
+
+        if bus.isOnTrack():
+
+            print("bus no ", bus.getId(), " drives on route:")
+            print(bus.getUpcomingRoute())
+            print("on this route, the upcoming traffic lights are:")
+            print(bus.getAllUpcomingTrafficLightsInOrder())
+            print("")
+
+    print("---- next step ----")
     step += 1
 
 avgVehStats = util.getAvgVehicleStats(vehStats.values())

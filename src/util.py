@@ -1,6 +1,6 @@
 from distutils.log import error
-import random
 import traci
+import random
 
 
 def getAllVehiclesAtTLS(tls_id, vehicleClass=""):
