@@ -23,7 +23,7 @@
     </edge>
     <edge id="e4" from="5" to="2" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
 
-    <edge id="e5" from="6" to="3" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
+    <edge id="e5" from="3" to="6" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
     <edge id="e5_t1" from="3" to="31" priority="2" numLanes="2" speed="30.0">
         <lane id="e5_t1_0" allow="bus" index="0" />
     </edge>
@@ -33,7 +33,7 @@
     <edge id="e5_t3" from="32" to="3" priority="2" numLanes="2" speed="30.0">
         <lane id="e5_t3_0" allow="bus" index="0" />
     </edge>
-    <edge id="e6" from="3" to="6" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
+    <edge id="e6" from="6" to="3" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
 
     <edge id="e7" from="4" to="5" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
     <edge id="e7_t1" from="4" to="23" priority="2" numLanes="2" speed="30.0">
