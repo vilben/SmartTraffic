@@ -7,11 +7,7 @@ import traci
 import src.util as util
 import src.tlsControl as tlsControl
 from src.vehicles.Bus import Bus
-from src.vehicleControl import (
-    addBus,
-    printVehicleTypes,
-    setRandomVehicleColor,
-)
+from src.vehicleControl import addBus
 
 #
 # Setup of stuff
@@ -22,9 +18,11 @@ VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
-parser = argparse.ArgumentParser(description='Yes something')
-parser.add_argument('--GUI', action='store_true', help='Define if GUI should be used')
-parser.add_argument('--DEBUG', action='store_true', help='Define if DEBUG should be used')
+parser = argparse.ArgumentParser(description="Yes something")
+parser.add_argument("--GUI", action="store_true", help="Define if GUI should be used")
+parser.add_argument(
+    "--DEBUG", action="store_true", help="Define if DEBUG should be used"
+)
 
 args = parser.parse_args()
 
@@ -38,9 +36,15 @@ else:
 
 
 if DEBUG:
-    logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
+    logging.basicConfig(
+        format="%(asctime)s %(message)s",
+        datefmt="%m/%d/%Y %I:%M:%S %p",
+        level=logging.DEBUG,
+    )
 else:
-    logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+    logging.basicConfig(
+        format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p"
+    )
 
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
@@ -69,8 +73,14 @@ while step < SIM_STEPS:
 
     for bus in allBusses:
         if bus.isOnTrack():
-            logging.debug("bus no {0} drives on route {1} \n on this route, the upcoming traffic lights are: \n {2}".format(bus.getId(), bus.getUpcomingRoute(), bus.getAllUpcomingTrafficLightsInOrder()))
-    
+            logging.debug(
+                "bus no {0} drives on route {1} \n on this route, the upcoming traffic lights are: \n {2}".format(
+                    bus.getId(),
+                    bus.getUpcomingRoute(),
+                    bus.getAllUpcomingTrafficLightsInOrder(),
+                )
+            )
+
     logging.debug("---- next step ----")
     step += 1
 
