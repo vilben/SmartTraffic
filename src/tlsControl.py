@@ -30,10 +30,6 @@ class TLSControl:
             else:
                 self.map_mask[char].append(int(idx))
 
-        print(f"map_mask {len(self.map_mask.items())}")
-        print(self.map_mask)
-        print(f"tls_state {len(self.tls_state.items())}")
-
     def __decode_start_val(self) -> None:
         """
         Decodes the start value of the traffic light.
@@ -55,9 +51,10 @@ class TLSControl:
         """
         state = ""
         for light_id, val in self.tls_state.items():
-            state += light_id
             for v in val["val"]:
                 state += v
+
+        return state
 
     def print_state(self) -> None:
         """
@@ -79,6 +76,6 @@ class TLSControl:
         """
         Sets the traffic light to the given value.
         """
-        self.tls_state[light_id][pos] = value
-        self.__encode_tls_state()
+        self.tls_state[light_id]['val'][pos] = value
+        self.state_str = self.__encode_tls_state()
         return self.state_str

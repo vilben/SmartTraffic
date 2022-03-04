@@ -2,14 +2,15 @@ from time import sleep
 import sumolib
 import traci
 
-import src.treat as treat
+import src.util as util
 import src.tlsControl as tlsControl
 
-SIM_STEPS = 1000
-WITH_GUI = False
+SIM_STEPS = 500
+WITH_GUI = True
 VIEW_ID = "View #0"
 ZOOM_LVL = 2000
-CENTER_X, CENTER_Y = 4577.56, 4533.25
+#CENTER_X, CENTER_Y = 4577.56, 4533.25
+CENTER_X, CENTER_Y = 4912.04, 3512.10
 
 if WITH_GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -47,11 +48,19 @@ tls_states = {
     "cluster_8582788745_8582788746": "ggggggggg",  # unbekannt :(
 }
 
-TLS_ID = "31379675"
+TLS_ID = "8496857761"
 sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
+# sguTls.print_state()
+# print("setting first light, second and third to green")
+# sguTls.set("1", 1, "g")
+# sguTls.set("1", 2, "g")
+# sguTls.print_state()
+# print("setting 3rd light, 0 and 1 to G")
+# sguTls.set("3", 0, "G")
+# sguTls.set("3", 1, "G")
+# sguTls.print_state()
 
-sleep(10)
-
+vehs_at_tls = []
 
 step = 0
 while step < SIM_STEPS:
@@ -60,18 +69,22 @@ while step < SIM_STEPS:
     # print("Step: {}".format(step))
     # print("TLS state: {}".format(traci.trafficlight.getRedYellowGreenState(TLS_ID)))
     # print("\n")
-    sguTls.set_state(traci.trafficlight.getRedYellowGreenState(TLS_ID))
-    sguTls.print_state()
-    sleep(0.1)
+    # sguTls.set_state(traci.trafficlight.getRedYellowGreenState(TLS_ID))
+    # sguTls.print_state()
+    # sleep(0.1)
+
+    curr_vehs = util.get_all_vehs_at_tls(TLS_ID)
+    for veh in curr_vehs:
+        if veh not in vehs_at_tls:
+            vehs_at_tls.append(veh)
 
     step += 1
 
-veh_ids = treat.get_veh_ids_at_tls(TLS_ID)
-veh_stats = treat.get_veh_stats(veh_ids)
-avg_veh_stats = treat.get_avg_veh_stats(veh_stats)
+veh_stats = util.get_veh_stats(vehs_at_tls)
+avg_veh_stats = util.get_avg_veh_stats(veh_stats)
 
 # print vehicle statistics
-print(f'Vehicle statistics for {len(veh_ids)} vehicles :')
+print(f"Vehicle statistics for {len(vehs_at_tls)} vehicles :")
 print("\n".join(["{}: {}".format(key, value) for key, value in avg_veh_stats.items()]))
 
 traci.close()
