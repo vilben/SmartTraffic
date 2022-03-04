@@ -56,14 +56,25 @@ busStats = {}
 vehs_at_tls = []
 allBusses = []
 
+allBusses.append(Bus("busRouteHorwLuzern1"))
+allBusses.append(Bus("busRouteEmmenAu1"))
+# allBusses.append(Bus("busRouteHorwLuzern1"))
+# allBusses.append(Bus("busRouteHorwLuzern1"))
+
 step = 0
 while step < SIM_STEPS:
     traci.simulationStep()
 
-    if step % 10 == 0:
-        busId = addBus()
-        bus = Bus(busId)
-        allBusses.append(bus)
+    # if step % 10 == 0:
+    #     busId = addBus()
+    #     bus = Bus(busId)
+    #     allBusses.append(bus)
+    #
+    # for bus in allBusses:
+    #     if bus.getNextTrafficLight():
+    #         print()
+
+
 
     if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):
