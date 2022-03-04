@@ -1,4 +1,5 @@
 from cgitb import text
+import logging
 import random
 import uuid
 import traci
@@ -45,11 +46,11 @@ def getRandomVehicle() -> text:
     return vehicleList[random.randint(0, len(vehicleList) - 1)]
 
 
-def printVehicleTypes():
+def logVehicleTypes():
     """
     Prints all vehicle types.
     """
-    print(traci.vehicletype.getIDList())
+    logging.log(traci.vehicletype.getIDList())
 
 def followVehicleWithGUI(vehicleId, viewId):
     """
@@ -63,9 +64,3 @@ def isVehicleKnown(vehicleId):
     Returns whether the given vehicle is known.
     """
     return vehicleId in traci.vehicle.getIDList()
-
-def printAllvTypes():
-    """
-    Prints all vehicle types.
-    """
-    print(traci.vehicletype.getIDList())

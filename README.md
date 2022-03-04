@@ -13,6 +13,12 @@ duarouter -n nets/lucerne.net.xml --route-files nets/lucerne.trips.xml -o nets/l
 python3 tools/vehicleTypeChanger.py
 ```
 
+To set the vehicle types, run the following command:
+
+``` 
+python3 tools/vehicleTypeChanger.py
+```
+
 run with:
 
 ```
