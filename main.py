@@ -1,3 +1,5 @@
+import argparse
+
 import sumolib
 import traci
 
@@ -11,12 +13,18 @@ from src.vehicleControl import (
 )
 
 SIM_STEPS = 5000
-WITH_GUI = False
-DEBUG = True
 VIEW_ID = "View #0"
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
-if WITH_GUI:
+parser = argparse.ArgumentParser(description='Yes something')
+parser.add_argument('--GUI', action='store_true', help='Define if GUI should be used')
+parser.add_argument('--DEBUG', action='store_true', help='Define if DEBUG should be used')
+
+args = parser.parse_args()
+
+DEBUG = args.DEBUG
+
+if args.GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
 else:
     sumoBinary = sumolib.checkBinary("sumo")
