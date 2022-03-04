@@ -1,4 +1,5 @@
 from distutils.log import error
+import logging
 import traci
 import random
 
@@ -123,9 +124,9 @@ def getTotalVehicleStats(vehStats):
     return total_veh_stats
 
 
-def printAllTlsStates():
+def logAllTlsStates():
     for tls_id in traci.trafficlight.getIDList():
-        print(f"{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}")
+        logging.log(f"{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}")
 
 
 def getRandomColor():
