@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021-12-01 10:50:56 by Eclipse SUMO netedit Version v1_11_0+0215-ec00761
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="bus" vClass="bus"/>
+    <vType id="tram" vClass="tram"/>
+
+    <route id="busRouteHorwLuzern" edges="e46 e30 e32 e44 e42 e41 e43 e31 e29 e45" color="yellow" repeat="10" cycleTime="140">
+        <stop busStop="A_bus" duration="20.00" until="30.00"/>
+        <stop busStop="B_bus" duration="20.00" until="90.00"/>
+    </route>
+
+    <vehicle id="busRouteHorwLuzern1" type="bus" depart="0.00" line="42" route="busRouteHorwLuzern"/>
+    <vehicle id="busRouteHorwLuzern2" type="bus" depart="10.00" line="42" route="busRouteHorwLuzern"/>
+    <vehicle id="busRouteHorwLuzern3" type="bus" depart="20.00" line="42" route="busRouteHorwLuzern"/>
+    <vehicle id="busRouteHorwLuzern4" type="bus" depart="30.00" line="42" route="busRouteHorwLuzern"/>
+    <vehicle id="busRouteHorwLuzern5" type="bus" depart="40.00" line="42" route="busRouteHorwLuzern"/>
+
+</routes>
