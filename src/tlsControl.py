@@ -1,5 +1,4 @@
 from cgitb import text
-from inspect import _void
 
 
 class TLSControl:
@@ -13,11 +12,11 @@ class TLSControl:
         self.id = id
         self.mask = mask
         self.state_str = start_val
-        self.__decode_mask()
-        self.__decode_start_val()
-        self.print_state()
+        self.__decodeMask()
+        self.__decodeStartValue()
+        self.printState()
 
-    def __decode_mask(self) -> None:
+    def __decodeMask(self) -> None:
         """
         Decodes the mask of the traffic light.
         The mask is in from of 112233, 111222333 or similar.
@@ -30,7 +29,7 @@ class TLSControl:
             else:
                 self.map_mask[char].append(int(idx))
 
-    def __decode_start_val(self) -> None:
+    def __decodeStartValue(self) -> None:
         """
         Decodes the start value of the traffic light.
         The start value is in from of ggyyrr, ggyyrrrrr or similar.
@@ -45,7 +44,7 @@ class TLSControl:
                     else:
                         self.tls_state[light_id] = {"pos": ps, "val": [chars[ps]]}
 
-    def __encode_tls_state(self) -> text:
+    def __encodeTLSState(self) -> text:
         """
         Encodes the traffic light state.
         """
@@ -56,7 +55,7 @@ class TLSControl:
 
         return state
 
-    def print_state(self) -> None:
+    def printState(self) -> None:
         """
         Prints the traffic light state.
         """
@@ -64,18 +63,18 @@ class TLSControl:
         print(self.tls_state)
         print("\n")
 
-    def set_state(self, state_str) -> None:
+    def setState(self, state_str) -> None:
         """
         Sets the traffic light to the given state.
         """
         self.state_str = state_str
-        self.__decode_start_val()
-        self.__encode_tls_state()
+        self.__decodeStartValue()
+        self.__encodeTLSState()
 
     def set(self, light_id, pos, value) -> text:
         """
         Sets the traffic light to the given value.
         """
         self.tls_state[light_id]['val'][pos] = value
-        self.state_str = self.__encode_tls_state()
+        self.state_str = self.__encodeTLSState()
         return self.state_str

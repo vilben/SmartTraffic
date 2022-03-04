@@ -1,7 +1,7 @@
 import traci
 
 
-def get_all_vehs_at_tls(tls_id):
+def getAllVehiclesAtTLS(tls_id):
     """
     Returns a list of vehicle IDs that pass the given traffic light.
     """
@@ -14,7 +14,7 @@ def get_all_vehs_at_tls(tls_id):
     return vehs
 
 
-def get_veh_stats(veh_ids):
+def getVehicleStats(veh_ids):
     """
     Returns a list of dictionaries containing the statistics of the given vehicles.
     """
@@ -34,7 +34,7 @@ def get_veh_stats(veh_ids):
     return veh_stats
 
 
-def get_avg_veh_stats(veh_stats):
+def getAvgVehicleStats(veh_stats):
     """
     Returns a dictionary containing the average statistics of the given vehicles.
     """
@@ -51,3 +51,9 @@ def get_avg_veh_stats(veh_stats):
     avg_veh_stats["co"] /= len(veh_stats)
     avg_veh_stats["hc"] /= len(veh_stats)
     return avg_veh_stats
+
+def get_all_tls_ids():
+    """
+    Returns a list of all traffic light IDs.
+    """
+    return traci.trafficlight.getIDList()
