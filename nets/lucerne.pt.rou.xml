@@ -10,28 +10,49 @@
 
     <route id="busRouteHorwLuzern" edges="e46 e30 e32 e44 e42 e41 e43 e31 e29 e45" color="yellow" repeat="10"
            cycleTime="140">
-        <stop busStop="A_bus" duration="20.00" until="30.00"/>
-        <stop busStop="B_bus" duration="20.00" until="90.00"/>
+        <stop busStop="Horw_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Helvetiaplatz_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Bahnhof_busStop" duration="20.00" until="90.00"/>
     </route>
 
     <route id="busRouteEmmenAu" edges="e48 e44 e42 e20 e16 e9 e4 e3 e10 e15 e19 e41 e43 e47" color="yellow" repeat="10"
            cycleTime="140">
-        <stop busStop="C_bus" duration="20.00" until="30.00"/>
-        <stop busStop="B_bus" duration="20.00" until="30.00"/>
-        <stop busStop="D_bus" duration="20.00" until="30.00"/>
-        <stop busStop="E_bus" duration="20.00" until="30.00"/>
+        <stop busStop="Au_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Bahnhof_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Schwanenplatz_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Emmen_busStop" duration="20.00" until="30.00"/>
+    </route>
+
+    <route id="busRouteWuerzenbachZug" edges="e18 e17 e19 e41 e27 e25 e34 e14 e2 e1 e13 e33 e26 e28 e42 e20" color="yellow" repeat="10"
+           cycleTime="140">
+        <stop busStop="Wuerzenbach_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Kasernenplatz_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Bahnhof_busStop" duration="20.00" until="30.00"/>
+    </route>
+
+    <route id="busRouteEbikonHorw" edges="e6 e5 e15 e19 e23 e21 e33 e35 e45 e46 e36 e34 e22 e24 e20 e16" color="yellow" repeat="10"
+           cycleTime="140">
+        <stop busStop="Ebikon_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Horw_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Schwanenplatz_busStop" duration="20.00" until="30.00"/>
+    </route>
+
+    <route id="busRouteZugHorw" edges="e2 e1 e13 e33 e35 e45 e46 e36 e34 e14" color="yellow" repeat="10"
+           cycleTime="140">
+        <stop busStop="Zug_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Kasernenplatz_busStop" duration="20.00" until="30.00"/>
+        <stop busStop="Horw_busStop" duration="20.00" until="30.00"/>
     </route>
 
     <vehicle id="busRouteHorwLuzern1" type="bus" depart="0.00" line="42" route="busRouteHorwLuzern"/>
-<!--    <vehicle id="busRouteHorwLuzern2" type="bus" depart="10.00" line="42" route="busRouteHorwLuzern"/>-->
-<!--    <vehicle id="busRouteHorwLuzern3" type="bus" depart="20.00" line="42" route="busRouteHorwLuzern"/>-->
-<!--    <vehicle id="busRouteHorwLuzern4" type="bus" depart="30.00" line="42" route="busRouteHorwLuzern"/>-->
-<!--    <vehicle id="busRouteHorwLuzern5" type="bus" depart="40.00" line="42" route="busRouteHorwLuzern"/>-->
+    <vehicle id="busRouteHorwLuzern2" type="bus" depart="160.00" line="42" route="busRouteHorwLuzern"/>
     <vehicle id="busRouteEmmenAu1" type="bus" depart="0.00" line="420" route="busRouteEmmenAu"/>
-<!--    <vehicle id="busRouteEmmenAu2" type="bus" depart="0.00" line="420" route="busRouteEmmenAu"/>-->
-<!--    <vehicle id="busRouteEmmenAu3" type="bus" depart="0.00" line="420" route="busRouteEmmenAu"/>-->
-<!--    <vehicle id="busRouteEmmenAu4" type="bus" depart="0.00" line="420" route="busRouteEmmenAu"/>-->
-<!--    <vehicle id="busRouteEmmenAu5" type="bus" depart="0.00" line="420" route="busRouteEmmenAu"/>-->
-
+    <vehicle id="busRouteEmmenAu2" type="bus" depart="300.00" line="420" route="busRouteEmmenAu"/>
+    <vehicle id="busRouteWuerzenbachZug1" type="bus" depart="0.00" line="69" route="busRouteWuerzenbachZug"/>
+    <vehicle id="busRouteWuerzenbachZug2" type="bus" depart="330.00" line="69" route="busRouteWuerzenbachZug"/>
+    <vehicle id="busRouteEbikonHorw1" type="bus" depart="0.00" line="690" route="busRouteEbikonHorw"/>
+    <vehicle id="busRouteEbikonHorw2" type="bus" depart="190.00" line="690" route="busRouteEbikonHorw"/>
+    <vehicle id="busRouteZugHorw1" type="bus" depart="0.00" line="691" route="busRouteZugHorw"/>
+    <vehicle id="busRouteZugHorw2" type="bus" depart="250.00" line="691" route="busRouteZugHorw"/>
 
 </routes>
