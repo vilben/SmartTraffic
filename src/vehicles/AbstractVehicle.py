@@ -54,7 +54,7 @@ class AbstractVehicle:
                         isAfter = True
                         upcomingRoute.append(edgeId)
             except Exception as e:
-                print("Fuck", e)
+                pass
 
         return upcomingRoute
 
