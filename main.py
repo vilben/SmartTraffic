@@ -4,14 +4,15 @@ import traci
 import src.util as util
 import src.tlsControl as tlsControl
 from src.vehicles.Bus import Bus
-from src.vehicleControl import addBus, printAllvTypes, printVehicleTypes, setRandomVehicleColor
+from src.vehicleControl import (
+    addBus,
+    printVehicleTypes,
+    setRandomVehicleColor,
+)
 
 SIM_STEPS = 5000
 WITH_GUI = True
 VIEW_ID = "View #0"
-ZOOM_LVL = 2000
-# CENTER_X, CENTER_Y = 4577.56, 4533.25
-CENTER_X, CENTER_Y = 4912.04, 3512.10
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
 if WITH_GUI:
@@ -22,17 +23,8 @@ else:
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
 
-
-print(f"TLS: {traci.trafficlight.getIDList()}")
-print(f"Junctions: {traci.junction.getIDList()}")
-printAllvTypes()
-
-TLS_ID = "10"
-sguTls = tlsControl.TLSControl(TLS_ID, "111222333", "rrrrrrrrr")
-
 vehStats = {}
 busStats = {}
-printVehicleTypes()
 
 vehs_at_tls = []
 allBusses = []
@@ -42,7 +34,6 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     if step % 10 == 0:
-        printAllvTypes()
         busId = addBus()
         bus = Bus(busId)
         allBusses.append(bus)
@@ -54,9 +45,7 @@ while step < SIM_STEPS:
         vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
     for bus in allBusses:
-
         if bus.isOnTrack():
-
             print("bus no ", bus.getId(), " drives on route:")
             print(bus.getUpcomingRoute())
             print("on this route, the upcoming traffic lights are:")
