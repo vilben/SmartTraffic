@@ -8,7 +8,6 @@ from src import tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
 
-SIM_STEPS = 10000
 VIEW_ID = "View #0"
 ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
@@ -23,10 +22,13 @@ parser.add_argument(
 parser.add_argument(
     "--STATS", action="store_true", help="Define if STATS should be generated"
 )
-
+parser.add_argument(
+    '--STEPS', type=int, default=5000, help="Define maximal simulation steps"
+)
 
 args = parser.parse_args()
 
+SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 STATS = args.STATS
@@ -35,7 +37,6 @@ if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
 else:
     sumoBinary = sumolib.checkBinary("sumo")
-
 
 if DEBUG:
     logging.basicConfig(
@@ -55,34 +56,27 @@ vehStats = {}
 busStats = {}
 
 vehs_at_tls = []
-allBusses = []
-
-allBusses.append(Bus("busRouteHorwLuzern1"))
-allBusses.append(Bus("busRouteEmmenAu1"))
+allBusses = [Bus("busRouteHorwLuzern1"), Bus("busRouteHorwLuzern2"), Bus("busRouteEmmenAu1"), Bus("busRouteEmmenAu1"),
+             Bus("busRouteEmmenAu1"), Bus("busRouteEmmenAu2"), Bus("busRouteWuerzenbachZug1"),
+             Bus("busRouteWuerzenbachZug2"), Bus("busRouteEbikonHorw1"), Bus("busRouteEbikonHorw2"),
+             Bus("busRouteZugHorw1"), Bus("busRouteZugHorw2")]
 
 step = 0
 while step < SIM_STEPS:
     traci.simulationStep()
 
-    # if step % 10 == 0:
-    #     busId = addBus()
-    #     bus = Bus(busId)
-    #     allBusses.append(bus)
-    #
     for bus in allBusses:
 
-        tls = bus.getNextTrafficLight()[0]
-        tlsId = tls[0]
-        tlsPhase = tls[3]
+        if bus.isOnTrack():
+            print("bus", bus)
+            tls = bus.getNextTrafficLight()[0]
 
-        # just skip stupid phases...
-        if tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
-            traci.trafficlight.setPhaseDuration(tlsId, 0)
+            tlsId = tls[0]
+            tlsPhase = tls[3]
 
-        # traci.trafficlight.setRedYellowGreenState(tlsId, "G")
-        # print("phase", phase)
-
-
+            # just skip stupid phases...
+            if tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
+                traci.trafficlight.setPhaseDuration(tlsId, 0)
 
     if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):
@@ -90,11 +84,6 @@ while step < SIM_STEPS:
 
         for vehId in util.getAllVehilcesExcept("bus"):
             vehStats[vehId] = util.getSingleVehilceStats(vehId)
-
-    # for bus in allBusses:
-    #     if bus.isOnTrack():
-    #         if DEBUG:
-    #             logging.debug("nothing")
 
     logging.debug("---- next step ----")
     step += 1
