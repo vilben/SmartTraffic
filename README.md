@@ -11,6 +11,12 @@ To generate a net from edges and nodes and what not... , run:
 netconvert --node-files=nets/lucerne.nod.xml --edge-files=nets/lucerne.edg.xml --output-file=nets/lucerne.net.xml
 ```
 
+To set the vehicle types, run the following command:
+
+``` 
+python3 tools/vehicleTypeChanger.py
+```
+
 run with:
 
 ```
