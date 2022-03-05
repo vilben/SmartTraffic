@@ -105,7 +105,9 @@ else:
 
 logging.info(f"SIM-ID: {SIMID}")
 
-cmd = [sumoBinary, "-c", CONFIG_FILE_NAME, additionalSumoOptions]
+cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
+if len(additionalSumoOptions) > 0:
+    cmd.append(additionalSumoOptions)
 traci.start(cmd)
 
 junctionMutexFactory = JunctionMutexFactory()
