@@ -21,6 +21,14 @@ class TrafficLight:
     def setToYellowOrGreen(self):
         self.__skipPhasesUntil('GgYy')
 
+    def advanceToAnyYellow(self):
+        if "y" not in traci.trafficlight.getRedYellowGreenState(self.getId()).lower():
+            traci.trafficlight.setPhaseDuration(self.getId(), 0)
+
+    def ensureAccess(self):
+        if self.getCurrentPhase().lower() != "g":
+            self.advanceToAnyYellow()
+
     def getCurrentPhase(self):
         return self.__currentPhase
 
