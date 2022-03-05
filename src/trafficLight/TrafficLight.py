@@ -13,10 +13,13 @@ class TrafficLight:
         return self.__id
 
     def setToRed(self):
-        self.__skipPhasesUntil('R')
+        self.__skipPhasesUntil('Rr')
 
     def setToGreen(self):
-        self.__skipPhasesUntil('G')
+        self.__skipPhasesUntil('Gg')
+
+    def setToYellowOrGreen(self):
+        self.__skipPhasesUntil('GgYy')
 
     def getCurrentPhase(self):
         return self.__currentPhase
@@ -24,7 +27,11 @@ class TrafficLight:
     def getDistanceFromVehicle(self):
         return self.__distanceFromBus
 
-    def __skipPhasesUntil(self, color='G'):
+    def setPhaseDuration(self, duration=10):
+        traci.trafficlight.setPhaseDuration(self.getId(), duration)
+
+    def __skipPhasesUntil(self, colors="GgYy"):
         # skip phases until phase is either 'G', 'R' or 'Y'
-        if self.getCurrentPhase() != color and self.getCurrentPhase() != color.lower():
-            traci.trafficlight.setPhaseDuration(self.getId(), 0)
+
+        if not colors.__contains__(self.getCurrentPhase()):
+            self.setPhaseDuration(0)
