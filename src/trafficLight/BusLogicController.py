@@ -3,10 +3,11 @@ from src.trafficLight.JunctionMutexFactory import JunctionMutexFactory
 
 
 class BusLogicController:
-    def __init__(self, junctionMutexFactory):
+    def __init__(self, junctionMutexFactory, distance):
         self.allBusses = []
         self.junctionMutexFactory = junctionMutexFactory
         self.approaches = {}
+        self.__distance = distance
 
     @property
     def junctionMutexFactory(self) -> JunctionMutexFactory:
@@ -49,32 +50,33 @@ class BusLogicController:
                 try:
                     distance = bus.getNextTrafficLight().getDistanceFromVehicle()
                 except Exception as e:
-                    distance = 51
+                    distance = self.__distance + 1
 
-                if distance < 50 or bus.isJammed():
-                    if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
-                        tls = bus.getNextTrafficLight()
-                        logging.debug(f"Bus {bus.getId()} is approaching {tls.getId()}")
-                        if tls is not None:
-                            self.declareBusApproachingTls(bus, tls.getId())
-                            junctionMutex = self.junctionMutexFactory.getJunctionMutex(
-                                tls.getId()
-                            )
-                            if junctionMutex.isOwner(
-                                bus.getId()
-                            ) or junctionMutex.acquireJunction(bus.getId()):
-                                tls.ensureAccess()
-                                logging.debug("Changing light because bus is jammed!!")
-                            else:
-                                junctionMutex.declareActive(
-                                    bus.getId(),
-                                    "bus may have detected jammed traffic ahead",
-                                    "",
-                                    "",
+                if distance < self.__distance or bus.isJammed():
+                    nextTrafficLight = bus.getNextTrafficLight()
+                    if nextTrafficLight.isControllingLane(bus.getCurrentLane()):
+                        if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
+                            logging.debug(f"Bus {bus.getId()} is approaching {nextTrafficLight.getId()}")
+                            if nextTrafficLight is not None:
+                                self.declareBusApproachingTls(bus, nextTrafficLight.getId())
+                                junctionMutex = self.junctionMutexFactory.getJunctionMutex(
+                                    nextTrafficLight.getId()
                                 )
-                                logging.debug(
-                                    f"Bus {bus.getId()} wants to clear junction, but other busses appear to have priority"
-                                )
+                                if junctionMutex.isOwner(
+                                    bus.getId()
+                                ) or junctionMutex.acquireJunction(bus.getId()):
+                                    nextTrafficLight.ensureAccess()
+                                    logging.debug("Changing light because bus is jammed!!")
+                                else:
+                                    junctionMutex.declareActive(
+                                        bus.getId(),
+                                        "bus may have detected jammed traffic ahead",
+                                        "",
+                                        "",
+                                    )
+                                    logging.debug(
+                                        f"Bus {bus.getId()} wants to clear junction, but other busses appear to have priority"
+                                    )
 
     def declareBusApproachingTls(self, bus, tlsId):
         self.approaches[bus] = tlsId
