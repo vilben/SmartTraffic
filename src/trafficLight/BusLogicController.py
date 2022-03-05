@@ -29,7 +29,7 @@ class BusLogicController:
                 self.approaches[bus]
             )
             if nextTls is None:
-                junctionMutex.declareInactive(self, bus.getId())
+                junctionMutex.declareInactive(bus.getId())
                 junctionMutex.releaseJunction(bus.getId())
                 logging.debug(
                     f"Removed bus {bus.getId()} from approach as it does not appear to have a lane"
