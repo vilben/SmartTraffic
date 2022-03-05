@@ -1,22 +1,10 @@
 depart_min: 0
-depart_max: 3000
-edges: 24
-generate_random: 10000
+depart_max: 5000
+edges: 48
+generate_random: 1000
 trips:
   - trip:
-    from: 1
-    to: 9
-    count: 100
-  - trip:
-    from: 1
-    to: 23
-    count: 100
-  - trip:
-    from: 1
-    to: 24
-    count: 100
-  - trip:
-    from: 1
+    from: 48
     to: 4
     count: 100
   - trip:
@@ -25,21 +13,61 @@ trips:
     count: 100
   - trip:
     from: 48
-    to: 1
+    to: 4
     count: 100
   - trip:
     from: 48
-    to: 3
+    to: 2
     count: 100
   - trip:
     from: 48
-    to: 14
-    count: 20
-  - trip:
-    from: 4
-    to: 9
+    to: 45
     count: 100
   - trip:
-    from: 4
-    to: 24
+    from: 17
+    to: 47
+    count: 100
+  - trip:
+    from: 17
+    to: 45
+    count: 100
+  - trip:
+    from: 3
+    to: 27
+    count: 50
+  - trip:
+    from: 1
+    to: 39
+    count: 60
+  - trip:
+    from: 1
+    to: 45
+    count: 100
+  - trip:
+    from: 1
+    to: 47
+    count: 100
+  - trip:
+    from: 1
+    to: 17
+    count: 100
+  - trip:
+    from: 1
+    to: 7
+    count: 100
+  - trip:
+    from: 26
+    to: 45
+    count: 50
+  - trip:
+    from: 27
+    to: 18
+    count: 100
+  - trip:
+    from: 5
+    to: 7
+    count: 100
+  - trip:
+    from: 5
+    to: 45
     count: 100
