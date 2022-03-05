@@ -88,14 +88,11 @@ allBusses = [
 step = 0
 if STATS:
     edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, DIAGNAMEPREFIX)
-    edgeStatsCollector.registerEdge("e1")
-    edgeStatsCollector.registerEdge("e2")
-    edgeStatsCollector.registerEdge("e13")
-    edgeStatsCollector.registerEdge("e14")
-    edgeStatsCollector.registerEdge("e19")
-    edgeStatsCollector.registerEdge("e20")
-    edgeStatsCollector.registerEdge("e25")
-    edgeStatsCollector.registerEdge("e30")
+
+    allEdges = traci.edge.getIDList()
+    for edgeId in allEdges:
+        edgeStatsCollector.registerEdge(edgeId)
+
 while step < SIM_STEPS:
     traci.simulationStep()
 
