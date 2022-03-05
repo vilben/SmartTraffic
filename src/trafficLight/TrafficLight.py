@@ -2,10 +2,6 @@ import traci
 
 
 class TrafficLight:
-
-    # def __init__(self, id):
-    #     self.__id = id
-
     # Constructor for tls gotten by bus.getNextTrafficLight
     def __init__(self, tls):
         self.__id = tls[0]
@@ -24,6 +20,9 @@ class TrafficLight:
 
     def getCurrentPhase(self):
         return self.__currentPhase
+
+    def getDistanceFromVehicle(self):
+        return self.__distanceFromBus
 
     def __skipPhasesUntil(self, color='G'):
         # skip phases until phase is either 'G', 'R' or 'Y'

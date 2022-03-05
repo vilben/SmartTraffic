@@ -2,6 +2,7 @@ import traci
 
 from src.trafficLight.TrafficLight import TrafficLight
 from src.vehicleControl import isVehicleKnown
+from src.vehicles.Stop import Stop
 
 
 class AbstractVehicle:
@@ -110,6 +111,16 @@ class AbstractVehicle:
 
         if leader and leader.isOnTrack():
             return leader.isStopped() and leaderDistance < 10
+
+    def getNextStop(self):
+        return Stop(traci.vehicle.getNextStops(self.getId())[0])
+
+    def getNthNextStop(self, n=1):
+        n -= 1
+        return Stop(traci.vehicle.getNextStops(self.getId()[n]))
+
+    def getCurrentLane(self):
+        return traci.vehicle.getLaneID(self.getId())
 
     # Probably not needed
 

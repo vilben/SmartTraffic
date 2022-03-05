@@ -6,9 +6,7 @@ import traci
 from src.edgeStats import EdgeStatsCollector
 
 import src.util as util
-from src import tlsControl
 from src.vehicles.Bus import Bus
-from src.vehicleControl import addBus
 from src.vehicleControl import followVehicleWithGUI
 
 VIEW_ID = "View #0"
@@ -60,7 +58,9 @@ if DEBUG:
     )
 else:
     logging.basicConfig(
-        format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p"
+        format="%(asctime)s:%(levelname)s:%(name)s:%(message)s",
+        datefmt="%m/%d/%Y %I:%M:%S %p",
+        level=logging.INFO,
     )
 
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
@@ -100,22 +100,17 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     for bus in allBusses:
-
         if bus.isOnTrack():
-
-            actualTLS = bus.getNextTrafficLightFromTraci()
-            if len(actualTLS) > 0:
-                tls = bus.getNextTrafficLightFromTraci()[0]
-
-                tlsId = tls[0]
-                tlsIndex = tls[1]
-                tlsPhase = tls[3]
-                tlsDistance = tls[2]
-
-                if bus.getAcceleration() < 0 and tlsDistance < 50 or bus.isJammed():
+            if (
+                bus.getNextTrafficLight().getDistanceFromVehicle() < 50
+                or bus.isJammed()
+            ):
+                if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
+                    tls = bus.getNextTrafficLight()
+                    tls.setToGreen()
                     logging.debug("Changing light because bus is jammed!!")
-                    # followVehicleWithGUI(bus.getId(), VIEW_ID)
-                    traci.trafficlight.setPhaseDuration(tlsId, 0)
+                    if GUI:
+                        followVehicleWithGUI(bus.getId(), VIEW_ID)
 
     if STATS:
         edgeStatsCollector.collect(step)
