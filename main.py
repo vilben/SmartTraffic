@@ -7,6 +7,7 @@ import src.util as util
 from src import tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
+from src.vehicleControl import followVehicleWithGUI
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -68,23 +69,18 @@ while step < SIM_STEPS:
     for bus in allBusses:
 
         if bus.isOnTrack():
-            logging.debug(f'bus {bus}')
+            
+            
             tls = bus.getNextTrafficLight()[0]
 
             tlsId = tls[0]
             tlsIndex = tls[1]
             tlsPhase = tls[3]
             tlsDistance = tls[2]
-
-            print(bus.getSpeed())
-            print(bus.getAcceleration())
-
-            print(bus.isJammed())
             
-            # print(tlsDistance)
-
-            # just skip stupid phases...
-            if tlsDistance < 100 and tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
+            if bus.getAcceleration() < 0 and tlsDistance < 50 or bus.isJammed():
+                logging.debug("Changing light because bus is jammed!!")
+                followVehicleWithGUI(bus.getId(), VIEW_ID)
                 traci.trafficlight.setPhaseDuration(tlsId, 0)
 
     if STATS:
@@ -94,7 +90,7 @@ while step < SIM_STEPS:
         for vehId in util.getAllVehilcesExcept("bus"):
             vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
-    logging.debug("---- next step ----")
+    logging.debug("---- finished step {0} ----".format(str(step)))
     step += 1
 
 if STATS:
