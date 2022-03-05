@@ -19,7 +19,9 @@ class AbstractVehicle:
         return traci.vehicle.getCO2Emission(self.__id)
 
     def getNextTrafficLight(self):
-        return TrafficLight(traci.vehicle.getNextTLS(self.__id)[0])
+        nextTls = traci.vehicle.getNextTLS(self.__id)
+        if len(nextTls) > 0:
+            return TrafficLight(traci.vehicle.getNextTLS(self.__id)[0])
 
     def getNextTrafficLightFromTraci(self):
         return traci.vehicle.getNextTLS(self.__id)
@@ -120,7 +122,10 @@ class AbstractVehicle:
 
     def getNthNextStop(self, n=1):
         n -= 1
-        return Stop(traci.vehicle.getNextStops(self.getId()[n]))
+        nextStops = traci.vehicle.getNextStops(self.getId())
+        if len(nextStops) > n - 1:
+            return Stop(traci.vehicle.getNextStops(self.getId()[n]))
+        return Stop.createNullStop()
 
     def getCurrentLane(self):
         return traci.vehicle.getLaneID(self.getId())

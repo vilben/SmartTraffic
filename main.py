@@ -1,14 +1,11 @@
 import argparse
 import logging
 import uuid
-from matplotlib.pyplot import text
 import sumolib
 import traci
 from src.edgeStats import EdgeStatsCollector
 
-import src.util as util
 from src.vehicles.Bus import Bus
-from src.vehicleControl import followVehicleWithGUI
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -116,16 +113,23 @@ while step < SIM_STEPS:
 
     for bus in allBusses:
         if bus.isOnTrack():
+
+            try:
+                distance = bus.getNextTrafficLight().getDistanceFromVehicle()
+            except Exception as e:
+                distance = 51
+                if DEBUG:
+                    logging.debug(e)
+
             if (
-                bus.getNextTrafficLight().getDistanceFromVehicle() < 50
-                or bus.isJammed()
+                    distance < 50
+                    or bus.isJammed()
             ):
                 if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
                     tls = bus.getNextTrafficLight()
-                    tls.setToGreen()
-                    logging.debug("Changing light because bus is jammed!!")
-                    # if GUI:
-                    # followVehicleWithGUI(bus.getId(), VIEW_ID)
+                    if tls is not None:
+                        tls.setToGreen()
+                        logging.debug("Changing light because bus is jammed!!")
 
     logging.debug(f"---- finished step {step} ----")
     step += 1
