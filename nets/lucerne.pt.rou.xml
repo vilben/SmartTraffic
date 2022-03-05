@@ -7,32 +7,32 @@
     <vType id="bus" vClass="bus" />
     <vType id="tram" vClass="tram" />
 
-    <route id="busRouteHorwLuzern" edges="e46 e30 e32 e44 e42 e23 e21 e33 e35 e45 e45_t1 e45_t2 e45_t3" color="yellow" repeat="10" cycleTime="140">
+    <route id="busRouteHorwLuzern" edges="e46 e30 e32 e44 e42 e23 e21 e33 e35 e45 e45_t1 e45_t2 e45_t3" color="yellow" repeat="50" cycleTime="140">
         <stop busStop="Horw_busStop" duration="20.00" until="30.00" />
         <stop busStop="Helvetiaplatz_busStop" duration="20.00" until="30.00" />
         <stop busStop="Bahnhof_busStop" duration="20.00" until="90.00" />
     </route>
 
-    <route id="busRouteEmmenAu" edges="e48 e44 e42 e20 e16 e9 e4 e3_t1 e3_t2 e3_t3 e3 e10 e15 e19 e41 e43 e47 e47_t1 e47_t2 e47_t3" color="yellow" repeat="10" cycleTime="140">
+    <route id="busRouteEmmenAu" edges="e48 e44 e42 e20 e16 e9 e4 e3_t1 e3_t2 e3_t3 e3 e10 e15 e19 e41 e43 e47 e47_t1 e47_t2 e47_t3" color="yellow" repeat="50" cycleTime="140">
         <stop busStop="Au_busStop" duration="20.00" until="30.00" />
         <stop busStop="Bahnhof_busStop" duration="20.00" until="30.00" />
         <stop busStop="Schwanenplatz_busStop" duration="20.00" until="30.00" />
         <stop busStop="Emmen_busStop" duration="20.00" until="30.00" />
     </route>
 
-    <route id="busRouteWuerzenbachZug" edges="e18 e17_t1 e17_t2 e17_t3 e17 e19 e41 e27 e25 e34 e14 e2 e1_t1 e1_t2 e1_t3 e1 e13 e33 e26 e28 e42 e20" color="yellow" repeat="10" cycleTime="140">
+    <route id="busRouteWuerzenbachZug" edges="e18 e17_t1 e17_t2 e17_t3 e17 e19 e41 e27 e25 e34 e14 e2 e1_t1 e1_t2 e1_t3 e1 e13 e33 e26 e28 e42 e20" color="yellow" repeat="50" cycleTime="140">
         <stop busStop="Wuerzenbach_busStop" duration="20.00" until="30.00" />
         <stop busStop="Kasernenplatz_busStop" duration="20.00" until="30.00" />
         <stop busStop="Bahnhof_busStop" duration="20.00" until="30.00" />
     </route>
 
-    <route id="busRouteEbikonHorw" edges="e6 e5_t1 e5_t2 e5_t3 e5 e15 e19 e23 e21 e33 e35 e45 e45_t1 e45_t2 e45_t3 e46 e36 e34 e22 e24 e20 e16" color="yellow" repeat="10" cycleTime="140">
+    <route id="busRouteEbikonHorw" edges="e6 e5_t1 e5_t2 e5_t3 e5 e15 e19 e23 e21 e33 e35 e45 e45_t1 e45_t2 e45_t3 e46 e36 e34 e22 e24 e20 e16" color="yellow" repeat="50" cycleTime="140">
         <stop busStop="Ebikon_busStop" duration="20.00" until="30.00" />
         <stop busStop="Horw_busStop" duration="20.00" until="30.00" />
         <stop busStop="Schwanenplatz_busStop" duration="20.00" until="30.00" />
     </route>
 
-    <route id="busRouteZugHorw" edges="e2 e1_t1 e1_t2 e1_t3 e1 e13 e33 e35 e45 e45_t1 e45_t2 e45_t3 e46 e36 e34 e14" color="yellow" repeat="10" cycleTime="140">
+    <route id="busRouteZugHorw" edges="e2 e1_t1 e1_t2 e1_t3 e1 e13 e33 e35 e45 e45_t1 e45_t2 e45_t3 e46 e36 e34 e14" color="yellow" repeat="50" cycleTime="140">
         <stop busStop="Zug_busStop" duration="20.00" until="30.00" />
         <stop busStop="Kasernenplatz_busStop" duration="20.00" until="30.00" />
         <stop busStop="Horw_busStop" duration="20.00" until="30.00" />

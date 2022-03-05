@@ -15,6 +15,7 @@ class Bus(AbstractVehicle):
     def hasBusStopAheadOnSameLane(self):
 
         currentLane = self.getCurrentLane()
+
         nextBusStopLane = self.getNextBusStop().getLane()
 
         return currentLane == nextBusStopLane

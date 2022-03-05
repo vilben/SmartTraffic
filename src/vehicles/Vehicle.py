@@ -21,7 +21,7 @@ class AbstractVehicle:
     def getNextTrafficLight(self):
         nextTls = traci.vehicle.getNextTLS(self.__id)
         if len(nextTls) > 0:
-            return TrafficLight(traci.vehicle.getNextTLS(self.__id)[0])
+            return TrafficLight(nextTls[0])
 
     def getNextTrafficLightFromTraci(self):
         return traci.vehicle.getNextTLS(self.__id)

@@ -1,12 +1,13 @@
 import argparse
 import logging
 import time
-import uuid
 import sumolib
 import traci
 from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
+from src.trafficLight.BusLogicController import BusLogicController
+from src.trafficLight.JunctionMutexFactory import JunctionMutexFactory
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -45,6 +46,16 @@ parser.add_argument(
     type=str,
     help="Splunk HEC Collector",
 )
+parser.add_argument(
+    "--SPLUNKDATASETNAME",
+    type=str,
+    help="Splunk Dataset Name",
+)
+parser.add_argument(
+    "--DISTANCE",
+    type=int,
+    help="distance",
+)
 
 args = parser.parse_args()
 
@@ -52,14 +63,14 @@ SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 DIAGS = args.DIAGS
-TIMESTAMP = time.time()
-SIMID = f"{TIMESTAMP}_{str(uuid.uuid4())}"
 JSON = args.JSON
 SPLUNK = args.SPLUNK
+DISTANCE = args.DISTANCE
 SPLUNKTOKEN = args.SPLUNKTOKEN
 SPLUNKDEST = args.SPLUNKDEST
-
-logging.info(f"SIM-ID: {SIMID}")
+SPLUNKDATASETNAME = args.SPLUNKDATASETNAME
+TIMESTAMP = time.time()
+SIMID = f"{TIMESTAMP}_{SPLUNKDATASETNAME}"
 
 COLLECT_DATA = DIAGS or JSON or SPLUNK
 
@@ -81,8 +92,12 @@ else:
         level=logging.INFO,
     )
 
+logging.info(f"SIM-ID: {SIMID}")
+
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
+
+junctionMutexFactory = JunctionMutexFactory()
 
 allBusses = [
     Bus("busRouteHorwLuzern1"),
@@ -98,40 +113,26 @@ allBusses = [
     Bus("busRouteZugHorw1"),
     Bus("busRouteZugHorw2"),
 ]
+busLogicController = BusLogicController(junctionMutexFactory, DISTANCE)
+busLogicController.addBusRange(allBusses)
 
 step = 0
 if COLLECT_DATA:
     edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, "diags", "json", SIMID)
-
-    allEdges = traci.edge.getIDList()
-    for edgeId in allEdges:
-        if edgeId.startswith("e"):
-            edgeStatsCollector.registerEdge(edgeId)
+    edgeStatsCollector.registerAllRelevantEdges()
 
 while step < SIM_STEPS:
     traci.simulationStep()
+    busLogicController.executeLogic()
 
     if COLLECT_DATA:
         edgeStatsCollector.collect(step)
 
-    for bus in allBusses:
-        if bus.isOnTrack():
-
-            try:
-                distance = bus.getNextTrafficLight().getDistanceFromVehicle()
-            except Exception as e:
-                distance = 51
-                if DEBUG:
-                    logging.debug(e)
-
-            if distance < 50 or bus.isJammed():
-                if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
-                    tls = bus.getNextTrafficLight()
-                    if tls is not None:
-                        tls.setToGreen()
-                        logging.debug("Changing light because bus is jammed!!")
-
-    logging.debug(f"---- finished step {step} ----")
+    if step > 1000:
+        if traci.vehicle.getIDCount() < len(allBusses):
+            logging.info(f"Step: {step}, Simulation finished!")
+            logging.info(f"==================================================")
+            break
     step += 1
 
 if DIAGS:
