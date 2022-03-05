@@ -8,8 +8,7 @@ from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
 from src.trafficLight.BusLogicController import BusLogicController
-from trafficLight.JunctionFactory import JunctionMutexFactory
-from trafficLight.JunctionMutex import JunctionManager
+from src.trafficLight.JunctionFactory import JunctionMutexFactory
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False

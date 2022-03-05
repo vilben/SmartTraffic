@@ -1,6 +1,6 @@
 import logging
-import trafficLight.JunctionMutex
-from trafficLight.JunctionFactory import JunctionMutexFactory
+import src.trafficLight.JunctionMutex
+from src.trafficLight.JunctionFactory import JunctionMutexFactory
 
 
 class BusLogicController:
@@ -58,10 +58,8 @@ class BusLogicController:
                         logging.debug(f"Bus {bus.getId()} is approaching {tls.getId()}")
                         if tls is not None:
                             self.declareBusApproachingTls(bus, tls.getId())
-                            junctionMutex = (
-                                self.junctionMutexFactory.getJunctionMutex(
-                                    tls.getId()
-                                )
+                            junctionMutex = self.junctionMutexFactory.getJunctionMutex(
+                                tls.getId()
                             )
                             if junctionMutex.isOwner(
                                 bus.getId()

@@ -1,4 +1,4 @@
-from trafficLight.JunctionMutex import JunctionMutex
+from src.trafficLight.JunctionMutex import JunctionMutex
 
 
 class JunctionMutexFactory:
