@@ -1,18 +1,20 @@
-from distutils.command.config import config
 import yaml
 import random
 
-class TripGenerator:
 
+class TripGenerator:
     config_yaml = ""
     trip_types = []
 
     def __init__(self, config_yaml):
+        self.generate_random = None
+        self.edges = None
+        self.depart_max = None
+        self.depart_min = None
         self.config_yaml = config_yaml
 
     def print(self):
         print(self.config_yaml)
-
 
     def parse(self):
         self.depart_min = self.config_yaml['depart_min']
@@ -22,15 +24,14 @@ class TripGenerator:
 
         self.__parseTripTypes()
 
-
     def buildTrips(self):
 
-        if len(self.trip_types) == 0 :
-            self.parse(self)
+        if len(self.trip_types) == 0:
+            self.parse()
 
         total_trips = 0
 
-        if(self.generate_random > 0):
+        if self.generate_random > 0:
             total_trips += self.generate_random
 
         for trip in self.trip_types:
@@ -40,7 +41,6 @@ class TripGenerator:
         generated_trips = []
 
         for random_trip in range(0, self.generate_random):
-
             start_pos = random.randint(1, self.edges)
             end_pos = random.randint(1, self.edges)
 
@@ -53,7 +53,6 @@ class TripGenerator:
         for trip_type in self.trip_types:
 
             for trip in range(0, trip_type.count):
-
                 slot_pos = random.randint(1, len(available_slots) - 1)
                 slot = available_slots[slot_pos]
                 del available_slots[slot_pos]
@@ -65,11 +64,11 @@ class TripGenerator:
         for trin in generated_trips:
             trin.print()
 
-
     def __parseTripTypes(self):
 
         for trip in self.config_yaml['trips']:
             self.trip_types.append(TripType(trip))
+
 
 class Trip:
     def __init__(self, from_edge, to_edge, depart, id):
@@ -82,7 +81,8 @@ class Trip:
         return self.id
 
     def print(self):
-        print('<trip id="{0}" depart="{1}" from="e{2}" to="e{3}"/>'.format(self.id, self.depart, self.from_edge, self.to_edge))
+        print('<trip id="{0}" depart="{1}" from="e{2}" to="e{3}"/>'.format(self.id, self.depart, self.from_edge,
+                                                                           self.to_edge))
 
 
 class TripType:
@@ -94,8 +94,7 @@ class TripType:
 
 
 if __name__ == "__main__":
-
-    config_file  = "exampleTrips.yaml"
+    config_file = "exampleTrips.yaml"
 
     with open(config_file, 'r') as file:
         docs = yaml.safe_load(file)
