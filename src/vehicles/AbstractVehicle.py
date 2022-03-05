@@ -1,3 +1,4 @@
+from lib2to3.pgen2.token import ISNONTERMINAL
 import traci
 
 from src.net.Net import Net
@@ -14,6 +15,9 @@ class AbstractVehicle:
     def getCurrentPosition(self):
         return traci.vehicle.getPosition(self.__id)
 
+    def getAcceleration(self):
+        return traci.vehicle.getAcceleration(self.__id)
+
     def getEmissions(self):
         return traci.vehicle.getCO2Emission(self.__id)
 
@@ -22,6 +26,38 @@ class AbstractVehicle:
 
     def isOnTrack(self):
         return isVehicleKnown(self.getId())
+
+    def isStopped(self):
+        return self.getAcceleration() == 0 and self.getSpeed() == 0
+
+    def isBreaking(self):
+        return self.getAcceleration() < 0
+
+    def isJammed(self):
+
+        if not self.isStopped():
+            return False
+
+        follower = traci.vehicle.getFollower(self.__id)
+        followerObject = AbstractVehicle
+        leaderObject =  AbstractVehicle
+
+        if follower:
+            followerId = follower[0]
+            followerObject = AbstractVehicle(followerId)
+        leader = traci.vehicle.getLeader(self.__id)
+        if leader:
+            leaderId = leader[0]
+            leaderObject = AbstractVehicle(leaderId)
+
+        if followerObject.isOnTrack() and leaderObject.isOnStrack():
+            return  followerObject.isStopped() and leaderObject.isStopped()
+        
+        if followerObject.isOnTrack():
+            return  followerObject.isStopped()
+
+        if leaderObject.isOnTrack():
+            return  leaderObject.isStopped()
 
     def getRoute(self):
         try:
