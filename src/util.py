@@ -126,7 +126,7 @@ def getTotalVehicleStats(vehStats):
 
 def logAllTlsStates():
     for tls_id in traci.trafficlight.getIDList():
-        logging.log(f"{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}")
+        logging.info(f"{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}")
 
 
 def getRandomColor():

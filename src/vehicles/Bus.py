@@ -5,4 +5,4 @@ from src.vehicles.Vehicle import AbstractVehicle
 class Bus(AbstractVehicle):
 
     def someAdditionalFunctionForBusses(self):
-        logging.log("yeet")
+        logging.debug("yeet")

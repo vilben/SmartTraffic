@@ -1,14 +1,62 @@
 <edges>
     <edge id="e1" from="1" to="7" priority="2" numLanes="2" speed="40.0" />
+    <edge id="e1_t1" from="1" to="33" priority="2" numLanes="2" speed="40.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e1_t2" from="33" to="34" priority="2" numLanes="2" speed="40.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e1_t3" from="34" to="1" priority="2" numLanes="2" speed="40.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e2" from="7" to="1" priority="2" numLanes="2" speed="40.0" />
 
     <edge id="e3" from="2" to="5" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
+    <edge id="e3_t1" from="2" to="21" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e3_t2" from="21" to="22" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e3_t3" from="22" to="2" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e4" from="5" to="2" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
 
     <edge id="e5" from="3" to="6" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
+    <edge id="e5_t1" from="3" to="31" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e5_t2" from="31" to="32" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e5_t3" from="32" to="3" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e6" from="6" to="3" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
-    
+
     <edge id="e7" from="4" to="5" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
+    <edge id="e7_t1" from="4" to="23" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e7_t2" from="23" to="24" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e7_t3" from="24" to="4" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e8" from="5" to="4" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
 
     <edge id="e9" from="6" to="5" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
@@ -24,18 +72,30 @@
     <edge id="e16" from="8" to="6" priority="2" numLanes="2" speed="20.0" sidewalkWidth="1" />
 
     <edge id="e17" from="9" to="8" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
+    <edge id="e17_t1" from="9" to="29" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e17_t2" from="29" to="30" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e17_t3" from="30" to="9" priority="2" numLanes="2" speed="30.0">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e18" from="8" to="9" priority="2" numLanes="2" speed="30.0" sidewalkWidth="1" />
-    
+
     <edge id="e19" from="8" to="12" priority="3" numLanes="2" speed="20.0" sidewalkWidth="2" />
     <edge id="e20" from="12" to="8" priority="3" numLanes="2" speed="20.0" sidewalkWidth="2" />
-    
+
     <edge id="e21" from="11" to="10" priority="2" numLanes="2" speed="20.0" sidewalkWidth="2" />
     <edge id="e22" from="10" to="11" priority="2" numLanes="2" speed="20.0" sidewalkWidth="2" />
 
     <edge id="e23" from="12" to="11" priority="2" numLanes="2" speed="20.0" sidewalkWidth="2" />
     <edge id="e24" from="11" to="12" priority="2" numLanes="2" speed="20.0" sidewalkWidth="2" />
 
-    <edge id="e25" from="14" to="13" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1"/>
+    <edge id="e25" from="14" to="13" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
     <edge id="e26" from="13" to="14" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
 
     <edge id="e27" from="15" to="14" priority="1" numLanes="1" speed="14.0" sidewalkWidth="1" />
@@ -66,8 +126,32 @@
     <edge id="e44" from="18" to="15" priority="2" numLanes="2" speed="20.0" sidewalkWidth="2" />
 
     <edge id="e45" from="16" to="19" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2" />
+    <edge id="e45_t1" from="19" to="25" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e45_t2" from="25" to="26" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e45_t3" from="26" to="19" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e46" from="19" to="16" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2" />
 
     <edge id="e47" from="18" to="20" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2" />
+    <edge id="e47_t1" from="20" to="27" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e47_t2" from="27" to="28" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
+    <edge id="e47_t3" from="28" to="20" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2">
+        <lane id="0" allow="bus" index="0" />
+        <lane id="1" allow="bus" index="1" />
+    </edge>
     <edge id="e48" from="20" to="18" priority="3" numLanes="2" speed="30.0" sidewalkWidth="2" />
 </edges>
