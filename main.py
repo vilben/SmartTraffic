@@ -95,22 +95,22 @@ if STATS:
     totalBusStats = util.getTotalVehicleStats(busStats.values())
 
     # print vehicle statistics
-    print(f"Vehicle statistics for {len(vehStats)} vehicles (avg, tot) :")
-    print(
+    logging.info(f"Vehicle statistics for {len(vehStats)} vehicles (avg, tot) :")
+    logging.info(
         "\n".join(["{}: {}".format(key, value) for key, value in avgVehStats.items()])
     )
-    print("\n")
-    print(
+    logging.info("\n")
+    logging.info(
         "\n".join(["{}: {}".format(key, value) for key, value in totalVehStats.items()])
     )
-    print("\n")
-    print("\n")
-    print(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
-    print(
+    logging.info("\n")
+    logging.info("\n")
+    logging.info(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
+    logging.info(
         "\n".join(["{}: {}".format(key, value) for key, value in avgBusStats.items()])
     )
-    print("\n")
-    print(
+    logging.info("\n")
+    logging.info(
         "\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()])
     )
 
