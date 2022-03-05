@@ -28,7 +28,7 @@
     <vehicle id="8" depart="8.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="9" depart="9.00" type="trailer">
+    <vehicle id="9" depart="9.00" type="normal_car">
         <route edges="e34 e22 e24 e41 e27 e38 e21 e33" />
     </vehicle>
     <vehicle id="10" depart="10.00" type="normal_car">
@@ -73,7 +73,7 @@
     <vehicle id="26" depart="26.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="27" depart="27.00" type="sporty_car">
+    <vehicle id="27" depart="27.00" type="normal_car">
         <route edges="e27 e39 e32 e44 e42" />
     </vehicle>
     <vehicle id="29" depart="29.00" type="normal_car">
@@ -94,7 +94,7 @@
     <vehicle id="37" depart="37.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="38" depart="38.00" type="normal_car">
+    <vehicle id="38" depart="38.00" type="sporty_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
     <vehicle id="39" depart="39.00" type="normal_car">
@@ -115,10 +115,10 @@
     <vehicle id="44" depart="44.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="45" depart="45.00" type="sporty_car">
+    <vehicle id="45" depart="45.00" type="normal_car">
         <route edges="e36 e34 e22 e24 e20 e16" />
     </vehicle>
-    <vehicle id="46" depart="46.00" type="sporty_car">
+    <vehicle id="46" depart="46.00" type="normal_car">
         <route edges="e44 e42 e23 e37" />
     </vehicle>
     <vehicle id="48" depart="48.00" type="normal_car">
@@ -130,7 +130,7 @@
     <vehicle id="50" depart="50.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="51" depart="51.00" type="sporty_car">
+    <vehicle id="51" depart="51.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="52" depart="52.00" type="normal_car">
@@ -145,10 +145,10 @@
     <vehicle id="56" depart="56.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="57" depart="57.00" type="normal_car">
+    <vehicle id="57" depart="57.00" type="sporty_car">
         <route edges="e34 e22 e24 e20 e16" />
     </vehicle>
-    <vehicle id="58" depart="58.00" type="sporty_car">
+    <vehicle id="58" depart="58.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="59" depart="59.00" type="normal_car">
@@ -157,7 +157,7 @@
     <vehicle id="60" depart="60.00" type="normal_car">
         <route edges="e17 e19 e41 e43" />
     </vehicle>
-    <vehicle id="62" depart="62.00" type="sporty_car">
+    <vehicle id="62" depart="62.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="63" depart="63.00" type="normal_car">
@@ -190,19 +190,19 @@
     <vehicle id="76" depart="76.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="77" depart="77.00" type="sporty_car">
+    <vehicle id="77" depart="77.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="78" depart="78.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="79" depart="79.00" type="sporty_car">
+    <vehicle id="79" depart="79.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="80" depart="80.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="81" depart="81.00" type="normal_car">
+    <vehicle id="81" depart="81.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="83" depart="83.00" type="normal_car">
@@ -217,7 +217,7 @@
     <vehicle id="87" depart="87.00" type="normal_car">
         <route edges="e38 e21 e33 e35" />
     </vehicle>
-    <vehicle id="90" depart="90.00" type="normal_car">
+    <vehicle id="90" depart="90.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="91" depart="91.00" type="normal_car">
@@ -229,49 +229,49 @@
     <vehicle id="95" depart="95.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="97" depart="97.00" type="coach">
+    <vehicle id="97" depart="97.00" type="normal_car">
         <route edges="e24 e41 e43 e31 e29" />
     </vehicle>
-    <vehicle id="99" depart="99.00" type="normal_car">
+    <vehicle id="99" depart="99.00" type="sporty_car">
         <route edges="e34 e14 e12 e8" />
     </vehicle>
     <vehicle id="101" depart="101.00" type="normal_car">
         <route edges="e37 e39 e32 e47" />
     </vehicle>
-    <vehicle id="102" depart="102.00" type="normal_car">
+    <vehicle id="102" depart="102.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="103" depart="103.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="104" depart="104.00" type="normal_car">
+    <vehicle id="104" depart="104.00" type="sporty_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="105" depart="105.00" type="sporty_car">
+    <vehicle id="105" depart="105.00" type="normal_car">
         <route edges="e22 e37 e25 e34 e14 e12 e10 e15" />
     </vehicle>
-    <vehicle id="106" depart="106.00" type="trailer">
+    <vehicle id="106" depart="106.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="108" depart="108.00" type="sporty_car">
+    <vehicle id="108" depart="108.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="109" depart="109.00" type="sporty_car">
+    <vehicle id="109" depart="109.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="110" depart="110.00" type="normal_car">
+    <vehicle id="110" depart="110.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="111" depart="111.00" type="normal_car">
         <route edges="e21 e33 e26 e28 e42 e23 e37" />
     </vehicle>
-    <vehicle id="112" depart="112.00" type="sporty_car">
+    <vehicle id="112" depart="112.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="113" depart="113.00" type="normal_car">
+    <vehicle id="113" depart="113.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="115" depart="115.00" type="sporty_car">
+    <vehicle id="115" depart="115.00" type="normal_car">
         <route edges="e29 e36 e34 e22 e37 e25" />
     </vehicle>
     <vehicle id="116" depart="116.00" type="normal_car">
@@ -280,13 +280,13 @@
     <vehicle id="118" depart="118.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="119" depart="119.00" type="normal_car">
+    <vehicle id="119" depart="119.00" type="coach">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="121" depart="121.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="122" depart="122.00" type="sporty_car">
+    <vehicle id="122" depart="122.00" type="normal_car">
         <route edges="e5 e9 e8" />
     </vehicle>
     <vehicle id="123" depart="123.00" type="normal_car">
@@ -295,13 +295,13 @@
     <vehicle id="124" depart="124.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="125" depart="125.00" type="normal_car">
+    <vehicle id="125" depart="125.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="126" depart="126.00" type="sporty_car">
+    <vehicle id="126" depart="126.00" type="normal_car">
         <route edges="e16 e9 e11 e13" />
     </vehicle>
-    <vehicle id="127" depart="127.00" type="normal_car">
+    <vehicle id="127" depart="127.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="129" depart="129.00" type="coach">
@@ -310,7 +310,7 @@
     <vehicle id="130" depart="130.00" type="normal_car">
         <route edges="e37 e25 e34 e14" />
     </vehicle>
-    <vehicle id="131" depart="131.00" type="sporty_car">
+    <vehicle id="131" depart="131.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="132" depart="132.00" type="normal_car">
@@ -319,7 +319,7 @@
     <vehicle id="133" depart="133.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="134" depart="134.00" type="normal_car">
+    <vehicle id="134" depart="134.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="135" depart="135.00" type="normal_car">
@@ -328,10 +328,10 @@
     <vehicle id="136" depart="136.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="137" depart="137.00" type="sporty_car">
+    <vehicle id="137" depart="137.00" type="normal_car">
         <route edges="e43 e31 e40 e38 e24 e20 e16 e9 e11" />
     </vehicle>
-    <vehicle id="138" depart="138.00" type="normal_car">
+    <vehicle id="138" depart="138.00" type="sporty_car">
         <route edges="e24 e41 e27 e25 e35 e30" />
     </vehicle>
     <vehicle id="139" depart="139.00" type="normal_car">
@@ -343,7 +343,7 @@
     <vehicle id="141" depart="141.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="142" depart="142.00" type="normal_car">
+    <vehicle id="142" depart="142.00" type="sporty_car">
         <route edges="e13 e33 e26 e28 e42 e23" />
     </vehicle>
     <vehicle id="143" depart="143.00" type="normal_car">
@@ -355,10 +355,10 @@
     <vehicle id="145" depart="145.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="146" depart="146.00" type="normal_car">
+    <vehicle id="146" depart="146.00" type="coach">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="147" depart="147.00" type="sporty_car">
+    <vehicle id="147" depart="147.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="149" depart="149.00" type="normal_car">
@@ -370,16 +370,16 @@
     <vehicle id="151" depart="151.00" type="normal_car">
         <route edges="e33 e26 e38 e21 e14 e12 e10 e15 e19" />
     </vehicle>
-    <vehicle id="152" depart="152.00" type="trailer">
+    <vehicle id="152" depart="152.00" type="normal_car">
         <route edges="e9 e11 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="153" depart="153.00" type="sporty_car">
+    <vehicle id="153" depart="153.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="155" depart="155.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="157" depart="157.00" type="sporty_car">
+    <vehicle id="157" depart="157.00" type="normal_car">
         <route edges="e20 e16 e9 e11 e13 e22 e37 e25 e34 e14 e12 e10" />
     </vehicle>
     <vehicle id="158" depart="158.00" type="normal_car">
@@ -406,7 +406,7 @@
     <vehicle id="170" depart="170.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="171" depart="171.00" type="normal_car">
+    <vehicle id="171" depart="171.00" type="coach">
         <route edges="e12 e10 e15 e19 e41 e27 e38 e24 e20 e16" />
     </vehicle>
     <vehicle id="172" depart="172.00" type="normal_car">
@@ -421,7 +421,7 @@
     <vehicle id="175" depart="175.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="176" depart="176.00" type="normal_car">
+    <vehicle id="176" depart="176.00" type="coach">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="177" depart="177.00" type="normal_car">
@@ -433,7 +433,7 @@
     <vehicle id="179" depart="179.00" type="normal_car">
         <route edges="e13 e22 e37 e25 e34 e14 e2" />
     </vehicle>
-    <vehicle id="180" depart="180.00" type="normal_car">
+    <vehicle id="180" depart="180.00" type="coach">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="181" depart="181.00" type="normal_car">
@@ -442,10 +442,10 @@
     <vehicle id="183" depart="183.00" type="normal_car">
         <route edges="e39 e29 e36 e26 e38" />
     </vehicle>
-    <vehicle id="184" depart="184.00" type="sporty_car">
+    <vehicle id="184" depart="184.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="185" depart="185.00" type="normal_car">
+    <vehicle id="185" depart="185.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="186" depart="186.00" type="normal_car">
@@ -457,13 +457,13 @@
     <vehicle id="188" depart="188.00" type="normal_car">
         <route edges="e23 e37 e39 e32 e44" />
     </vehicle>
-    <vehicle id="189" depart="189.00" type="normal_car">
+    <vehicle id="189" depart="189.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="192" depart="192.00" type="sporty_car">
+    <vehicle id="192" depart="192.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="195" depart="195.00" type="normal_car">
+    <vehicle id="195" depart="195.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="196" depart="196.00" type="normal_car">
@@ -475,13 +475,13 @@
     <vehicle id="198" depart="198.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="200" depart="200.00" type="normal_car">
+    <vehicle id="200" depart="200.00" type="sporty_car">
         <route edges="e36" />
     </vehicle>
     <vehicle id="201" depart="201.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="202" depart="202.00" type="sporty_car">
+    <vehicle id="202" depart="202.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="203" depart="203.00" type="normal_car">
@@ -490,10 +490,10 @@
     <vehicle id="205" depart="205.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="206" depart="206.00" type="coach">
+    <vehicle id="206" depart="206.00" type="normal_car">
         <route edges="e33 e26 e38 e21 e14 e12" />
     </vehicle>
-    <vehicle id="208" depart="208.00" type="sporty_car">
+    <vehicle id="208" depart="208.00" type="normal_car">
         <route edges="e33 e35 e30 e32 e44 e27" />
     </vehicle>
     <vehicle id="209" depart="209.00" type="normal_car">
@@ -502,7 +502,7 @@
     <vehicle id="210" depart="210.00" type="normal_car">
         <route edges="e22 e24 e41 e27 e38" />
     </vehicle>
-    <vehicle id="211" depart="211.00" type="normal_car">
+    <vehicle id="211" depart="211.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="212" depart="212.00" type="normal_car">
@@ -532,7 +532,7 @@
     <vehicle id="225" depart="225.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="226" depart="226.00" type="sporty_car">
+    <vehicle id="226" depart="226.00" type="coach">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="227" depart="227.00" type="normal_car">
@@ -547,7 +547,7 @@
     <vehicle id="234" depart="234.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="235" depart="235.00" type="normal_car">
+    <vehicle id="235" depart="235.00" type="sporty_car">
         <route edges="e14 e12 e10 e15 e19 e41 e27" />
     </vehicle>
     <vehicle id="236" depart="236.00" type="normal_car">
@@ -562,7 +562,7 @@
     <vehicle id="239" depart="239.00" type="normal_car">
         <route edges="e11 e13 e22" />
     </vehicle>
-    <vehicle id="240" depart="240.00" type="normal_car">
+    <vehicle id="240" depart="240.00" type="sporty_car">
         <route edges="e40 e38 e21 e33" />
     </vehicle>
     <vehicle id="242" depart="242.00" type="normal_car">
@@ -571,7 +571,7 @@
     <vehicle id="243" depart="243.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="244" depart="244.00" type="normal_car">
+    <vehicle id="244" depart="244.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="246" depart="246.00" type="normal_car">
@@ -604,10 +604,10 @@
     <vehicle id="258" depart="258.00" type="normal_car">
         <route edges="e33 e26 e39" />
     </vehicle>
-    <vehicle id="260" depart="260.00" type="normal_car">
+    <vehicle id="260" depart="260.00" type="coach">
         <route edges="e35 e30 e40 e38 e24 e41" />
     </vehicle>
-    <vehicle id="261" depart="261.00" type="normal_car">
+    <vehicle id="261" depart="261.00" type="coach">
         <route edges="e25 e34 e22 e24 e41 e43" />
     </vehicle>
     <vehicle id="262" depart="262.00" type="normal_car">
@@ -619,7 +619,7 @@
     <vehicle id="265" depart="265.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="266" depart="266.00" type="normal_car">
+    <vehicle id="266" depart="266.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="269" depart="269.00" type="normal_car">
@@ -631,10 +631,10 @@
     <vehicle id="271" depart="271.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="272" depart="272.00" type="sporty_car">
+    <vehicle id="272" depart="272.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="273" depart="273.00" type="normal_car">
+    <vehicle id="273" depart="273.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="274" depart="274.00" type="normal_car">
@@ -661,19 +661,19 @@
     <vehicle id="283" depart="283.00" type="normal_car">
         <route edges="e34 e22 e24 e41 e43 e31" />
     </vehicle>
-    <vehicle id="285" depart="285.00" type="sporty_car">
+    <vehicle id="285" depart="285.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="286" depart="286.00" type="trailer">
+    <vehicle id="286" depart="286.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="287" depart="287.00" type="normal_car">
+    <vehicle id="287" depart="287.00" type="trailer">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="289" depart="289.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="290" depart="290.00" type="normal_car">
+    <vehicle id="290" depart="290.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="291" depart="291.00" type="normal_car">
@@ -682,7 +682,7 @@
     <vehicle id="292" depart="292.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="293" depart="293.00" type="normal_car">
+    <vehicle id="293" depart="293.00" type="coach">
         <route edges="e19 e41 e27 e25 e34" />
     </vehicle>
     <vehicle id="294" depart="294.00" type="normal_car">
@@ -694,13 +694,13 @@
     <vehicle id="297" depart="297.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="299" depart="299.00" type="sporty_car">
+    <vehicle id="299" depart="299.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="300" depart="300.00" type="normal_car">
         <route edges="e36 e34" />
     </vehicle>
-    <vehicle id="301" depart="301.00" type="normal_car">
+    <vehicle id="301" depart="301.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="302" depart="302.00" type="normal_car">
@@ -721,7 +721,7 @@
     <vehicle id="308" depart="308.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="309" depart="309.00" type="sporty_car">
+    <vehicle id="309" depart="309.00" type="trailer">
         <route edges="e16 e9 e11 e13 e33 e26 e38 e21" />
     </vehicle>
     <vehicle id="310" depart="310.00" type="normal_car">
@@ -733,7 +733,7 @@
     <vehicle id="314" depart="314.00" type="normal_car">
         <route edges="e5 e15 e19 e23 e21" />
     </vehicle>
-    <vehicle id="315" depart="315.00" type="normal_car">
+    <vehicle id="315" depart="315.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="316" depart="316.00" type="normal_car">
@@ -748,7 +748,7 @@
     <vehicle id="321" depart="321.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="324" depart="324.00" type="normal_car">
+    <vehicle id="324" depart="324.00" type="sporty_car">
         <route edges="e1 e13 e22 e24 e41 e43 e31" />
     </vehicle>
     <vehicle id="325" depart="325.00" type="normal_car">
@@ -772,10 +772,10 @@
     <vehicle id="333" depart="333.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="334" depart="334.00" type="coach">
+    <vehicle id="334" depart="334.00" type="normal_car">
         <route edges="e36 e34 e22 e24 e20 e16 e9 e11 e13" />
     </vehicle>
-    <vehicle id="336" depart="336.00" type="normal_car">
+    <vehicle id="336" depart="336.00" type="sporty_car">
         <route edges="e26 e39 e29 e36 e34" />
     </vehicle>
     <vehicle id="337" depart="337.00" type="normal_car">
@@ -790,7 +790,7 @@
     <vehicle id="340" depart="340.00" type="normal_car">
         <route edges="e33 e35 e30" />
     </vehicle>
-    <vehicle id="341" depart="341.00" type="normal_car">
+    <vehicle id="341" depart="341.00" type="trailer">
         <route edges="e29 e36 e34 e22 e37 e25" />
     </vehicle>
     <vehicle id="343" depart="343.00" type="normal_car">
@@ -805,13 +805,13 @@
     <vehicle id="347" depart="347.00" type="normal_car">
         <route edges="e38 e21 e33 e35 e30 e32 e44" />
     </vehicle>
-    <vehicle id="348" depart="348.00" type="normal_car">
+    <vehicle id="348" depart="348.00" type="sporty_car">
         <route edges="e46 e36 e34 e22 e24 e41" />
     </vehicle>
-    <vehicle id="349" depart="349.00" type="sporty_car">
+    <vehicle id="349" depart="349.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="350" depart="350.00" type="sporty_car">
+    <vehicle id="350" depart="350.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="353" depart="353.00" type="normal_car">
@@ -829,7 +829,7 @@
     <vehicle id="357" depart="357.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="358" depart="358.00" type="trailer">
+    <vehicle id="358" depart="358.00" type="normal_car">
         <route edges="e48 e44 e27" />
     </vehicle>
     <vehicle id="360" depart="360.00" type="normal_car">
@@ -847,10 +847,10 @@
     <vehicle id="364" depart="364.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="365" depart="365.00" type="sporty_car">
+    <vehicle id="365" depart="365.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="366" depart="366.00" type="sporty_car">
+    <vehicle id="366" depart="366.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="367" depart="367.00" type="normal_car">
@@ -859,13 +859,13 @@
     <vehicle id="368" depart="368.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="369" depart="369.00" type="normal_car">
+    <vehicle id="369" depart="369.00" type="sporty_car">
         <route edges="e34 e22 e37 e39" />
     </vehicle>
     <vehicle id="370" depart="370.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="371" depart="371.00" type="coach">
+    <vehicle id="371" depart="371.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="372" depart="372.00" type="normal_car">
@@ -883,7 +883,7 @@
     <vehicle id="377" depart="377.00" type="normal_car">
         <route edges="e28 e42 e23 e21 e14 e12 e8" />
     </vehicle>
-    <vehicle id="378" depart="378.00" type="normal_car">
+    <vehicle id="378" depart="378.00" type="sporty_car">
         <route edges="e1 e13 e22 e37 e25 e34" />
     </vehicle>
     <vehicle id="380" depart="380.00" type="normal_car">
@@ -892,19 +892,19 @@
     <vehicle id="381" depart="381.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="383" depart="383.00" type="normal_car">
+    <vehicle id="383" depart="383.00" type="coach">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="384" depart="384.00" type="normal_car">
         <route edges="e19 e41 e27" />
     </vehicle>
-    <vehicle id="385" depart="385.00" type="normal_car">
+    <vehicle id="385" depart="385.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="387" depart="387.00" type="normal_car">
+    <vehicle id="387" depart="387.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="388" depart="388.00" type="normal_car">
+    <vehicle id="388" depart="388.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="390" depart="390.00" type="normal_car">
@@ -919,7 +919,7 @@
     <vehicle id="395" depart="395.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="396" depart="396.00" type="normal_car">
+    <vehicle id="396" depart="396.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="397" depart="397.00" type="sporty_car">
@@ -940,7 +940,7 @@
     <vehicle id="405" depart="405.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="406" depart="406.00" type="sporty_car">
+    <vehicle id="406" depart="406.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="407" depart="407.00" type="normal_car">
@@ -949,19 +949,19 @@
     <vehicle id="408" depart="408.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="409" depart="409.00" type="sporty_car">
+    <vehicle id="409" depart="409.00" type="normal_car">
         <route edges="e7 e4" />
     </vehicle>
-    <vehicle id="411" depart="411.00" type="normal_car">
+    <vehicle id="411" depart="411.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="412" depart="412.00" type="normal_car">
+    <vehicle id="412" depart="412.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="413" depart="413.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="414" depart="414.00" type="trailer">
+    <vehicle id="414" depart="414.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="415" depart="415.00" type="normal_car">
@@ -976,13 +976,13 @@
     <vehicle id="418" depart="418.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="420" depart="420.00" type="sporty_car">
+    <vehicle id="420" depart="420.00" type="normal_car">
         <route edges="e5 e9 e11" />
     </vehicle>
     <vehicle id="421" depart="421.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="422" depart="422.00" type="normal_car">
+    <vehicle id="422" depart="422.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="423" depart="423.00" type="normal_car">
@@ -991,7 +991,7 @@
     <vehicle id="425" depart="425.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="427" depart="427.00" type="coach">
+    <vehicle id="427" depart="427.00" type="sporty_car">
         <route edges="e27 e39 e32" />
     </vehicle>
     <vehicle id="428" depart="428.00" type="normal_car">
@@ -1003,19 +1003,19 @@
     <vehicle id="430" depart="430.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="431" depart="431.00" type="normal_car">
+    <vehicle id="431" depart="431.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="432" depart="432.00" type="trailer">
+    <vehicle id="432" depart="432.00" type="coach">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="433" depart="433.00" type="sporty_car">
+    <vehicle id="433" depart="433.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="434" depart="434.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="436" depart="436.00" type="sporty_car">
+    <vehicle id="436" depart="436.00" type="coach">
         <route edges="e23 e21 e14" />
     </vehicle>
     <vehicle id="437" depart="437.00" type="normal_car">
@@ -1030,10 +1030,10 @@
     <vehicle id="442" depart="442.00" type="normal_car">
         <route edges="e31 e40 e28 e43" />
     </vehicle>
-    <vehicle id="443" depart="443.00" type="sporty_car">
+    <vehicle id="443" depart="443.00" type="normal_car">
         <route edges="e30 e40 e38 e21 e14 e12 e10 e15" />
     </vehicle>
-    <vehicle id="444" depart="444.00" type="normal_car">
+    <vehicle id="444" depart="444.00" type="coach">
         <route edges="e40 e25 e34" />
     </vehicle>
     <vehicle id="445" depart="445.00" type="normal_car">
@@ -1045,7 +1045,7 @@
     <vehicle id="448" depart="448.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="449" depart="449.00" type="sporty_car">
+    <vehicle id="449" depart="449.00" type="coach">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="450" depart="450.00" type="normal_car">
@@ -1084,7 +1084,7 @@
     <vehicle id="467" depart="467.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="468" depart="468.00" type="normal_car">
+    <vehicle id="468" depart="468.00" type="sporty_car">
         <route edges="e24 e20 e16 e9 e4" />
     </vehicle>
     <vehicle id="469" depart="469.00" type="normal_car">
@@ -1108,22 +1108,22 @@
     <vehicle id="476" depart="476.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="477" depart="477.00" type="coach">
+    <vehicle id="477" depart="477.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="478" depart="478.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="480" depart="480.00" type="normal_car">
+    <vehicle id="480" depart="480.00" type="coach">
         <route edges="e43 e31 e29 e36 e34 e14 e12" />
     </vehicle>
-    <vehicle id="481" depart="481.00" type="normal_car">
+    <vehicle id="481" depart="481.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="482" depart="482.00" type="normal_car">
+    <vehicle id="482" depart="482.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="486" depart="486.00" type="coach">
+    <vehicle id="486" depart="486.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="487" depart="487.00" type="normal_car">
@@ -1171,10 +1171,10 @@
     <vehicle id="505" depart="505.00" type="normal_car">
         <route edges="e44 e42 e23 e21 e14 e2" />
     </vehicle>
-    <vehicle id="506" depart="506.00" type="normal_car">
+    <vehicle id="506" depart="506.00" type="coach">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="507" depart="507.00" type="normal_car">
+    <vehicle id="507" depart="507.00" type="coach">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="508" depart="508.00" type="normal_car">
@@ -1183,7 +1183,7 @@
     <vehicle id="509" depart="509.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="510" depart="510.00" type="sporty_car">
+    <vehicle id="510" depart="510.00" type="coach">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="511" depart="511.00" type="normal_car">
@@ -1195,7 +1195,7 @@
     <vehicle id="515" depart="515.00" type="normal_car">
         <route edges="e32 e44 e27 e39 e29" />
     </vehicle>
-    <vehicle id="516" depart="516.00" type="normal_car">
+    <vehicle id="516" depart="516.00" type="sporty_car">
         <route edges="e28 e43 e31 e29" />
     </vehicle>
     <vehicle id="519" depart="519.00" type="normal_car">
@@ -1204,7 +1204,7 @@
     <vehicle id="521" depart="521.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="522" depart="522.00" type="sporty_car">
+    <vehicle id="522" depart="522.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="524" depart="524.00" type="normal_car">
@@ -1219,13 +1219,13 @@
     <vehicle id="528" depart="528.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="529" depart="529.00" type="sporty_car">
+    <vehicle id="529" depart="529.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="530" depart="530.00" type="normal_car">
         <route edges="e15 e19 e23 e37 e28 e42" />
     </vehicle>
-    <vehicle id="531" depart="531.00" type="sporty_car">
+    <vehicle id="531" depart="531.00" type="normal_car">
         <route edges="e24 e41 e27 e38" />
     </vehicle>
     <vehicle id="532" depart="532.00" type="normal_car">
@@ -1246,10 +1246,10 @@
     <vehicle id="539" depart="539.00" type="normal_car">
         <route edges="e29 e36 e34" />
     </vehicle>
-    <vehicle id="540" depart="540.00" type="normal_car">
+    <vehicle id="540" depart="540.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="541" depart="541.00" type="coach">
+    <vehicle id="541" depart="541.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="542" depart="542.00" type="normal_car">
@@ -1261,10 +1261,10 @@
     <vehicle id="546" depart="546.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="547" depart="547.00" type="normal_car">
+    <vehicle id="547" depart="547.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="548" depart="548.00" type="normal_car">
+    <vehicle id="548" depart="548.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="549" depart="549.00" type="normal_car">
@@ -1273,13 +1273,13 @@
     <vehicle id="551" depart="551.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="552" depart="552.00" type="normal_car">
+    <vehicle id="552" depart="552.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="553" depart="553.00" type="normal_car">
         <route edges="e36 e26 e28 e43 e47" />
     </vehicle>
-    <vehicle id="554" depart="554.00" type="normal_car">
+    <vehicle id="554" depart="554.00" type="sporty_car">
         <route edges="e35 e30 e32 e44 e42 e20 e16 e9 e11" />
     </vehicle>
     <vehicle id="556" depart="556.00" type="normal_car">
@@ -1291,10 +1291,10 @@
     <vehicle id="558" depart="558.00" type="normal_car">
         <route edges="e31 e40 e28 e43" />
     </vehicle>
-    <vehicle id="559" depart="559.00" type="coach">
+    <vehicle id="559" depart="559.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="560" depart="560.00" type="sporty_car">
+    <vehicle id="560" depart="560.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
     <vehicle id="561" depart="561.00" type="normal_car">
@@ -1303,16 +1303,16 @@
     <vehicle id="562" depart="562.00" type="normal_car">
         <route edges="e23" />
     </vehicle>
-    <vehicle id="563" depart="563.00" type="sporty_car">
+    <vehicle id="563" depart="563.00" type="normal_car">
         <route edges="e39 e29 e36 e34 e14 e12 e10" />
     </vehicle>
     <vehicle id="564" depart="564.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="565" depart="565.00" type="normal_car">
+    <vehicle id="565" depart="565.00" type="sporty_car">
         <route edges="e13 e22 e24 e20" />
     </vehicle>
-    <vehicle id="568" depart="568.00" type="normal_car">
+    <vehicle id="568" depart="568.00" type="coach">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="569" depart="569.00" type="normal_car">
@@ -1321,10 +1321,10 @@
     <vehicle id="570" depart="570.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="571" depart="571.00" type="sporty_car">
+    <vehicle id="571" depart="571.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="573" depart="573.00" type="normal_car">
+    <vehicle id="573" depart="573.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="574" depart="574.00" type="sporty_car">
@@ -1351,28 +1351,28 @@
     <vehicle id="586" depart="586.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="587" depart="587.00" type="normal_car">
+    <vehicle id="587" depart="587.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="588" depart="588.00" type="normal_car">
         <route edges="e13 e22 e24 e20 e16 e9 e8" />
     </vehicle>
-    <vehicle id="589" depart="589.00" type="coach">
+    <vehicle id="589" depart="589.00" type="normal_car">
         <route edges="e25 e35 e30 e32" />
     </vehicle>
-    <vehicle id="590" depart="590.00" type="sporty_car">
+    <vehicle id="590" depart="590.00" type="trailer">
         <route edges="e39 e32 e44 e42 e20 e16 e9 e11 e13" />
     </vehicle>
     <vehicle id="591" depart="591.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="592" depart="592.00" type="normal_car">
+    <vehicle id="592" depart="592.00" type="coach">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="594" depart="594.00" type="normal_car">
+    <vehicle id="594" depart="594.00" type="coach">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="595" depart="595.00" type="coach">
+    <vehicle id="595" depart="595.00" type="normal_car">
         <route edges="e21 e33 e26 e38 e24" />
     </vehicle>
     <vehicle id="596" depart="596.00" type="normal_car">
@@ -1381,7 +1381,7 @@
     <vehicle id="597" depart="597.00" type="normal_car">
         <route edges="e29 e36 e34 e22 e24 e20 e18" />
     </vehicle>
-    <vehicle id="598" depart="598.00" type="normal_car">
+    <vehicle id="598" depart="598.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="600" depart="600.00" type="normal_car">
@@ -1390,13 +1390,13 @@
     <vehicle id="601" depart="601.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="602" depart="602.00" type="normal_car">
+    <vehicle id="602" depart="602.00" type="sporty_car">
         <route edges="e23 e37 e28 e42 e20 e16" />
     </vehicle>
-    <vehicle id="604" depart="604.00" type="normal_car">
+    <vehicle id="604" depart="604.00" type="coach">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="605" depart="605.00" type="normal_car">
+    <vehicle id="605" depart="605.00" type="coach">
         <route edges="e20 e16 e9 e11 e13 e22 e37 e39 e29 e36" />
     </vehicle>
     <vehicle id="606" depart="606.00" type="normal_car">
@@ -1408,10 +1408,10 @@
     <vehicle id="608" depart="608.00" type="normal_car">
         <route edges="e13 e22 e37 e25" />
     </vehicle>
-    <vehicle id="610" depart="610.00" type="normal_car">
+    <vehicle id="610" depart="610.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="611" depart="611.00" type="normal_car">
+    <vehicle id="611" depart="611.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="614" depart="614.00" type="normal_car">
@@ -1420,7 +1420,7 @@
     <vehicle id="616" depart="616.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="617" depart="617.00" type="normal_car">
+    <vehicle id="617" depart="617.00" type="sporty_car">
         <route edges="e31 e40 e38 e24 e41 e27" />
     </vehicle>
     <vehicle id="619" depart="619.00" type="normal_car">
@@ -1456,10 +1456,10 @@
     <vehicle id="634" depart="634.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="636" depart="636.00" type="sporty_car">
+    <vehicle id="636" depart="636.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="637" depart="637.00" type="normal_car">
+    <vehicle id="637" depart="637.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="638" depart="638.00" type="normal_car">
@@ -1474,10 +1474,10 @@
     <vehicle id="644" depart="644.00" type="normal_car">
         <route edges="e21 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="645" depart="645.00" type="sporty_car">
+    <vehicle id="645" depart="645.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="646" depart="646.00" type="coach">
+    <vehicle id="646" depart="646.00" type="normal_car">
         <route edges="e19 e23 e21 e14 e12 e4" />
     </vehicle>
     <vehicle id="647" depart="647.00" type="normal_car">
@@ -1498,10 +1498,10 @@
     <vehicle id="654" depart="654.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="655" depart="655.00" type="normal_car">
+    <vehicle id="655" depart="655.00" type="sporty_car">
         <route edges="e37 e25 e34 e22" />
     </vehicle>
-    <vehicle id="656" depart="656.00" type="sporty_car">
+    <vehicle id="656" depart="656.00" type="normal_car">
         <route edges="e16 e9 e8" />
     </vehicle>
     <vehicle id="657" depart="657.00" type="normal_car">
@@ -1534,7 +1534,7 @@
     <vehicle id="667" depart="667.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="669" depart="669.00" type="normal_car">
+    <vehicle id="669" depart="669.00" type="sporty_car">
         <route edges="e31 e40 e25 e35" />
     </vehicle>
     <vehicle id="671" depart="671.00" type="normal_car">
@@ -1549,7 +1549,7 @@
     <vehicle id="675" depart="675.00" type="normal_car">
         <route edges="e7 e11 e13 e33 e26" />
     </vehicle>
-    <vehicle id="677" depart="677.00" type="sporty_car">
+    <vehicle id="677" depart="677.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="678" depart="678.00" type="normal_car">
@@ -1558,7 +1558,7 @@
     <vehicle id="679" depart="679.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="680" depart="680.00" type="sporty_car">
+    <vehicle id="680" depart="680.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="681" depart="681.00" type="normal_car">
@@ -1570,7 +1570,7 @@
     <vehicle id="685" depart="685.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="686" depart="686.00" type="normal_car">
+    <vehicle id="686" depart="686.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="687" depart="687.00" type="normal_car">
@@ -1591,7 +1591,7 @@
     <vehicle id="694" depart="694.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="696" depart="696.00" type="sporty_car">
+    <vehicle id="696" depart="696.00" type="normal_car">
         <route edges="e23 e21 e14 e12 e8" />
     </vehicle>
     <vehicle id="697" depart="697.00" type="normal_car">
@@ -1600,7 +1600,7 @@
     <vehicle id="698" depart="698.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="699" depart="699.00" type="sporty_car">
+    <vehicle id="699" depart="699.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="700" depart="700.00" type="normal_car">
@@ -1624,10 +1624,10 @@
     <vehicle id="706" depart="706.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="707" depart="707.00" type="coach">
+    <vehicle id="707" depart="707.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="708" depart="708.00" type="normal_car">
+    <vehicle id="708" depart="708.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="709" depart="709.00" type="normal_car">
@@ -1639,7 +1639,7 @@
     <vehicle id="712" depart="712.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="713" depart="713.00" type="sporty_car">
+    <vehicle id="713" depart="713.00" type="normal_car">
         <route edges="e23 e21 e14" />
     </vehicle>
     <vehicle id="714" depart="714.00" type="normal_car">
@@ -1651,19 +1651,19 @@
     <vehicle id="716" depart="716.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="717" depart="717.00" type="normal_car">
+    <vehicle id="717" depart="717.00" type="coach">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="718" depart="718.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="719" depart="719.00" type="sporty_car">
+    <vehicle id="719" depart="719.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="720" depart="720.00" type="normal_car">
+    <vehicle id="720" depart="720.00" type="trailer">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="722" depart="722.00" type="sporty_car">
+    <vehicle id="722" depart="722.00" type="normal_car">
         <route edges="e21 e33 e35 e30 e40" />
     </vehicle>
     <vehicle id="723" depart="723.00" type="normal_car">
@@ -1684,7 +1684,7 @@
     <vehicle id="732" depart="732.00" type="normal_car">
         <route edges="e43 e31 e29 e36 e26 e39 e32" />
     </vehicle>
-    <vehicle id="735" depart="735.00" type="sporty_car">
+    <vehicle id="735" depart="735.00" type="normal_car">
         <route edges="e9 e11 e2" />
     </vehicle>
     <vehicle id="736" depart="736.00" type="normal_car">
@@ -1696,10 +1696,10 @@
     <vehicle id="738" depart="738.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="739" depart="739.00" type="sporty_car">
+    <vehicle id="739" depart="739.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="741" depart="741.00" type="sporty_car">
+    <vehicle id="741" depart="741.00" type="normal_car">
         <route edges="e19 e23 e21 e14 e2" />
     </vehicle>
     <vehicle id="742" depart="742.00" type="normal_car">
@@ -1711,7 +1711,7 @@
     <vehicle id="744" depart="744.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="745" depart="745.00" type="sporty_car">
+    <vehicle id="745" depart="745.00" type="normal_car">
         <route edges="e28 e42 e20 e16 e9 e11 e13" />
     </vehicle>
     <vehicle id="746" depart="746.00" type="normal_car">
@@ -1747,7 +1747,7 @@
     <vehicle id="757" depart="757.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="759" depart="759.00" type="coach">
+    <vehicle id="759" depart="759.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="760" depart="760.00" type="normal_car">
@@ -1768,16 +1768,16 @@
     <vehicle id="766" depart="766.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="769" depart="769.00" type="sporty_car">
+    <vehicle id="769" depart="769.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="770" depart="770.00" type="normal_car">
+    <vehicle id="770" depart="770.00" type="coach">
         <route edges="e26 e39 e32" />
     </vehicle>
     <vehicle id="771" depart="771.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="772" depart="772.00" type="normal_car">
+    <vehicle id="772" depart="772.00" type="sporty_car">
         <route edges="e23 e37 e28 e42 e20 e16" />
     </vehicle>
     <vehicle id="773" depart="773.00" type="normal_car">
@@ -1789,13 +1789,13 @@
     <vehicle id="775" depart="775.00" type="normal_car">
         <route edges="e20 e16 e9 e11 e13 e33 e26 e28 e42 e23" />
     </vehicle>
-    <vehicle id="776" depart="776.00" type="sporty_car">
+    <vehicle id="776" depart="776.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="777" depart="777.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="779" depart="779.00" type="normal_car">
+    <vehicle id="779" depart="779.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="780" depart="780.00" type="normal_car">
@@ -1816,31 +1816,31 @@
     <vehicle id="789" depart="789.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="790" depart="790.00" type="normal_car">
+    <vehicle id="790" depart="790.00" type="sporty_car">
         <route edges="e22 e24 e41 e27 e38" />
     </vehicle>
     <vehicle id="791" depart="791.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="794" depart="794.00" type="sporty_car">
+    <vehicle id="794" depart="794.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="795" depart="795.00" type="sporty_car">
+    <vehicle id="795" depart="795.00" type="normal_car">
         <route edges="e43 e31 e29 e36 e26 e39 e32" />
     </vehicle>
-    <vehicle id="796" depart="796.00" type="sporty_car">
+    <vehicle id="796" depart="796.00" type="normal_car">
         <route edges="e17 e19 e23 e37 e28 e42" />
     </vehicle>
     <vehicle id="797" depart="797.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e25 e34 e14 e2" />
     </vehicle>
-    <vehicle id="798" depart="798.00" type="sporty_car">
+    <vehicle id="798" depart="798.00" type="normal_car">
         <route edges="e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="799" depart="799.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="802" depart="802.00" type="normal_car">
+    <vehicle id="802" depart="802.00" type="trailer">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="803" depart="803.00" type="normal_car">
@@ -1855,7 +1855,7 @@
     <vehicle id="806" depart="806.00" type="normal_car">
         <route edges="e28 e43 e31 e40 e38 e24" />
     </vehicle>
-    <vehicle id="807" depart="807.00" type="normal_car">
+    <vehicle id="807" depart="807.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="809" depart="809.00" type="normal_car">
@@ -1882,10 +1882,10 @@
     <vehicle id="818" depart="818.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="819" depart="819.00" type="sporty_car">
+    <vehicle id="819" depart="819.00" type="trailer">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="820" depart="820.00" type="normal_car">
+    <vehicle id="820" depart="820.00" type="trailer">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="821" depart="821.00" type="normal_car">
@@ -1927,7 +1927,7 @@
     <vehicle id="838" depart="838.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="839" depart="839.00" type="coach">
+    <vehicle id="839" depart="839.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="840" depart="840.00" type="normal_car">
@@ -1942,13 +1942,13 @@
     <vehicle id="843" depart="843.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="844" depart="844.00" type="sporty_car">
+    <vehicle id="844" depart="844.00" type="normal_car">
         <route edges="e22 e37 e25 e34 e14 e12" />
     </vehicle>
     <vehicle id="845" depart="845.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="846" depart="846.00" type="normal_car">
+    <vehicle id="846" depart="846.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="847" depart="847.00" type="normal_car">
@@ -1975,19 +1975,19 @@
     <vehicle id="854" depart="854.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="856" depart="856.00" type="normal_car">
+    <vehicle id="856" depart="856.00" type="coach">
         <route edges="e19 e41 e27 e38" />
     </vehicle>
     <vehicle id="857" depart="857.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="858" depart="858.00" type="trailer">
+    <vehicle id="858" depart="858.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="859" depart="859.00" type="coach">
+    <vehicle id="859" depart="859.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="862" depart="862.00" type="sporty_car">
+    <vehicle id="862" depart="862.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="863" depart="863.00" type="normal_car">
@@ -2032,7 +2032,7 @@
     <vehicle id="879" depart="879.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="880" depart="880.00" type="sporty_car">
+    <vehicle id="880" depart="880.00" type="normal_car">
         <route edges="e36" />
     </vehicle>
     <vehicle id="882" depart="882.00" type="normal_car">
@@ -2056,13 +2056,13 @@
     <vehicle id="888" depart="888.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="889" depart="889.00" type="trailer">
+    <vehicle id="889" depart="889.00" type="sporty_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="890" depart="890.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="891" depart="891.00" type="coach">
+    <vehicle id="891" depart="891.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="892" depart="892.00" type="normal_car">
@@ -2080,13 +2080,13 @@
     <vehicle id="896" depart="896.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="897" depart="897.00" type="normal_car">
+    <vehicle id="897" depart="897.00" type="sporty_car">
         <route edges="e32 e44 e42 e20 e16 e9 e11" />
     </vehicle>
     <vehicle id="898" depart="898.00" type="normal_car">
         <route edges="e23" />
     </vehicle>
-    <vehicle id="899" depart="899.00" type="sporty_car">
+    <vehicle id="899" depart="899.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="900" depart="900.00" type="normal_car">
@@ -2134,13 +2134,13 @@
     <vehicle id="917" depart="917.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="918" depart="918.00" type="normal_car">
+    <vehicle id="918" depart="918.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="919" depart="919.00" type="normal_car">
         <route edges="e20 e16 e9 e11 e13 e22 e37 e25" />
     </vehicle>
-    <vehicle id="920" depart="920.00" type="normal_car">
+    <vehicle id="920" depart="920.00" type="sporty_car">
         <route edges="e27 e38 e24 e41" />
     </vehicle>
     <vehicle id="921" depart="921.00" type="normal_car">
@@ -2167,7 +2167,7 @@
     <vehicle id="931" depart="931.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="934" depart="934.00" type="normal_car">
+    <vehicle id="934" depart="934.00" type="sporty_car">
         <route edges="e12 e4" />
     </vehicle>
     <vehicle id="935" depart="935.00" type="normal_car">
@@ -2182,10 +2182,10 @@
     <vehicle id="938" depart="938.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="939" depart="939.00" type="normal_car">
+    <vehicle id="939" depart="939.00" type="sporty_car">
         <route edges="e16 e9 e11" />
     </vehicle>
-    <vehicle id="942" depart="942.00" type="sporty_car">
+    <vehicle id="942" depart="942.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="943" depart="943.00" type="normal_car">
@@ -2194,7 +2194,7 @@
     <vehicle id="944" depart="944.00" type="normal_car">
         <route edges="e17 e19 e23 e21 e14 e12 e10" />
     </vehicle>
-    <vehicle id="948" depart="948.00" type="normal_car">
+    <vehicle id="948" depart="948.00" type="sporty_car">
         <route edges="e14 e12 e10 e15 e19 e23 e37 e28 e42" />
     </vehicle>
     <vehicle id="949" depart="949.00" type="normal_car">
@@ -2203,7 +2203,7 @@
     <vehicle id="950" depart="950.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="951" depart="951.00" type="normal_car">
+    <vehicle id="951" depart="951.00" type="sporty_car">
         <route edges="e36 e34 e22 e24 e41" />
     </vehicle>
     <vehicle id="952" depart="952.00" type="normal_car">
@@ -2215,7 +2215,7 @@
     <vehicle id="954" depart="954.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="955" depart="955.00" type="normal_car">
+    <vehicle id="955" depart="955.00" type="sporty_car">
         <route edges="e17 e19 e23 e37 e28" />
     </vehicle>
     <vehicle id="956" depart="956.00" type="normal_car">
@@ -2227,7 +2227,7 @@
     <vehicle id="958" depart="958.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="959" depart="959.00" type="sporty_car">
+    <vehicle id="959" depart="959.00" type="normal_car">
         <route edges="e17 e19 e41 e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="960" depart="960.00" type="normal_car">
@@ -2254,10 +2254,10 @@
     <vehicle id="968" depart="968.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="969" depart="969.00" type="trailer">
+    <vehicle id="969" depart="969.00" type="normal_car">
         <route edges="e26 e28" />
     </vehicle>
-    <vehicle id="972" depart="972.00" type="sporty_car">
+    <vehicle id="972" depart="972.00" type="coach">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="974" depart="974.00" type="normal_car">
@@ -2278,10 +2278,10 @@
     <vehicle id="980" depart="980.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="981" depart="981.00" type="sporty_car">
+    <vehicle id="981" depart="981.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="982" depart="982.00" type="normal_car">
+    <vehicle id="982" depart="982.00" type="sporty_car">
         <route edges="e28 e43 e31 e40 e38" />
     </vehicle>
     <vehicle id="983" depart="983.00" type="normal_car">
@@ -2290,10 +2290,10 @@
     <vehicle id="984" depart="984.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="985" depart="985.00" type="normal_car">
+    <vehicle id="985" depart="985.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="986" depart="986.00" type="sporty_car">
+    <vehicle id="986" depart="986.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="987" depart="987.00" type="normal_car">
@@ -2305,7 +2305,7 @@
     <vehicle id="990" depart="990.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="991" depart="991.00" type="sporty_car">
+    <vehicle id="991" depart="991.00" type="trailer">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="992" depart="992.00" type="normal_car">
@@ -2329,13 +2329,13 @@
     <vehicle id="998" depart="998.00" type="normal_car">
         <route edges="e29 e36 e26 e39 e32" />
     </vehicle>
-    <vehicle id="999" depart="999.00" type="sporty_car">
+    <vehicle id="999" depart="999.00" type="normal_car">
         <route edges="e25 e34 e22 e37 e39 e29 e36" />
     </vehicle>
-    <vehicle id="1001" depart="1001.00" type="normal_car">
+    <vehicle id="1001" depart="1001.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1003" depart="1003.00" type="sporty_car">
+    <vehicle id="1003" depart="1003.00" type="normal_car">
         <route edges="e21 e33 e26 e38" />
     </vehicle>
     <vehicle id="1004" depart="1004.00" type="normal_car">
@@ -2356,7 +2356,7 @@
     <vehicle id="1010" depart="1010.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1011" depart="1011.00" type="sporty_car">
+    <vehicle id="1011" depart="1011.00" type="normal_car">
         <route edges="e41 e27 e25 e35 e30" />
     </vehicle>
     <vehicle id="1012" depart="1012.00" type="normal_car">
@@ -2365,10 +2365,10 @@
     <vehicle id="1013" depart="1013.00" type="normal_car">
         <route edges="e19 e41 e27 e25 e34 e22" />
     </vehicle>
-    <vehicle id="1014" depart="1014.00" type="sporty_car">
+    <vehicle id="1014" depart="1014.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1015" depart="1015.00" type="normal_car">
+    <vehicle id="1015" depart="1015.00" type="sporty_car">
         <route edges="e16 e9 e11 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="1016" depart="1016.00" type="normal_car">
@@ -2377,7 +2377,7 @@
     <vehicle id="1017" depart="1017.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1018" depart="1018.00" type="sporty_car">
+    <vehicle id="1018" depart="1018.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1019" depart="1019.00" type="normal_car">
@@ -2389,7 +2389,7 @@
     <vehicle id="1022" depart="1022.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1023" depart="1023.00" type="trailer">
+    <vehicle id="1023" depart="1023.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1025" depart="1025.00" type="normal_car">
@@ -2416,7 +2416,7 @@
     <vehicle id="1033" depart="1033.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1034" depart="1034.00" type="normal_car">
+    <vehicle id="1034" depart="1034.00" type="sporty_car">
         <route edges="e19 e23 e21 e14 e12 e4" />
     </vehicle>
     <vehicle id="1035" depart="1035.00" type="normal_car">
@@ -2428,7 +2428,7 @@
     <vehicle id="1040" depart="1040.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1041" depart="1041.00" type="normal_car">
+    <vehicle id="1041" depart="1041.00" type="coach">
         <route edges="e16 e9 e11 e13 e22 e37 e39 e29 e36" />
     </vehicle>
     <vehicle id="1042" depart="1042.00" type="normal_car">
@@ -2437,7 +2437,7 @@
     <vehicle id="1043" depart="1043.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="1044" depart="1044.00" type="normal_car">
+    <vehicle id="1044" depart="1044.00" type="sporty_car">
         <route edges="e33 e26 e28 e42 e23" />
     </vehicle>
     <vehicle id="1045" depart="1045.00" type="normal_car">
@@ -2470,7 +2470,7 @@
     <vehicle id="1055" depart="1055.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30" />
     </vehicle>
-    <vehicle id="1056" depart="1056.00" type="sporty_car">
+    <vehicle id="1056" depart="1056.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1057" depart="1057.00" type="normal_car">
@@ -2500,7 +2500,7 @@
     <vehicle id="1066" depart="1066.00" type="normal_car">
         <route edges="e41 e43 e31" />
     </vehicle>
-    <vehicle id="1067" depart="1067.00" type="coach">
+    <vehicle id="1067" depart="1067.00" type="normal_car">
         <route edges="e30 e40 e28 e43 e31 e29 e36" />
     </vehicle>
     <vehicle id="1068" depart="1068.00" type="normal_car">
@@ -2509,7 +2509,7 @@
     <vehicle id="1069" depart="1069.00" type="normal_car">
         <route edges="e32 e44 e42 e23 e21 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1070" depart="1070.00" type="normal_car">
+    <vehicle id="1070" depart="1070.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1071" depart="1071.00" type="normal_car">
@@ -2521,7 +2521,7 @@
     <vehicle id="1073" depart="1073.00" type="normal_car">
         <route edges="e14 e12 e4" />
     </vehicle>
-    <vehicle id="1074" depart="1074.00" type="trailer">
+    <vehicle id="1074" depart="1074.00" type="normal_car">
         <route edges="e20 e16 e9 e8" />
     </vehicle>
     <vehicle id="1075" depart="1075.00" type="normal_car">
@@ -2539,7 +2539,7 @@
     <vehicle id="1080" depart="1080.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1084" depart="1084.00" type="normal_car">
+    <vehicle id="1084" depart="1084.00" type="trailer">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1085" depart="1085.00" type="normal_car">
@@ -2551,7 +2551,7 @@
     <vehicle id="1087" depart="1087.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1088" depart="1088.00" type="coach">
+    <vehicle id="1088" depart="1088.00" type="normal_car">
         <route edges="e10 e15 e19 e23 e21 e14" />
     </vehicle>
     <vehicle id="1089" depart="1089.00" type="normal_car">
@@ -2572,22 +2572,22 @@
     <vehicle id="1094" depart="1094.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1095" depart="1095.00" type="normal_car">
+    <vehicle id="1095" depart="1095.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1096" depart="1096.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1097" depart="1097.00" type="sporty_car">
+    <vehicle id="1097" depart="1097.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1098" depart="1098.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1099" depart="1099.00" type="coach">
+    <vehicle id="1099" depart="1099.00" type="normal_car">
         <route edges="e26 e28" />
     </vehicle>
-    <vehicle id="1101" depart="1101.00" type="sporty_car">
+    <vehicle id="1101" depart="1101.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1102" depart="1102.00" type="normal_car">
@@ -2602,7 +2602,7 @@
     <vehicle id="1107" depart="1107.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1108" depart="1108.00" type="normal_car">
+    <vehicle id="1108" depart="1108.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1109" depart="1109.00" type="normal_car">
@@ -2659,7 +2659,7 @@
     <vehicle id="1128" depart="1128.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1129" depart="1129.00" type="normal_car">
+    <vehicle id="1129" depart="1129.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1130" depart="1130.00" type="normal_car">
@@ -2674,13 +2674,13 @@
     <vehicle id="1135" depart="1135.00" type="normal_car">
         <route edges="e42 e23 e21 e33 e35 e30 e40" />
     </vehicle>
-    <vehicle id="1136" depart="1136.00" type="normal_car">
+    <vehicle id="1136" depart="1136.00" type="coach">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1138" depart="1138.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1140" depart="1140.00" type="sporty_car">
+    <vehicle id="1140" depart="1140.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1141" depart="1141.00" type="normal_car">
@@ -2704,7 +2704,7 @@
     <vehicle id="1148" depart="1148.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1149" depart="1149.00" type="sporty_car">
+    <vehicle id="1149" depart="1149.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1152" depart="1152.00" type="normal_car">
@@ -2755,7 +2755,7 @@
     <vehicle id="1169" depart="1169.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1170" depart="1170.00" type="normal_car">
+    <vehicle id="1170" depart="1170.00" type="coach">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1171" depart="1171.00" type="normal_car">
@@ -2764,7 +2764,7 @@
     <vehicle id="1174" depart="1174.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1175" depart="1175.00" type="normal_car">
+    <vehicle id="1175" depart="1175.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="1176" depart="1176.00" type="normal_car">
@@ -2779,7 +2779,7 @@
     <vehicle id="1181" depart="1181.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e27 e25 e34" />
     </vehicle>
-    <vehicle id="1182" depart="1182.00" type="sporty_car">
+    <vehicle id="1182" depart="1182.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1183" depart="1183.00" type="normal_car">
@@ -2809,7 +2809,7 @@
     <vehicle id="1195" depart="1195.00" type="normal_car">
         <route edges="e17 e19 e41 e27" />
     </vehicle>
-    <vehicle id="1196" depart="1196.00" type="sporty_car">
+    <vehicle id="1196" depart="1196.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1197" depart="1197.00" type="normal_car">
@@ -2821,7 +2821,7 @@
     <vehicle id="1199" depart="1199.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="1200" depart="1200.00" type="normal_car">
+    <vehicle id="1200" depart="1200.00" type="sporty_car">
         <route edges="e44 e42 e23 e21 e14 e12 e4" />
     </vehicle>
     <vehicle id="1202" depart="1202.00" type="normal_car">
@@ -2830,10 +2830,10 @@
     <vehicle id="1203" depart="1203.00" type="normal_car">
         <route edges="e17 e16 e9 e8" />
     </vehicle>
-    <vehicle id="1204" depart="1204.00" type="sporty_car">
+    <vehicle id="1204" depart="1204.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1205" depart="1205.00" type="normal_car">
+    <vehicle id="1205" depart="1205.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1207" depart="1207.00" type="normal_car">
@@ -2848,22 +2848,22 @@
     <vehicle id="1210" depart="1210.00" type="normal_car">
         <route edges="e43 e31 e29 e36 e34 e14 e12 e10" />
     </vehicle>
-    <vehicle id="1211" depart="1211.00" type="normal_car">
+    <vehicle id="1211" depart="1211.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1212" depart="1212.00" type="normal_car">
+    <vehicle id="1212" depart="1212.00" type="sporty_car">
         <route edges="e37 e25" />
     </vehicle>
-    <vehicle id="1213" depart="1213.00" type="normal_car">
+    <vehicle id="1213" depart="1213.00" type="sporty_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="1214" depart="1214.00" type="sporty_car">
+    <vehicle id="1214" depart="1214.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1215" depart="1215.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1216" depart="1216.00" type="sporty_car">
+    <vehicle id="1216" depart="1216.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1217" depart="1217.00" type="normal_car">
@@ -2872,7 +2872,7 @@
     <vehicle id="1218" depart="1218.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1219" depart="1219.00" type="normal_car">
+    <vehicle id="1219" depart="1219.00" type="coach">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1220" depart="1220.00" type="normal_car">
@@ -2917,13 +2917,13 @@
     <vehicle id="1236" depart="1236.00" type="normal_car">
         <route edges="e27 e38 e24 e41 e43" />
     </vehicle>
-    <vehicle id="1238" depart="1238.00" type="normal_car">
+    <vehicle id="1238" depart="1238.00" type="coach">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1239" depart="1239.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1240" depart="1240.00" type="sporty_car">
+    <vehicle id="1240" depart="1240.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1241" depart="1241.00" type="normal_car">
@@ -2932,7 +2932,7 @@
     <vehicle id="1242" depart="1242.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1243" depart="1243.00" type="normal_car">
+    <vehicle id="1243" depart="1243.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1244" depart="1244.00" type="normal_car">
@@ -2950,13 +2950,13 @@
     <vehicle id="1248" depart="1248.00" type="normal_car">
         <route edges="e39 e32 e44 e27" />
     </vehicle>
-    <vehicle id="1250" depart="1250.00" type="normal_car">
+    <vehicle id="1250" depart="1250.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1252" depart="1252.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1253" depart="1253.00" type="normal_car">
+    <vehicle id="1253" depart="1253.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1254" depart="1254.00" type="normal_car">
@@ -2977,7 +2977,7 @@
     <vehicle id="1260" depart="1260.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1261" depart="1261.00" type="normal_car">
+    <vehicle id="1261" depart="1261.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1262" depart="1262.00" type="normal_car">
@@ -2989,13 +2989,13 @@
     <vehicle id="1264" depart="1264.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1266" depart="1266.00" type="coach">
+    <vehicle id="1266" depart="1266.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1267" depart="1267.00" type="normal_car">
         <route edges="e44 e42 e20 e16 e9 e11 e13" />
     </vehicle>
-    <vehicle id="1268" depart="1268.00" type="sporty_car">
+    <vehicle id="1268" depart="1268.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="1269" depart="1269.00" type="normal_car">
@@ -3049,10 +3049,10 @@
     <vehicle id="1294" depart="1294.00" type="normal_car">
         <route edges="e29 e36 e26 e28 e43" />
     </vehicle>
-    <vehicle id="1295" depart="1295.00" type="sporty_car">
+    <vehicle id="1295" depart="1295.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1297" depart="1297.00" type="normal_car">
+    <vehicle id="1297" depart="1297.00" type="coach">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1299" depart="1299.00" type="normal_car">
@@ -3070,7 +3070,7 @@
     <vehicle id="1305" depart="1305.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1306" depart="1306.00" type="normal_car">
+    <vehicle id="1306" depart="1306.00" type="sporty_car">
         <route edges="e38 e21 e33 e26 e28" />
     </vehicle>
     <vehicle id="1307" depart="1307.00" type="normal_car">
@@ -3088,10 +3088,10 @@
     <vehicle id="1313" depart="1313.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1314" depart="1314.00" type="normal_car">
+    <vehicle id="1314" depart="1314.00" type="trailer">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="1315" depart="1315.00" type="normal_car">
+    <vehicle id="1315" depart="1315.00" type="coach">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1316" depart="1316.00" type="normal_car">
@@ -3121,16 +3121,16 @@
     <vehicle id="1329" depart="1329.00" type="normal_car">
         <route edges="e42 e23 e37 e25" />
     </vehicle>
-    <vehicle id="1330" depart="1330.00" type="sporty_car">
+    <vehicle id="1330" depart="1330.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1331" depart="1331.00" type="sporty_car">
+    <vehicle id="1331" depart="1331.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1332" depart="1332.00" type="normal_car">
+    <vehicle id="1332" depart="1332.00" type="coach">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1335" depart="1335.00" type="normal_car">
+    <vehicle id="1335" depart="1335.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1336" depart="1336.00" type="normal_car">
@@ -3142,7 +3142,7 @@
     <vehicle id="1338" depart="1338.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1340" depart="1340.00" type="normal_car">
+    <vehicle id="1340" depart="1340.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1341" depart="1341.00" type="normal_car">
@@ -3154,7 +3154,7 @@
     <vehicle id="1344" depart="1344.00" type="normal_car">
         <route edges="e26 e38" />
     </vehicle>
-    <vehicle id="1348" depart="1348.00" type="trailer">
+    <vehicle id="1348" depart="1348.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1349" depart="1349.00" type="normal_car">
@@ -3193,10 +3193,10 @@
     <vehicle id="1364" depart="1364.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1365" depart="1365.00" type="sporty_car">
+    <vehicle id="1365" depart="1365.00" type="normal_car">
         <route edges="e11 e13 e33 e35 e30 e32" />
     </vehicle>
-    <vehicle id="1366" depart="1366.00" type="sporty_car">
+    <vehicle id="1366" depart="1366.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1368" depart="1368.00" type="normal_car">
@@ -3208,7 +3208,7 @@
     <vehicle id="1370" depart="1370.00" type="normal_car">
         <route edges="e39 e29 e36 e34 e14 e12 e8" />
     </vehicle>
-    <vehicle id="1371" depart="1371.00" type="sporty_car">
+    <vehicle id="1371" depart="1371.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1372" depart="1372.00" type="normal_car">
@@ -3220,13 +3220,13 @@
     <vehicle id="1374" depart="1374.00" type="normal_car">
         <route edges="e7 e11 e13 e33 e35 e30 e40" />
     </vehicle>
-    <vehicle id="1375" depart="1375.00" type="normal_car">
+    <vehicle id="1375" depart="1375.00" type="coach">
         <route edges="e46 e36 e26 e28 e43 e31" />
     </vehicle>
     <vehicle id="1376" depart="1376.00" type="normal_car">
         <route edges="e7 e11 e2" />
     </vehicle>
-    <vehicle id="1377" depart="1377.00" type="sporty_car">
+    <vehicle id="1377" depart="1377.00" type="normal_car">
         <route edges="e16 e9 e11 e13 e22 e37 e25 e34 e14 e12 e10 e15" />
     </vehicle>
     <vehicle id="1378" depart="1378.00" type="normal_car">
@@ -3250,19 +3250,19 @@
     <vehicle id="1386" depart="1386.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1388" depart="1388.00" type="normal_car">
+    <vehicle id="1388" depart="1388.00" type="sporty_car">
         <route edges="e5 e9 e11 e13 e22 e24 e20" />
     </vehicle>
-    <vehicle id="1390" depart="1390.00" type="sporty_car">
+    <vehicle id="1390" depart="1390.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1391" depart="1391.00" type="normal_car">
+    <vehicle id="1391" depart="1391.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1392" depart="1392.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1393" depart="1393.00" type="sporty_car">
+    <vehicle id="1393" depart="1393.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1394" depart="1394.00" type="normal_car">
@@ -3280,10 +3280,10 @@
     <vehicle id="1399" depart="1399.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1400" depart="1400.00" type="normal_car">
+    <vehicle id="1400" depart="1400.00" type="trailer">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1402" depart="1402.00" type="normal_car">
+    <vehicle id="1402" depart="1402.00" type="sporty_car">
         <route edges="e41 e27 e25 e34 e14 e12 e10 e15" />
     </vehicle>
     <vehicle id="1403" depart="1403.00" type="normal_car">
@@ -3301,7 +3301,7 @@
     <vehicle id="1408" depart="1408.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1409" depart="1409.00" type="normal_car">
+    <vehicle id="1409" depart="1409.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1410" depart="1410.00" type="normal_car">
@@ -3313,16 +3313,16 @@
     <vehicle id="1412" depart="1412.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1413" depart="1413.00" type="sporty_car">
+    <vehicle id="1413" depart="1413.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1414" depart="1414.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1415" depart="1415.00" type="normal_car">
+    <vehicle id="1415" depart="1415.00" type="coach">
         <route edges="e12 e10 e15 e19 e23 e21 e33 e26" />
     </vehicle>
-    <vehicle id="1416" depart="1416.00" type="normal_car">
+    <vehicle id="1416" depart="1416.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1417" depart="1417.00" type="normal_car">
@@ -3334,19 +3334,19 @@
     <vehicle id="1419" depart="1419.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1420" depart="1420.00" type="normal_car">
+    <vehicle id="1420" depart="1420.00" type="coach">
         <route edges="e5 e15 e19 e23 e21 e14" />
     </vehicle>
     <vehicle id="1421" depart="1421.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1422" depart="1422.00" type="normal_car">
+    <vehicle id="1422" depart="1422.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1423" depart="1423.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1424" depart="1424.00" type="normal_car">
+    <vehicle id="1424" depart="1424.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1425" depart="1425.00" type="normal_car">
@@ -3361,13 +3361,13 @@
     <vehicle id="1431" depart="1431.00" type="normal_car">
         <route edges="e10 e15 e19 e41 e27 e38 e24" />
     </vehicle>
-    <vehicle id="1432" depart="1432.00" type="normal_car">
+    <vehicle id="1432" depart="1432.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1434" depart="1434.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1435" depart="1435.00" type="normal_car">
+    <vehicle id="1435" depart="1435.00" type="sporty_car">
         <route edges="e21 e14 e12 e4" />
     </vehicle>
     <vehicle id="1436" depart="1436.00" type="normal_car">
@@ -3388,7 +3388,7 @@
     <vehicle id="1441" depart="1441.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1442" depart="1442.00" type="normal_car">
+    <vehicle id="1442" depart="1442.00" type="coach">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1443" depart="1443.00" type="normal_car">
@@ -3397,10 +3397,10 @@
     <vehicle id="1445" depart="1445.00" type="normal_car">
         <route edges="e36 e26 e28" />
     </vehicle>
-    <vehicle id="1446" depart="1446.00" type="coach">
+    <vehicle id="1446" depart="1446.00" type="normal_car">
         <route edges="e27 e39 e29 e36 e26 e28" />
     </vehicle>
-    <vehicle id="1448" depart="1448.00" type="sporty_car">
+    <vehicle id="1448" depart="1448.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e16 e9 e11" />
     </vehicle>
     <vehicle id="1449" depart="1449.00" type="normal_car">
@@ -3421,7 +3421,7 @@
     <vehicle id="1456" depart="1456.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1457" depart="1457.00" type="sporty_car">
+    <vehicle id="1457" depart="1457.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1459" depart="1459.00" type="normal_car">
@@ -3433,7 +3433,7 @@
     <vehicle id="1462" depart="1462.00" type="normal_car">
         <route edges="e17 e19 e41 e43" />
     </vehicle>
-    <vehicle id="1463" depart="1463.00" type="normal_car">
+    <vehicle id="1463" depart="1463.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1464" depart="1464.00" type="normal_car">
@@ -3448,7 +3448,7 @@
     <vehicle id="1467" depart="1467.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1468" depart="1468.00" type="normal_car">
+    <vehicle id="1468" depart="1468.00" type="trailer">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1469" depart="1469.00" type="normal_car">
@@ -3460,7 +3460,7 @@
     <vehicle id="1471" depart="1471.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1474" depart="1474.00" type="coach">
+    <vehicle id="1474" depart="1474.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1476" depart="1476.00" type="normal_car">
@@ -3469,7 +3469,7 @@
     <vehicle id="1477" depart="1477.00" type="normal_car">
         <route edges="e24 e41 e27 e39 e32" />
     </vehicle>
-    <vehicle id="1478" depart="1478.00" type="normal_car">
+    <vehicle id="1478" depart="1478.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1479" depart="1479.00" type="normal_car">
@@ -3517,13 +3517,13 @@
     <vehicle id="1496" depart="1496.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1499" depart="1499.00" type="sporty_car">
+    <vehicle id="1499" depart="1499.00" type="normal_car">
         <route edges="e38 e21 e14 e12 e8" />
     </vehicle>
     <vehicle id="1500" depart="1500.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="1501" depart="1501.00" type="normal_car">
+    <vehicle id="1501" depart="1501.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1502" depart="1502.00" type="normal_car">
@@ -3535,7 +3535,7 @@
     <vehicle id="1504" depart="1504.00" type="normal_car">
         <route edges="e14 e12 e4" />
     </vehicle>
-    <vehicle id="1505" depart="1505.00" type="sporty_car">
+    <vehicle id="1505" depart="1505.00" type="normal_car">
         <route edges="e14 e12 e10 e15 e19 e41 e27 e39" />
     </vehicle>
     <vehicle id="1506" depart="1506.00" type="normal_car">
@@ -3562,7 +3562,7 @@
     <vehicle id="1517" depart="1517.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1518" depart="1518.00" type="normal_car">
+    <vehicle id="1518" depart="1518.00" type="coach">
         <route edges="e9 e11 e13 e22 e37 e25" />
     </vehicle>
     <vehicle id="1519" depart="1519.00" type="normal_car">
@@ -3574,22 +3574,22 @@
     <vehicle id="1522" depart="1522.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1523" depart="1523.00" type="sporty_car">
+    <vehicle id="1523" depart="1523.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1525" depart="1525.00" type="normal_car">
+    <vehicle id="1525" depart="1525.00" type="sporty_car">
         <route edges="e25 e34 e14 e12 e8" />
     </vehicle>
-    <vehicle id="1526" depart="1526.00" type="coach">
+    <vehicle id="1526" depart="1526.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="1529" depart="1529.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1530" depart="1530.00" type="normal_car">
+    <vehicle id="1530" depart="1530.00" type="coach">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="1531" depart="1531.00" type="sporty_car">
+    <vehicle id="1531" depart="1531.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1532" depart="1532.00" type="normal_car">
@@ -3619,10 +3619,10 @@
     <vehicle id="1543" depart="1543.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1544" depart="1544.00" type="normal_car">
+    <vehicle id="1544" depart="1544.00" type="sporty_car">
         <route edges="e21 e33 e26 e28 e42" />
     </vehicle>
-    <vehicle id="1545" depart="1545.00" type="normal_car">
+    <vehicle id="1545" depart="1545.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1546" depart="1546.00" type="normal_car">
@@ -3637,7 +3637,7 @@
     <vehicle id="1549" depart="1549.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1550" depart="1550.00" type="normal_car">
+    <vehicle id="1550" depart="1550.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1551" depart="1551.00" type="normal_car">
@@ -3649,19 +3649,19 @@
     <vehicle id="1553" depart="1553.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1554" depart="1554.00" type="coach">
+    <vehicle id="1554" depart="1554.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1555" depart="1555.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1556" depart="1556.00" type="normal_car">
+    <vehicle id="1556" depart="1556.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1557" depart="1557.00" type="normal_car">
+    <vehicle id="1557" depart="1557.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1558" depart="1558.00" type="sporty_car">
+    <vehicle id="1558" depart="1558.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1559" depart="1559.00" type="normal_car">
@@ -3670,13 +3670,13 @@
     <vehicle id="1560" depart="1560.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1561" depart="1561.00" type="normal_car">
+    <vehicle id="1561" depart="1561.00" type="sporty_car">
         <route edges="e30 e40 e25" />
     </vehicle>
     <vehicle id="1563" depart="1563.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1564" depart="1564.00" type="sporty_car">
+    <vehicle id="1564" depart="1564.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1565" depart="1565.00" type="normal_car">
@@ -3700,13 +3700,13 @@
     <vehicle id="1572" depart="1572.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1573" depart="1573.00" type="normal_car">
+    <vehicle id="1573" depart="1573.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1574" depart="1574.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1576" depart="1576.00" type="normal_car">
+    <vehicle id="1576" depart="1576.00" type="coach">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1577" depart="1577.00" type="normal_car">
@@ -3727,10 +3727,10 @@
     <vehicle id="1582" depart="1582.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1583" depart="1583.00" type="normal_car">
+    <vehicle id="1583" depart="1583.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1584" depart="1584.00" type="normal_car">
+    <vehicle id="1584" depart="1584.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1585" depart="1585.00" type="normal_car">
@@ -3751,10 +3751,10 @@
     <vehicle id="1590" depart="1590.00" type="normal_car">
         <route edges="e33 e26 e38 e24" />
     </vehicle>
-    <vehicle id="1591" depart="1591.00" type="normal_car">
+    <vehicle id="1591" depart="1591.00" type="coach">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1592" depart="1592.00" type="sporty_car">
+    <vehicle id="1592" depart="1592.00" type="normal_car">
         <route edges="e29 e36 e26 e28" />
     </vehicle>
     <vehicle id="1593" depart="1593.00" type="normal_car">
@@ -3769,16 +3769,16 @@
     <vehicle id="1597" depart="1597.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1598" depart="1598.00" type="normal_car">
+    <vehicle id="1598" depart="1598.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1599" depart="1599.00" type="normal_car">
+    <vehicle id="1599" depart="1599.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1600" depart="1600.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1602" depart="1602.00" type="normal_car">
+    <vehicle id="1602" depart="1602.00" type="trailer">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1603" depart="1603.00" type="normal_car">
@@ -3787,10 +3787,10 @@
     <vehicle id="1604" depart="1604.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1606" depart="1606.00" type="normal_car">
+    <vehicle id="1606" depart="1606.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1607" depart="1607.00" type="sporty_car">
+    <vehicle id="1607" depart="1607.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1608" depart="1608.00" type="normal_car">
@@ -3829,7 +3829,7 @@
     <vehicle id="1620" depart="1620.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="1621" depart="1621.00" type="sporty_car">
+    <vehicle id="1621" depart="1621.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1622" depart="1622.00" type="normal_car">
@@ -3844,10 +3844,10 @@
     <vehicle id="1627" depart="1627.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1628" depart="1628.00" type="sporty_car">
+    <vehicle id="1628" depart="1628.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1629" depart="1629.00" type="normal_car">
+    <vehicle id="1629" depart="1629.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1630" depart="1630.00" type="normal_car">
@@ -3856,7 +3856,7 @@
     <vehicle id="1632" depart="1632.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1633" depart="1633.00" type="coach">
+    <vehicle id="1633" depart="1633.00" type="normal_car">
         <route edges="e43 e31 e40 e38 e24" />
     </vehicle>
     <vehicle id="1634" depart="1634.00" type="normal_car">
@@ -3865,22 +3865,22 @@
     <vehicle id="1635" depart="1635.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1636" depart="1636.00" type="normal_car">
+    <vehicle id="1636" depart="1636.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1637" depart="1637.00" type="normal_car">
         <route edges="e40 e38 e24 e41" />
     </vehicle>
-    <vehicle id="1638" depart="1638.00" type="trailer">
+    <vehicle id="1638" depart="1638.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1639" depart="1639.00" type="sporty_car">
+    <vehicle id="1639" depart="1639.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1640" depart="1640.00" type="normal_car">
         <route edges="e25 e34 e22 e37 e28" />
     </vehicle>
-    <vehicle id="1642" depart="1642.00" type="sporty_car">
+    <vehicle id="1642" depart="1642.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1645" depart="1645.00" type="normal_car">
@@ -3889,10 +3889,10 @@
     <vehicle id="1647" depart="1647.00" type="normal_car">
         <route edges="e36 e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="1648" depart="1648.00" type="sporty_car">
+    <vehicle id="1648" depart="1648.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1651" depart="1651.00" type="sporty_car">
+    <vehicle id="1651" depart="1651.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="1652" depart="1652.00" type="normal_car">
@@ -3910,13 +3910,13 @@
     <vehicle id="1657" depart="1657.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1658" depart="1658.00" type="normal_car">
+    <vehicle id="1658" depart="1658.00" type="trailer">
         <route edges="e31 e40 e28" />
     </vehicle>
     <vehicle id="1660" depart="1660.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1662" depart="1662.00" type="trailer">
+    <vehicle id="1662" depart="1662.00" type="normal_car">
         <route edges="e20 e16 e9 e11 e13 e22 e24 e41 e43 e31" />
     </vehicle>
     <vehicle id="1663" depart="1663.00" type="normal_car">
@@ -3940,10 +3940,10 @@
     <vehicle id="1670" depart="1670.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1673" depart="1673.00" type="normal_car">
+    <vehicle id="1673" depart="1673.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1674" depart="1674.00" type="normal_car">
+    <vehicle id="1674" depart="1674.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1675" depart="1675.00" type="normal_car">
@@ -3958,13 +3958,13 @@
     <vehicle id="1678" depart="1678.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12" />
     </vehicle>
-    <vehicle id="1680" depart="1680.00" type="normal_car">
+    <vehicle id="1680" depart="1680.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1681" depart="1681.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e40" />
     </vehicle>
-    <vehicle id="1682" depart="1682.00" type="normal_car">
+    <vehicle id="1682" depart="1682.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1684" depart="1684.00" type="normal_car">
@@ -3982,7 +3982,7 @@
     <vehicle id="1694" depart="1694.00" type="normal_car">
         <route edges="e43 e31 e40 e38 e24 e20 e16 e9 e11" />
     </vehicle>
-    <vehicle id="1695" depart="1695.00" type="normal_car">
+    <vehicle id="1695" depart="1695.00" type="coach">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1697" depart="1697.00" type="normal_car">
@@ -4000,7 +4000,7 @@
     <vehicle id="1702" depart="1702.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1703" depart="1703.00" type="normal_car">
+    <vehicle id="1703" depart="1703.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1704" depart="1704.00" type="normal_car">
@@ -4009,7 +4009,7 @@
     <vehicle id="1705" depart="1705.00" type="normal_car">
         <route edges="e13 e22" />
     </vehicle>
-    <vehicle id="1707" depart="1707.00" type="normal_car">
+    <vehicle id="1707" depart="1707.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e20 e16" />
     </vehicle>
     <vehicle id="1708" depart="1708.00" type="normal_car">
@@ -4024,19 +4024,19 @@
     <vehicle id="1714" depart="1714.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1717" depart="1717.00" type="normal_car">
+    <vehicle id="1717" depart="1717.00" type="coach">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1718" depart="1718.00" type="normal_car">
         <route edges="e12 e10 e15 e19 e23" />
     </vehicle>
-    <vehicle id="1719" depart="1719.00" type="sporty_car">
+    <vehicle id="1719" depart="1719.00" type="normal_car">
         <route edges="e7 e11 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1720" depart="1720.00" type="normal_car">
         <route edges="e22 e24 e41 e43 e31" />
     </vehicle>
-    <vehicle id="1721" depart="1721.00" type="sporty_car">
+    <vehicle id="1721" depart="1721.00" type="normal_car">
         <route edges="e22 e37 e25 e35" />
     </vehicle>
     <vehicle id="1722" depart="1722.00" type="normal_car">
@@ -4048,13 +4048,13 @@
     <vehicle id="1724" depart="1724.00" type="normal_car">
         <route edges="e21 e33 e26 e28 e43 e31" />
     </vehicle>
-    <vehicle id="1725" depart="1725.00" type="normal_car">
+    <vehicle id="1725" depart="1725.00" type="coach">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1726" depart="1726.00" type="normal_car">
         <route edges="e31" />
     </vehicle>
-    <vehicle id="1727" depart="1727.00" type="sporty_car">
+    <vehicle id="1727" depart="1727.00" type="normal_car">
         <route edges="e23 e21 e14" />
     </vehicle>
     <vehicle id="1728" depart="1728.00" type="normal_car">
@@ -4078,16 +4078,16 @@
     <vehicle id="1735" depart="1735.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1736" depart="1736.00" type="coach">
+    <vehicle id="1736" depart="1736.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1737" depart="1737.00" type="normal_car">
         <route edges="e24 e41 e27 e38 e21 e33" />
     </vehicle>
-    <vehicle id="1738" depart="1738.00" type="normal_car">
+    <vehicle id="1738" depart="1738.00" type="sporty_car">
         <route edges="e26 e39 e29" />
     </vehicle>
-    <vehicle id="1739" depart="1739.00" type="normal_car">
+    <vehicle id="1739" depart="1739.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1740" depart="1740.00" type="normal_car">
@@ -4096,7 +4096,7 @@
     <vehicle id="1741" depart="1741.00" type="normal_car">
         <route edges="e9 e8" />
     </vehicle>
-    <vehicle id="1743" depart="1743.00" type="normal_car">
+    <vehicle id="1743" depart="1743.00" type="sporty_car">
         <route edges="e7 e11 e13 e22 e24" />
     </vehicle>
     <vehicle id="1744" depart="1744.00" type="normal_car">
@@ -4108,19 +4108,19 @@
     <vehicle id="1749" depart="1749.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1750" depart="1750.00" type="sporty_car">
+    <vehicle id="1750" depart="1750.00" type="normal_car">
         <route edges="e36 e26 e38" />
     </vehicle>
-    <vehicle id="1751" depart="1751.00" type="sporty_car">
+    <vehicle id="1751" depart="1751.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1752" depart="1752.00" type="normal_car">
         <route edges="e29 e36 e26 e28 e43 e47" />
     </vehicle>
-    <vehicle id="1753" depart="1753.00" type="normal_car">
+    <vehicle id="1753" depart="1753.00" type="coach">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1755" depart="1755.00" type="sporty_car">
+    <vehicle id="1755" depart="1755.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1756" depart="1756.00" type="normal_car">
@@ -4129,31 +4129,31 @@
     <vehicle id="1757" depart="1757.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e25 e34" />
     </vehicle>
-    <vehicle id="1758" depart="1758.00" type="normal_car">
+    <vehicle id="1758" depart="1758.00" type="sporty_car">
         <route edges="e14 e12 e10 e15 e19 e41 e27 e38 e24 e20" />
     </vehicle>
-    <vehicle id="1761" depart="1761.00" type="trailer">
+    <vehicle id="1761" depart="1761.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1762" depart="1762.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1763" depart="1763.00" type="normal_car">
+    <vehicle id="1763" depart="1763.00" type="sporty_car">
         <route edges="e21 e33 e35 e30 e40 e25" />
     </vehicle>
-    <vehicle id="1764" depart="1764.00" type="sporty_car">
+    <vehicle id="1764" depart="1764.00" type="normal_car">
         <route edges="e9 e11 e13 e22 e37 e25 e34 e14 e12 e10" />
     </vehicle>
     <vehicle id="1765" depart="1765.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1767" depart="1767.00" type="normal_car">
+    <vehicle id="1767" depart="1767.00" type="sporty_car">
         <route edges="e44 e42 e20" />
     </vehicle>
-    <vehicle id="1769" depart="1769.00" type="normal_car">
+    <vehicle id="1769" depart="1769.00" type="coach">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1770" depart="1770.00" type="sporty_car">
+    <vehicle id="1770" depart="1770.00" type="normal_car">
         <route edges="e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="1772" depart="1772.00" type="normal_car">
@@ -4168,7 +4168,7 @@
     <vehicle id="1777" depart="1777.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1778" depart="1778.00" type="sporty_car">
+    <vehicle id="1778" depart="1778.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1779" depart="1779.00" type="normal_car">
@@ -4189,7 +4189,7 @@
     <vehicle id="1785" depart="1785.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1786" depart="1786.00" type="sporty_car">
+    <vehicle id="1786" depart="1786.00" type="normal_car">
         <route edges="e7 e11 e2" />
     </vehicle>
     <vehicle id="1788" depart="1788.00" type="normal_car">
@@ -4207,7 +4207,7 @@
     <vehicle id="1792" depart="1792.00" type="normal_car">
         <route edges="e20 e16 e9 e11 e13 e33 e35" />
     </vehicle>
-    <vehicle id="1793" depart="1793.00" type="coach">
+    <vehicle id="1793" depart="1793.00" type="normal_car">
         <route edges="e46 e30 e40 e38 e21 e33" />
     </vehicle>
     <vehicle id="1794" depart="1794.00" type="normal_car">
@@ -4228,22 +4228,22 @@
     <vehicle id="1803" depart="1803.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39 e29" />
     </vehicle>
-    <vehicle id="1804" depart="1804.00" type="sporty_car">
+    <vehicle id="1804" depart="1804.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1807" depart="1807.00" type="normal_car">
         <route edges="e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1811" depart="1811.00" type="normal_car">
+    <vehicle id="1811" depart="1811.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1812" depart="1812.00" type="sporty_car">
+    <vehicle id="1812" depart="1812.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1814" depart="1814.00" type="trailer">
+    <vehicle id="1814" depart="1814.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1815" depart="1815.00" type="sporty_car">
+    <vehicle id="1815" depart="1815.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1816" depart="1816.00" type="normal_car">
@@ -4252,7 +4252,7 @@
     <vehicle id="1818" depart="1818.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1819" depart="1819.00" type="sporty_car">
+    <vehicle id="1819" depart="1819.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1820" depart="1820.00" type="normal_car">
@@ -4264,10 +4264,10 @@
     <vehicle id="1822" depart="1822.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1823" depart="1823.00" type="normal_car">
+    <vehicle id="1823" depart="1823.00" type="sporty_car">
         <route edges="e13 e33 e35 e30 e32 e44" />
     </vehicle>
-    <vehicle id="1825" depart="1825.00" type="sporty_car">
+    <vehicle id="1825" depart="1825.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1826" depart="1826.00" type="normal_car">
@@ -4276,7 +4276,7 @@
     <vehicle id="1827" depart="1827.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="1828" depart="1828.00" type="sporty_car">
+    <vehicle id="1828" depart="1828.00" type="normal_car">
         <route edges="e1 e13 e33 e26 e38" />
     </vehicle>
     <vehicle id="1829" depart="1829.00" type="normal_car">
@@ -4297,25 +4297,25 @@
     <vehicle id="1835" depart="1835.00" type="normal_car">
         <route edges="e23 e37 e28 e42" />
     </vehicle>
-    <vehicle id="1836" depart="1836.00" type="coach">
+    <vehicle id="1836" depart="1836.00" type="normal_car">
         <route edges="e25 e34 e22 e24 e20 e16 e9 e11 e13" />
     </vehicle>
     <vehicle id="1837" depart="1837.00" type="normal_car">
         <route edges="e10 e15 e19 e41" />
     </vehicle>
-    <vehicle id="1838" depart="1838.00" type="normal_car">
+    <vehicle id="1838" depart="1838.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1839" depart="1839.00" type="normal_car">
+    <vehicle id="1839" depart="1839.00" type="coach">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1843" depart="1843.00" type="normal_car">
+    <vehicle id="1843" depart="1843.00" type="sporty_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1844" depart="1844.00" type="normal_car">
         <route edges="e15 e19 e41 e27 e38 e24 e20 e16" />
     </vehicle>
-    <vehicle id="1846" depart="1846.00" type="sporty_car">
+    <vehicle id="1846" depart="1846.00" type="normal_car">
         <route edges="e10 e15 e19 e41 e27 e38 e24 e20" />
     </vehicle>
     <vehicle id="1848" depart="1848.00" type="normal_car">
@@ -4324,13 +4324,13 @@
     <vehicle id="1850" depart="1850.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="1851" depart="1851.00" type="sporty_car">
+    <vehicle id="1851" depart="1851.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1852" depart="1852.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1853" depart="1853.00" type="sporty_car">
+    <vehicle id="1853" depart="1853.00" type="normal_car">
         <route edges="e26 e28 e42 e20 e16" />
     </vehicle>
     <vehicle id="1855" depart="1855.00" type="normal_car">
@@ -4348,10 +4348,10 @@
     <vehicle id="1859" depart="1859.00" type="normal_car">
         <route edges="e27 e39 e32" />
     </vehicle>
-    <vehicle id="1860" depart="1860.00" type="sporty_car">
+    <vehicle id="1860" depart="1860.00" type="trailer">
         <route edges="e40 e28" />
     </vehicle>
-    <vehicle id="1861" depart="1861.00" type="normal_car">
+    <vehicle id="1861" depart="1861.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1863" depart="1863.00" type="normal_car">
@@ -4360,7 +4360,7 @@
     <vehicle id="1864" depart="1864.00" type="normal_car">
         <route edges="e9 e11 e13 e22 e37 e25 e34 e14" />
     </vehicle>
-    <vehicle id="1865" depart="1865.00" type="normal_car">
+    <vehicle id="1865" depart="1865.00" type="sporty_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
     <vehicle id="1868" depart="1868.00" type="normal_car">
@@ -4369,7 +4369,7 @@
     <vehicle id="1869" depart="1869.00" type="normal_car">
         <route edges="e25 e34 e22 e24" />
     </vehicle>
-    <vehicle id="1870" depart="1870.00" type="coach">
+    <vehicle id="1870" depart="1870.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1871" depart="1871.00" type="normal_car">
@@ -4384,13 +4384,13 @@
     <vehicle id="1875" depart="1875.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1876" depart="1876.00" type="sporty_car">
+    <vehicle id="1876" depart="1876.00" type="normal_car">
         <route edges="e16 e9 e8" />
     </vehicle>
-    <vehicle id="1877" depart="1877.00" type="coach">
+    <vehicle id="1877" depart="1877.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1878" depart="1878.00" type="coach">
+    <vehicle id="1878" depart="1878.00" type="sporty_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
     <vehicle id="1879" depart="1879.00" type="normal_car">
@@ -4399,16 +4399,16 @@
     <vehicle id="1880" depart="1880.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1881" depart="1881.00" type="normal_car">
+    <vehicle id="1881" depart="1881.00" type="coach">
         <route edges="e44 e42 e23 e21 e14 e12 e8" />
     </vehicle>
-    <vehicle id="1882" depart="1882.00" type="normal_car">
+    <vehicle id="1882" depart="1882.00" type="trailer">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1885" depart="1885.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1886" depart="1886.00" type="sporty_car">
+    <vehicle id="1886" depart="1886.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1887" depart="1887.00" type="normal_car">
@@ -4423,19 +4423,19 @@
     <vehicle id="1890" depart="1890.00" type="normal_car">
         <route edges="e32 e44 e27 e38 e24" />
     </vehicle>
-    <vehicle id="1892" depart="1892.00" type="sporty_car">
+    <vehicle id="1892" depart="1892.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1893" depart="1893.00" type="normal_car">
         <route edges="e33 e26 e39 e29 e36 e34" />
     </vehicle>
-    <vehicle id="1894" depart="1894.00" type="coach">
+    <vehicle id="1894" depart="1894.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="1895" depart="1895.00" type="normal_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="1897" depart="1897.00" type="normal_car">
+    <vehicle id="1897" depart="1897.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1900" depart="1900.00" type="normal_car">
@@ -4447,13 +4447,13 @@
     <vehicle id="1902" depart="1902.00" type="normal_car">
         <route edges="e26 e28 e42 e20 e16" />
     </vehicle>
-    <vehicle id="1903" depart="1903.00" type="sporty_car">
+    <vehicle id="1903" depart="1903.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="1905" depart="1905.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="1906" depart="1906.00" type="normal_car">
+    <vehicle id="1906" depart="1906.00" type="sporty_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="1907" depart="1907.00" type="normal_car">
@@ -4468,10 +4468,10 @@
     <vehicle id="1910" depart="1910.00" type="normal_car">
         <route edges="e18" />
     </vehicle>
-    <vehicle id="1911" depart="1911.00" type="normal_car">
+    <vehicle id="1911" depart="1911.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="1912" depart="1912.00" type="normal_car">
+    <vehicle id="1912" depart="1912.00" type="coach">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="1913" depart="1913.00" type="normal_car">
@@ -4486,10 +4486,10 @@
     <vehicle id="1916" depart="1916.00" type="normal_car">
         <route edges="e39 e29 e36 e26 e28 e43" />
     </vehicle>
-    <vehicle id="1917" depart="1917.00" type="normal_car">
+    <vehicle id="1917" depart="1917.00" type="sporty_car">
         <route edges="e43 e31 e29 e36 e26 e39 e32" />
     </vehicle>
-    <vehicle id="1918" depart="1918.00" type="normal_car">
+    <vehicle id="1918" depart="1918.00" type="coach">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="1920" depart="1920.00" type="normal_car">
@@ -4498,7 +4498,7 @@
     <vehicle id="1923" depart="1923.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1924" depart="1924.00" type="normal_car">
+    <vehicle id="1924" depart="1924.00" type="sporty_car">
         <route edges="e35 e30 e40 e25 e34 e22" />
     </vehicle>
     <vehicle id="1925" depart="1925.00" type="normal_car">
@@ -4516,7 +4516,7 @@
     <vehicle id="1929" depart="1929.00" type="sporty_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="1930" depart="1930.00" type="sporty_car">
+    <vehicle id="1930" depart="1930.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="1931" depart="1931.00" type="normal_car">
@@ -4531,7 +4531,7 @@
     <vehicle id="1935" depart="1935.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1936" depart="1936.00" type="sporty_car">
+    <vehicle id="1936" depart="1936.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1937" depart="1937.00" type="normal_car">
@@ -4543,22 +4543,22 @@
     <vehicle id="1939" depart="1939.00" type="normal_car">
         <route edges="e17 e19 e41 e27 e38 e24 e20" />
     </vehicle>
-    <vehicle id="1940" depart="1940.00" type="sporty_car">
+    <vehicle id="1940" depart="1940.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1941" depart="1941.00" type="sporty_car">
+    <vehicle id="1941" depart="1941.00" type="normal_car">
         <route edges="e43 e31 e29 e36 e34 e22" />
     </vehicle>
     <vehicle id="1942" depart="1942.00" type="normal_car">
         <route edges="e7 e11 e13 e33 e35 e30 e32" />
     </vehicle>
-    <vehicle id="1943" depart="1943.00" type="trailer">
+    <vehicle id="1943" depart="1943.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="1944" depart="1944.00" type="normal_car">
         <route edges="e29 e36 e26 e38 e21" />
     </vehicle>
-    <vehicle id="1945" depart="1945.00" type="normal_car">
+    <vehicle id="1945" depart="1945.00" type="sporty_car">
         <route edges="e20 e16 e9 e4" />
     </vehicle>
     <vehicle id="1946" depart="1946.00" type="normal_car">
@@ -4582,13 +4582,13 @@
     <vehicle id="1953" depart="1953.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1954" depart="1954.00" type="trailer">
+    <vehicle id="1954" depart="1954.00" type="normal_car">
         <route edges="e16 e9 e11 e13 e22 e37 e25" />
     </vehicle>
     <vehicle id="1955" depart="1955.00" type="normal_car">
         <route edges="e22 e24 e41 e43" />
     </vehicle>
-    <vehicle id="1956" depart="1956.00" type="sporty_car">
+    <vehicle id="1956" depart="1956.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="1957" depart="1957.00" type="normal_car">
@@ -4612,10 +4612,10 @@
     <vehicle id="1967" depart="1967.00" type="normal_car">
         <route edges="e7 e11 e13 e22" />
     </vehicle>
-    <vehicle id="1968" depart="1968.00" type="sporty_car">
+    <vehicle id="1968" depart="1968.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="1969" depart="1969.00" type="trailer">
+    <vehicle id="1969" depart="1969.00" type="normal_car">
         <route edges="e39 e32 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="1972" depart="1972.00" type="normal_car">
@@ -4627,7 +4627,7 @@
     <vehicle id="1974" depart="1974.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="1975" depart="1975.00" type="sporty_car">
+    <vehicle id="1975" depart="1975.00" type="normal_car">
         <route edges="e3 e11 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="1976" depart="1976.00" type="normal_car">
@@ -4654,22 +4654,22 @@
     <vehicle id="1985" depart="1985.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="1987" depart="1987.00" type="normal_car">
+    <vehicle id="1987" depart="1987.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="1989" depart="1989.00" type="normal_car">
+    <vehicle id="1989" depart="1989.00" type="sporty_car">
         <route edges="e26 e39 e29 e45" />
     </vehicle>
-    <vehicle id="1992" depart="1992.00" type="sporty_car">
+    <vehicle id="1992" depart="1992.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="1993" depart="1993.00" type="normal_car">
+    <vehicle id="1993" depart="1993.00" type="sporty_car">
         <route edges="e16 e9 e11 e13 e33 e35 e30 e32 e44" />
     </vehicle>
-    <vehicle id="1994" depart="1994.00" type="normal_car">
+    <vehicle id="1994" depart="1994.00" type="coach">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="1995" depart="1995.00" type="normal_car">
+    <vehicle id="1995" depart="1995.00" type="coach">
         <route edges="e48 e31 e40 e28 e43 e47" />
     </vehicle>
     <vehicle id="1996" depart="1996.00" type="normal_car">
@@ -4708,10 +4708,10 @@
     <vehicle id="2009" depart="2009.00" type="normal_car">
         <route edges="e11 e13 e33 e35" />
     </vehicle>
-    <vehicle id="2011" depart="2011.00" type="normal_car">
+    <vehicle id="2011" depart="2011.00" type="coach">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2012" depart="2012.00" type="normal_car">
+    <vehicle id="2012" depart="2012.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2013" depart="2013.00" type="normal_car">
@@ -4738,7 +4738,7 @@
     <vehicle id="2021" depart="2021.00" type="normal_car">
         <route edges="e40 e38 e24 e20 e16" />
     </vehicle>
-    <vehicle id="2023" depart="2023.00" type="sporty_car">
+    <vehicle id="2023" depart="2023.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2024" depart="2024.00" type="normal_car">
@@ -4756,7 +4756,7 @@
     <vehicle id="2030" depart="2030.00" type="normal_car">
         <route edges="e10 e15 e19 e23 e37 e28" />
     </vehicle>
-    <vehicle id="2031" depart="2031.00" type="normal_car">
+    <vehicle id="2031" depart="2031.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="2032" depart="2032.00" type="normal_car">
@@ -4783,16 +4783,16 @@
     <vehicle id="2041" depart="2041.00" type="normal_car">
         <route edges="e10 e15 e19 e23 e37 e28" />
     </vehicle>
-    <vehicle id="2042" depart="2042.00" type="sporty_car">
+    <vehicle id="2042" depart="2042.00" type="normal_car">
         <route edges="e43 e31 e40 e38 e24 e41 e27" />
     </vehicle>
     <vehicle id="2043" depart="2043.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="2044" depart="2044.00" type="normal_car">
+    <vehicle id="2044" depart="2044.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2045" depart="2045.00" type="sporty_car">
+    <vehicle id="2045" depart="2045.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2047" depart="2047.00" type="normal_car">
@@ -4819,7 +4819,7 @@
     <vehicle id="2054" depart="2054.00" type="normal_car">
         <route edges="e31 e29 e36 e34 e22" />
     </vehicle>
-    <vehicle id="2056" depart="2056.00" type="sporty_car">
+    <vehicle id="2056" depart="2056.00" type="normal_car">
         <route edges="e20 e16 e9 e4" />
     </vehicle>
     <vehicle id="2057" depart="2057.00" type="normal_car">
@@ -4831,7 +4831,7 @@
     <vehicle id="2061" depart="2061.00" type="normal_car">
         <route edges="e9 e11 e13 e22 e24" />
     </vehicle>
-    <vehicle id="2063" depart="2063.00" type="sporty_car">
+    <vehicle id="2063" depart="2063.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="2064" depart="2064.00" type="normal_car">
@@ -4852,7 +4852,7 @@
     <vehicle id="2073" depart="2073.00" type="normal_car">
         <route edges="e38 e24 e41 e27 e25 e34 e22" />
     </vehicle>
-    <vehicle id="2075" depart="2075.00" type="normal_car">
+    <vehicle id="2075" depart="2075.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2076" depart="2076.00" type="normal_car">
@@ -4870,10 +4870,10 @@
     <vehicle id="2081" depart="2081.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2085" depart="2085.00" type="sporty_car">
+    <vehicle id="2085" depart="2085.00" type="normal_car">
         <route edges="e24 e41" />
     </vehicle>
-    <vehicle id="2086" depart="2086.00" type="normal_car">
+    <vehicle id="2086" depart="2086.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2087" depart="2087.00" type="normal_car">
@@ -4888,22 +4888,22 @@
     <vehicle id="2093" depart="2093.00" type="normal_car">
         <route edges="e34 e22 e24 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2094" depart="2094.00" type="normal_car">
+    <vehicle id="2094" depart="2094.00" type="coach">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2095" depart="2095.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2097" depart="2097.00" type="normal_car">
+    <vehicle id="2097" depart="2097.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2098" depart="2098.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2099" depart="2099.00" type="sporty_car">
+    <vehicle id="2099" depart="2099.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="2101" depart="2101.00" type="coach">
+    <vehicle id="2101" depart="2101.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2102" depart="2102.00" type="normal_car">
@@ -4927,22 +4927,22 @@
     <vehicle id="2118" depart="2118.00" type="normal_car">
         <route edges="e30 e32 e44 e42 e20 e16" />
     </vehicle>
-    <vehicle id="2119" depart="2119.00" type="coach">
+    <vehicle id="2119" depart="2119.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2121" depart="2121.00" type="normal_car">
+    <vehicle id="2121" depart="2121.00" type="sporty_car">
         <route edges="e9 e11 e13 e22 e24" />
     </vehicle>
     <vehicle id="2122" depart="2122.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="2123" depart="2123.00" type="sporty_car">
+    <vehicle id="2123" depart="2123.00" type="trailer">
         <route edges="e28 e42 e20" />
     </vehicle>
     <vehicle id="2124" depart="2124.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="2125" depart="2125.00" type="sporty_car">
+    <vehicle id="2125" depart="2125.00" type="normal_car">
         <route edges="e14 e12 e10 e15 e19 e41 e27 e38" />
     </vehicle>
     <vehicle id="2126" depart="2126.00" type="normal_car">
@@ -4954,7 +4954,7 @@
     <vehicle id="2128" depart="2128.00" type="normal_car">
         <route edges="e16" />
     </vehicle>
-    <vehicle id="2129" depart="2129.00" type="normal_car">
+    <vehicle id="2129" depart="2129.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2130" depart="2130.00" type="normal_car">
@@ -4966,7 +4966,7 @@
     <vehicle id="2132" depart="2132.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2133" depart="2133.00" type="coach">
+    <vehicle id="2133" depart="2133.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="2134" depart="2134.00" type="normal_car">
@@ -4978,16 +4978,16 @@
     <vehicle id="2136" depart="2136.00" type="normal_car">
         <route edges="e42 e23 e37 e25 e34 e22 e24" />
     </vehicle>
-    <vehicle id="2137" depart="2137.00" type="normal_car">
+    <vehicle id="2137" depart="2137.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2138" depart="2138.00" type="sporty_car">
+    <vehicle id="2138" depart="2138.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="2139" depart="2139.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2140" depart="2140.00" type="normal_car">
+    <vehicle id="2140" depart="2140.00" type="coach">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2143" depart="2143.00" type="normal_car">
@@ -5002,10 +5002,10 @@
     <vehicle id="2149" depart="2149.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="2152" depart="2152.00" type="normal_car">
+    <vehicle id="2152" depart="2152.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2153" depart="2153.00" type="normal_car">
+    <vehicle id="2153" depart="2153.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="2154" depart="2154.00" type="normal_car">
@@ -5014,7 +5014,7 @@
     <vehicle id="2155" depart="2155.00" type="normal_car">
         <route edges="e39 e32 e44 e42" />
     </vehicle>
-    <vehicle id="2156" depart="2156.00" type="normal_car">
+    <vehicle id="2156" depart="2156.00" type="sporty_car">
         <route edges="e39 e29 e36 e34 e14 e12 e10 e15" />
     </vehicle>
     <vehicle id="2157" depart="2157.00" type="normal_car">
@@ -5023,7 +5023,7 @@
     <vehicle id="2159" depart="2159.00" type="normal_car">
         <route edges="e7 e11 e13 e33 e26 e28 e42" />
     </vehicle>
-    <vehicle id="2161" depart="2161.00" type="normal_car">
+    <vehicle id="2161" depart="2161.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="2163" depart="2163.00" type="normal_car">
@@ -5047,10 +5047,10 @@
     <vehicle id="2170" depart="2170.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="2171" depart="2171.00" type="sporty_car">
+    <vehicle id="2171" depart="2171.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2172" depart="2172.00" type="normal_car">
+    <vehicle id="2172" depart="2172.00" type="coach">
         <route edges="e39 e29 e36 e34 e14 e12 e8" />
     </vehicle>
     <vehicle id="2173" depart="2173.00" type="normal_car">
@@ -5062,7 +5062,7 @@
     <vehicle id="2175" depart="2175.00" type="normal_car">
         <route edges="e37 e28 e42" />
     </vehicle>
-    <vehicle id="2177" depart="2177.00" type="coach">
+    <vehicle id="2177" depart="2177.00" type="sporty_car">
         <route edges="e1 e13 e22 e24 e41" />
     </vehicle>
     <vehicle id="2178" depart="2178.00" type="normal_car">
@@ -5107,7 +5107,7 @@
     <vehicle id="2196" depart="2196.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2197" depart="2197.00" type="sporty_car">
+    <vehicle id="2197" depart="2197.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2201" depart="2201.00" type="normal_car">
@@ -5116,7 +5116,7 @@
     <vehicle id="2204" depart="2204.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="2205" depart="2205.00" type="trailer">
+    <vehicle id="2205" depart="2205.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2207" depart="2207.00" type="normal_car">
@@ -5125,7 +5125,7 @@
     <vehicle id="2209" depart="2209.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="2210" depart="2210.00" type="normal_car">
+    <vehicle id="2210" depart="2210.00" type="sporty_car">
         <route edges="e44" />
     </vehicle>
     <vehicle id="2214" depart="2214.00" type="normal_car">
@@ -5152,7 +5152,7 @@
     <vehicle id="2224" depart="2224.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2225" depart="2225.00" type="normal_car">
+    <vehicle id="2225" depart="2225.00" type="sporty_car">
         <route edges="e20 e16 e9 e11 e13 e22 e24 e41 e43 e31" />
     </vehicle>
     <vehicle id="2226" depart="2226.00" type="normal_car">
@@ -5161,10 +5161,10 @@
     <vehicle id="2227" depart="2227.00" type="normal_car">
         <route edges="e42 e23 e21 e33 e35 e45" />
     </vehicle>
-    <vehicle id="2228" depart="2228.00" type="coach">
+    <vehicle id="2228" depart="2228.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2230" depart="2230.00" type="sporty_car">
+    <vehicle id="2230" depart="2230.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2231" depart="2231.00" type="normal_car">
@@ -5188,7 +5188,7 @@
     <vehicle id="2239" depart="2239.00" type="normal_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
-    <vehicle id="2242" depart="2242.00" type="normal_car">
+    <vehicle id="2242" depart="2242.00" type="sporty_car">
         <route edges="e28 e42 e23 e21 e14 e12 e10 e15" />
     </vehicle>
     <vehicle id="2243" depart="2243.00" type="normal_car">
@@ -5197,7 +5197,7 @@
     <vehicle id="2244" depart="2244.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="2245" depart="2245.00" type="sporty_car">
+    <vehicle id="2245" depart="2245.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="2246" depart="2246.00" type="normal_car">
@@ -5206,22 +5206,22 @@
     <vehicle id="2248" depart="2248.00" type="normal_car">
         <route edges="e28 e43 e31 e29 e36 e34" />
     </vehicle>
-    <vehicle id="2250" depart="2250.00" type="normal_car">
+    <vehicle id="2250" depart="2250.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2251" depart="2251.00" type="sporty_car">
+    <vehicle id="2251" depart="2251.00" type="normal_car">
         <route edges="e34 e22 e24 e41 e43 e47" />
     </vehicle>
     <vehicle id="2253" depart="2253.00" type="normal_car">
         <route edges="e44 e42 e20 e16 e9 e11" />
     </vehicle>
-    <vehicle id="2254" depart="2254.00" type="normal_car">
+    <vehicle id="2254" depart="2254.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2256" depart="2256.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="2257" depart="2257.00" type="normal_car">
+    <vehicle id="2257" depart="2257.00" type="sporty_car">
         <route edges="e3 e11 e13 e22 e24 e41 e27" />
     </vehicle>
     <vehicle id="2258" depart="2258.00" type="normal_car">
@@ -5230,7 +5230,7 @@
     <vehicle id="2259" depart="2259.00" type="normal_car">
         <route edges="e37 e28 e42 e20 e16 e6" />
     </vehicle>
-    <vehicle id="2261" depart="2261.00" type="normal_car">
+    <vehicle id="2261" depart="2261.00" type="sporty_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
     <vehicle id="2262" depart="2262.00" type="normal_car">
@@ -5254,16 +5254,16 @@
     <vehicle id="2270" depart="2270.00" type="normal_car">
         <route edges="e9 e11 e13 e22 e37 e25 e34 e14" />
     </vehicle>
-    <vehicle id="2274" depart="2274.00" type="sporty_car">
+    <vehicle id="2274" depart="2274.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
     <vehicle id="2275" depart="2275.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2277" depart="2277.00" type="sporty_car">
+    <vehicle id="2277" depart="2277.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2278" depart="2278.00" type="normal_car">
+    <vehicle id="2278" depart="2278.00" type="coach">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2279" depart="2279.00" type="normal_car">
@@ -5281,7 +5281,7 @@
     <vehicle id="2283" depart="2283.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2284" depart="2284.00" type="coach">
+    <vehicle id="2284" depart="2284.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2286" depart="2286.00" type="normal_car">
@@ -5299,7 +5299,7 @@
     <vehicle id="2290" depart="2290.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2291" depart="2291.00" type="normal_car">
+    <vehicle id="2291" depart="2291.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2293" depart="2293.00" type="normal_car">
@@ -5317,7 +5317,7 @@
     <vehicle id="2297" depart="2297.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="2299" depart="2299.00" type="normal_car">
+    <vehicle id="2299" depart="2299.00" type="sporty_car">
         <route edges="e40 e38 e21 e14 e2" />
     </vehicle>
     <vehicle id="2300" depart="2300.00" type="normal_car">
@@ -5332,16 +5332,16 @@
     <vehicle id="2305" depart="2305.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="2306" depart="2306.00" type="sporty_car">
+    <vehicle id="2306" depart="2306.00" type="normal_car">
         <route edges="e1 e12 e8" />
     </vehicle>
     <vehicle id="2307" depart="2307.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
-    <vehicle id="2308" depart="2308.00" type="normal_car">
+    <vehicle id="2308" depart="2308.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="2312" depart="2312.00" type="sporty_car">
+    <vehicle id="2312" depart="2312.00" type="normal_car">
         <route edges="e32 e44 e42 e23 e21 e14 e2" />
     </vehicle>
     <vehicle id="2313" depart="2313.00" type="normal_car">
@@ -5353,7 +5353,7 @@
     <vehicle id="2316" depart="2316.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2318" depart="2318.00" type="coach">
+    <vehicle id="2318" depart="2318.00" type="normal_car">
         <route edges="e16 e9 e11 e13 e33 e26 e38 e21" />
     </vehicle>
     <vehicle id="2319" depart="2319.00" type="normal_car">
@@ -5383,7 +5383,7 @@
     <vehicle id="2332" depart="2332.00" type="normal_car">
         <route edges="e31 e40 e25 e35" />
     </vehicle>
-    <vehicle id="2333" depart="2333.00" type="normal_car">
+    <vehicle id="2333" depart="2333.00" type="trailer">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2334" depart="2334.00" type="normal_car">
@@ -5398,7 +5398,7 @@
     <vehicle id="2337" depart="2337.00" type="normal_car">
         <route edges="e46 e30 e32 e44 e42 e20" />
     </vehicle>
-    <vehicle id="2338" depart="2338.00" type="normal_car">
+    <vehicle id="2338" depart="2338.00" type="coach">
         <route edges="e22 e37 e28" />
     </vehicle>
     <vehicle id="2339" depart="2339.00" type="normal_car">
@@ -5422,7 +5422,7 @@
     <vehicle id="2345" depart="2345.00" type="normal_car">
         <route edges="e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2346" depart="2346.00" type="sporty_car">
+    <vehicle id="2346" depart="2346.00" type="normal_car">
         <route edges="e1 e12 e10 e15 e19" />
     </vehicle>
     <vehicle id="2347" depart="2347.00" type="normal_car">
@@ -5431,10 +5431,10 @@
     <vehicle id="2348" depart="2348.00" type="normal_car">
         <route edges="e35 e30 e40 e38 e21 e14 e12 e10 e15 e19" />
     </vehicle>
-    <vehicle id="2350" depart="2350.00" type="normal_car">
+    <vehicle id="2350" depart="2350.00" type="sporty_car">
         <route edges="e1 e13 e22 e37 e25 e34 e14" />
     </vehicle>
-    <vehicle id="2351" depart="2351.00" type="normal_car">
+    <vehicle id="2351" depart="2351.00" type="coach">
         <route edges="e38 e21 e14 e2" />
     </vehicle>
     <vehicle id="2352" depart="2352.00" type="normal_car">
@@ -5461,7 +5461,7 @@
     <vehicle id="2360" depart="2360.00" type="normal_car">
         <route edges="e38 e21 e33 e35" />
     </vehicle>
-    <vehicle id="2361" depart="2361.00" type="sporty_car">
+    <vehicle id="2361" depart="2361.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2363" depart="2363.00" type="normal_car">
@@ -5473,25 +5473,25 @@
     <vehicle id="2365" depart="2365.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2366" depart="2366.00" type="normal_car">
+    <vehicle id="2366" depart="2366.00" type="sporty_car">
         <route edges="e12 e10 e15 e19 e23 e21 e33" />
     </vehicle>
     <vehicle id="2367" depart="2367.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="2368" depart="2368.00" type="trailer">
+    <vehicle id="2368" depart="2368.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2369" depart="2369.00" type="normal_car">
         <route edges="e36 e26 e28 e43" />
     </vehicle>
-    <vehicle id="2371" depart="2371.00" type="normal_car">
+    <vehicle id="2371" depart="2371.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2373" depart="2373.00" type="normal_car">
         <route edges="e16 e9 e11 e13 e22 e37 e25" />
     </vehicle>
-    <vehicle id="2374" depart="2374.00" type="sporty_car">
+    <vehicle id="2374" depart="2374.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2375" depart="2375.00" type="normal_car">
@@ -5503,7 +5503,7 @@
     <vehicle id="2377" depart="2377.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="2380" depart="2380.00" type="sporty_car">
+    <vehicle id="2380" depart="2380.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2381" depart="2381.00" type="normal_car">
@@ -5515,7 +5515,7 @@
     <vehicle id="2383" depart="2383.00" type="normal_car">
         <route edges="e27 e25 e35" />
     </vehicle>
-    <vehicle id="2384" depart="2384.00" type="normal_car">
+    <vehicle id="2384" depart="2384.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2385" depart="2385.00" type="normal_car">
@@ -5527,10 +5527,10 @@
     <vehicle id="2387" depart="2387.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2388" depart="2388.00" type="sporty_car">
+    <vehicle id="2388" depart="2388.00" type="trailer">
         <route edges="e19 e41 e27 e38" />
     </vehicle>
-    <vehicle id="2389" depart="2389.00" type="sporty_car">
+    <vehicle id="2389" depart="2389.00" type="normal_car">
         <route edges="e35 e30 e32 e44 e42 e20 e16 e6" />
     </vehicle>
     <vehicle id="2390" depart="2390.00" type="normal_car">
@@ -5560,7 +5560,7 @@
     <vehicle id="2400" depart="2400.00" type="normal_car">
         <route edges="e21 e33 e35" />
     </vehicle>
-    <vehicle id="2402" depart="2402.00" type="normal_car">
+    <vehicle id="2402" depart="2402.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="2403" depart="2403.00" type="normal_car">
@@ -5569,7 +5569,7 @@
     <vehicle id="2404" depart="2404.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="2405" depart="2405.00" type="normal_car">
+    <vehicle id="2405" depart="2405.00" type="coach">
         <route edges="e17 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2406" depart="2406.00" type="normal_car">
@@ -5578,10 +5578,10 @@
     <vehicle id="2407" depart="2407.00" type="normal_car">
         <route edges="e31 e29 e36 e34" />
     </vehicle>
-    <vehicle id="2408" depart="2408.00" type="normal_car">
+    <vehicle id="2408" depart="2408.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2409" depart="2409.00" type="sporty_car">
+    <vehicle id="2409" depart="2409.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2410" depart="2410.00" type="normal_car">
@@ -5635,7 +5635,7 @@
     <vehicle id="2431" depart="2431.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="2432" depart="2432.00" type="sporty_car">
+    <vehicle id="2432" depart="2432.00" type="coach">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="2433" depart="2433.00" type="normal_car">
@@ -5644,13 +5644,13 @@
     <vehicle id="2434" depart="2434.00" type="normal_car">
         <route edges="e22 e37 e28 e42 e23" />
     </vehicle>
-    <vehicle id="2435" depart="2435.00" type="sporty_car">
+    <vehicle id="2435" depart="2435.00" type="normal_car">
         <route edges="e41 e27 e25 e34 e22" />
     </vehicle>
     <vehicle id="2436" depart="2436.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2437" depart="2437.00" type="normal_car">
+    <vehicle id="2437" depart="2437.00" type="sporty_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2439" depart="2439.00" type="normal_car">
@@ -5665,7 +5665,7 @@
     <vehicle id="2442" depart="2442.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2443" depart="2443.00" type="normal_car">
+    <vehicle id="2443" depart="2443.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2444" depart="2444.00" type="normal_car">
@@ -5674,7 +5674,7 @@
     <vehicle id="2445" depart="2445.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="2447" depart="2447.00" type="normal_car">
+    <vehicle id="2447" depart="2447.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2449" depart="2449.00" type="normal_car">
@@ -5686,7 +5686,7 @@
     <vehicle id="2451" depart="2451.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
-    <vehicle id="2452" depart="2452.00" type="normal_car">
+    <vehicle id="2452" depart="2452.00" type="coach">
         <route edges="e22 e37 e25 e34" />
     </vehicle>
     <vehicle id="2453" depart="2453.00" type="normal_car">
@@ -5716,13 +5716,13 @@
     <vehicle id="2465" depart="2465.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2467" depart="2467.00" type="normal_car">
+    <vehicle id="2467" depart="2467.00" type="sporty_car">
         <route edges="e32 e44 e42 e20" />
     </vehicle>
-    <vehicle id="2469" depart="2469.00" type="sporty_car">
+    <vehicle id="2469" depart="2469.00" type="normal_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="2470" depart="2470.00" type="trailer">
+    <vehicle id="2470" depart="2470.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
     <vehicle id="2471" depart="2471.00" type="normal_car">
@@ -5731,19 +5731,19 @@
     <vehicle id="2473" depart="2473.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2474" depart="2474.00" type="normal_car">
+    <vehicle id="2474" depart="2474.00" type="sporty_car">
         <route edges="e27 e39 e32 e44 e42" />
     </vehicle>
     <vehicle id="2475" depart="2475.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2476" depart="2476.00" type="sporty_car">
+    <vehicle id="2476" depart="2476.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="2477" depart="2477.00" type="normal_car">
         <route edges="e27 e25 e34 e14" />
     </vehicle>
-    <vehicle id="2480" depart="2480.00" type="sporty_car">
+    <vehicle id="2480" depart="2480.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
     <vehicle id="2481" depart="2481.00" type="normal_car">
@@ -5752,13 +5752,13 @@
     <vehicle id="2482" depart="2482.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="2483" depart="2483.00" type="normal_car">
+    <vehicle id="2483" depart="2483.00" type="sporty_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2484" depart="2484.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2485" depart="2485.00" type="normal_car">
+    <vehicle id="2485" depart="2485.00" type="sporty_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
     <vehicle id="2486" depart="2486.00" type="normal_car">
@@ -5779,10 +5779,10 @@
     <vehicle id="2494" depart="2494.00" type="normal_car">
         <route edges="e38 e21 e33 e35" />
     </vehicle>
-    <vehicle id="2495" depart="2495.00" type="normal_car">
+    <vehicle id="2495" depart="2495.00" type="coach">
         <route edges="e21 e33 e26 e28 e43" />
     </vehicle>
-    <vehicle id="2496" depart="2496.00" type="sporty_car">
+    <vehicle id="2496" depart="2496.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
     <vehicle id="2497" depart="2497.00" type="normal_car">
@@ -5797,7 +5797,7 @@
     <vehicle id="2500" depart="2500.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2501" depart="2501.00" type="sporty_car">
+    <vehicle id="2501" depart="2501.00" type="normal_car">
         <route edges="e1 e13 e33 e35 e45" />
     </vehicle>
     <vehicle id="2502" depart="2502.00" type="normal_car">
@@ -5812,13 +5812,13 @@
     <vehicle id="2507" depart="2507.00" type="normal_car">
         <route edges="e48 e31 e29 e36 e34 e14 e12 e4" />
     </vehicle>
-    <vehicle id="2508" depart="2508.00" type="normal_car">
+    <vehicle id="2508" depart="2508.00" type="sporty_car">
         <route edges="e31 e29 e36 e34 e14 e12" />
     </vehicle>
     <vehicle id="2510" depart="2510.00" type="normal_car">
         <route edges="e48 e44 e42 e20 e16 e9" />
     </vehicle>
-    <vehicle id="2511" depart="2511.00" type="sporty_car">
+    <vehicle id="2511" depart="2511.00" type="trailer">
         <route edges="e30 e40 e38 e21 e14 e12 e8" />
     </vehicle>
     <vehicle id="2512" depart="2512.00" type="normal_car">
@@ -5845,7 +5845,7 @@
     <vehicle id="2522" depart="2522.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
-    <vehicle id="2523" depart="2523.00" type="normal_car">
+    <vehicle id="2523" depart="2523.00" type="coach">
         <route edges="e47" />
     </vehicle>
     <vehicle id="2524" depart="2524.00" type="normal_car">
@@ -5872,19 +5872,19 @@
     <vehicle id="2535" depart="2535.00" type="normal_car">
         <route edges="e17 e19 e41 e43 e47" />
     </vehicle>
-    <vehicle id="2536" depart="2536.00" type="sporty_car">
+    <vehicle id="2536" depart="2536.00" type="normal_car">
         <route edges="e48 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2538" depart="2538.00" type="normal_car">
+    <vehicle id="2538" depart="2538.00" type="sporty_car">
         <route edges="e48 e31 e29 e36 e34 e14 e2" />
     </vehicle>
-    <vehicle id="2539" depart="2539.00" type="trailer">
+    <vehicle id="2539" depart="2539.00" type="normal_car">
         <route edges="e14 e12 e10 e15 e19 e23 e21 e33" />
     </vehicle>
     <vehicle id="2540" depart="2540.00" type="sporty_car">
         <route edges="e27 e38 e24 e20 e18" />
     </vehicle>
-    <vehicle id="2541" depart="2541.00" type="sporty_car">
+    <vehicle id="2541" depart="2541.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
     <vehicle id="2542" depart="2542.00" type="normal_car">
@@ -5908,7 +5908,7 @@
     <vehicle id="2549" depart="2549.00" type="normal_car">
         <route edges="e40 e38 e21 e14" />
     </vehicle>
-    <vehicle id="2550" depart="2550.00" type="sporty_car">
+    <vehicle id="2550" depart="2550.00" type="normal_car">
         <route edges="e1 e13 e22 e37 e39" />
     </vehicle>
     <vehicle id="2551" depart="2551.00" type="normal_car">
@@ -5917,10 +5917,10 @@
     <vehicle id="2552" depart="2552.00" type="normal_car">
         <route edges="e5 e15 e19 e41 e43 e31 e29 e45" />
     </vehicle>
-    <vehicle id="2554" depart="2554.00" type="normal_car">
+    <vehicle id="2554" depart="2554.00" type="sporty_car">
         <route edges="e42 e23 e21 e14" />
     </vehicle>
-    <vehicle id="2556" depart="2556.00" type="normal_car">
+    <vehicle id="2556" depart="2556.00" type="coach">
         <route edges="e1 e13 e33 e35 e30 e32 e47" />
     </vehicle>
     <vehicle id="2557" depart="2557.00" type="normal_car">
