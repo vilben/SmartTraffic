@@ -1,5 +1,5 @@
 import logging
-from src.vehicles.AbstractVehicle import AbstractVehicle
+from src.vehicles.Vehicle import AbstractVehicle
 
 
 class Bus(AbstractVehicle):

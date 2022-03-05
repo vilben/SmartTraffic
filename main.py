@@ -94,15 +94,15 @@ while step < SIM_STEPS:
     for bus in allBusses:
 
         if bus.isOnTrack():
-            logging.debug(f"bus {bus}")
-            tls = bus.getNextTrafficLight()[0]
+            logging.debug(f'bus {bus}')
+            tls = bus.getNextTrafficLight()
 
-            tlsId = tls[0]
-            tlsPhase = tls[3]
+            tls.setToGreen()
 
-            # just skip stupid phases...
-            if tlsPhase == "r" or tlsPhase == "R" or tlsPhase == "y" or tlsPhase == "Y":
-                traci.trafficlight.setPhaseDuration(tlsId, 0)
+            print(bus.getSpeed())
+            print(bus.getAcceleration())
+
+            print(bus.isJammed())
 
     if STATS:
         edgeStatsCollector.collect(step)
