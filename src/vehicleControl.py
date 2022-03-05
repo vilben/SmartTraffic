@@ -50,7 +50,7 @@ def logVehicleTypes():
     """
     Prints all vehicle types.
     """
-    logging.log(traci.vehicletype.getIDList())
+    logging.info(traci.vehicletype.getIDList())
 
 def followVehicleWithGUI(vehicleId, viewId):
     """
