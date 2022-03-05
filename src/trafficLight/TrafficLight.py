@@ -21,7 +21,7 @@ class TrafficLight:
     def getCurrentPhase(self):
         return self.__currentPhase
 
-    def getDistanceFromBus(self):
+    def getDistanceFromVehicle(self):
         return self.__distanceFromBus
 
     def __skipPhasesUntil(self, color='G'):
