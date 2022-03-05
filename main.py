@@ -66,17 +66,13 @@ while step < SIM_STEPS:
     traci.simulationStep()
 
     for bus in allBusses:
-
         if bus.isOnTrack():
             logging.debug(f'bus {bus}')
-            tls = bus.getNextTrafficLight()
 
-            tls.setToGreen()
-
-            print(bus.getSpeed())
-            print(bus.getAcceleration())
-
-            print(bus.isJammed())
+            if bus.getNextTrafficLight().getDistanceFromBus() < 25:
+                if not bus.hasBusStopAheadOnSameLane():
+                    tls = bus.getNextTrafficLight()
+                    tls.setToGreen()
 
     if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):

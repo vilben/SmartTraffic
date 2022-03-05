@@ -2,6 +2,7 @@ import traci
 
 from src.trafficLight.TrafficLight import TrafficLight
 from src.vehicleControl import isVehicleKnown
+from src.vehicles.Stop import Stop
 
 
 class AbstractVehicle:
@@ -76,13 +77,23 @@ class AbstractVehicle:
         leader = self.getLeader()
 
         if follower.isOnTrack() and leader.isOnStrack():
-            return  follower.isStopped() and leader.isStopped()
-        
+            return follower.isStopped() and leader.isStopped()
+
         if follower.isOnTrack():
-            return  follower.isStopped()
+            return follower.isStopped()
 
         if leader.isOnTrack():
-            return  leader.isStopped()
+            return leader.isStopped()
+
+    def getNextStop(self):
+        return Stop(traci.vehicle.getNextStops(self.getId())[0])
+
+    def getNthNextStop(self, n=1):
+        n -= 1
+        return Stop(traci.vehicle.getNextStops(self.getId()[n]))
+
+    def getCurrentLane(self):
+        return traci.vehicle.getLaneID(self.getId())
 
     # Probably not needed
 
