@@ -317,6 +317,8 @@ class EdgeStatsCollector:
 
         with requests.Session() as s:
             for edgeStat in self.edgeStats:
+
+                # As this is only a hack and this instance not reachable from anywhere except here we do not care about this token here
                 url='https://192.168.1.190:8088/services/collector/event'
                 authHeader = {'Authorization': 'Splunk {}'.format('367a51f8-0ffd-4b88-884a-4dbbdf5ebc4a')}
                 jsonDict = {"index":"hack", "event": { 'message' : json.dumps(edgeStat)} }
