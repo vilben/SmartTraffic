@@ -109,8 +109,8 @@ while step < SIM_STEPS:
                     tls = bus.getNextTrafficLight()
                     tls.setToGreen()
                     logging.debug("Changing light because bus is jammed!!")
-                    if GUI:
-                        followVehicleWithGUI(bus.getId(), VIEW_ID)
+                    # if GUI:
+                        # followVehicleWithGUI(bus.getId(), VIEW_ID)
 
     if STATS:
         edgeStatsCollector.collect(step)

@@ -18,3 +18,7 @@ class Stop:
 
     def getLane(self):
         return self.__lane
+
+    @staticmethod
+    def createNullStop():
+        return Stop([0, 0, 0, 0, 0, 0])
