@@ -99,10 +99,10 @@ class AbstractVehicle:
         leader, leaderDistance = self.getLeaderWithDistance()
 
         if follower and follower.isOnTrack():
-            return  follower.isStopped() and followerDistance < 10
+            return follower.isStopped() and followerDistance < 10
 
         if leader and leader.isOnTrack():
-            return  leader.isStopped() and leaderDistance < 10
+            return leader.isStopped() and leaderDistance < 10
 
     def getNextStop(self):
         return Stop(traci.vehicle.getNextStops(self.getId())[0])
