@@ -2,10 +2,6 @@ import traci
 
 
 class TrafficLight:
-
-    # def __init__(self, id):
-    #     self.__id = id
-
     # Constructor for tls gotten by bus.getNextTrafficLight
     def __init__(self, tls):
         self.__id = tls[0]

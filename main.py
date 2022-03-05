@@ -4,9 +4,7 @@ import sumolib
 import traci
 
 import src.util as util
-from src import tlsControl
 from src.vehicles.Bus import Bus
-from src.vehicleControl import addBus
 from src.vehicleControl import followVehicleWithGUI
 
 VIEW_ID = "View #0"

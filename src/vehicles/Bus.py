@@ -1,5 +1,3 @@
-import traci
-
 from src.vehicles.Vehicle import AbstractVehicle
 
 
