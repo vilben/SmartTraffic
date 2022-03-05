@@ -1,0 +1,133 @@
+Warning: At actuated tlLogic 'cluster_1245382291_1245382347_1245382386_1483240320_1898480107_4592689062_5221381715_5221381716_5221387521_5221387523_5221387526_5221387529_97765159', linkIndex 9 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_1245382291_1245382347_1245382386_1483240320_1898480107_4592689062_5221381715_5221381716_5221387521_5221387523_5221387526_5221387529_97765159', linkIndex 10 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_1245382291_1245382347_1245382386_1483240320_1898480107_4592689062_5221381715_5221381716_5221387521_5221387523_5221387526_5221387529_97765159', linkIndex 11 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_1245382291_1245382347_1245382386_1483240320_1898480107_4592689062_5221381715_5221381716_5221387521_5221387523_5221387526_5221387529_97765159', linkIndex 12 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_1939957744_1939957753_2621067014_28214038', linkIndex 11 has no controlling detector.
+Warning: busStop '426860182' on lane '19803517#20_0' is too short for vehicle '2_bus_30:0'.
+Warning: busStop '-7248262545' on lane '-330757768#12_0' is too short for vehicle '2_bus_30:0'.
+Warning: busStop '-7274196219' on lane '-94711853_0' is too short for vehicle '2_bus_30:0'.
+Warning: busStop '1154423252' on lane '94711853_0' is too short for vehicle '8_bus_30:1'.
+Warning: busStop '-1499118015' on lane '-136641146#3_0' is too short for vehicle '8_bus_30:1'.
+Warning: busStop '-1099877676' on lane '-190192157#0_0' is too short for vehicle '8_bus_30:1'.
+Warning: busStop '206372888' on lane '35286562#0_0' is too short for vehicle '9_bus_73:0'.
+Warning: busStop '7271595869' on lane '37297216#4_0' is too short for vehicle '9_bus_73:0'.
+Warning: busStop '7271595862' on lane '27602301#0_0' is too short for vehicle '9_bus_73:0'.
+Warning: busStop '-984023532' on lane '-364075852#2_0' is too short for vehicle '9_bus_73:0'.
+Warning: busStop '598172359' on lane '93752629_0' is too short for vehicle '9_bus_73:0'.
+Warning: busStop '-984739274' on lane '-976088823#8_0' is too short for vehicle '10_bus_73:1'.
+Warning: busStop '8073856017' on lane '190196878#11_0' is too short for vehicle '11_bus_40:0'.
+Warning: busStop '8073840716' on lane '101939798#1_0' is too short for vehicle '11_bus_40:0'.
+Warning: busStop '311287459' on lane '32846420#6_0' is too short for vehicle '12_trolleybus_5:0'.
+Warning: busStop '1096064553' on lane '95094998#0_0' is too short for vehicle '12_trolleybus_5:0'.
+Warning: busStop '-7272347245' on lane '-32767128_0' is too short for vehicle '12_trolleybus_5:0'.
+Warning: busStop '598161467' on lane '542717331#0_0' is too short for vehicle '12_trolleybus_5:0'.
+Warning: busStop '598172356' on lane '94728342#1_0' is too short for vehicle '13_trolleybus_2:0'.
+Warning: busStop '598172353' on lane '94727480#1_0' is too short for vehicle '15_trolleybus_4:0'.
+Warning: busStop '-7274331909' on lane '-305482859#6_0' is too short for vehicle '15_trolleybus_4:0'.
+Warning: busStop '-472459433' on lane '-305482859#0_0' is too short for vehicle '15_trolleybus_4:0'.
+Warning: busStop '7274331199' on lane '24544106#1_0' is too short for vehicle '15_trolleybus_4:0'.
+Warning: Vehicle '15_trolleybus_4:0' is not allowed to stop on lane '-97670448_0'.
+Warning: busStop '1096064554' on lane '134989591#0_0' is too short for vehicle '16_trolleybus_6:0'.
+Warning: Vehicle '16_trolleybus_6:0' is not allowed to stop on lane '705286358_0'.
+Warning: busStop '598172367' on lane '93752640_0' is too short for vehicle '19_bus_72:0'.
+Warning: busStop '1483240186' on lane '134989584#2_0' is too short for vehicle '19_bus_72:0'.
+Warning: busStop '311606382' on lane '10968767#7_0' is too short for vehicle '19_bus_72:0'.
+Warning: busStop '206357913' on lane '94522273#6_0' is too short for vehicle '23_bus_25:1'.
+Warning: busStop '472459432' on lane '397546364#0_0' is too short for vehicle '24_bus_21:0'.
+Warning: busStop '598172366' on lane '93752650_0' is too short for vehicle '24_bus_21:0'.
+Warning: busStop '1098666350' on lane '94602935_0' is too short for vehicle '26_bus_20:0'.
+Warning: busStop '472459430' on lane '120517467#0_0' is too short for vehicle '27_bus_20:1'.
+Warning: busStop '984024084' on lane '96095211_0' is too short for vehicle '30_bus_9:0'.
+Warning: busStop '1099877607' on lane '779101387#1_0' is too short for vehicle '30_bus_9:0'.
+Warning: busStop '6776962333' on lane '779101385_0' is too short for vehicle '32_bus_14:0'.
+Warning: busStop '8072044974' on lane '27602527#1_0' is too short for vehicle '33_bus_14:1'.
+Warning: busStop '598172354' on lane '94728202_0' is too short for vehicle '34_bus_10:0'.
+Warning: busStop '984024292' on lane '4496451#3_0' is too short for vehicle '34_bus_10:0'.
+Warning: busStop '866201064' on lane '49303772#1_0' is too short for vehicle '34_bus_10:0'.
+Warning: busStop '845290451' on lane '95095003_0' is too short for vehicle '34_bus_10:0'.
+Warning: busStop '984014288' on lane '97804889_0' is too short for vehicle '34_bus_10:0'.
+Warning: busStop '-4420078769' on lane '-134727279#7_0' is too short for vehicle '43_bus_40:2'.
+Warning: busStop '598172362' on lane '93752636_0' is too short for vehicle '48_trolleybus_1:0'.
+Warning: busStop '308240450' on lane '712687104#3_0' is too short for vehicle '48_trolleybus_1:0'.
+Warning: busStop '7274196194' on lane '22384595#4_0' is too short for vehicle '48_trolleybus_1:0'.
+Warning: Vehicle '48_trolleybus_1:0' is not allowed to stop on lane '97690539_0'.
+Warning: Vehicle '49_trolleybus_1:1' is not allowed to stop on lane '97690539_0'.
+Warning: busStop '-1483240187' on lane '-22384595#3_0' is too short for vehicle '49_trolleybus_1:1'.
+Warning: busStop '371753766' on lane '436156037#0_0' is too short for vehicle '62_bus_19:1'.
+Warning: Vehicle '16_trolleybus_6:0' is not allowed on destination edge '705286358'.
+Warning: busStop '-507053070' for vehicle '16_trolleybus_6:0' on lane '-72738315#2_0' is not downstream the current route.
+Warning: Vehicle '16_trolleybus_6:0' is not allowed to stop on lane '705286358_0'.
+Warning: Vehicle '15_trolleybus_4:0' is not allowed on destination edge '-97670448'.
+Warning: busStop '1098191334' for vehicle '15_trolleybus_4:0' on lane '37389755#8_0' is not downstream the current route.
+Warning: Vehicle '15_trolleybus_4:0' is not allowed to stop on lane '-97670448_0'.
+Warning: Vehicle '48_trolleybus_1:0' is not allowed on destination edge '97690539'.
+Warning: busStop '-1485039517' for vehicle '48_trolleybus_1:0' on lane '-330757768#5_0' is not downstream the current route.
+Warning: Vehicle '48_trolleybus_1:0' is not allowed to stop on lane '97690539_0'.
+Warning: Vehicle '49_trolleybus_1:1' is not allowed to depart on any lane of edge '97690539'.
+Warning: Vehicle '65_trolleybus_6:1' is not allowed to stop on lane '705286358_0'.
+Warning: Vehicle '66_trolleybus_8:0' is not allowed to stop on lane '94539483_0'.
+Warning: Vehicle '66_trolleybus_8:0' is not allowed to stop on lane '37297210#1_0'.
+Warning: Vehicle '67_trolleybus_8:1' is not allowed to stop on lane '37297210#1_0'.
+Warning: Vehicle '67_trolleybus_8:1' is not allowed to stop on lane '-705286362_0'.
+Warning: Vehicle '68_trolleybus_7:0' is not allowed to stop on lane '97670449_0'.
+Warning: busStop '-1485039481' on lane '-135207203#4_0' is too short for vehicle '68_trolleybus_7:0'.
+Warning: Vehicle '68_trolleybus_7:0' is not allowed to stop on lane '142551218#0_0'.
+Warning: busStop '7279189828' on lane '135160800_0' is too short for vehicle '68_trolleybus_7:0'.
+Warning: busStop '-1483240180' on lane '-134989549#1_0' is too short for vehicle '69_trolleybus_7:1'.
+Warning: busStop '1560009337' on lane '704947941#2_0' is too short for vehicle '69_trolleybus_7:1'.
+Warning: busStop '1485039572' on lane '705286367#0_0' is too short for vehicle '69_trolleybus_7:1'.
+Warning: Vehicle '69_trolleybus_7:1' is not allowed to stop on lane '97670449_0'.
+Warning: Vehicle '70_trolleybus_4:1' is not allowed to stop on lane '-97670448_0'.
+Warning: busStop '-1098191304' on lane '-37389755#5_0' is too short for vehicle '70_trolleybus_4:1'.
+Warning: busStop '-7274331913' on lane '-305482861#2_0' is too short for vehicle '70_trolleybus_4:1'.
+Warning: busStop '598151973' on lane '30111223#0_0' is too short for vehicle '72_trolleybus_1:2'.
+Warning: busStop '-268126927' on lane '-434705278_0' is too short for vehicle '72_trolleybus_1:2'.
+Warning: busStop '598098664' on lane '46822949_0' is too short for vehicle '73_bus_15:0'.
+Warning: busStop '-435225257' on lane '-94711849#1_0' is too short for vehicle '73_bus_15:0'.
+Warning: busStop '-435231930' on lane '-37337876#1_0' is too short for vehicle '73_bus_15:0'.
+Warning: busStop '598172357' on lane '95094999#1_0' is too short for vehicle '77_bus_12:0'.
+Warning: busStop '598172360' on lane '93752645_0' is too short for vehicle '78_bus_61:0'.
+Warning: busStop '-9442245063' on lane '-108358756#4_0' is too short for vehicle '80_bus_10:3'.
+Warning: busStop '-1402361697' on lane '-276061431_0' is too short for vehicle '84_bus_71:3'.
+Warning: busStop '2870822827' on lane '592182332#0_0' is too short for vehicle '100_bus_24:0'.
+Warning: busStop '626368405' on lane '19802198#0_0' is too short for vehicle '101_bus_24:1'.
+Warning: busStop '310005930' on lane '94711857_0' is too short for vehicle '108_bus_15:3'.
+Warning: busStop '984024684' on lane '39074776#2_0' is too short for vehicle '109_bus_41:0'.
+Warning: busStop '1133988270' on lane '498890215_0' is too short for vehicle '110_bus_41:1'.
+Warning: busStop '-7184667176' on lane '-866204097_0' is too short for vehicle '111_bus_42:0'.
+Warning: Vehicle '69_trolleybus_7:1' is not allowed on destination edge '97670449'.
+Warning: busStop '1485039541' for vehicle '69_trolleybus_7:1' on lane '89387843#3_0' is not downstream the current route.
+Warning: Vehicle '69_trolleybus_7:1' is not allowed to stop on lane '97670449_0'.
+Warning: Vehicle '65_trolleybus_6:1' is not allowed to depart on any lane of edge '705286358'.
+Warning: Vehicle '66_trolleybus_8:0' is not allowed to depart on any lane of edge '94539483'.
+Warning: Vehicle '67_trolleybus_8:1' is not allowed to depart on any lane of edge '37297210#1'.
+Warning: Vehicle '68_trolleybus_7:0' is not allowed to depart on any lane of edge '97670449'.
+Warning: Vehicle '70_trolleybus_4:1' is not allowed to depart on any lane of edge '-97670448'.
+Warning: Teleporting vehicle '20_train_S77:0'; frontal collision with vehicle '21_train_S77:1', lane='25921504_0', gap=-1.00, time=319.00 stage=move.
+Warning: Teleporting vehicle '21_train_S77:1'; frontal collision with vehicle '57_train_S6:0', lane='795291375_0', gap=-1.00, time=379.00 stage=move.
+Warning: Vehicle '21_train_S77:1' ends teleporting on edge '-795469561', time=379.00.
+Warning: Vehicle '20_train_S77:0' ends teleporting on edge '-87230811#0', time=390.00.
+Warning: busStop '2051794005' on lane '118745118_0' is too short for vehicle '118_train_600:0'.
+Warning: busStop '331818268' on lane '28115065#1_0' is too short for vehicle '127_bus_15:5'.
+Warning: busStop '2051794005@7782644' on lane '118745107_0' is too short for vehicle '133_train_IR_27:0'.
+Warning: busStop '598172361' on lane '93752651_0' is too short for vehicle '149_bus_TEL:0'.
+Warning: Teleporting vehicle '58_train_S6:1'; frontal collision with vehicle '56_train_S99:1', lane='-87230813_0', gap=-1.00, time=412.00 stage=move.
+Warning: Vehicle '58_train_S6:1' ends teleporting on edge '-196661157', time=433.00.
+Warning: Vehicle '56_train_S99:1' performs emergency braking with decel=-5.00 wished=1.30 severity=1.00, time=458.00.
+Warning: Teleporting vehicle '5_train_S3:0'; collision with vehicle '104_train_S1:0', lane='-197135813_0', gap=-1.00, time=502.00 stage=move.
+Warning: Vehicle '5_train_S3:0' ends teleporting on edge '-86320913#2', time=505.00.
+Warning: Teleporting vehicle '56_train_S99:1'; frontal collision with vehicle '104_train_S1:0', lane='-197135813_0', gap=-1.00, time=514.00 stage=move.
+Warning: Vehicle '56_train_S99:1' ends teleporting on edge '-116828436', time=514.00.
+Warning: Teleporting vehicle '104_train_S1:0'; frontal collision with vehicle '57_train_S6:0', lane='87230766_0', gap=-1.00, time=546.00 stage=move.
+Warning: Vehicle '132_train_IR_26:1' performs emergency braking with decel=-5.00 wished=1.30 severity=1.00, time=661.00.
+Warning: Teleporting vehicle '132_train_IR_26:1'; frontal collision with vehicle '118_train_600:0', lane='118745118_0', gap=-1.00, time=787.00 stage=move.
+Warning: Vehicle '132_train_IR_26:1' skips stop on lane '118745118_0' time=787.00.
+Warning: Teleporting vehicle '118_train_600:0'; frontal collision with vehicle '131_train_IR_26:0', lane='-86320687_0', gap=-1.00, time=816.00 stage=move.
+Warning: Teleporting vehicle '137_train_IR_15:1'; frontal collision with vehicle '131_train_IR_26:0', lane='118745118_0', gap=-1.00, time=946.00 stage=move.
+Warning: Vehicle '137_train_IR_15:1' teleports beyond arrival edge '118745118', time=946.00.
+Warning: Vehicle '137_train_IR_15:1' skips stop on lane '118745118_0' time=946.00.
+Warning: Teleporting vehicle '17_bus_73:2'; waited too long (wrong lane), lane='53620033_2', time=1197.00.
+Warning: Teleporting vehicle '50_bus_73:3'; waited too long (jam), lane=':27329524_1_1', time=1259.00.
+Warning: Teleporting vehicle '143_bus_N401:0'; waited too long (yield), lane='94721111#2_0', time=1315.00.
+Warning: 12 total messages of type: At actuated tlLogic '%', linkIndex % has no controlling detector.
+Warning: 12 total messages of type: Vehicle '%' ends teleporting on edge '%', time=%.

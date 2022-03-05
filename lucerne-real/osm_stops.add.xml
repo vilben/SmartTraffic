@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-03-05 21:39:53 by Eclipse SUMO netconvert Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvert.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-1002463599" name="Luzern" lane="-834322745_0" startPos="0.00" endPos="104.10" friendlyPos="true">
+        <access lane="377963627_0" pos="0.00" length="18.79" friendlyPos="1"/>
+        <access lane="377966225_0" pos="2.05" length="11.64" friendlyPos="1"/>
+        <access lane="379387005_0" pos="6.37" length="10.61" friendlyPos="1"/>
+        <access lane="44129708#2_0" pos="8.99" length="13.74" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="0.00" length="19.08" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1002465031" name="Luzern" lane="-834322752_0" startPos="264.80" endPos="369.60" friendlyPos="true">
+        <access lane="377963625#0_0" pos="0.00" length="20.27" friendlyPos="1"/>
+        <access lane="377966223_0" pos="129.15" length="14.40" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="10.69" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="13.77" length="18.86" friendlyPos="1"/>
+        <access lane="44129708#6_0" pos="2.31" length="15.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1002465533" name="Luzern" lane="-834322751_0" startPos="0.00" endPos="104.68" friendlyPos="true">
+        <access lane="377966224_0" pos="2.59" length="19.22" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="12.24" friendlyPos="1"/>
+        <access lane="379387004_0" pos="6.54" length="12.89" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="9.48" length="14.92" friendlyPos="1"/>
+        <access lane="44129708#6_0" pos="0.00" length="20.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1002465535" name="Luzern" lane="-834322749_0" startPos="0.00" endPos="104.49" friendlyPos="true">
+        <access lane="23088146#0_0" pos="0.00" length="18.36" friendlyPos="1"/>
+        <access lane="23088146#1_0" pos="0.00" length="23.35" friendlyPos="1"/>
+        <access lane="377966224_0" pos="2.59" length="11.74" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="7.78" length="14.59" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="0.00" length="19.61" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1002466274" name="Luzern" lane="-834322747_0" startPos="0.00" endPos="104.30" friendlyPos="true">
+        <access lane="23088146#0_0" pos="0.00" length="12.55" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.00" length="19.48" friendlyPos="1"/>
+        <access lane="377966225_0" pos="2.05" length="18.87" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="9.05" length="14.13" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="0.00" length="21.07" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1057155639" name="Haslihorn" lane="-458346548#6_0" startPos="29.56" endPos="44.56" friendlyPos="true" lines="21"/>
+    <busStop id="-1098133696" name="Dietschiberg" lane="-80446532#2_0" startPos="0.00" endPos="11.45" friendlyPos="true" lines="6 8"/>
+    <busStop id="-1098191304" name="Mönchweg" lane="-37389755#5_0" startPos="0.00" endPos="8.88" friendlyPos="true" lines="4"/>
+    <busStop id="-1099807926" name="Kreuzstutz" lane="-190192157#9_0" startPos="7.25" endPos="22.25" friendlyPos="true" lines="30 12"/>
+    <busStop id="-1099877676" name="Grenzhof" lane="-190192157#0_0" startPos="27.60" endPos="42.60" friendlyPos="true" lines="30"/>
+    <busStop id="-1099877741" name="Kanonenstrasse" lane="-190192157#3_0" startPos="3.27" endPos="18.27" friendlyPos="true" lines="30 12"/>
+    <busStop id="-1103214919" name="Brüelstrasse" lane="-1016970349_0" startPos="0.00" endPos="14.35" friendlyPos="true" lines="26"/>
+    <busStop id="-1132623664" name="Senti" lane="-28037730#0_0" startPos="0.00" endPos="11.50" friendlyPos="true" lines="15"/>
+    <busStop id="-1132624749" name="St. Niklausengasse" lane="-276043569#0_0" startPos="53.91" endPos="68.91" friendlyPos="true" lines="15"/>
+    <busStop id="-1133988364" name="Staldenhof" lane="-498890219#1_0" startPos="3.98" endPos="18.98" friendlyPos="true" lines="41"/>
+    <busStop id="-1227248791" name="Roggernhalde" lane="-30373813#2_0" startPos="436.21" endPos="451.21" friendlyPos="true" lines="15"/>
+    <busStop id="-1356968579" name="Schlossberg" lane="-93720122#2_0" startPos="41.98" endPos="56.98" friendlyPos="true" lines="1 19"/>
+    <busStop id="-1398732992" name="Luzern Verkehrshaus" lane="-103893340_0" startPos="313.92" endPos="513.92" friendlyPos="true">
+        <access lane="142973098_0" pos="174.03" length="45.39" friendlyPos="1"/>
+        <access lane="27602296#11_0" pos="35.02" length="75.61" friendlyPos="1"/>
+        <access lane="283174676#2_0" pos="178.79" length="37.91" friendlyPos="1"/>
+        <access lane="283174677#2_0" pos="80.37" length="23.70" friendlyPos="1"/>
+        <access lane="578233921#2_0" pos="37.33" length="79.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1402361684" name="Pulvermühle" lane="-30111223#2_0" startPos="43.91" endPos="58.91" friendlyPos="true" lines="15 1"/>
+    <busStop id="-1402361697" name="Stampfeli" lane="-276061431_0" startPos="41.07" endPos="51.52" friendlyPos="true" lines="71 1"/>
+    <busStop id="-1402361703" name="Feldmühle" lane="-24668591#8_0" startPos="0.00" endPos="14.79" friendlyPos="true" lines="71 1"/>
+    <busStop id="-1402382117" name="Kriens Busschleife" lane="-144379387#2_0" startPos="6.99" endPos="21.99" friendlyPos="true" lines="71 1"/>
+    <busStop id="-1402433076" name="Schachenstrasse" lane="-818077657#0_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="1 5"/>
+    <busStop id="-1402433088" name="Hofmatt-Bellpark" lane="-30505619#0_0" startPos="10.88" endPos="25.88" friendlyPos="true" lines="1 5"/>
+    <busStop id="-1480899669" name="Ruopigen Zentrum" lane="-134727280#0_0" startPos="12.87" endPos="27.87" friendlyPos="true" lines="40"/>
+    <busStop id="-1483240180" name="Dreilinden" lane="-134989549#1_0" startPos="50.73" endPos="64.72" friendlyPos="true" lines="7"/>
+    <busStop id="-1483240181" name="Kapuzinerweg" lane="-143232900#0_0" startPos="10.32" endPos="25.32" friendlyPos="true" lines="14 7"/>
+    <busStop id="-1483240182" name="Kloster" lane="-134989549#9_0" startPos="25.11" endPos="40.11" friendlyPos="true" lines="7"/>
+    <busStop id="-1483240187" name="Wesemlinrain" lane="-22384595#3_0" startPos="14.28" endPos="25.65" friendlyPos="true" lines="1 19"/>
+    <busStop id="-1485039454" name="Bodenhofterrasse" lane="-704947941#0_0" startPos="0.00" endPos="9.89" friendlyPos="true" lines="7"/>
+    <busStop id="-1485039476" name="Gartenheim" lane="-135160800_0" startPos="29.22" endPos="44.22" friendlyPos="true" lines="7"/>
+    <busStop id="-1485039481" name="Geissenstein" lane="-135207203#4_0" startPos="5.10" endPos="14.72" friendlyPos="true" lines="7"/>
+    <busStop id="-1485039517" name="Maihofmatte-Rotsee" lane="-330757768#5_0" startPos="76.88" endPos="91.88" friendlyPos="true" lines="30 1"/>
+    <busStop id="-1485039535" name="Morgenweg" lane="-135207223#1_0" startPos="20.90" endPos="35.90" friendlyPos="true" lines="7"/>
+    <busStop id="-1485039548" name="Rodtegg" lane="-89387843#2_0" startPos="34.68" endPos="49.68" friendlyPos="true" lines="7"/>
+    <busStop id="-1485039627" name="Zwyssigplatz" lane="-135207223#2_0" startPos="13.88" endPos="28.88" friendlyPos="true" lines="7"/>
+    <busStop id="-1499118015" name="Schlossberg" lane="-136641146#3_0" startPos="26.35" endPos="37.16" friendlyPos="true" lines="30 19"/>
+    <busStop id="-1621275615" name="Friedhofstrasse" lane="-28115065#3_0" startPos="8.92" endPos="23.92" friendlyPos="true" lines="15"/>
+    <busStop id="-1778558480" name="Eggen" lane="-37297185#1_0" startPos="52.59" endPos="67.59" friendlyPos="true" lines="6"/>
+    <busStop id="-2051794005" name="Luzern" lane="-834322750_0" startPos="0.00" endPos="7.50" friendlyPos="true">
+        <access lane="23088146#1_0" pos="0.00" length="5.06" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.24" length="3.45" friendlyPos="1"/>
+        <access lane="377963623#1_0" pos="0.20" length="9.59" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="12.28" length="7.94" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="0.00" length="9.42" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-2051794005@7782644" name="Luzern" lane="-194675923_0" startPos="376.97" endPos="384.47" friendlyPos="true">
+        <access lane="23088146#1_0" pos="0.00" length="5.06" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.24" length="3.45" friendlyPos="1"/>
+        <access lane="377963623#1_0" pos="0.20" length="9.59" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="12.28" length="7.94" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="0.00" length="9.42" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-206357913" name="Giseli" lane="-94522273#6_0" startPos="0.00" endPos="14.61" friendlyPos="true" lines="6 25"/>
+    <busStop id="-206372726" name="Michaelshof" lane="-19803517#8_0" startPos="37.69" endPos="52.69" friendlyPos="true" lines="30 12"/>
+    <busStop id="-206372754" name="Kantonsspital" lane="-22386331#0_0" startPos="43.28" endPos="58.28" friendlyPos="true" lines="30 9 19"/>
+    <busStop id="-206372908" name="Schädrütihalde" lane="-37297216#3_0" startPos="21.32" endPos="36.32" friendlyPos="true" lines="26"/>
+    <busStop id="-206381260" name="Luzern" lane="-194675923_0" startPos="280.04" endPos="384.47" friendlyPos="true">
+        <access lane="23088146#0_0" pos="0.00" length="11.71" friendlyPos="1"/>
+        <access lane="23088146#1_0" pos="0.00" length="19.66" friendlyPos="1"/>
+        <access lane="377966224_0" pos="2.59" length="18.37" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="12.28" length="20.73" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="2.72" length="14.43" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-260019054" name="Pilatusplatz" lane="-305482866#0_0" startPos="42.71" endPos="57.71" friendlyPos="true" lines="2 20 9 10 52 71 72 1 12 61 11 50"/>
+    <busStop id="-260019068" name="Alpenstrasse" lane="-387290889#2_0" startPos="72.19" endPos="87.19" friendlyPos="true" lines="71 1 5"/>
+    <busStop id="-260019117" name="Nidfeld" lane="-28514156#0_0" startPos="96.98" endPos="111.98" friendlyPos="true" lines="14"/>
+    <busStop id="-268126927" name="Kriens Busschleife" lane="-434705278_0" startPos="0.00" endPos="6.47" friendlyPos="true" lines="1 71"/>
+    <busStop id="-27329497" name="Kantonalbank" lane="-39447057#1_0" startPos="36.15" endPos="51.15" friendlyPos="true" lines="2 20 9 10 1 12 11"/>
+    <busStop id="-282157840" name="Littau Dorf" lane="-39074716#0_0" startPos="6.37" endPos="21.37" friendlyPos="true" lines="30 40"/>
+    <busStop id="-283223448" name="Littau" lane="-196661156#1_0" startPos="54.98" endPos="193.47" friendlyPos="true">
+        <access lane="-39074756#0_0" pos="94.86" length="47.41" friendlyPos="1"/>
+        <access lane="-97686493_0" pos="21.15" length="54.97" friendlyPos="1"/>
+        <access lane="39074756#0_0" pos="34.10" length="42.61" friendlyPos="1"/>
+        <access lane="681039319_0" pos="0.00" length="55.82" friendlyPos="1"/>
+        <access lane="681039320#1_0" pos="2.13" length="54.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-300652646" name="Casino-Palace" lane="-364075852#4_0" startPos="26.64" endPos="41.64" friendlyPos="true" lines="6 8 24"/>
+    <busStop id="-303097162" name="Schlösslihalde" lane="-27602527#8_0" startPos="26.02" endPos="41.02" friendlyPos="true" lines="14"/>
+    <busStop id="-307120029" name="Johanneskirche" lane="-751559970#11_0" startPos="0.00" endPos="8.92" friendlyPos="true" lines="21 16"/>
+    <busStop id="-308898923" name="Steinhofrain" lane="-220487398#0_0" startPos="100.42" endPos="115.42" friendlyPos="true" lines="10 11"/>
+    <busStop id="-309136781" name="Dattenbergrain" lane="-220753097#1_0" startPos="65.21" endPos="80.21" friendlyPos="true" lines="15"/>
+    <busStop id="-310005930" name="Pilatus-Bahnen" lane="-94711857_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="15"/>
+    <busStop id="-311606391" name="Rönnimoosrain" lane="-19803517#15_0" startPos="21.92" endPos="36.92" friendlyPos="true" lines="30 12"/>
+    <busStop id="-311606396" name="Längweiher" lane="-19803517#11_0" startPos="25.99" endPos="40.99" friendlyPos="true" lines="30 12"/>
+    <busStop id="-317381548" name="Obere Dattenbergstrasse" lane="-106697040#0_0" startPos="1.62" endPos="16.62" friendlyPos="true" lines="15"/>
+    <busStop id="-331805631" name="Eichenspes" lane="-94711858#6_0" startPos="0.00" endPos="7.70" friendlyPos="true" lines="15"/>
+    <busStop id="-331805632" name="Zumhofstrasse" lane="-94711858#0_0" startPos="94.38" endPos="109.38" friendlyPos="true" lines="15"/>
+    <busStop id="-331805633" name="Zumhof" lane="-37337875#0_0" startPos="27.04" endPos="42.04" friendlyPos="true" lines="15"/>
+    <busStop id="-333555694" name="Luzern" lane="-834322746_0" startPos="0.00" endPos="104.24" friendlyPos="true">
+        <access lane="23088146#0_0" pos="0.00" length="19.01" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.00" length="22.94" friendlyPos="1"/>
+        <access lane="377966225_0" pos="2.05" length="12.44" friendlyPos="1"/>
+        <access lane="44129708#2_0" pos="12.82" length="19.70" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="4.22" length="14.04" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-333645308" name="Luzern" lane="-834322750_0" startPos="0.00" endPos="104.62" friendlyPos="true">
+        <access lane="377966224_0" pos="2.59" length="12.15" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="19.28" friendlyPos="1"/>
+        <access lane="379387004_0" pos="6.54" length="11.47" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="11.53" length="20.21" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="4.15" length="14.85" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-336706429" name="Grossfeldstrasse" lane="-28069843#4_0" startPos="25.25" endPos="40.25" friendlyPos="true" lines="16 15"/>
+    <busStop id="-357455545" name="Geissmatthöhe" lane="-31909899_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="9"/>
+    <busStop id="-357471926" name="Mühlemattstrasse" lane="-866030037#2_0" startPos="39.00" endPos="54.00" friendlyPos="true" lines="9"/>
+    <busStop id="-364790072" name="Friedbergstrasse" lane="-135207193#0_0" startPos="17.64" endPos="32.64" friendlyPos="true" lines="9"/>
+    <busStop id="-369965693" name="Obere Weinhalde" lane="-32841506#10_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="15"/>
+    <busStop id="-371753766" name="Reussport" lane="-436156037#0_0" startPos="0.00" endPos="11.02" friendlyPos="true" lines="19"/>
+    <busStop id="-426860182" name="Grenzhof" lane="-19803517#20_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="12"/>
+    <busStop id="-428732887" name="Sternmatt" lane="-104318805#4_0" startPos="1.48" endPos="16.48" friendlyPos="true" lines="7"/>
+    <busStop id="-434635992" name="Oberseeburg" lane="-37297191#9_0" startPos="9.24" endPos="24.24" friendlyPos="true" lines="25"/>
+    <busStop id="-434636245" name="Würzenbachmatte" lane="-37297207#2_0" startPos="32.78" endPos="47.78" friendlyPos="true" lines="8"/>
+    <busStop id="-434636247" name="Würzenbachmatte" lane="-37297207#4_0" startPos="7.23" endPos="22.23" friendlyPos="true" lines="8"/>
+    <busStop id="-435225257" name="Ehrendingen" lane="-94711849#1_0" startPos="30.00" endPos="45.00" friendlyPos="true" lines="15"/>
+    <busStop id="-435225259" name="Gabeldingen" lane="-28146423_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="15"/>
+    <busStop id="-435225260" name="Gabeldingen Schulhaus" lane="-221650296#1_0" startPos="21.46" endPos="36.46" friendlyPos="true" lines="15"/>
+    <busStop id="-435225265" name="Bergstrasse" lane="-220753098_0" startPos="16.48" endPos="31.48" friendlyPos="true" lines="15"/>
+    <busStop id="-435231930" name="Oberhusrain" lane="-37337876#1_0" startPos="24.59" endPos="37.24" friendlyPos="true" lines="15"/>
+    <busStop id="-435231931" name="Oberhusweg" lane="-419301361_0" startPos="0.74" endPos="15.74" friendlyPos="true" lines="15"/>
+    <busStop id="-435245567" name="Kirchbühl" lane="-106697016#1_0" startPos="6.83" endPos="21.83" friendlyPos="true" lines="15"/>
+    <busStop id="-436601443" name="Hubelmatt" lane="-97670448_0" startPos="0.00" endPos="5.68" friendlyPos="true" lines="4"/>
+    <busStop id="-4420078769" name="Staffeln Schulhaus" lane="-134727279#7_0" startPos="7.04" endPos="18.94" friendlyPos="true" lines="40 42 43"/>
+    <busStop id="-4441508552" name="Schiff" lane="-373436809_0" startPos="2.55" endPos="17.55" friendlyPos="true" lines="5 2"/>
+    <busStop id="-466485418" name="Matt" lane="-39074700#5_0" startPos="24.27" endPos="39.27" friendlyPos="true" lines="40"/>
+    <busStop id="-466485605" name="Littau Bahnhof" lane="-97686493_0" startPos="23.58" endPos="38.58" friendlyPos="true" lines="30 40 41"/>
+    <busStop id="-471106231" name="Stutz" lane="-880325777_0" startPos="12.22" endPos="27.22" friendlyPos="true" lines="21"/>
+    <busStop id="-472459433" name="Bundesplatz" lane="-305482859#0_0" startPos="35.29" endPos="45.30" friendlyPos="true" lines="4 6 8 7"/>
+    <busStop id="-4841439968" name="Seefeldstrasse" lane="-283174680#0_0" startPos="0.00" endPos="7.70" friendlyPos="true" lines="24"/>
+    <busStop id="-506671368" name="Werkhofstrasse" lane="-305482877#6_0" startPos="10.49" endPos="25.49" friendlyPos="true" lines="21 6 8 7"/>
+    <busStop id="-506672767" name="Weinbergli" lane="-785364818#4_0" startPos="0.14" endPos="15.14" friendlyPos="true" lines="6 8 7"/>
+    <busStop id="-506673090" name="Eisfeldstrasse" lane="-705286365_0" startPos="35.96" endPos="50.96" friendlyPos="true" lines="21 6 8 7"/>
+    <busStop id="-507051500" name="Wartegg" lane="-72738315#10_0" startPos="0.00" endPos="13.82" friendlyPos="true" lines="6 8"/>
+    <busStop id="-507053070" name="Schönbühl" lane="-72738315#2_0" startPos="0.20" endPos="15.20" friendlyPos="true" lines="6 21 8"/>
+    <busStop id="-598134662" name="Zentrum Pilatus" lane="-276049497#4_0" startPos="15.40" endPos="30.40" friendlyPos="true" lines="1 5"/>
+    <busStop id="-598151967" name="Hammerschmiede" lane="-24668591#0_0" startPos="31.77" endPos="46.77" friendlyPos="true" lines="1"/>
+    <busStop id="-598151976" name="Schappe-Center" lane="-30111223#4_0" startPos="59.05" endPos="74.05" friendlyPos="true" lines="15 1"/>
+    <busStop id="-598161469" name="Kupferhammer" lane="-24668589_0" startPos="3.77" endPos="18.77" friendlyPos="true" lines="1 5"/>
+    <busStop id="-598172341" name="Eichhof" lane="-164358769#3_0" startPos="29.85" endPos="44.85" friendlyPos="true" lines="20"/>
+    <busStop id="-598172343" name="Paulusplatz" lane="-386850954#2_0" startPos="2.58" endPos="17.58" friendlyPos="true" lines="20 1 11 5"/>
+    <busStop id="-598172346" name="Moosegg" lane="-8428661#1_0" startPos="11.87" endPos="26.87" friendlyPos="true" lines="1 11 5"/>
+    <busStop id="-626367394" name="Seeburg-Schifflände" lane="-220331656_0" startPos="320.42" endPos="335.42" friendlyPos="true" lines="24"/>
+    <busStop id="-626367834" name="Hotel Seeburg" lane="-220331655#4_0" startPos="18.99" endPos="33.99" friendlyPos="true" lines="24"/>
+    <busStop id="-626495930" name="Schlössli" lane="-52345192#0_0" startPos="285.24" endPos="300.24" friendlyPos="true" lines="24"/>
+    <busStop id="-6377336345" name="Littau" lane="-98221366#1_0" startPos="0.00" endPos="96.07" friendlyPos="true">
+        <access lane="-97686493_0" pos="21.21" length="42.18" friendlyPos="1"/>
+        <access lane="39074717_0" pos="41.32" length="46.98" friendlyPos="1"/>
+        <access lane="39074718#1_0" pos="36.38" length="52.66" friendlyPos="1"/>
+        <access lane="39074756#0_0" pos="33.87" length="55.39" friendlyPos="1"/>
+        <access lane="681039319_0" pos="0.00" length="56.08" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7184667176" name="Obermättlistrasse" lane="-866204097_0" startPos="36.61" endPos="51.61" friendlyPos="true" lines="42 43"/>
+    <busStop id="-7184667178" name="Waldstrasse" lane="-39074665#0_0" startPos="16.60" endPos="31.60" friendlyPos="true" lines="42 43"/>
+    <busStop id="-7222804248" name="Luzern" lane="-834322753#0_0" startPos="231.80" endPos="336.65" friendlyPos="true">
+        <access lane="377963625#0_0" pos="0.00" length="23.78" friendlyPos="1"/>
+        <access lane="377966223_0" pos="129.03" length="7.29" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="16.64" friendlyPos="1"/>
+        <access lane="44129708#6_0" pos="7.05" length="15.27" friendlyPos="1"/>
+        <access lane="44129708#7_0" pos="0.00" length="18.78" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7248262541" name="Schlossberg" lane="-330757768#19_0" startPos="29.25" endPos="44.25" friendlyPos="true" lines="30 1"/>
+    <busStop id="-7248262542" name="Gasshof" lane="-443045111#0_0" startPos="46.98" endPos="61.98" friendlyPos="true" lines="12"/>
+    <busStop id="-7248262543" name="Gasshof" lane="-101433110#1_0" startPos="4.56" endPos="19.56" friendlyPos="true" lines="30 40"/>
+    <busStop id="-7248262545" name="Weggismatt" lane="-330757768#12_0" startPos="22.92" endPos="37.92" friendlyPos="true" lines="30 1"/>
+    <busStop id="-7248262564" name="St. Karli" lane="-866030035#0_0" startPos="18.60" endPos="33.60" friendlyPos="true" lines="30 9 19"/>
+    <busStop id="-7248262568" name="Blattenmoos" lane="-19803517#1_0" startPos="4.16" endPos="19.16" friendlyPos="true" lines="30"/>
+    <busStop id="-7271600096" name="Rigiblick" lane="-976088823#10_0" startPos="452.36" endPos="467.36" friendlyPos="true" lines="73 26"/>
+    <busStop id="-7271600097" name="Hochhüsliweid" lane="-638331076_0" startPos="9.60" endPos="24.60" friendlyPos="true" lines="26"/>
+    <busStop id="-7272347245" name="Eichhof" lane="-32767128_0" startPos="20.98" endPos="35.98" friendlyPos="true" lines="5 71 14 11 1"/>
+    <busStop id="-7274196219" name="Maihof" lane="-94711853_0" startPos="18.55" endPos="31.23" friendlyPos="true" lines="30 1"/>
+    <busStop id="-7274331909" name="Kantonalbank" lane="-305482859#6_0" startPos="17.58" endPos="29.58" friendlyPos="true" lines="4 6 21 8 7"/>
+    <busStop id="-7274331913" name="Brünigstrasse" lane="-305482861#2_0" startPos="52.57" endPos="66.68" friendlyPos="true" lines="4"/>
+    <busStop id="-7274331934" name="Steghof" lane="-750730565_0" startPos="0.00" endPos="14.95" friendlyPos="true" lines="4"/>
+    <busStop id="-7276028335" name="Gütsch" lane="-43418075#1_0" startPos="23.48" endPos="38.48" friendlyPos="true" lines="5 2 12"/>
+    <busStop id="-7276028336" name="Fluhmühle" lane="-94721106#3_0" startPos="109.21" endPos="124.21" friendlyPos="true" lines="5 2"/>
+    <busStop id="-7276082761" name="Frohburg" lane="-445092733#0_0" startPos="19.02" endPos="34.02" friendlyPos="true" lines="40 2 42 43 5"/>
+    <busStop id="-7276082784" name="Kreuzstutz" lane="-43418075#7_0" startPos="11.85" endPos="26.85" friendlyPos="true" lines="5 2"/>
+    <busStop id="-7279189827" name="Felsberg" lane="-134989549#4_0" startPos="2.85" endPos="17.85" friendlyPos="true" lines="7"/>
+    <busStop id="-7279189829" name="Schulhaus Unterlöchli" lane="-72740989#0_0" startPos="15.04" endPos="30.04" friendlyPos="true" lines="7"/>
+    <busStop id="-750648136" name="Sonnenbergstrasse" lane="-97804890#0_0" startPos="110.16" endPos="125.16" friendlyPos="true" lines="11"/>
+    <busStop id="-750648181" name="Steinhof" lane="-97804890#7_0" startPos="74.23" endPos="89.23" friendlyPos="true" lines="11"/>
+    <busStop id="-758982143" name="Oberseeburghöhe" lane="-37297191#4_0" startPos="52.98" endPos="67.98" friendlyPos="true" lines="25"/>
+    <busStop id="-758982155" name="Eggen" lane="-37297192#1_0" startPos="33.57" endPos="48.57" friendlyPos="true" lines="6 25"/>
+    <busStop id="-758982163" name="Büttenen" lane="-37297185#2_0" startPos="6.19" endPos="21.19" friendlyPos="true" lines="6"/>
+    <busStop id="-7908898589" name="Luzern" lane="-834322754_0" startPos="0.00" endPos="113.36" friendlyPos="true">
+        <access lane="-30808995#5_0" pos="2.48" length="28.47" friendlyPos="1"/>
+        <access lane="118733795#1_0" pos="7.09" length="22.03" friendlyPos="1"/>
+        <access lane="170990449#1_0" pos="12.84" length="34.37" friendlyPos="1"/>
+        <access lane="30808995#5_0" pos="24.50" length="23.67" friendlyPos="1"/>
+        <access lane="30808995#6_0" pos="0.00" length="31.40" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7908898590" name="Luzern" lane="-834322755_0" startPos="134.22" endPos="247.50" friendlyPos="true">
+        <access lane="-30808995#5_0" pos="2.17" length="22.95" friendlyPos="1"/>
+        <access lane="-30808995#6_0" pos="6.46" length="30.53" friendlyPos="1"/>
+        <access lane="118733795#1_0" pos="7.09" length="24.50" friendlyPos="1"/>
+        <access lane="30808995#5_0" pos="24.81" length="18.15" friendlyPos="1"/>
+        <access lane="30808995#6_0" pos="0.00" length="27.12" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-8072044950" name="Zunacher" lane="-751559970#8_0" startPos="3.12" endPos="18.12" friendlyPos="true" lines="21 16"/>
+    <busStop id="-8072044951" name="Sportweg" lane="-751559970#1_0" startPos="10.93" endPos="25.93" friendlyPos="true" lines="21 16"/>
+    <busStop id="-8072044953" name="Lauerzweg" lane="-751559970#0_0" startPos="63.51" endPos="78.51" friendlyPos="true" lines="21 16"/>
+    <busStop id="-8072070859" name="Himmelrichstrasse" lane="-30373813#2_0" startPos="653.02" endPos="668.02" friendlyPos="true" lines="15"/>
+    <busStop id="-8072070913" name="Hermitage" lane="-408451711#4_0" startPos="0.00" endPos="12.45" friendlyPos="true" lines="24"/>
+    <busStop id="-8072075918" name="Rosenhalde" lane="-52345192#1_0" startPos="102.86" endPos="117.86" friendlyPos="true" lines="24"/>
+    <busStop id="-8072075919" name="Balm" lane="-52345192#1_0" startPos="438.29" endPos="453.29" friendlyPos="true" lines="24"/>
+    <busStop id="-845290448" name="Obergütschhalde" lane="-108358756#10_0" startPos="13.91" endPos="28.91" friendlyPos="true" lines="10"/>
+    <busStop id="-866201047" name="Steinhofstrasse" lane="-28050002_0" startPos="21.47" endPos="36.47" friendlyPos="true" lines="10"/>
+    <busStop id="-866201055" name="Untergütsch" lane="-49302771#3_0" startPos="8.12" endPos="23.12" friendlyPos="true" lines="10"/>
+    <busStop id="-866201060" name="Panoramic View" lane="-49302769_0" startPos="94.34" endPos="109.34" friendlyPos="true" lines="10"/>
+    <busStop id="-866201064" name="Berglistrasse" lane="-49303772#1_0" startPos="0.00" endPos="14.29" friendlyPos="true" lines="10"/>
+    <busStop id="-9442245040" name="Obergütschrain" lane="-108358756#8_0" startPos="99.89" endPos="114.89" friendlyPos="true" lines="10"/>
+    <busStop id="-9442245063" name="Obergütschstrasse" lane="-108358756#4_0" startPos="24.27" endPos="37.42" friendlyPos="true" lines="10"/>
+    <busStop id="-984013966" name="Breitenlachen" lane="-24544106#2_0" startPos="31.07" endPos="46.07" friendlyPos="true" lines="4"/>
+    <busStop id="-984014129" name="Hirtenhof" lane="-705286362_0" startPos="24.15" endPos="31.20" friendlyPos="true" lines="8"/>
+    <busStop id="-984014276" name="Unter-Dattenberg" lane="-28123922#0_0" startPos="29.52" endPos="44.52" friendlyPos="true" lines="10 11"/>
+    <busStop id="-984014635" name="Zumbachhof" lane="-705286364#3_0" startPos="16.40" endPos="31.40" friendlyPos="true" lines="8"/>
+    <busStop id="-984023516" name="Klinik St. Anna" lane="-27582119#1_0" startPos="24.24" endPos="34.67" friendlyPos="true" lines="14"/>
+    <busStop id="-984023532" name="Haldensteig" lane="-364075852#2_0" startPos="15.98" endPos="28.49" friendlyPos="true" lines="73 6 8"/>
+    <busStop id="-984023828" name="Gärtnerstrasse" lane="-27603102#5_0" startPos="3.50" endPos="18.50" friendlyPos="true" lines="14"/>
+    <busStop id="-984024066" name="Urnerhof" lane="-887914950#1_0" startPos="10.35" endPos="25.35" friendlyPos="true" lines="30 19"/>
+    <busStop id="-984024077" name="Europe" lane="-364075852#11_0" startPos="12.92" endPos="27.92" friendlyPos="true" lines="6 8"/>
+    <busStop id="-984024083" name="Brüggligasse" lane="-53620026_0" startPos="23.00" endPos="38.00" friendlyPos="true" lines="9"/>
+    <busStop id="-984024089" name="Littau Schützenhaus" lane="-443045111#2_0" startPos="13.30" endPos="28.30" friendlyPos="true" lines="30 40 12"/>
+    <busStop id="-984024092" name="Säntihof" lane="-498890213#0_0" startPos="0.00" endPos="12.17" friendlyPos="true" lines="41"/>
+    <busStop id="-984024105" name="Blattenmoos" lane="-19803517#3_0" startPos="39.56" endPos="54.56" friendlyPos="true" lines="12"/>
+    <busStop id="-984024117" name="Rosenberg" lane="-22385351#3_0" startPos="0.00" endPos="12.74" friendlyPos="true" lines="30 19"/>
+    <busStop id="-984024118" name="Lützelmattstrasse" lane="-27582119#2_0" startPos="2.59" endPos="17.59" friendlyPos="true" lines="14"/>
+    <busStop id="-984024126" name="Konservatorium" lane="-27603102#0_0" startPos="14.25" endPos="29.25" friendlyPos="true" lines="14"/>
+    <busStop id="-984024152" name="Hirzenhof" lane="-95094998#0_0" startPos="58.90" endPos="73.90" friendlyPos="true" lines="9 2 12 5"/>
+    <busStop id="-984024214" name="Ruopigen Schulhaus" lane="-190196878#11_0" startPos="25.38" endPos="40.38" friendlyPos="true" lines="40"/>
+    <busStop id="-984024222" name="Schwimmbad" lane="-101939798#1_0" startPos="21.67" endPos="36.67" friendlyPos="true" lines="40"/>
+    <busStop id="-984024292" name="Zähringerstrasse" lane="-4496451#3_0" startPos="0.00" endPos="9.59" friendlyPos="true" lines="10"/>
+    <busStop id="-984739213" name="Schlösslihalde" lane="-37297216#18_0" startPos="17.61" endPos="32.61" friendlyPos="true" lines="26"/>
+    <busStop id="-984739217" name="Leumatt" lane="-27602528#1_0" startPos="6.57" endPos="21.57" friendlyPos="true" lines="14"/>
+    <busStop id="-984739234" name="Rigistrasse" lane="-27582119#4_0" startPos="11.43" endPos="26.43" friendlyPos="true" lines="14"/>
+    <busStop id="-984739274" name="Rigiblick" lane="-976088823#8_0" startPos="8.37" endPos="15.87" friendlyPos="true" lines="73"/>
+    <busStop id="-984739319" name="Buchmatt" lane="-638331107#5_0" startPos="20.29" endPos="35.29" friendlyPos="true" lines="25"/>
+    <busStop id="-984739332" name="Schlösslirain" lane="-27602527#6_0" startPos="12.70" endPos="27.70" friendlyPos="true" lines="14"/>
+    <busStop id="-984739343" name="Klösterli" lane="-142976777_0" startPos="21.53" endPos="36.53" friendlyPos="true" lines="25"/>
+    <busStop id="-984739344" name="Hochrüti" lane="-142976777_0" startPos="386.39" endPos="401.39" friendlyPos="true" lines="25"/>
+    <busStop id="-984739350" name="Englisch Friedhof" lane="-638331107#0_0" startPos="52.01" endPos="67.01" friendlyPos="true" lines="25"/>
+    <busStop id="1002463599" name="Luzern" lane="86320760_0" startPos="0.00" endPos="132.42" friendlyPos="true" lines="S3 S99">
+        <access lane="377963627_0" pos="0.00" length="18.79" friendlyPos="1"/>
+        <access lane="377966225_0" pos="2.05" length="11.64" friendlyPos="1"/>
+        <access lane="379387005_0" pos="6.37" length="10.61" friendlyPos="1"/>
+        <access lane="44129708#2_0" pos="8.99" length="13.74" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="0.00" length="19.08" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1002465031" name="Luzern" lane="118745125_0" startPos="0.00" endPos="104.80" friendlyPos="true" lines="S1">
+        <access lane="377963625#0_0" pos="0.00" length="20.27" friendlyPos="1"/>
+        <access lane="377966223_0" pos="129.15" length="14.40" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="10.69" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="13.77" length="18.86" friendlyPos="1"/>
+        <access lane="44129708#6_0" pos="2.31" length="15.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1002465533" name="Luzern" lane="86320371_0" startPos="108.55" endPos="308.55" friendlyPos="true" lines="S6">
+        <access lane="377966224_0" pos="2.59" length="19.22" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="12.24" friendlyPos="1"/>
+        <access lane="379387004_0" pos="6.54" length="12.89" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="9.48" length="14.92" friendlyPos="1"/>
+        <access lane="44129708#6_0" pos="0.00" length="20.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1002465535" name="Luzern" lane="86320356#1_0" startPos="0.00" endPos="154.34" friendlyPos="true">
+        <access lane="23088146#0_0" pos="0.00" length="18.36" friendlyPos="1"/>
+        <access lane="23088146#1_0" pos="0.00" length="23.35" friendlyPos="1"/>
+        <access lane="377966224_0" pos="2.59" length="11.74" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="7.78" length="14.59" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="0.00" length="19.61" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1002466274" name="Luzern" lane="86320713_0" startPos="0.00" endPos="115.24" friendlyPos="true" lines="EC 151">
+        <access lane="23088146#0_0" pos="0.00" length="12.55" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.00" length="19.48" friendlyPos="1"/>
+        <access lane="377966225_0" pos="2.05" length="18.87" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="9.05" length="14.13" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="0.00" length="21.07" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1088752236" name="Luzern Bahnhof" lane="94602944_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="PE"/>
+    <busStop id="1096064551" name="Kantonsspital" lane="22386331#2_0" startPos="28.07" endPos="43.07" friendlyPos="true" lines="30 9 19"/>
+    <busStop id="1096064553" name="Hirzenhof" lane="95094998#0_0" startPos="77.35" endPos="85.60" friendlyPos="true" lines="5 2 9 10 12"/>
+    <busStop id="1096064554" name="Luzernerhof" lane="134989591#0_0" startPos="21.18" endPos="34.73" friendlyPos="true" lines="6 8 24"/>
+    <busStop id="1096064557" name="Kreuzstutz" lane="135572695#2_0" startPos="7.56" endPos="22.56" friendlyPos="true">
+        <access lane="-135207220#0_0" pos="0.20" length="21.15" friendlyPos="1"/>
+        <access lane="-135207220#1_0" pos="113.25" length="23.15" friendlyPos="1"/>
+        <access lane="1013068277#1_0" pos="31.19" length="7.18" friendlyPos="1"/>
+        <access lane="267492224#1_0" pos="80.08" length="19.09" friendlyPos="1"/>
+        <access lane="727273130#0_0" pos="0.00" length="17.67" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1098133697" name="Luzernerhof" lane="94522261_0" startPos="15.61" endPos="30.61" friendlyPos="true" lines="73 6 8 24"/>
+    <busStop id="1098191319" name="Konservatorium" lane="27601327#2_0" startPos="70.75" endPos="85.32" friendlyPos="true" lines="14"/>
+    <busStop id="1098191334" name="Mönchweg" lane="37389755#8_0" startPos="15.45" endPos="30.45" friendlyPos="true" lines="4"/>
+    <busStop id="1098191373" name="Gärtnerstrasse" lane="27603102#6_0" startPos="14.64" endPos="29.64" friendlyPos="true" lines="14"/>
+    <busStop id="1098666350" name="Luzern Bahnhof" lane="94602935_0" startPos="22.99" endPos="30.49" friendlyPos="true" lines="20"/>
+    <busStop id="1098666400" name="Luzern Bahnhof" lane="93752639_0" startPos="13.63" endPos="26.40" friendlyPos="true" lines="19"/>
+    <busStop id="1099807926" name="Kreuzstutz" lane="190192157#9_0" startPos="37.54" endPos="52.54" friendlyPos="true" lines="30 12"/>
+    <busStop id="1099807979" name="Kreuzstutz" lane="1013074041#1_0" startPos="10.57" endPos="25.57" friendlyPos="true">
+        <access lane="1013068281#4_0" pos="12.67" length="16.54" friendlyPos="1"/>
+        <access lane="727273130#2_0" pos="13.20" length="11.19" friendlyPos="1"/>
+        <access lane="727273130#3_0" pos="0.00" length="11.14" friendlyPos="1"/>
+        <access lane="727273132_0" pos="0.34" length="15.65" friendlyPos="1"/>
+        <access lane="93507924_0" pos="0.00" length="14.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1099877607" name="Luzern Bahnhof" lane="779101387#1_0" startPos="12.59" endPos="20.09" friendlyPos="true" lines="9 11"/>
+    <busStop id="1099877676" name="Grenzhof" lane="190192157#0_0" startPos="1.01" endPos="16.01" friendlyPos="true" lines="12"/>
+    <busStop id="1099877714" name="Kanonenstrasse" lane="190192157#5_0" startPos="5.47" endPos="20.47" friendlyPos="true" lines="30 12"/>
+    <busStop id="1103214919" name="Brüelstrasse" lane="39401063#5_0" startPos="12.21" endPos="19.58" friendlyPos="true" lines="73 14"/>
+    <busStop id="1132161190" name="Hochhüsliweid" lane="37297216#1_0" startPos="0.00" endPos="14.95" friendlyPos="true" lines="73 26"/>
+    <busStop id="1132161194" name="Sonnenbergstrasse" lane="220487398#4_0" startPos="7.79" endPos="22.79" friendlyPos="true" lines="10 11"/>
+    <busStop id="1133988270" name="Säntihof" lane="498890215_0" startPos="34.77" endPos="47.37" friendlyPos="true" lines="41"/>
+    <busStop id="1140909292" name="Hochrüti" lane="142976777_0" startPos="198.08" endPos="213.08" friendlyPos="true" lines="25"/>
+    <busStop id="1154423252" name="Maihof" lane="94711853_0" startPos="17.75" endPos="31.23" friendlyPos="true" lines="30 1"/>
+    <busStop id="1165748197" name="Schwanenplatz" lane="100873454#0_0" startPos="42.86" endPos="57.86" friendlyPos="true" lines="73 14 1 19 6 8 7 24"/>
+    <busStop id="1165748363" name="Wey" lane="134989595#3_0" startPos="11.49" endPos="26.49" friendlyPos="true" lines="14 7"/>
+    <busStop id="1227248791" name="Roggernhalde" lane="30373813#2_0" startPos="251.93" endPos="266.93" friendlyPos="true" lines="15"/>
+    <busStop id="1398732992" name="Luzern Verkehrshaus" lane="103893220_0" startPos="165.78" endPos="365.78" friendlyPos="true">
+        <access lane="142973098_0" pos="174.03" length="45.39" friendlyPos="1"/>
+        <access lane="27602296#11_0" pos="35.02" length="75.61" friendlyPos="1"/>
+        <access lane="283174676#2_0" pos="178.79" length="37.91" friendlyPos="1"/>
+        <access lane="283174677#2_0" pos="80.37" length="23.70" friendlyPos="1"/>
+        <access lane="578233921#2_0" pos="37.33" length="79.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1398733007" name="Luzern Verkehrshaus" lane="126092202_0" startPos="165.69" endPos="365.69" friendlyPos="true" lines="VAE S3">
+        <access lane="-27602296#11_0" pos="64.68" length="74.06" friendlyPos="1"/>
+        <access lane="142973098_0" pos="173.86" length="52.17" friendlyPos="1"/>
+        <access lane="27602296#11_0" pos="36.61" length="69.26" friendlyPos="1"/>
+        <access lane="283174676#2_0" pos="178.53" length="44.68" friendlyPos="1"/>
+        <access lane="283174677#2_0" pos="80.64" length="30.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1402361695" name="Stampfeli" lane="276061431_0" startPos="7.44" endPos="22.44" friendlyPos="true" lines="1 71"/>
+    <busStop id="1402361703" name="Feldmühle" lane="24668591#7_0" startPos="57.01" endPos="72.01" friendlyPos="true" lines="1 71"/>
+    <busStop id="1402433083" name="Schachenstrasse" lane="818077657#4_0" startPos="16.01" endPos="31.01" friendlyPos="true" lines="5 1"/>
+    <busStop id="1406220211" name="Hofmatt-Bellpark" lane="30505619#2_0" startPos="14.25" endPos="29.25" friendlyPos="true" lines="5 16 15 1"/>
+    <busStop id="1417759043" name="Reformierte Kirche" lane="101433081#2_0" startPos="0.00" endPos="14.69" friendlyPos="true"/>
+    <busStop id="1480899669" name="Ruopigen Zentrum" lane="134727280#0_0" startPos="33.59" endPos="48.59" friendlyPos="true" lines="40 46"/>
+    <busStop id="1483240180" name="Dreilinden" lane="134989549#1_0" startPos="0.00" endPos="13.33" friendlyPos="true" lines="7"/>
+    <busStop id="1483240181" name="Kapuzinerweg" lane="72740995_0" startPos="150.13" endPos="165.13" friendlyPos="true" lines="14 7"/>
+    <busStop id="1483240183" name="Luzernerhof" lane="94545446#0_0" startPos="21.64" endPos="36.64" friendlyPos="true" lines="14 1 19 7"/>
+    <busStop id="1483240184" name="Luzernerhof" lane="94545447#1_0" startPos="25.28" endPos="40.28" friendlyPos="true" lines="1 19"/>
+    <busStop id="1483240185" name="Löwenplatz" lane="134989604#4_0" startPos="4.07" endPos="19.07" friendlyPos="true" lines="1 19"/>
+    <busStop id="1483240186" name="Pilatusplatz" lane="134989584#2_0" startPos="8.57" endPos="18.53" friendlyPos="true" lines="72 9 10 52 2 50 12 5 61"/>
+    <busStop id="1483240188" name="Wey" lane="134989556#1_0" startPos="5.72" endPos="20.72" friendlyPos="true" lines="14 7"/>
+    <busStop id="1485039414" name="Haslihorn" lane="458346548#8_0" startPos="9.57" endPos="24.57" friendlyPos="true" lines="21"/>
+    <busStop id="1485039419" name="Zentrum Pilatus" lane="867036815#1_0" startPos="13.60" endPos="28.60" friendlyPos="true" lines="5 16 15 1"/>
+    <busStop id="1485039442" name="Biregghof" lane="97670449_0" startPos="15.27" endPos="22.77" friendlyPos="true" lines="7"/>
+    <busStop id="1485039481" name="Geissenstein" lane="135207203#4_0" startPos="0.00" endPos="9.65" friendlyPos="true" lines="7"/>
+    <busStop id="1485039490" name="Kloster" lane="135207223#0_0" startPos="24.15" endPos="39.15" friendlyPos="true" lines="7"/>
+    <busStop id="1485039516" name="Maihof" lane="97690539_0" startPos="60.11" endPos="63.11" friendlyPos="true" lines="1"/>
+    <busStop id="1485039517" name="Maihofmatte-Rotsee" lane="330757768#4_0" startPos="0.00" endPos="12.46" friendlyPos="true" lines="30 1"/>
+    <busStop id="1485039535" name="Morgenweg" lane="135207223#1_0" startPos="8.05" endPos="23.05" friendlyPos="true" lines="7"/>
+    <busStop id="1485039541" name="Rodtegg" lane="89387843#3_0" startPos="25.97" endPos="40.97" friendlyPos="true" lines="7"/>
+    <busStop id="1485039572" name="Sternmatt" lane="705286367#0_0" startPos="12.01" endPos="21.12" friendlyPos="true" lines="7"/>
+    <busStop id="1485039575" name="Tiefe" lane="305482861#5_0" startPos="94.67" endPos="109.67" friendlyPos="true" lines="4"/>
+    <busStop id="1485039604" name="Verkehrshaus/Lido" lane="283174676#2_0" startPos="26.12" endPos="41.12" friendlyPos="true" lines="6 8 24"/>
+    <busStop id="1485039679" name="Balm" lane="52345192#1_0" startPos="61.35" endPos="76.35" friendlyPos="true" lines="24"/>
+    <busStop id="1560009337" name="Bodenhofterrasse" lane="704947941#2_0" startPos="9.03" endPos="24.03" friendlyPos="true" lines="7"/>
+    <busStop id="1560009338" name="Zwyssigplatz" lane="142551218#0_0" startPos="15.98" endPos="28.84" friendlyPos="true" lines="7"/>
+    <busStop id="1584421236" name="Grosshofstrasse" lane="542709066_0" startPos="9.44" endPos="24.44" friendlyPos="true" lines="5 14 1"/>
+    <busStop id="1592889360" name="Schulhaus Unterlöchli" lane="72740989#2_0" startPos="4.16" endPos="19.16" friendlyPos="true" lines="7"/>
+    <busStop id="2051794005" name="Luzern" lane="118745118_0" startPos="201.66" endPos="216.66" friendlyPos="true" lines="600 IR 26">
+        <access lane="23088146#1_0" pos="0.00" length="5.06" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.24" length="3.45" friendlyPos="1"/>
+        <access lane="377963623#1_0" pos="0.20" length="9.59" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="12.28" length="7.94" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="0.00" length="9.42" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2051794005@7782644" name="Luzern" lane="118745107_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="IR 27 IR 15">
+        <access lane="23088146#1_0" pos="0.00" length="5.06" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.24" length="3.45" friendlyPos="1"/>
+        <access lane="377963623#1_0" pos="0.20" length="9.59" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="12.28" length="7.94" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="0.00" length="9.42" friendlyPos="1"/>
+    </busStop>
+    <busStop id="206318587" name="Stutz" lane="458346548#2_0" startPos="35.04" endPos="50.04" friendlyPos="true" lines="21"/>
+    <busStop id="206357913" name="Giseli" lane="94522273#6_0" startPos="13.82" endPos="28.72" friendlyPos="true" lines="25"/>
+    <busStop id="206357943" name="Eggen" lane="388185755#0_0" startPos="32.68" endPos="47.68" friendlyPos="true" lines="25"/>
+    <busStop id="206360978" name="Steghof" lane="135207207#0_0" startPos="29.01" endPos="44.01" friendlyPos="true" lines="4"/>
+    <busStop id="206372728" name="Längweiher" lane="19803517#12_0" startPos="25.11" endPos="40.11" friendlyPos="true" lines="30 12"/>
+    <busStop id="206372731" name="Rönnimoosrain" lane="19803517#17_0" startPos="19.15" endPos="34.15" friendlyPos="true" lines="30 12"/>
+    <busStop id="206372879" name="Talrain" lane="976088823#4_0" startPos="39.57" endPos="52.28" friendlyPos="true"/>
+    <busStop id="206372888" name="Luegisland" lane="35286562#0_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="26"/>
+    <busStop id="206372908" name="Schädrütihalde" lane="37297216#3_0" startPos="89.72" endPos="104.72" friendlyPos="true" lines="73"/>
+    <busStop id="206381260" name="Luzern" lane="118745107_0" startPos="0.00" endPos="104.43" friendlyPos="true">
+        <access lane="23088146#0_0" pos="0.00" length="11.71" friendlyPos="1"/>
+        <access lane="23088146#1_0" pos="0.00" length="19.66" friendlyPos="1"/>
+        <access lane="377966224_0" pos="2.59" length="18.37" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="12.28" length="20.73" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="2.72" length="14.43" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2117444912" name="Luzern Bahnhof" lane="53620033_0" startPos="17.88" endPos="32.88" friendlyPos="true" lines="6 8 7 14 1"/>
+    <busStop id="260019068" name="Alpenstrasse" lane="387290889#2_0" startPos="14.55" endPos="29.55" friendlyPos="true" lines="5 71 1"/>
+    <busStop id="268984807" name="Tiefe" lane="135207207#2_0" startPos="93.20" endPos="108.20" friendlyPos="true" lines="4"/>
+    <busStop id="271429291" name="Littau Schützenhaus" lane="94727490#1_0" startPos="2.97" endPos="17.97" friendlyPos="true"/>
+    <busStop id="27329561" name="Schwanenplatz" lane="134989591#8_0" startPos="25.96" endPos="38.62" friendlyPos="true" lines="73 6 14 1 19 8 7 24"/>
+    <busStop id="28197903" name="Pilatusplatz" lane="397705249_0" startPos="20.26" endPos="35.26" friendlyPos="true" lines="5 20 71 14 11 1"/>
+    <busStop id="282157840" name="Littau Dorf" lane="39074716#0_0" startPos="30.53" endPos="45.53" friendlyPos="true" lines="30 40"/>
+    <busStop id="283223448" name="Littau" lane="196661156#1_0" startPos="0.00" endPos="143.26" friendlyPos="true" lines="S77 S6">
+        <access lane="-39074756#0_0" pos="94.86" length="47.41" friendlyPos="1"/>
+        <access lane="-97686493_0" pos="21.15" length="54.97" friendlyPos="1"/>
+        <access lane="39074756#0_0" pos="34.10" length="42.61" friendlyPos="1"/>
+        <access lane="681039319_0" pos="0.00" length="55.82" friendlyPos="1"/>
+        <access lane="681039320#1_0" pos="2.13" length="54.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2870822827" name="Brüel" lane="592182332#0_0" startPos="0.00" endPos="12.52" friendlyPos="true" lines="24"/>
+    <busStop id="2870822828" name="Verkehrshaus/Lido" lane="283174677#2_0" startPos="248.86" endPos="263.86" friendlyPos="true" lines="6 8 24"/>
+    <busStop id="300652646" name="Casino-Palace" lane="364075852#4_0" startPos="35.86" endPos="50.86" friendlyPos="true" lines="6 8 24"/>
+    <busStop id="303097162" name="Schlösslihalde" lane="27602527#8_0" startPos="100.42" endPos="115.42" friendlyPos="true" lines="14"/>
+    <busStop id="307533429" name="Luzern, Utenberg" lane="95094994#3_0" startPos="27.00" endPos="52.00" friendlyPos="true"/>
+    <busStop id="307533432" name="Luzern, Utenberg" lane="95094994#2_0" startPos="5.07" endPos="30.07" friendlyPos="true"/>
+    <busStop id="307858465" name="Zentrum Pilatus" lane="28037297#0_0" startPos="0.00" endPos="9.71" friendlyPos="true" lines="21 16 15"/>
+    <busStop id="307862796" name="Südstrasse" lane="37339235#3_0" startPos="26.13" endPos="41.13" friendlyPos="true" lines="15"/>
+    <busStop id="308062519" name="Südpol" lane="28055519#5_0" startPos="0.00" endPos="12.02" friendlyPos="true"/>
+    <busStop id="308240450" name="Löwenplatz" lane="712687104#3_0" startPos="18.35" endPos="33.35" friendlyPos="true" lines="1 19"/>
+    <busStop id="308898923" name="Steinhofrain" lane="220487398#0_0" startPos="90.75" endPos="105.75" friendlyPos="true" lines="10 11"/>
+    <busStop id="310005930" name="Pilatus-Bahnen" lane="94711857_0" startPos="8.98" endPos="16.44" friendlyPos="true" lines="15"/>
+    <busStop id="311287459" name="Kasernenplatz" lane="32846420#6_0" startPos="4.34" endPos="11.84" friendlyPos="true" lines="5 2 9 12"/>
+    <busStop id="311606382" name="Kasernenplatz" lane="10968767#7_0" startPos="18.07" endPos="25.57" friendlyPos="true" lines="72 9 52 PE 2 50 12 5 61"/>
+    <busStop id="311606385" name="Gütsch" lane="43418075#2_0" startPos="32.72" endPos="47.72" friendlyPos="true" lines="2 12 5"/>
+    <busStop id="311606402" name="Michaelshof" lane="19803517#9_0" startPos="13.34" endPos="28.34" friendlyPos="true" lines="30 12"/>
+    <busStop id="331818267" name="Krauerhalle" lane="37339241#0_0" startPos="58.67" endPos="73.67" friendlyPos="true" lines="21 15 16"/>
+    <busStop id="331818268" name="Friedhofstrasse" lane="28115065#1_0" startPos="49.48" endPos="60.04" friendlyPos="true" lines="15"/>
+    <busStop id="331818270" name="Himmelrichstrasse" lane="30373813#2_0" startPos="74.55" endPos="89.55" friendlyPos="true" lines="15"/>
+    <busStop id="333555694" name="Luzern" lane="194675922_0" startPos="0.00" endPos="142.83" friendlyPos="true" lines="S1 S9">
+        <access lane="23088146#0_0" pos="0.00" length="19.01" friendlyPos="1"/>
+        <access lane="377963614#0_0" pos="0.00" length="22.94" friendlyPos="1"/>
+        <access lane="377966225_0" pos="2.05" length="12.44" friendlyPos="1"/>
+        <access lane="44129708#2_0" pos="12.82" length="19.70" friendlyPos="1"/>
+        <access lane="44129708#3_0" pos="4.22" length="14.04" friendlyPos="1"/>
+    </busStop>
+    <busStop id="333645308" name="Luzern" lane="118745118_0" startPos="109.16" endPos="309.16" friendlyPos="true">
+        <access lane="377966224_0" pos="2.59" length="12.15" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="19.28" friendlyPos="1"/>
+        <access lane="379387004_0" pos="6.54" length="11.47" friendlyPos="1"/>
+        <access lane="44129708#4_0" pos="11.53" length="20.21" friendlyPos="1"/>
+        <access lane="44129708#5_0" pos="4.15" length="14.85" friendlyPos="1"/>
+    </busStop>
+    <busStop id="336669876" name="Zunacher" lane="751559970#9_0" startPos="22.37" endPos="37.37" friendlyPos="true" lines="16"/>
+    <busStop id="336669906" name="Sportweg" lane="751559970#3_0" startPos="15.80" endPos="30.80" friendlyPos="true" lines="16"/>
+    <busStop id="339954014" name="Bachstrasse" lane="37339239#0_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="15"/>
+    <busStop id="357455545" name="Geissmatthöhe" lane="31909897_0" startPos="4.24" endPos="18.78" friendlyPos="true" lines="9"/>
+    <busStop id="357471926" name="Mühlemattstrasse" lane="866030037#2_0" startPos="9.81" endPos="24.81" friendlyPos="true" lines="9"/>
+    <busStop id="364790072" name="Friedbergstrasse" lane="135207193#0_0" startPos="9.74" endPos="24.74" friendlyPos="true" lines="9"/>
+    <busStop id="3699596679" name="Pilatusplatz" lane="10491942#4_0" startPos="0.00" endPos="12.57" friendlyPos="true"/>
+    <busStop id="369968495" name="Josef Schryberstrasse" lane="32841772#1_0" startPos="16.18" endPos="31.18" friendlyPos="true" lines="15"/>
+    <busStop id="3715907112" name="Bundesplatz" lane="305482859#1_0" startPos="35.19" endPos="50.19" friendlyPos="true" lines="6 8 7 4"/>
+    <busStop id="371753766" name="Reussport" lane="436156037#0_0" startPos="30.58" endPos="41.60" friendlyPos="true" lines="19"/>
+    <busStop id="371757763" name="Felsberg" lane="134989549#5_0" startPos="8.64" endPos="23.64" friendlyPos="true" lines="7"/>
+    <busStop id="426860182" name="Grenzhof" lane="19803517#20_0" startPos="67.03" endPos="74.53" friendlyPos="true" lines="30"/>
+    <busStop id="434635992" name="Oberseeburg" lane="37297191#9_0" startPos="45.92" endPos="60.92" friendlyPos="true" lines="6 25"/>
+    <busStop id="434636297" name="Würzenbach" lane="37297210#1_0" startPos="13.78" endPos="23.78" friendlyPos="true" lines="8"/>
+    <busStop id="435231932" name="Gemeindehaus" lane="28037300#8_0" startPos="0.00" endPos="13.01" friendlyPos="true" lines="15"/>
+    <busStop id="435245565" name="Klösterli" lane="37339237#0_0" startPos="0.92" endPos="15.92" friendlyPos="true" lines="15"/>
+    <busStop id="4420078769" name="Staffeln Schulhaus" lane="134727279#7_0" startPos="0.00" endPos="12.03" friendlyPos="true" lines="40 46 42 43"/>
+    <busStop id="4439779319" name="Eisfeldstrasse" lane="446737725#1_0" startPos="2.65" endPos="17.65" friendlyPos="true" lines="6 21 8 7"/>
+    <busStop id="4441508553" name="Schiff" lane="385907414#0_0" startPos="12.55" endPos="27.55" friendlyPos="true" lines="2 5"/>
+    <busStop id="445336532" name="Obergütschrain" lane="108358756#8_0" startPos="19.44" endPos="34.44" friendlyPos="true" lines="10"/>
+    <busStop id="466485418" name="Matt" lane="39074700#5_0" startPos="17.59" endPos="32.59" friendlyPos="true" lines="40"/>
+    <busStop id="466485605" name="Littau Bahnhof" lane="39074717_0" startPos="32.41" endPos="39.88" friendlyPos="true" lines="30 40 41"/>
+    <busStop id="472459416" name="Langensand" lane="458346548#8_0" startPos="607.55" endPos="622.55" friendlyPos="true" lines="21"/>
+    <busStop id="472459430" name="Kantonalbank" lane="120517467#0_0" startPos="36.81" endPos="48.10" friendlyPos="true" lines="20 9 10 2 14 11 1 12">
+        <access lane="183588772#0_0" pos="0.20" length="21.01" friendlyPos="1"/>
+        <access lane="183588772#2_0" pos="0.00" length="17.54" friendlyPos="1"/>
+        <access lane="44279687#6_0" pos="24.80" length="20.36" friendlyPos="1"/>
+        <access lane="98779050#5_0" pos="38.09" length="14.61" friendlyPos="1"/>
+        <access lane="98779050#6_0" pos="0.00" length="18.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="472459432" name="Kantonalbank" lane="397546364#0_0" startPos="10.38" endPos="22.16" friendlyPos="true" lines="21 6 8 7 4"/>
+    <busStop id="4841439969" name="Seefeldstrasse" lane="283174680#2_0" startPos="16.72" endPos="31.72" friendlyPos="true" lines="24"/>
+    <busStop id="506671071" name="Werkhofstrasse" lane="705286368#0_0" startPos="7.04" endPos="22.04" friendlyPos="true" lines="6 21 8 7"/>
+    <busStop id="506672014" name="Weinbergli" lane="786305338#0_0" startPos="0.00" endPos="13.36" friendlyPos="true" lines="6 8 7"/>
+    <busStop id="507050408" name="Wartegg" lane="705286359#1_0" startPos="13.68" endPos="28.68" friendlyPos="true" lines="6 8 7"/>
+    <busStop id="507050544" name="Wartegg" lane="135207191#0_0" startPos="0.00" endPos="14.46" friendlyPos="true" lines="7"/>
+    <busStop id="507053070" name="Schönbühl" lane="72738315#1_0" startPos="95.09" endPos="110.09" friendlyPos="true" lines="21 6 8"/>
+    <busStop id="507055481" name="Matthof" lane="705286358_0" startPos="9.43" endPos="16.93" friendlyPos="true" lines="6"/>
+    <busStop id="598098664" name="Kriens Busschleife" lane="46822949_0" startPos="18.32" endPos="26.02" friendlyPos="true" lines="15"/>
+    <busStop id="598101627" name="Kriens Busschleife" lane="46822948_0" startPos="6.71" endPos="14.41" friendlyPos="true" lines="16 21"/>
+    <busStop id="598101628" name="Kriens Busschleife" lane="46822946_0" startPos="9.22" endPos="16.92" friendlyPos="true" lines="5"/>
+    <busStop id="598151966" name="Hammerschmiede" lane="24668591#1_0" startPos="36.94" endPos="51.94" friendlyPos="true" lines="1"/>
+    <busStop id="598151973" name="Pulvermühle" lane="30111223#0_0" startPos="38.04" endPos="47.23" friendlyPos="true" lines="1"/>
+    <busStop id="598151976" name="Schappe-Center" lane="30111223#4_0" startPos="47.77" endPos="62.77" friendlyPos="true" lines="1"/>
+    <busStop id="598161467" name="Kupferhammer" lane="542717331#0_0" startPos="21.75" endPos="35.18" friendlyPos="true" lines="5 1"/>
+    <busStop id="598172337" name="Grosshofstrasse" lane="598960142_0" startPos="3.65" endPos="18.65" friendlyPos="true" lines="1 5"/>
+    <busStop id="598172339" name="Eichhof" lane="32767128_0" startPos="0.00" endPos="9.32" friendlyPos="true" lines="71 1 11 5"/>
+    <busStop id="598172341" name="Eichhof" lane="164358769#3_0" startPos="4.33" endPos="19.33" friendlyPos="true" lines="20"/>
+    <busStop id="598172343" name="Paulusplatz" lane="386850954#1_0" startPos="8.69" endPos="23.69" friendlyPos="true" lines="5 20 14 11 1"/>
+    <busStop id="598172345" name="Moosegg" lane="8428661#3_0" startPos="0.00" endPos="12.60" friendlyPos="true" lines="5 14 11 1"/>
+    <busStop id="598172352" name="Luzern Bahnhof" lane="74320149#0_0" startPos="38.48" endPos="50.23" friendlyPos="true" lines="6 8 7 1"/>
+    <busStop id="598172353" name="Luzern Bahnhof" lane="94727480#1_0" startPos="11.75" endPos="19.25" friendlyPos="true" lines="4"/>
+    <busStop id="598172354" name="Luzern Bahnhof" lane="94728202_0" startPos="0.00" endPos="7.41" friendlyPos="true" lines="10"/>
+    <busStop id="598172356" name="Luzern Bahnhof" lane="94728342#1_0" startPos="13.32" endPos="20.82" friendlyPos="true" lines="2"/>
+    <busStop id="598172357" name="Luzern Bahnhof" lane="95094999#1_0" startPos="12.13" endPos="19.63" friendlyPos="true" lines="12"/>
+    <busStop id="598172358" name="Luzern Bahnhof" lane="93752655_0" startPos="12.68" endPos="20.30" friendlyPos="true" lines="24"/>
+    <busStop id="598172359" name="Luzern Bahnhof" lane="93752629_0" startPos="11.17" endPos="20.23" friendlyPos="true" lines="73"/>
+    <busStop id="598172360" name="Luzern Bahnhof" lane="93752645_0" startPos="11.62" endPos="20.00" friendlyPos="true" lines="61"/>
+    <busStop id="598172361" name="Luzern Bahnhof" lane="93752651_0" startPos="8.96" endPos="16.66" friendlyPos="true" lines="TEL"/>
+    <busStop id="598172362" name="Luzern Bahnhof" lane="93752636_0" startPos="9.37" endPos="19.19" friendlyPos="true" lines="1"/>
+    <busStop id="598172363" name="Luzern Bahnhof" lane="93752648_0" startPos="9.23" endPos="20.26" friendlyPos="true" lines="52 50"/>
+    <busStop id="598172364" name="Luzern Bahnhof" lane="93752642_0" startPos="16.09" endPos="23.59" friendlyPos="true"/>
+    <busStop id="598172365" name="Luzern Bahnhof" lane="93752631_0" startPos="9.43" endPos="20.50" friendlyPos="true" lines="71"/>
+    <busStop id="598172366" name="Luzern Bahnhof" lane="93752650_0" startPos="5.38" endPos="16.40" friendlyPos="true" lines="21"/>
+    <busStop id="598172367" name="Luzern Bahnhof" lane="93752640_0" startPos="9.10" endPos="20.24" friendlyPos="true" lines="72"/>
+    <busStop id="626357837" name="Lerchenbühl" lane="258430348_0" startPos="2.99" endPos="17.99" friendlyPos="true" lines="24"/>
+    <busStop id="626364425" name="Hermitage" lane="408451711#4_0" startPos="44.89" endPos="59.89" friendlyPos="true" lines="24"/>
+    <busStop id="626367408" name="Seeburg-Schifflände" lane="220331654#1_0" startPos="78.68" endPos="93.68" friendlyPos="true" lines="24"/>
+    <busStop id="626367793" name="Hotel Seeburg" lane="220331655#0_0" startPos="5.32" endPos="20.32" friendlyPos="true" lines="24"/>
+    <busStop id="626368405" name="Brüel" lane="19802198#0_0" startPos="9.21" endPos="24.21" friendlyPos="true" lines="24"/>
+    <busStop id="626495695" name="Rosenhalde" lane="52345192#1_0" startPos="439.28" endPos="454.28" friendlyPos="true" lines="24"/>
+    <busStop id="627053218" name="Fluhmühle" lane="94721106#3_0" startPos="66.49" endPos="81.49" friendlyPos="true" lines="2 5"/>
+    <busStop id="627054207" name="Grenzweg" lane="24980031#0_0" startPos="127.60" endPos="142.60" friendlyPos="true">
+        <access lane="-267492224#0_0" pos="128.02" length="34.66" friendlyPos="1"/>
+        <access lane="1013068281#0_0" pos="0.26" length="39.66" friendlyPos="1"/>
+        <access lane="1013068281#1_0" pos="22.88" length="10.53" friendlyPos="1"/>
+        <access lane="1013120642#1_0" pos="0.00" length="38.37" friendlyPos="1"/>
+        <access lane="267492224#0_0" pos="12.93" length="29.86" friendlyPos="1"/>
+    </busStop>
+    <busStop id="6377336344" name="Littau" lane="98221234#1_0" startPos="0.00" endPos="142.66" friendlyPos="true">
+        <access lane="-39074756#0_0" pos="95.16" length="39.72" friendlyPos="1"/>
+        <access lane="-628514589#5_0" pos="0.00" length="61.54" friendlyPos="1"/>
+        <access lane="39074756#0_0" pos="33.80" length="34.92" friendlyPos="1"/>
+        <access lane="681039319_0" pos="0.00" length="56.44" friendlyPos="1"/>
+        <access lane="681039320#1_0" pos="2.13" length="54.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="6377336345" name="Littau" lane="98221366#1_0" startPos="0.00" endPos="100.98" friendlyPos="true">
+        <access lane="-97686493_0" pos="21.21" length="42.18" friendlyPos="1"/>
+        <access lane="39074717_0" pos="41.32" length="46.98" friendlyPos="1"/>
+        <access lane="39074718#1_0" pos="36.38" length="52.66" friendlyPos="1"/>
+        <access lane="39074756#0_0" pos="33.87" length="55.39" friendlyPos="1"/>
+        <access lane="681039319_0" pos="0.00" length="56.08" friendlyPos="1"/>
+    </busStop>
+    <busStop id="665978819" name="Brüelstrasse" lane="98616633#2_0" startPos="40.85" endPos="48.35" friendlyPos="true" lines="6 25 8"/>
+    <busStop id="6776962333" name="Luzern Bahnhof" lane="779101385_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="14"/>
+    <busStop id="7005106863" name="Luzern, Inseli" lane="29730545#1_0" startPos="96.49" endPos="111.49" friendlyPos="true" lines="N33 1524 N401 417 437 477 497 K188 506"/>
+    <busStop id="7184667177" name="Eichenstrasse" lane="19803068#6_0" startPos="44.61" endPos="56.17" friendlyPos="true" lines="42 43"/>
+    <busStop id="7222804248" name="Luzern" lane="118745121_0" startPos="0.00" endPos="104.85" friendlyPos="true">
+        <access lane="377963625#0_0" pos="0.00" length="23.78" friendlyPos="1"/>
+        <access lane="377966223_0" pos="129.03" length="7.29" friendlyPos="1"/>
+        <access lane="377966226_0" pos="2.66" length="16.64" friendlyPos="1"/>
+        <access lane="44129708#6_0" pos="7.05" length="15.27" friendlyPos="1"/>
+        <access lane="44129708#7_0" pos="0.00" length="18.78" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7248262542" name="Gasshof" lane="443045111#0_0" startPos="44.88" endPos="59.88" friendlyPos="true" lines="30 40 12"/>
+    <busStop id="7248262544" name="Weggismatt" lane="330757768#14_0" startPos="23.13" endPos="38.13" friendlyPos="true" lines="30 1"/>
+    <busStop id="7271595862" name="Brüelstrasse" lane="27602301#0_0" startPos="21.92" endPos="33.80" friendlyPos="true" lines="73"/>
+    <busStop id="7271595869" name="Schädrütihalde" lane="37297216#4_0" startPos="35.66" endPos="46.47" friendlyPos="true" lines="73 26"/>
+    <busStop id="7271600097" name="Hochhüsliweid" lane="638331076_0" startPos="6.80" endPos="21.80" friendlyPos="true" lines="73"/>
+    <busStop id="7272504536" name="Allmend/Messe" lane="41984586#7_0" startPos="168.45" endPos="183.45" friendlyPos="true"/>
+    <busStop id="7274196194" name="Wesemlinrain" lane="22384595#4_0" startPos="8.20" endPos="23.17" friendlyPos="true" lines="1 19"/>
+    <busStop id="7274331199" name="Breitenlachen" lane="24544106#1_0" startPos="0.00" endPos="4.93" friendlyPos="true" lines="4"/>
+    <busStop id="7276059611" name="Europe" lane="364075852#11_0" startPos="13.58" endPos="28.58" friendlyPos="true" lines="6 8"/>
+    <busStop id="7276069722" name="Zumbachhof" lane="705286364#4_0" startPos="16.83" endPos="29.53" friendlyPos="true" lines="8"/>
+    <busStop id="7276082761" name="Frohburg" lane="445092733#0_0" startPos="41.93" endPos="56.93" friendlyPos="true" lines="40 5 2 46 42 43"/>
+    <busStop id="7279189828" name="Gartenheim" lane="135160800_0" startPos="84.37" endPos="99.37" friendlyPos="true" lines="7"/>
+    <busStop id="750648181" name="Steinhof" lane="97804890#7_0" startPos="6.62" endPos="21.62" friendlyPos="true" lines="11"/>
+    <busStop id="758982143" name="Oberseeburghöhe" lane="37297191#4_0" startPos="8.67" endPos="23.67" friendlyPos="true" lines="6 25"/>
+    <busStop id="758982178" name="Büttenenhalde" lane="98616629#3_0" startPos="13.19" endPos="22.10" friendlyPos="true" lines="6"/>
+    <busStop id="7908898589" name="Luzern" lane="194672511#1_0" startPos="113.92" endPos="303.69" friendlyPos="true" lines="S77 VAE">
+        <access lane="-30808995#5_0" pos="2.48" length="28.47" friendlyPos="1"/>
+        <access lane="118733795#1_0" pos="7.09" length="22.03" friendlyPos="1"/>
+        <access lane="170990449#1_0" pos="12.84" length="34.37" friendlyPos="1"/>
+        <access lane="30808995#5_0" pos="24.50" length="23.67" friendlyPos="1"/>
+        <access lane="30808995#6_0" pos="0.00" length="31.40" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7908898590" name="Luzern" lane="118745105_0" startPos="0.00" endPos="90.01" friendlyPos="true">
+        <access lane="-30808995#5_0" pos="2.17" length="22.95" friendlyPos="1"/>
+        <access lane="-30808995#6_0" pos="6.46" length="30.53" friendlyPos="1"/>
+        <access lane="118733795#1_0" pos="7.09" length="24.50" friendlyPos="1"/>
+        <access lane="30808995#5_0" pos="24.81" length="18.15" friendlyPos="1"/>
+        <access lane="30808995#6_0" pos="0.00" length="27.12" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8072044932" name="Zihlmattweg" lane="41984586#1_0" startPos="24.02" endPos="39.02" friendlyPos="true"/>
+    <busStop id="8072044972" name="Südpol" lane="28055519#6_0" startPos="25.84" endPos="40.84" friendlyPos="true" lines="14"/>
+    <busStop id="8072044973" name="Rigistrasse" lane="27582119#4_0" startPos="164.77" endPos="179.77" friendlyPos="true" lines="14"/>
+    <busStop id="8072044974" name="Leumatt" lane="27602527#1_0" startPos="0.00" endPos="9.16" friendlyPos="true" lines="14"/>
+    <busStop id="8072075917" name="Lerchenbühl" lane="735450687#1_0" startPos="0.00" endPos="8.35" friendlyPos="true" lines="24"/>
+    <busStop id="8073840716" name="Schwimmbad" lane="101939798#1_0" startPos="166.35" endPos="177.45" friendlyPos="true" lines="40"/>
+    <busStop id="8073856017" name="Ruopigen Schulhaus" lane="190196878#11_0" startPos="64.36" endPos="74.56" friendlyPos="true" lines="40"/>
+    <busStop id="82624475" name="Zihlmattweg" lane="41984586#0_0" startPos="9.74" endPos="24.74" friendlyPos="true"/>
+    <busStop id="845290448" name="Obergütschhalde" lane="108358756#10_0" startPos="92.02" endPos="107.02" friendlyPos="true" lines="10"/>
+    <busStop id="845290451" name="Obergütsch" lane="95095003_0" startPos="0.00" endPos="1.06" friendlyPos="true" lines="10"/>
+    <busStop id="866201047" name="Steinhofstrasse" lane="28050002_0" startPos="33.32" endPos="48.32" friendlyPos="true" lines="10"/>
+    <busStop id="866201055" name="Untergütsch" lane="49302771#3_0" startPos="29.67" endPos="44.67" friendlyPos="true" lines="10"/>
+    <busStop id="866201060" name="Panoramic View" lane="49302769_0" startPos="17.23" endPos="32.23" friendlyPos="true" lines="10"/>
+    <busStop id="866201064" name="Berglistrasse" lane="49303772#1_0" startPos="12.43" endPos="26.71" friendlyPos="true" lines="10"/>
+    <busStop id="866201067" name="Gigeliwald" lane="108358756#1_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="10"/>
+    <busStop id="866206946" name="Obergütschstrasse" lane="108358756#4_0" startPos="14.74" endPos="29.74" friendlyPos="true" lines="10"/>
+    <busStop id="9034221933" name="Luzernerhof" lane="134989592#0_0" startPos="36.77" endPos="51.77" friendlyPos="true"/>
+    <busStop id="9380160849" name="Brüelstrasse" lane="1016970340#1_0" startPos="31.73" endPos="46.73" friendlyPos="true"/>
+    <busStop id="97765117" name="Kasernenplatz" lane="420302482#0_0" startPos="40.06" endPos="55.06" friendlyPos="true" lines="52 PE 72 61 50">
+        <access lane="10968767#6_0" pos="39.41" length="31.80" friendlyPos="1"/>
+        <access lane="10968767#7_0" pos="0.00" length="32.85" friendlyPos="1"/>
+        <access lane="134989572#4_0" pos="39.41" length="31.80" friendlyPos="1"/>
+        <access lane="134989572#5_0" pos="0.00" length="32.85" friendlyPos="1"/>
+        <access lane="161969849#3_0" pos="16.14" length="13.59" friendlyPos="1"/>
+    </busStop>
+    <busStop id="984014129" name="Hirtenhof" lane="94539483_0" startPos="18.41" endPos="33.41" friendlyPos="true" lines="8"/>
+    <busStop id="984014276" name="Unter-Dattenberg" lane="28123922#0_0" startPos="52.23" endPos="67.23" friendlyPos="true" lines="10 11"/>
+    <busStop id="984014288" name="Dattenberg" lane="97804889_0" startPos="1.86" endPos="9.36" friendlyPos="true" lines="10 11"/>
+    <busStop id="984023307" name="Dietschiberg" lane="557814529_0" startPos="17.81" endPos="32.81" friendlyPos="true" lines="6 8"/>
+    <busStop id="984023516" name="Klinik St. Anna" lane="27582119#1_0" startPos="0.00" endPos="9.99" friendlyPos="true" lines="14"/>
+    <busStop id="984023532" name="Haldensteig" lane="364075852#2_0" startPos="0.00" endPos="12.50" friendlyPos="true" lines="6 8"/>
+    <busStop id="984023609" name="Franziskanerplatz" lane="34047603#1_0" startPos="0.00" endPos="13.47" friendlyPos="true"/>
+    <busStop id="984024066" name="Urnerhof" lane="887914950#1_0" startPos="17.62" endPos="32.62" friendlyPos="true" lines="30 19"/>
+    <busStop id="984024073" name="Friedental" lane="93720120_0" startPos="20.05" endPos="35.05" friendlyPos="true" lines="19"/>
+    <busStop id="984024081" name="Brünigstrasse" lane="305482861#2_0" startPos="44.39" endPos="59.39" friendlyPos="true" lines="4"/>
+    <busStop id="984024083" name="Brüggligasse" lane="53620026_0" startPos="5.13" endPos="20.13" friendlyPos="true" lines="9"/>
+    <busStop id="984024084" name="Bramberg" lane="96095211_0" startPos="7.47" endPos="14.97" friendlyPos="true" lines="9"/>
+    <busStop id="984024105" name="Blattenmoos" lane="19803517#3_0" startPos="19.06" endPos="34.06" friendlyPos="true" lines="30 12"/>
+    <busStop id="984024117" name="Rosenberg" lane="22385351#3_0" startPos="60.67" endPos="73.40" friendlyPos="true" lines="30 19"/>
+    <busStop id="984024118" name="Lützelmattstrasse" lane="27582119#2_0" startPos="205.15" endPos="220.15" friendlyPos="true" lines="14"/>
+    <busStop id="984024135" name="Klosterstrasse" lane="4496451#0_0" startPos="21.86" endPos="36.86" friendlyPos="true"/>
+    <busStop id="984024292" name="Zähringerstrasse" lane="4496451#3_0" startPos="10.44" endPos="19.97" friendlyPos="true" lines="10"/>
+    <busStop id="984024323" name="St. Karli" lane="866030035#1_0" startPos="11.49" endPos="26.49" friendlyPos="true" lines="30 9 19"/>
+    <busStop id="984024682" name="Staldenhof" lane="498890220#1_0" startPos="14.87" endPos="29.87" friendlyPos="true" lines="41">
+        <access lane="1012833479#2_0" pos="44.59" length="40.14" friendlyPos="1"/>
+        <access lane="1012833479#3_0" pos="19.59" length="13.70" friendlyPos="1"/>
+        <access lane="1012849341#0_0" pos="0.20" length="37.11" friendlyPos="1"/>
+        <access lane="1012849341#1_0" pos="0.00" length="35.78" friendlyPos="1"/>
+        <access lane="1012850483#0_0" pos="0.00" length="41.46" friendlyPos="1"/>
+    </busStop>
+    <busStop id="984024684" name="Schachenhof" lane="39074776#2_0" startPos="0.00" endPos="5.38" friendlyPos="true" lines="41"/>
+    <busStop id="984738515" name="Hermitage" lane="220331661#1_0" startPos="76.81" endPos="89.31" friendlyPos="true"/>
+    <busStop id="984738524" name="Seeburg" lane="91004717_0" startPos="0.00" endPos="12.50" friendlyPos="true"/>
+    <busStop id="984739213" name="Schlösslihalde" lane="37297216#18_0" startPos="1.40" endPos="16.40" friendlyPos="true" lines="73 26"/>
+    <busStop id="984739274" name="Rigiblick" lane="976088823#8_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="26"/>
+    <busStop id="984739319" name="Buchmatt" lane="638331107#5_0" startPos="150.53" endPos="165.53" friendlyPos="true" lines="25"/>
+    <busStop id="984739332" name="Schlösslirain" lane="27602527#6_0" startPos="16.05" endPos="31.05" friendlyPos="true" lines="14"/>
+    <busStop id="984739350" name="Englisch Friedhof" lane="638331107#0_0" startPos="51.97" endPos="66.97" friendlyPos="true" lines="25"/>
+</additional>

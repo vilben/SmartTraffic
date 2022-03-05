@@ -308,8 +308,8 @@ class EdgeStatsCollector:
     def registerAllRelevantEdges(self):
         allEdges = traci.edge.getIDList()
         for edgeId in allEdges:
-            if edgeId.startswith("e") and "_t" not in edgeId:
-                self.registerEdge(edgeId)
+            #if edgeId.startswith("e") and "_t" not in edgeId:
+            self.registerEdge(edgeId)
 
     def collect(self, simStep):
         for edgeId in self.edgeStats:
