@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-03-06 00:08:29 by Eclipse SUMO sumo Version v1_12_0+1067-9f738abf540
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="lucerne-real/osm.net.xml"/>
+        <route-files value="lucerne-real/osm_pt.rou.xml,lucerne-real/osm.passenger.trips.xml,lucerne-real/osm.bus.trips.xml"/>
+        <additional-files value="lucerne-real/osm.poly.xml,lucerne-real/osm_stops.add.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="1646521706.300313_RL_500S_MBQE__emissions.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="54085"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="lucerne-real/osm.view.xml"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<emission-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/emission_file.xsd">
+    <timestep time="0.00">
+        <vehicle id="bus0" eclass="HBEFA3/Bus" CO2="5286.11" CO="20.17" HC="4.85" NOx="60.75" PMx="2.01" fuel="2.25" electricity="0.00" noise="67.11" route="!bus0!var#1" type="bus_bus" waiting="0.00" lane="-37389755#2_0" pos="12.10" speed="0.00" angle="280.76" x="4584.45" y="1603.24"/>
+        <vehicle id="pt_bus_N33:0.0" eclass="HBEFA3/Bus" CO2="5286.11" CO="20.17" HC="4.85" NOx="60.75" PMx="2.01" fuel="2.25" electricity="0.00" noise="67.11" route="pt_bus_N33:0" type="pt_bus" waiting="0.00" lane="39480378_0" pos="12.10" speed="0.00" angle="239.20" x="3686.57" y="4990.14"/>
+        <vehicle id="veh0" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="1.13" electricity="0.00" noise="55.94" route="!veh0!var#1" type="veh_passenger" waiting="0.00" lane="28007944#4_0" pos="5.10" speed="0.00" angle="43.42" x="5240.62" y="4437.80"/>
+    </timestep>
+</emission-export>

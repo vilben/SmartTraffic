@@ -14,7 +14,6 @@ from src.xmlUtil import insertAttrAtTopNode
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
-# CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 CONFIG_FILE_NAME = "lucerne-real/osm.sumocfg"
 
 parser = argparse.ArgumentParser(description="Yes something")
@@ -111,35 +110,17 @@ traci.start(cmd)
 
 junctionMutexFactory = JunctionMutexFactory()
 
-# allBusses = [
-#     Bus("busRouteHorwLuzern1"),
-#     Bus("busRouteHorwLuzern2"),
-#     Bus("busRouteEmmenAu1"),
-#     Bus("busRouteEmmenAu1"),
-#     Bus("busRouteEmmenAu1"),
-#     Bus("busRouteEmmenAu2"),
-#     Bus("busRouteWuerzenbachZug1"),
-#     Bus("busRouteWuerzenbachZug2"),
-#     Bus("busRouteEbikonHorw1"),
-#     Bus("busRouteEbikonHorw2"),
-#     Bus("busRouteZugHorw1"),
-#     Bus("busRouteZugHorw2"),
-# ]
-
 allBusses = []
 for i in range(0, 1852):
     allBusses.append(Bus("bus{}".format(i)))
 
 busLogicController = BusLogicController(junctionMutexFactory, DISTANCE)
 busLogicController.addBusRange(allBusses)
-
 step = 0
 
 while step < SIM_STEPS:
     traci.simulationStep()
-    #busLogicController.executeLogic()
-
-    print("Step No.", step)
+    busLogicController.executeLogic()
 
     if step > 1000:
         if traci.vehicle.getIDCount() < len(allBusses):

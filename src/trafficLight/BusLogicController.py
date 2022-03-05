@@ -23,6 +23,9 @@ class BusLogicController:
     def addBusRange(self, busses):
         self.allBusses.extend(busses)
 
+    def setBusRange(self, busses):
+        self.allBusses = busses
+
     def executeLogic(self):
         for bus, tlsId in self.approaches.items():
             nextTls = bus.getNextTrafficLight()
