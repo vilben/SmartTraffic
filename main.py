@@ -98,16 +98,22 @@ while step < SIM_STEPS:
 
     for bus in allBusses:
         if bus.isOnTrack():
-            if (
-                bus.getNextTrafficLight().getDistanceFromVehicle() < 50
-                or bus.isJammed()
-            ):
-                if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
-                    tls = bus.getNextTrafficLight()
-                    tls.setToGreen()
-                    logging.debug("Changing light because bus is jammed!!")
-                    # if GUI:
-                        # followVehicleWithGUI(bus.getId(), VIEW_ID)
+
+            try:
+                distance = bus.getNextTrafficLight().getDistanceFromVehicle()
+                if (
+                    distance < 50
+                    or bus.isJammed()
+                ):
+                    if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
+                        tls = bus.getNextTrafficLight()
+                        tls.setToGreen()
+                        logging.debug("Changing light because bus is jammed!!")
+                        # if GUI:
+                            # followVehicleWithGUI(bus.getId(), VIEW_ID)
+            except:
+                pass
+
 
     if STATS:
         edgeStatsCollector.collect(step)
