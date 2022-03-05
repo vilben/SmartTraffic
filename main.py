@@ -1,7 +1,9 @@
 import argparse
 import logging
+from matplotlib.pyplot import text
 import sumolib
 import traci
+from src.edgeStats import EdgeStatsCollector
 
 import src.util as util
 from src import tlsControl
@@ -13,9 +15,7 @@ ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
 parser = argparse.ArgumentParser(description="Yes something")
-parser.add_argument(
-    "--GUI", action="store_true", help="Define if GUI should be used"
-)
+parser.add_argument("--GUI", action="store_true", help="Define if GUI should be used")
 parser.add_argument(
     "--DEBUG", action="store_true", help="Define if DEBUG should be used"
 )
@@ -23,7 +23,12 @@ parser.add_argument(
     "--STATS", action="store_true", help="Define if STATS should be generated"
 )
 parser.add_argument(
-    '--STEPS', type=int, default=5000, help="Define maximal simulation steps"
+    "--STEPS", type=int, default=5000, help="Define maximal simulation steps"
+)
+parser.add_argument(
+    "--DIAGS",
+    action="store_true",
+    help="Output folder for DIAGS. If ommited, no diags will be generated. Requires STATS",
 )
 
 args = parser.parse_args()
@@ -32,6 +37,7 @@ SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 STATS = args.STATS
+DIAGS = args.DIAGS
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -40,7 +46,7 @@ else:
 
 if DEBUG:
     logging.basicConfig(
-        format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
+        format="%(asctime)s:%(levelname)s:%(name)s:%(message)s",
         datefmt="%m/%d/%Y %I:%M:%S %p",
         level=logging.DEBUG,
     )
@@ -56,29 +62,50 @@ vehStats = {}
 busStats = {}
 
 vehs_at_tls = []
-allBusses = [Bus("busRouteHorwLuzern1"), Bus("busRouteHorwLuzern2"), Bus("busRouteEmmenAu1"), Bus("busRouteEmmenAu1"),
-             Bus("busRouteEmmenAu1"), Bus("busRouteEmmenAu2"), Bus("busRouteWuerzenbachZug1"),
-             Bus("busRouteWuerzenbachZug2"), Bus("busRouteEbikonHorw1"), Bus("busRouteEbikonHorw2"),
-             Bus("busRouteZugHorw1"), Bus("busRouteZugHorw2")]
+allBusses = [
+    Bus("busRouteHorwLuzern1"),
+    Bus("busRouteHorwLuzern2"),
+    Bus("busRouteEmmenAu1"),
+    Bus("busRouteEmmenAu1"),
+    Bus("busRouteEmmenAu1"),
+    Bus("busRouteEmmenAu2"),
+    Bus("busRouteWuerzenbachZug1"),
+    Bus("busRouteWuerzenbachZug2"),
+    Bus("busRouteEbikonHorw1"),
+    Bus("busRouteEbikonHorw2"),
+    Bus("busRouteZugHorw1"),
+    Bus("busRouteZugHorw2"),
+]
 
 step = 0
+if STATS:
+    edgeStatsCollector = EdgeStatsCollector(SIM_STEPS)
+    edgeStatsCollector.registerEdge("e1")
+    edgeStatsCollector.registerEdge("e2")
+    edgeStatsCollector.registerEdge("e13")
+    edgeStatsCollector.registerEdge("e14")
+    edgeStatsCollector.registerEdge("e19")
+    edgeStatsCollector.registerEdge("e20")
+    edgeStatsCollector.registerEdge("e25")
+    edgeStatsCollector.registerEdge("e30")
 while step < SIM_STEPS:
     traci.simulationStep()
 
     for bus in allBusses:
 
         if bus.isOnTrack():
-            logging.debug(f'bus {bus}')
+            logging.debug(f"bus {bus}")
             tls = bus.getNextTrafficLight()[0]
 
             tlsId = tls[0]
             tlsPhase = tls[3]
 
             # just skip stupid phases...
-            if tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
+            if tlsPhase == "r" or tlsPhase == "R" or tlsPhase == "y" or tlsPhase == "Y":
                 traci.trafficlight.setPhaseDuration(tlsId, 0)
 
     if STATS:
+        edgeStatsCollector.collect(step)
         for busId in util.getAllVehiclesOfClass("bus"):
             busStats[busId] = util.getSingleVehilceStats(busId)
 
@@ -113,5 +140,8 @@ if STATS:
     logging.info(
         "\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()])
     )
+
+    if DIAGS:
+        edgeStatsCollector.createDiags("diags")
 
 traci.close()

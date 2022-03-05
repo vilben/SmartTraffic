@@ -3,6 +3,7 @@ First, you have to install the sumo modules:
 ```
 pip install sumolib
 pip install traci
+pip install matplotlib
 ```
 
 To generate a net from edges and nodes and what not... , run:
@@ -15,14 +16,15 @@ python3 tools/vehicleTypeChanger.py
 
 To set the vehicle types, run the following command:
 
-``` 
+```
 python3 tools/vehicleTypeChanger.py
 ```
 
 To generate a not to random trip selection, configure the exmpleTrips.yaml file in tools and the script. Paste the output into the trips file and run duarouter:
+
 ```
 python3 tools/generateTrips.py
-``` 
+```
 
 run with:
 
