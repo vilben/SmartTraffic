@@ -30,6 +30,8 @@ class EdgeStats:
         self.dataPoints[simStep] = {
             "edgeId": self.edgeId,
             "simdId": self.simId,
+            "simSteps": self.maxSimSteps,
+            "simStep": simStep,
             "emissions": traci.edge.getCO2Emission(self.edgeId),
             "speed": traci.edge.getLastStepMeanSpeed(self.edgeId),
             "occupancy": traci.edge.getLastStepOccupancy(self.edgeId),
@@ -63,7 +65,7 @@ class EdgeStats:
     def createSpeedPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Speed")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("avg Speed [m/s]")
         plt.plot(
             range(self.seriesLength),
@@ -78,7 +80,7 @@ class EdgeStats:
     def createOccupancyPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Occupancy")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Occupancy")
         plt.plot(
             range(self.seriesLength),
@@ -93,7 +95,7 @@ class EdgeStats:
     def createEmissionsPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Emissions")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Emissions [mg]")
         plt.plot(
             range(self.seriesLength),
@@ -108,7 +110,7 @@ class EdgeStats:
     def createTraveltimePlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Traveltime")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Traveltime")
         plt.plot(
             range(self.seriesLength),
@@ -126,7 +128,7 @@ class EdgeStats:
     def createVehicleNumberPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("VehicleNumber")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("number of vehicles")
         plt.plot(
             range(self.seriesLength),
@@ -147,7 +149,7 @@ class EdgeStats:
     def createHaltingNumberPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("HaltingNumber")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("number of halting vehicles (speed < 0.1 [m/s]")
         plt.plot(
             range(self.seriesLength),
@@ -168,7 +170,7 @@ class EdgeStats:
     def createNoisePlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Noise")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Noise [db]")
         plt.plot(
             range(self.seriesLength),
@@ -183,7 +185,7 @@ class EdgeStats:
     def createWaitingTimePlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("WaitingTime")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("sum of vehicle waiting time")
         plt.plot(
             range(self.seriesLength),
@@ -201,7 +203,7 @@ class EdgeStats:
     def createFuelConsumptionPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("FuelConsumption")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("FuelConsumption [ml]")
         plt.plot(
             range(self.seriesLength),
@@ -222,7 +224,7 @@ class EdgeStats:
     def createCombinedGraph(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Overview")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Overview")
         plt.plot(
             range(self.seriesLength),
