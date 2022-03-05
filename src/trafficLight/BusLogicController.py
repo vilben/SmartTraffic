@@ -1,20 +1,21 @@
 import logging
-import src.trafficLight.JunctionController
+import trafficLight.JunctionMutex
+from trafficLight.JunctionFactory import JunctionMutexFactory
 
 
 class BusLogicController:
-    def __init__(self, junctionManager):
+    def __init__(self, junctionMutexFactory):
         self.allBusses = []
-        self.junctionManager = junctionManager
+        self.junctionMutexFactory = junctionMutexFactory
         self.approaches = {}
 
     @property
-    def junctionManager(self) -> src.trafficLight.JunctionController.JunctionManager:
+    def junctionMutexFactory(self) -> JunctionMutexFactory:
         return self._junctionManager
 
-    @junctionManager.setter
-    def junctionManager(self, junctionManager):
-        self._junctionManager = junctionManager
+    @junctionMutexFactory.setter
+    def junctionMutexFactory(self, junctionMutexFactory):
+        self._junctionManager = junctionMutexFactory
 
     def addBus(self, bus):
         self.allBusses.append(bus)
@@ -25,18 +26,18 @@ class BusLogicController:
     def executeLogic(self):
         for bus, tlsId in self.approaches.items():
             nextTls = bus.getNextTrafficLight()
-            junctionControl = self.junctionManager.getJunctionControl(
+            junctionMutex = self.junctionMutexFactory.getJunctionMutex(
                 self.approaches[bus]
             )
             if nextTls is None:
-                junctionControl.declareInactive(self, bus.getId())
-                junctionControl.releaseJunction(bus.getId())
+                junctionMutex.declareInactive(self, bus.getId())
+                junctionMutex.releaseJunction(bus.getId())
                 logging.debug(
                     f"Removed bus {bus.getId()} from approach as it does not appear to have a lane"
                 )
             elif nextTls.getId() != tlsId:
-                junctionControl.declareInactive(bus.getId())
-                junctionControl.releaseJunction(bus.getId())
+                junctionMutex.declareInactive(bus.getId())
+                junctionMutex.releaseJunction(bus.getId())
                 self.approaches[bus] = nextTls.getId()
                 logging.debug(
                     f"Removed bus {bus.getId()} from approach as it has left its approaching lane"
@@ -57,16 +58,18 @@ class BusLogicController:
                         logging.debug(f"Bus {bus.getId()} is approaching {tls.getId()}")
                         if tls is not None:
                             self.declareBusApproachingTls(bus, tls.getId())
-                            junctionControl = self.junctionManager.getJunctionControl(
-                                tls.getId()
+                            junctionMutex = (
+                                self.junctionMutexFactory.getJunctionMutex(
+                                    tls.getId()
+                                )
                             )
-                            if junctionControl.isOwner(
+                            if junctionMutex.isOwner(
                                 bus.getId()
-                            ) or junctionControl.acquireJunction(bus.getId()):
+                            ) or junctionMutex.acquireJunction(bus.getId()):
                                 tls.ensureAccess()
                                 logging.debug("Changing light because bus is jammed!!")
                             else:
-                                junctionControl.declareActive(
+                                junctionMutex.declareActive(
                                     bus.getId(),
                                     "bus may have detected jammed traffic ahead",
                                     "",

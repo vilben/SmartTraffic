@@ -1,4 +1,4 @@
-class JunctionControl:
+class JunctionMutex:
     def __init__(self, tlsId):
         self.tlsId = tlsId
         self.activeFactors = {}
@@ -39,17 +39,3 @@ class JunctionControl:
             return True
         return False
 
-
-class JunctionManager:
-    def __init__(self):
-        self.activelyControlledJunctions = {}
-
-    def getJunctionControl(self, tlsId):
-        if tlsId not in self.activelyControlledJunctions:
-            self.activelyControlledJunctions[tlsId] = JunctionControl(tlsId)
-
-        return self.activelyControlledJunctions[tlsId]
-
-    def releaseJunctionControl(self, tlsId) -> JunctionControl:
-        if tlsId in self.activelyControlledJunctions:
-            del self.activelyControlledJunctions[tlsId]

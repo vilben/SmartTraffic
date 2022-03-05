@@ -8,7 +8,8 @@ from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
 from src.trafficLight.BusLogicController import BusLogicController
-from src.trafficLight.JunctionController import JunctionManager
+from trafficLight.JunctionFactory import JunctionMutexFactory
+from trafficLight.JunctionMutex import JunctionManager
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -47,6 +48,11 @@ parser.add_argument(
     type=str,
     help="Splunk HEC Collector",
 )
+parser.add_argument(
+    "--SPLUNKDATASETNAME",
+    type=str,
+    help="Splunk Dataset Name",
+)
 
 args = parser.parse_args()
 
@@ -54,12 +60,13 @@ SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 DIAGS = args.DIAGS
-TIMESTAMP = time.time()
-SIMID = f"{TIMESTAMP}_{str(uuid.uuid4())}"
 JSON = args.JSON
 SPLUNK = args.SPLUNK
 SPLUNKTOKEN = args.SPLUNKTOKEN
 SPLUNKDEST = args.SPLUNKDEST
+SPLUNKDATASETNAME = args.SPLUNKDATASETNAME
+TIMESTAMP = time.time()
+SIMID = f"{TIMESTAMP}_{SPLUNKDATASETNAME}"
 
 COLLECT_DATA = DIAGS or JSON or SPLUNK
 
@@ -86,7 +93,7 @@ logging.info(f"SIM-ID: {SIMID}")
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
 
-junctionManager = JunctionManager()
+junctionMutexFactory = JunctionMutexFactory()
 
 allBusses = [
     Bus("busRouteHorwLuzern1"),
@@ -102,7 +109,7 @@ allBusses = [
     Bus("busRouteZugHorw1"),
     Bus("busRouteZugHorw2"),
 ]
-busLogicController = BusLogicController(junctionManager)
+busLogicController = BusLogicController(junctionMutexFactory)
 busLogicController.addBusRange(allBusses)
 
 step = 0
