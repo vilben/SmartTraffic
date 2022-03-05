@@ -39,6 +39,16 @@ parser.add_argument(
     action="store_true",
     help="Should data be sent to Splunk",
 )
+parser.add_argument(
+    "--SPLUNKTOKEN",
+    type=str,
+    help="Splunk HEC Token",
+)
+parser.add_argument(
+    "--SPLUNKDEST",
+    type=str,
+    help="Splunk HEC Collector",
+)
 
 args = parser.parse_args()
 
@@ -49,6 +59,8 @@ STATS = args.STATS
 DIAGS = args.DIAGS
 DIAGNAMEPREFIX = args.DIAGNAMEPREFIX
 SPLUNK = args.SPLUNK
+SPLUNKTOKEN = args.SPLUNKTOKEN
+SPLUNKDEST = args.SPLUNKDEST
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -155,6 +167,6 @@ if STATS:
         edgeStatsCollector.createDiags("diags")
 
     if SPLUNK:
-        edgeStatsCollector.sendJsonToSplunk()
+        edgeStatsCollector.sendJsonToSplunk(SPLUNKDEST, SPLUNKTOKEN)
 
 traci.close()
