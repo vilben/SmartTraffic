@@ -48,6 +48,8 @@ SIMID = str(uuid.uuid4())
 JSON = args.JSON
 SPLUNK = args.SPLUNK
 
+logging.info(f"SIM-ID: {SIMID}")
+
 COLLECT_DATA = DIAGS or JSON or SPLUNK
 
 if GUI:
