@@ -145,6 +145,8 @@ while step < SIM_STEPS:
     if COLLECT_DATA:
         edgeStatsCollector.collect(step)
 
+    print("Step No.", step)
+
     if step > 1000:
         if traci.vehicle.getIDCount() < len(allBusses):
             logging.info(f"Step: {step}, Simulation finished!")

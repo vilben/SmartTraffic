@@ -19,9 +19,12 @@ class AbstractVehicle:
         return traci.vehicle.getCO2Emission(self.__id)
 
     def getNextTrafficLight(self):
-        nextTls = traci.vehicle.getNextTLS(self.__id)
-        if len(nextTls) > 0:
-            return TrafficLight(nextTls[0])
+        try:
+            nextTls = traci.vehicle.getNextTLS(self.__id)
+            if len(nextTls) > 0:
+                return TrafficLight(nextTls[0])
+        except:
+            pass
 
     def getNextTrafficLightFromTraci(self):
         return traci.vehicle.getNextTLS(self.__id)
