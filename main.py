@@ -69,7 +69,7 @@ while step < SIM_STEPS:
         if bus.isOnTrack():
             logging.debug(f'bus {bus}')
 
-            if bus.getNextTrafficLight().getDistanceFromBus() < 25:
+            if bus.getNextTrafficLight().getDistanceFromBus() < 25 or bus.isJammed():
                 if not bus.hasBusStopAheadOnSameLane():
                     tls = bus.getNextTrafficLight()
                     tls.setToGreen()
