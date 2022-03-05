@@ -4,6 +4,8 @@ import time
 import uuid
 import sumolib
 import traci
+
+from src.context.SimulationContext import setStep
 from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
@@ -117,6 +119,7 @@ while step < SIM_STEPS:
     for bus in allBusses:
         if bus.isOnTrack():
 
+            # maybe fixme?
             try:
                 distance = bus.getNextTrafficLight().getDistanceFromVehicle()
             except Exception as e:
@@ -129,10 +132,12 @@ while step < SIM_STEPS:
                     tls = bus.getNextTrafficLight()
                     if tls is not None:
                         tls.ensureAccess()
+                        # tls.setToYellowOrGreen()
                         logging.debug("Changing light because bus is jammed!!")
 
     logging.debug(f"---- finished step {step} ----")
     step += 1
+    setStep(step)
 
 if DIAGS:
     edgeStatsCollector.createDiags()

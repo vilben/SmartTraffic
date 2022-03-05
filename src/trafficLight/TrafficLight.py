@@ -1,4 +1,5 @@
 import traci
+from src.context.SimulationContext import getStep
 
 
 class TrafficLight:
@@ -38,8 +39,10 @@ class TrafficLight:
     def setPhaseDuration(self, duration=10):
         traci.trafficlight.setPhaseDuration(self.getId(), duration)
 
-    def __skipPhasesUntil(self, colors="GgYy"):
-        # skip phases until phase is either 'G', 'R' or 'Y'
+    def getRemainingStepsDuration(self):
+        absoluteStepsSwitch = traci.trafficlight.getNextSwitch(self.getId())
+        return absoluteStepsSwitch - getStep()
 
+    def __skipPhasesUntil(self, colors="GgYy"):
         if not colors.__contains__(self.getCurrentPhase()):
             self.setPhaseDuration(0)
