@@ -47,7 +47,9 @@ if DEBUG:
     )
 else:
     logging.basicConfig(
-        format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p"
+        format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
+        datefmt="%m/%d/%Y %I:%M:%S %p",
+        level=logging.INFO,
     )
 
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
@@ -80,7 +82,7 @@ while step < SIM_STEPS:
             
             if bus.getAcceleration() < 0 and tlsDistance < 50 or bus.isJammed():
                 logging.debug("Changing light because bus is jammed!!")
-                followVehicleWithGUI(bus.getId(), VIEW_ID)
+                # followVehicleWithGUI(bus.getId(), VIEW_ID)
                 traci.trafficlight.setPhaseDuration(tlsId, 0)
 
     if STATS:
