@@ -4,7 +4,7 @@ import os
 import time
 import sumolib
 import traci
-from src.emOutUtil import parseAndEnrichXML, sendAllTheData, sendEventsToSpluk
+from src.emOutUtil import parseAndEnrichXML, sendAllTheData
 from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
@@ -137,7 +137,7 @@ step = 0
 
 while step < SIM_STEPS:
     traci.simulationStep()
-    busLogicController.executeLogic()
+    #busLogicController.executeLogic()
 
     print("Step No.", step)
 
