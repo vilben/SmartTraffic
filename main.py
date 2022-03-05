@@ -29,11 +29,15 @@ parser.add_argument(
     action="store_true",
     help="Output folder for DIAGS. If ommited, no diags will be generated. Requires STATS",
 )
-
 parser.add_argument(
     "--DIAGNAMEPREFIX",
     type=str,
     help="Prefix for diag file name",
+)
+parser.add_argument(
+    "--SPLUNK",
+    action="store_true",
+    help="Should data be sent to Splunk",
 )
 
 args = parser.parse_args()
@@ -44,6 +48,7 @@ GUI = args.GUI
 STATS = args.STATS
 DIAGS = args.DIAGS
 DIAGNAMEPREFIX = args.DIAGNAMEPREFIX
+SPLUNK = args.SPLUNK
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -147,7 +152,9 @@ if STATS:
     )
 
     if DIAGS:
-        #edgeStatsCollector.createDiags("diags")
+        edgeStatsCollector.createDiags("diags")
+
+    if SPLUNK:
         edgeStatsCollector.sendJsonToSplunk()
 
 traci.close()
