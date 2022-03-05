@@ -14,12 +14,22 @@ ENABLE_STATS = False
 CONFIG_FILE_NAME = "config/lucerne.sumo.cfg"
 
 parser = argparse.ArgumentParser(description="Yes something")
-parser.add_argument("--GUI", action="store_true", help="Define if GUI should be used")
+
 parser.add_argument(
-    "--DEBUG", action="store_true", help="Define if DEBUG should be used"
+    "--GUI", 
+    action="store_true", 
+    help="Define if GUI should be used"
 )
 parser.add_argument(
-    "--STEPS", type=int, default=5000, help="Define maximal simulation steps"
+    "--DEBUG", 
+    action="store_true", 
+    help="Define if DEBUG should be used"
+)
+parser.add_argument(
+    "--STEPS", 
+    type=int,
+    default=5000, 
+    help="Define maximal simulation steps"
 )
 parser.add_argument(
     "--DIAGS",
@@ -54,6 +64,7 @@ parser.add_argument(
 parser.add_argument(
     "--DISTANCE",
     type=int,
+    default=50,
     help="distance",
 )
 
