@@ -7,6 +7,7 @@ import src.util as util
 from src import tlsControl
 from src.vehicles.Bus import Bus
 from src.vehicleControl import addBus
+from src.vehicleControl import followVehicleWithGUI
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -69,10 +70,12 @@ while step < SIM_STEPS:
         if bus.isOnTrack():
             logging.debug(f'bus {bus}')
 
-            if bus.getNextTrafficLight().getDistanceFromBus() < 25 or bus.isJammed():
+            if bus.getNextTrafficLight().getDistanceFromBus() < 50 or bus.isJammed():
                 if not bus.hasBusStopAheadOnSameLane():
                     tls = bus.getNextTrafficLight()
                     tls.setToGreen()
+                    logging.debug("Changing light because bus is jammed!!")
+                    followVehicleWithGUI(bus.getId(), VIEW_ID)
 
     if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):
@@ -81,7 +84,7 @@ while step < SIM_STEPS:
         for vehId in util.getAllVehilcesExcept("bus"):
             vehStats[vehId] = util.getSingleVehilceStats(vehId)
 
-    logging.debug("---- next step ----")
+    logging.debug("---- finished step {0} ----".format(str(step)))
     step += 1
 
 if STATS:

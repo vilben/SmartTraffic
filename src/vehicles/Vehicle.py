@@ -43,7 +43,18 @@ class AbstractVehicle:
         return 0
 
     def getFollower(self):
-        return AbstractVehicle(traci.vehicle.getFollower(self.__id))
+        follower = traci.vehicle.getFollower(self.__id)
+        if follower[1] != -1:
+            return AbstractVehicle(traci.vehicle.getFollower(self.__id)[0])
+        else:
+            return None
+
+    def getFollowerWithDistance(self):
+        follower = traci.vehicle.getFollower(self.__id)
+        if follower[1] != -1:
+            return AbstractVehicle(traci.vehicle.getFollower(self.__id)[0]), traci.vehicle.getFollower(self.__id)[1]
+        else:
+            return None, -1
 
     def getNthFollower(self, n=1):
         current = self.getFollower()
@@ -53,7 +64,18 @@ class AbstractVehicle:
         return current
 
     def getLeader(self):
-        return AbstractVehicle(traci.vehicle.getLeader(self.__id))
+        leader = traci.vehicle.getLeader(self.__id)
+        if leader:
+            return AbstractVehicle(traci.vehicle.getLeader(self.__id)[0])
+        else:
+            return None
+
+    def getLeaderWithDistance(self):
+        leader = traci.vehicle.getLeader(self.__id)
+        if leader:
+            return AbstractVehicle(traci.vehicle.getLeader(self.__id)[0]), traci.vehicle.getLeader(self.__id)[1]
+        else:
+            return None, -1
 
     def getNthLeader(self, n=1):
         current = self.getLeader()
@@ -70,20 +92,17 @@ class AbstractVehicle:
 
     def isJammed(self):
 
-        if not self.isStopped():
+        if not self.isStopped() or traci.vehicle.isAtBusStop(self.getId()):
             return False
 
-        follower = self.getFollower()
-        leader = self.getLeader()
+        follower, followerDistance = self.getFollowerWithDistance()
+        leader, leaderDistance = self.getLeaderWithDistance()
 
-        if follower.isOnTrack() and leader.isOnStrack():
-            return follower.isStopped() and leader.isStopped()
+        if follower and follower.isOnTrack():
+            return  follower.isStopped() and followerDistance < 10
 
-        if follower.isOnTrack():
-            return follower.isStopped()
-
-        if leader.isOnTrack():
-            return leader.isStopped()
+        if leader and leader.isOnTrack():
+            return  leader.isStopped() and leaderDistance < 10
 
     def getNextStop(self):
         return Stop(traci.vehicle.getNextStops(self.getId())[0])
