@@ -68,14 +68,23 @@ while step < SIM_STEPS:
     for bus in allBusses:
 
         if bus.isOnTrack():
-            print("bus", bus)
             tls = bus.getNextTrafficLight()[0]
 
             tlsId = tls[0]
+            tlsIndex = tls[1]
             tlsPhase = tls[3]
+            tlsDistance = tls[2]
+
+            
+            print(bus.getSpeed())
+            print(bus.getAcceleration())
+
+            print(bus.isJammed())
+            
+            # print(tlsDistance)
 
             # just skip stupid phases...
-            if tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
+            if tlsDistance < 100 and tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
                 traci.trafficlight.setPhaseDuration(tlsId, 0)
 
     if STATS:
