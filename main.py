@@ -45,7 +45,9 @@ if DEBUG:
     )
 else:
     logging.basicConfig(
-        format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p"
+        format='%(asctime)s:%(levelname)s:%(name)s:%(message)s',
+        datefmt="%m/%d/%Y %I:%M:%S %p",
+        level=logging.INFO,
     )
 
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
