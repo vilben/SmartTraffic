@@ -61,6 +61,29 @@ class AbstractVehicle:
             current = current.getLeader(current)
         return current
 
+    def isStopped(self):
+        return self.getAcceleration() == 0 and self.getSpeed() == 0
+
+    def isBreaking(self):
+        return self.getAcceleration() < 0
+
+    def isJammed(self):
+
+        if not self.isStopped():
+            return False
+
+        follower = self.getFollower()
+        leader = self.getLeader()
+
+        if follower.isOnTrack() and leader.isOnStrack():
+            return  follower.isStopped() and leader.isStopped()
+        
+        if follower.isOnTrack():
+            return  follower.isStopped()
+
+        if leader.isOnTrack():
+            return  leader.isStopped()
+
     # Probably not needed
 
     # def getUpcomingRoute(self):
@@ -98,6 +121,9 @@ class AbstractVehicle:
 
     def getSpeed(self):
         return traci.vehicle.getSpeed(self.__id)
+
+    def getAcceleration(self):
+        return traci.vehicle.getAcceleration(self.__id)
 
     def getPassengerCount(self):
         # todo

@@ -73,6 +73,11 @@ while step < SIM_STEPS:
 
             tls.setToGreen()
 
+            print(bus.getSpeed())
+            print(bus.getAcceleration())
+
+            print(bus.isJammed())
+
     if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):
             busStats[busId] = util.getSingleVehilceStats(busId)
