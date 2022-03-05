@@ -113,7 +113,10 @@ class AbstractVehicle:
             return leader.isStopped() and leaderDistance < 10
 
     def getNextStop(self):
-        return Stop(traci.vehicle.getNextStops(self.getId())[0])
+        nextStops = traci.vehicle.getNextStops(self.getId())
+        if len(nextStops) > 0:
+            return Stop(nextStops[0])
+        return Stop.createNullStop()
 
     def getNthNextStop(self, n=1):
         n -= 1

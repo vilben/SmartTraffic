@@ -32,6 +32,11 @@ parser.add_argument(
     action="store_true",
     help="Enable JSON creation",
 )
+parser.add_argument(
+    "--SPLUNK",
+    action="store_true",
+    help="Should data be sent to Splunk",
+)
 
 args = parser.parse_args()
 
@@ -41,6 +46,9 @@ GUI = args.GUI
 DIAGS = args.DIAGS
 SIMID = str(uuid.uuid4())
 JSON = args.JSON
+SPLUNK = args.SPLUNK
+
+COLLECT_DATA = DIAGS or JSON or SPLUNK
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -79,20 +87,17 @@ allBusses = [
 ]
 
 step = 0
-if JSON or DIAGS:
+if COLLECT_DATA:
     edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, "diags", "json", SIMID)
-    edgeStatsCollector.registerEdge("e1")
-    edgeStatsCollector.registerEdge("e2")
-    edgeStatsCollector.registerEdge("e13")
-    edgeStatsCollector.registerEdge("e14")
-    edgeStatsCollector.registerEdge("e19")
-    edgeStatsCollector.registerEdge("e20")
-    edgeStatsCollector.registerEdge("e25")
-    edgeStatsCollector.registerEdge("e30")
+
+    allEdges = traci.edge.getIDList()
+    for edgeId in allEdges:
+        edgeStatsCollector.registerEdge(edgeId)
+
 while step < SIM_STEPS:
     traci.simulationStep()
 
-    if JSON or DIAGS:
+    if COLLECT_DATA:
         edgeStatsCollector.collect(step)
 
     for bus in allBusses:
@@ -105,8 +110,8 @@ while step < SIM_STEPS:
                     tls = bus.getNextTrafficLight()
                     tls.setToGreen()
                     logging.debug("Changing light because bus is jammed!!")
-                    if GUI:
-                        followVehicleWithGUI(bus.getId(), VIEW_ID)
+                    # if GUI:
+                    # followVehicleWithGUI(bus.getId(), VIEW_ID)
 
     logging.debug(f"---- finished step {step} ----")
     step += 1
@@ -115,5 +120,7 @@ if DIAGS:
     edgeStatsCollector.createDiags()
 if JSON:
     edgeStatsCollector.writeJSON()
+if SPLUNK:
+    edgeStatsCollector.sendJsonToSplunk()
 
 traci.close()

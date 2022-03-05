@@ -1,6 +1,10 @@
 import errno
 import json
 import os
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 import traci
 from matplotlib import pyplot as plt
 
@@ -319,6 +323,20 @@ class EdgeStatsCollector:
         for edgeId in self.edgeStats:
             edgeStats = self.edgeStats[edgeId]
             edgeStats.writeJson(self.jsonOut)
+
+    def sendJsonToSplunk(self):
+        with requests.Session() as s:
+            for edgeStat in self.edgeStats:
+                # As this is only a hack and this instance not reachable from anywhere except here we do not care about this token here
+                url = "https://192.168.1.190:8088/services/collector/event"
+                authHeader = {
+                    "Authorization": "Splunk {}".format(
+                        "367a51f8-0ffd-4b88-884a-4dbbdf5ebc4a"
+                    )
+                }
+                jsonDict = {"index": "hack", "event": {"message": json.dumps(edgeStat)}}
+
+                _ = s.post(url, headers=authHeader, json=jsonDict, verify=False)
 
     def __ensureFolder(self, path):
         try:
