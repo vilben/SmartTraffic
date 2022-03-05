@@ -37,6 +37,16 @@ parser.add_argument(
     action="store_true",
     help="Should data be sent to Splunk",
 )
+parser.add_argument(
+    "--SPLUNKTOKEN",
+    type=str,
+    help="Splunk HEC Token",
+)
+parser.add_argument(
+    "--SPLUNKDEST",
+    type=str,
+    help="Splunk HEC Collector",
+)
 
 args = parser.parse_args()
 
@@ -47,6 +57,8 @@ DIAGS = args.DIAGS
 SIMID = str(uuid.uuid4())
 JSON = args.JSON
 SPLUNK = args.SPLUNK
+SPLUNKTOKEN = args.SPLUNKTOKEN
+SPLUNKDEST = args.SPLUNKDEST
 
 logging.info(f"SIM-ID: {SIMID}")
 
@@ -123,6 +135,6 @@ if DIAGS:
 if JSON:
     edgeStatsCollector.writeJSON()
 if SPLUNK:
-    edgeStatsCollector.sendJsonToSplunk()
+    edgeStatsCollector.sendJsonToSplunk(SPLUNKDEST, SPLUNKTOKEN)
 
 traci.close()

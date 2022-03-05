@@ -324,16 +324,11 @@ class EdgeStatsCollector:
             edgeStats = self.edgeStats[edgeId]
             edgeStats.writeJson(self.jsonOut)
 
-    def sendJsonToSplunk(self):
+    def sendJsonToSplunk(self, dest, token):
         with requests.Session() as s:
             for edgeStat in self.edgeStats:
-                # As this is only a hack and this instance not reachable from anywhere except here we do not care about this token here
-                url = "https://192.168.1.190:8088/services/collector/event"
-                authHeader = {
-                    "Authorization": "Splunk {}".format(
-                        "367a51f8-0ffd-4b88-884a-4dbbdf5ebc4a"
-                    )
-                }
+                url = "https://{}/services/collector/event".format(dest)
+                authHeader = {"Authorization": "Splunk {}".format(token)}
                 jsonDict = {"index": "hack", "event": {"message": json.dumps(edgeStat)}}
 
                 _ = s.post(url, headers=authHeader, json=jsonDict, verify=False)
