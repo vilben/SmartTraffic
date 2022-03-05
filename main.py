@@ -1,5 +1,6 @@
 import argparse
 import logging
+import uuid
 from matplotlib.pyplot import text
 import sumolib
 import traci
@@ -19,21 +20,32 @@ parser.add_argument(
     "--DEBUG", action="store_true", help="Define if DEBUG should be used"
 )
 parser.add_argument(
-    "--STATS", action="store_true", help="Define if STATS should be generated"
-)
-parser.add_argument(
     "--STEPS", type=int, default=5000, help="Define maximal simulation steps"
 )
 parser.add_argument(
     "--DIAGS",
     action="store_true",
-    help="Output folder for DIAGS. If ommited, no diags will be generated. Requires STATS",
+    help="Enable Diagram creation",
 )
-
 parser.add_argument(
-    "--DIAGNAMEPREFIX",
+    "--JSON",
+    action="store_true",
+    help="Enable JSON creation",
+)
+parser.add_argument(
+    "--SPLUNK",
+    action="store_true",
+    help="Should data be sent to Splunk",
+)
+parser.add_argument(
+    "--SPLUNKTOKEN",
     type=str,
-    help="Prefix for diag file name",
+    help="Splunk HEC Token",
+)
+parser.add_argument(
+    "--SPLUNKDEST",
+    type=str,
+    help="Splunk HEC Collector",
 )
 
 args = parser.parse_args()
@@ -41,9 +53,16 @@ args = parser.parse_args()
 SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
-STATS = args.STATS
 DIAGS = args.DIAGS
-DIAGNAMEPREFIX = args.DIAGNAMEPREFIX
+SIMID = str(uuid.uuid4())
+JSON = args.JSON
+SPLUNK = args.SPLUNK
+SPLUNKTOKEN = args.SPLUNKTOKEN
+SPLUNKDEST = args.SPLUNKDEST
+
+logging.info(f"SIM-ID: {SIMID}")
+
+COLLECT_DATA = DIAGS or JSON or SPLUNK
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -66,10 +85,6 @@ else:
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
 
-vehStats = {}
-busStats = {}
-
-vehs_at_tls = []
 allBusses = [
     Bus("busRouteHorwLuzern1"),
     Bus("busRouteHorwLuzern2"),
@@ -86,8 +101,8 @@ allBusses = [
 ]
 
 step = 0
-if STATS:
-    edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, DIAGNAMEPREFIX)
+if COLLECT_DATA:
+    edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, "diags", "json", SIMID)
 
     allEdges = traci.edge.getIDList()
     for edgeId in allEdges:
@@ -95,6 +110,9 @@ if STATS:
 
 while step < SIM_STEPS:
     traci.simulationStep()
+
+    if COLLECT_DATA:
+        edgeStatsCollector.collect(step)
 
     for bus in allBusses:
         if bus.isOnTrack():
@@ -115,45 +133,14 @@ while step < SIM_STEPS:
                 pass
 
 
-    if STATS:
-        edgeStatsCollector.collect(step)
-        for busId in util.getAllVehiclesOfClass("bus"):
-            busStats[busId] = util.getSingleVehilceStats(busId)
-
-        for vehId in util.getAllVehilcesExcept("bus"):
-            vehStats[vehId] = util.getSingleVehilceStats(vehId)
-
-    logging.debug("---- finished step {0} ----".format(str(step)))
+    logging.debug(f"---- finished step {step} ----")
     step += 1
 
-if STATS:
-    avgVehStats = util.getAvgVehicleStats(vehStats.values())
-    totalVehStats = util.getTotalVehicleStats(vehStats.values())
-    avgBusStats = util.getAvgVehicleStats(busStats.values())
-    totalBusStats = util.getTotalVehicleStats(busStats.values())
-
-    # print vehicle statistics
-    logging.info(f"Vehicle statistics for {len(vehStats)} vehicles (avg, tot) :")
-    logging.info(
-        "\n".join(["{}: {}".format(key, value) for key, value in avgVehStats.items()])
-    )
-    logging.info("\n")
-    logging.info(
-        "\n".join(["{}: {}".format(key, value) for key, value in totalVehStats.items()])
-    )
-    logging.info("\n")
-    logging.info("\n")
-    logging.info(f"\nBus statistics for {len(busStats)} vehicles (avg, tot) :")
-    logging.info(
-        "\n".join(["{}: {}".format(key, value) for key, value in avgBusStats.items()])
-    )
-    logging.info("\n")
-    logging.info(
-        "\n".join(["{}: {}".format(key, value) for key, value in totalBusStats.items()])
-    )
-
-    if DIAGS:
-        #edgeStatsCollector.createDiags("diags")
-        edgeStatsCollector.sendJsonToSplunk()
+if DIAGS:
+    edgeStatsCollector.createDiags()
+if JSON:
+    edgeStatsCollector.writeJSON()
+if SPLUNK:
+    edgeStatsCollector.sendJsonToSplunk(SPLUNKDEST, SPLUNKTOKEN)
 
 traci.close()

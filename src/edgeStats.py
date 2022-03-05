@@ -2,7 +2,8 @@ import errno
 import json
 import os
 import requests
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from urllib3.exceptions import InsecureRequestWarning
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 import traci
 from matplotlib import pyplot as plt
@@ -11,7 +12,7 @@ from src.diagUtil import aggregateSeries
 
 
 class EdgeStats:
-    def __init__(self, edgeId, maxSimSteps, namePrefix):
+    def __init__(self, edgeId, maxSimSteps, simId):
         self.edgeId = edgeId
         # index = simstep
         # [
@@ -25,13 +26,16 @@ class EdgeStats:
         # self.aggrGroups = maxSimSteps // 10
         self.aggrGroups = 100
         self.seriesLength = self.aggrGroups
-        self.namePrefix = namePrefix
+        self.simId = simId
         self.figSize = (20, 10)
         self.dpi = 300
 
     def createDatapoint(self, simStep):
         self.dataPoints[simStep] = {
             "edgeId": self.edgeId,
+            "simdId": self.simId,
+            "simSteps": self.maxSimSteps,
+            "simStep": simStep,
             "emissions": traci.edge.getCO2Emission(self.edgeId),
             "speed": traci.edge.getLastStepMeanSpeed(self.edgeId),
             "occupancy": traci.edge.getLastStepOccupancy(self.edgeId),
@@ -47,7 +51,7 @@ class EdgeStats:
         }
 
     def writeJson(self, outputFolder):
-        with open(os.path.join(outputFolder, f"{self.namePrefix}_data.json"), "w") as f:
+        with open(os.path.join(outputFolder, f"{self.edgeId}.json"), "w") as f:
             json.dump(self.dataPoints, f)
 
     def createPlots(self, outputFolder):
@@ -65,7 +69,7 @@ class EdgeStats:
     def createSpeedPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Speed")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("avg Speed [m/s]")
         plt.plot(
             range(self.seriesLength),
@@ -74,15 +78,13 @@ class EdgeStats:
                 self.aggrGroups,
             ),
         )
-        plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_speed.png"), dpi=self.dpi
-        )
+        plt.savefig(os.path.join(outputFolder, f"speed.png"), dpi=self.dpi)
         plt.close()
 
     def createOccupancyPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Occupancy")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Occupancy")
         plt.plot(
             range(self.seriesLength),
@@ -91,15 +93,13 @@ class EdgeStats:
                 self.aggrGroups,
             ),
         )
-        plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_occupancy.png"), dpi=self.dpi
-        )
+        plt.savefig(os.path.join(outputFolder, f"occupancy.png"), dpi=self.dpi)
         plt.close()
 
     def createEmissionsPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Emissions")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Emissions [mg]")
         plt.plot(
             range(self.seriesLength),
@@ -108,15 +108,13 @@ class EdgeStats:
                 self.aggrGroups,
             ),
         )
-        plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_emissions.png"), dpi=self.dpi
-        )
+        plt.savefig(os.path.join(outputFolder, f"emissions.png"), dpi=self.dpi)
         plt.close()
 
     def createTraveltimePlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Traveltime")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Traveltime")
         plt.plot(
             range(self.seriesLength),
@@ -126,7 +124,7 @@ class EdgeStats:
             ),
         )
         plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_traveltime.png"),
+            os.path.join(outputFolder, f"traveltime.png"),
             dpi=self.dpi,
         )
         plt.close()
@@ -134,7 +132,7 @@ class EdgeStats:
     def createVehicleNumberPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("VehicleNumber")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("number of vehicles")
         plt.plot(
             range(self.seriesLength),
@@ -147,7 +145,7 @@ class EdgeStats:
             ),
         )
         plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_vehicleNumber.png"),
+            os.path.join(outputFolder, f"vehicleNumber.png"),
             dpi=self.dpi,
         )
         plt.close()
@@ -155,7 +153,7 @@ class EdgeStats:
     def createHaltingNumberPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("HaltingNumber")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("number of halting vehicles (speed < 0.1 [m/s]")
         plt.plot(
             range(self.seriesLength),
@@ -168,7 +166,7 @@ class EdgeStats:
             ),
         )
         plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_haltingNumber.png"),
+            os.path.join(outputFolder, f"haltingNumber.png"),
             dpi=self.dpi,
         )
         plt.close()
@@ -176,7 +174,7 @@ class EdgeStats:
     def createNoisePlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Noise")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Noise [db]")
         plt.plot(
             range(self.seriesLength),
@@ -185,15 +183,13 @@ class EdgeStats:
                 self.aggrGroups,
             ),
         )
-        plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_noise.png"), dpi=self.dpi
-        )
+        plt.savefig(os.path.join(outputFolder, f"noise.png"), dpi=self.dpi)
         plt.close()
 
     def createWaitingTimePlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("WaitingTime")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("sum of vehicle waiting time")
         plt.plot(
             range(self.seriesLength),
@@ -203,7 +199,7 @@ class EdgeStats:
             ),
         )
         plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_waitingTime.png"),
+            os.path.join(outputFolder, f"waitingTime.png"),
             dpi=self.dpi,
         )
         plt.close()
@@ -211,7 +207,7 @@ class EdgeStats:
     def createFuelConsumptionPlot(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("FuelConsumption")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("FuelConsumption [ml]")
         plt.plot(
             range(self.seriesLength),
@@ -224,7 +220,7 @@ class EdgeStats:
             ),
         )
         plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_fuelConsumption.png"),
+            os.path.join(outputFolder, f"fuelConsumption.png"),
             dpi=600,
         )
         plt.close()
@@ -232,7 +228,7 @@ class EdgeStats:
     def createCombinedGraph(self, outputFolder):
         plt.figure(figsize=self.figSize)
         plt.title("Overview")
-        plt.xlabel("SimStep")
+        plt.xlabel("Simulation Time")
         plt.ylabel("Overview")
         plt.plot(
             range(self.seriesLength),
@@ -290,20 +286,20 @@ class EdgeStats:
             fancybox=True,
             shadow=True,
         )
-        plt.savefig(
-            os.path.join(outputFolder, f"{self.namePrefix}_combined.png"), dpi=self.dpi
-        )
+        plt.savefig(os.path.join(outputFolder, f"combined.png"), dpi=self.dpi)
         plt.close()
 
 
 class EdgeStatsCollector:
-    def __init__(self, maxSimSteps, namePrefix=""):
+    def __init__(self, maxSimSteps, diagOut, jsonOut, simId=""):
         self.maxSimSteps = maxSimSteps
         self.edgeStats = {}
-        self.namePrefix = namePrefix
+        self.simId = simId
+        self.diagOut = f"{diagOut}/{simId}"
+        self.jsonOut = f"{jsonOut}/{simId}"
 
     def registerEdge(self, edgeId):
-        self.edgeStats[edgeId] = EdgeStats(edgeId, self.maxSimSteps, self.namePrefix)
+        self.edgeStats[edgeId] = EdgeStats(edgeId, self.maxSimSteps, self.simId)
 
     def collect(self, simStep):
         for edgeId in self.edgeStats:
@@ -315,25 +311,27 @@ class EdgeStatsCollector:
     def getEdgeStatsAsJson(self):
         return json.dumps(self.edgeStats)
 
-    def sendJsonToSplunk(self):
+    def createDiags(self):
+        self.__ensureFolder(self.diagOut)
+        for edgeId in self.edgeStats:
+            self.__ensureFolder(self.diagOut + "/" + edgeId)
+            edgeStats = self.edgeStats[edgeId]
+            edgeStats.createPlots(self.diagOut + "/" + edgeId)
 
+    def writeJSON(self):
+        self.__ensureFolder(self.jsonOut)
+        for edgeId in self.edgeStats:
+            edgeStats = self.edgeStats[edgeId]
+            edgeStats.writeJson(self.jsonOut)
+
+    def sendJsonToSplunk(self, dest, token):
         with requests.Session() as s:
             for edgeStat in self.edgeStats:
+                url = "https://{}/services/collector/event".format(dest)
+                authHeader = {"Authorization": "Splunk {}".format(token)}
+                jsonDict = {"index": "hack", "event": {"message": json.dumps(edgeStat)}}
 
-                # As this is only a hack and this instance not reachable from anywhere except here we do not care about this token here
-                url='https://192.168.1.190:8088/services/collector/event'
-                authHeader = {'Authorization': 'Splunk {}'.format('367a51f8-0ffd-4b88-884a-4dbbdf5ebc4a')}
-                jsonDict = {"index":"hack", "event": { 'message' : json.dumps(edgeStat)} }
-
-                r = s.post(url, headers=authHeader, json=jsonDict, verify=False)
-
-    def createDiags(self, outFolder):
-        self.__ensureFolder(outFolder)
-        for edgeId in self.edgeStats:
-            self.__ensureFolder(outFolder + "/" + edgeId)
-            edgeStats = self.edgeStats[edgeId]
-            edgeStats.createPlots(outFolder + "/" + edgeId)
-            edgeStats.writeJson(outFolder + "/" + edgeId)
+                _ = s.post(url, headers=authHeader, json=jsonDict, verify=False)
 
     def __ensureFolder(self, path):
         try:
