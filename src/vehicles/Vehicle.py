@@ -67,26 +67,17 @@ class AbstractVehicle:
         if not self.isStopped():
             return False
 
-        follower = traci.vehicle.getFollower(self.__id)
-        followerObject = AbstractVehicle
-        leaderObject =  AbstractVehicle
+        follower = self.getFollower()
+        leader = self.getLeader()
 
-        if follower:
-            followerId = follower[0]
-            followerObject = AbstractVehicle(followerId)
-        leader = traci.vehicle.getLeader(self.__id)
-        if leader:
-            leaderId = leader[0]
-            leaderObject = AbstractVehicle(leaderId)
-
-        if followerObject.isOnTrack() and leaderObject.isOnStrack():
-            return  followerObject.isStopped() and leaderObject.isStopped()
+        if follower.isOnTrack() and leader.isOnStrack():
+            return  follower.isStopped() and leader.isStopped()
         
-        if followerObject.isOnTrack():
-            return  followerObject.isStopped()
+        if follower.isOnTrack():
+            return  follower.isStopped()
 
-        if leaderObject.isOnTrack():
-            return  leaderObject.isStopped()
+        if leader.isOnTrack():
+            return  leader.isStopped()
 
     # Probably not needed
 
