@@ -69,7 +69,7 @@ while step < SIM_STEPS:
     for bus in allBusses:
         if bus.isOnTrack():
             if bus.getNextTrafficLight().getDistanceFromVehicle() < 50 or bus.isJammed():
-                if not bus.hasBusStopAheadOnSameLane():
+                if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
                     tls = bus.getNextTrafficLight()
                     tls.setToGreen()
                     logging.debug("Changing light because bus is jammed!!")
