@@ -1,5 +1,6 @@
 import traci
 
+from src.trafficLight.TrafficLight import TrafficLight
 from src.vehicleControl import isVehicleKnown
 
 
@@ -18,7 +19,11 @@ class AbstractVehicle:
         return traci.vehicle.getCO2Emission(self.__id)
 
     def getNextTrafficLight(self):
-        return traci.vehicle.getNextTLS(self.__id)
+        return TrafficLight(traci.vehicle.getNextTLS(self.__id)[0])
+
+    def getNthTrafficLightAhead(self, n=1):
+        n -= 1
+        return TrafficLight(traci.vehicle.getNextTLS(self.__id)[n])
 
     def isOnTrack(self):
         return isVehicleKnown(self.getId())

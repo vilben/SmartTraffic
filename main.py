@@ -69,14 +69,9 @@ while step < SIM_STEPS:
 
         if bus.isOnTrack():
             logging.debug(f'bus {bus}')
-            tls = bus.getNextTrafficLight()[0]
+            tls = bus.getNextTrafficLight()
 
-            tlsId = tls[0]
-            tlsPhase = tls[3]
-
-            # just skip stupid phases...
-            if tlsPhase == 'r' or tlsPhase == 'R' or tlsPhase == 'y' or tlsPhase == 'Y':
-                traci.trafficlight.setPhaseDuration(tlsId, 0)
+            tls.setToGreen()
 
     if STATS:
         for busId in util.getAllVehiclesOfClass("bus"):
