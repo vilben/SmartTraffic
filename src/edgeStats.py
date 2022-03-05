@@ -5,6 +5,8 @@ import os
 import requests
 from urllib3.exceptions import InsecureRequestWarning
 
+from src.xmlUtil import getJSONFromXML
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 import traci
 from matplotlib import pyplot as plt
@@ -353,6 +355,27 @@ class EdgeStatsCollector:
                     logging.debug(
                         "Successfully sent json to splunk for edge {}".format(edgeId)
                     )
+
+    def sendXMLToSplunk(self, dest, token, xmlFilePath):
+        logging.info("Sending XML to Splunk (but it's actually JSON, don't worry)")
+        with requests.Session() as s:
+            url = "https://{}/services/collector/event".format(dest)
+            authHeader = {"Authorization": "Splunk {}".format(token)}
+            jsonDict = {"index": "hack", "event": getJSONFromXML(xmlFilePath)}
+            r = s.post(
+                url,
+                headers=authHeader,
+                json=jsonDict,
+                verify=False,
+            )
+            if r.status_code != 200:
+                logging.error(
+                    "Failed to send xml to splunk. Status code: {}".format(
+                        r.status_code
+                    )
+                )
+            else:
+                logging.debug("Successfully sent xml to splunk")
 
     def __ensureFolder(self, path):
         try:

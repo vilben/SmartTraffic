@@ -4,7 +4,11 @@ First, you have to install the sumo modules:
 pip install sumolib
 pip install traci
 pip install matplotlib
+pip install xmltodict
 ```
+
+_(Possibly, xmldict needs to be installed differently, depening on your OS...)._
+_See [here](https://github.com/martinblech/xmltodict) for more info._
 
 To generate a net from edges and nodes and what not... , run:
 

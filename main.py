@@ -1,13 +1,16 @@
 import argparse
 import logging
+import os
 import time
 import sumolib
 import traci
+from src.emOutUtil import parseAndEnrichXML, sendAllTheData, sendEventsToSpluk
 from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
 from src.trafficLight.BusLogicController import BusLogicController
 from src.trafficLight.JunctionMutexFactory import JunctionMutexFactory
+from src.xmlUtil import insertAttrAtTopNode
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -24,12 +27,12 @@ parser.add_argument(
 parser.add_argument(
     "--DIAGS",
     action="store_true",
-    help="Enable Diagram creation",
+    help="[Obsolete] Enable Diagram creation",
 )
 parser.add_argument(
     "--JSON",
     action="store_true",
-    help="Enable JSON creation",
+    help="[Obsolete] Enable JSON creation",
 )
 parser.add_argument(
     "--SPLUNK",
@@ -73,6 +76,12 @@ TIMESTAMP = time.time()
 SIMID = f"{TIMESTAMP}_{SPLUNKDATASETNAME}"
 
 COLLECT_DATA = DIAGS or JSON or SPLUNK
+EMISSIONSOUTFILENAME = f"{SIMID}_emissions.xml"
+
+additionalSumoOptions = ""
+
+if SPLUNK:
+    additionalSumoOptions = f"--emission-output={EMISSIONSOUTFILENAME}"
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -94,7 +103,7 @@ else:
 
 logging.info(f"SIM-ID: {SIMID}")
 
-cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
+cmd = [sumoBinary, "-c", CONFIG_FILE_NAME, additionalSumoOptions]
 traci.start(cmd)
 
 junctionMutexFactory = JunctionMutexFactory()
@@ -117,16 +126,10 @@ busLogicController = BusLogicController(junctionMutexFactory, DISTANCE)
 busLogicController.addBusRange(allBusses)
 
 step = 0
-if COLLECT_DATA:
-    edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, "diags", "json", SIMID)
-    edgeStatsCollector.registerAllRelevantEdges()
 
 while step < SIM_STEPS:
     traci.simulationStep()
     busLogicController.executeLogic()
-
-    if COLLECT_DATA:
-        edgeStatsCollector.collect(step)
 
     if step > 1000:
         if traci.vehicle.getIDCount() < len(allBusses):
@@ -135,11 +138,10 @@ while step < SIM_STEPS:
             break
     step += 1
 
-if DIAGS:
-    edgeStatsCollector.createDiags()
-if JSON:
-    edgeStatsCollector.writeJSON()
-if SPLUNK:
-    edgeStatsCollector.sendJsonToSplunk(SPLUNKDEST, SPLUNKTOKEN)
-
 traci.close()
+
+if SPLUNK:
+    insertAttrAtTopNode(EMISSIONSOUTFILENAME, "simId", SIMID)
+    dps = parseAndEnrichXML(EMISSIONSOUTFILENAME)
+    sendAllTheData(dps, SPLUNKDEST, SPLUNKTOKEN)
+    os.remove(EMISSIONSOUTFILENAME)
