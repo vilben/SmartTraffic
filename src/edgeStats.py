@@ -1,6 +1,7 @@
 import errno
 import json
 import os
+import requests
 import traci
 from matplotlib import pyplot as plt
 
@@ -311,6 +312,19 @@ class EdgeStatsCollector:
 
     def getEdgeStatsAsJson(self):
         return json.dumps(self.edgeStats)
+
+    def sendJsonToSplunk(self):
+
+        with requests.Session() as s:
+            for edgeStat in self.edgeStats:
+                url='https://192.168.1.190:8088/services/collector/event'
+                authHeader = {'Authorization': 'Splunk {}'.format('367a51f8-0ffd-4b88-884a-4dbbdf5ebc4a')}
+                jsonDict = {"index":"hack", "event": { 'message' : json.dumps(edgeStat)} }
+
+                print(authHeader)
+                print(jsonDict)
+
+                r = s.post(url, headers=authHeader, json=jsonDict, verify=False)
 
     def createDiags(self, outFolder):
         self.__ensureFolder(outFolder)
