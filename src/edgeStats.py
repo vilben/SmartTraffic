@@ -1,5 +1,6 @@
 import errno
 import json
+import logging
 import os
 import requests
 from urllib3.exceptions import InsecureRequestWarning
@@ -53,6 +54,9 @@ class EdgeStats:
     def writeJson(self, outputFolder):
         with open(os.path.join(outputFolder, f"{self.edgeId}.json"), "w") as f:
             json.dump(self.dataPoints, f)
+
+    def serialize(self):
+        return json.dumps(self.dataPoints)
 
     def createPlots(self, outputFolder):
         self.createSpeedPlot(outputFolder)
@@ -326,12 +330,24 @@ class EdgeStatsCollector:
 
     def sendJsonToSplunk(self, dest, token):
         with requests.Session() as s:
-            for edgeStat in self.edgeStats:
+            for edgeId, edgeStat in self.edgeStats.items():
                 url = "https://{}/services/collector/event".format(dest)
                 authHeader = {"Authorization": "Splunk {}".format(token)}
-                jsonDict = {"index": "hack", "event": {"message": json.dumps(edgeStat)}}
+                jsonDict = {"index": "hack", "event": edgeStat.serialize()}
 
-                _ = s.post(url, headers=authHeader, json=jsonDict, verify=False)
+                r = s.post(url, headers=authHeader, json=jsonDict, verify=False)
+                if r.status_code != 200:
+                    logging.error(
+                        "Failed to send json to splunk. Status code: {}".format(
+                            r.status_code
+                        )
+                    )
+                else:
+                    logging.debug(
+                        "Successfully sent json to splunk for edge {}".format(
+                            edgeId
+                        )
+                    )
 
     def __ensureFolder(self, path):
         try:
