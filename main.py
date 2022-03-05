@@ -1,5 +1,6 @@
 import argparse
 import logging
+import time
 import uuid
 import sumolib
 import traci
@@ -51,7 +52,8 @@ SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 DIAGS = args.DIAGS
-SIMID = str(uuid.uuid4())
+TIMESTAMP = time.time()
+SIMID = f"{TIMESTAMP}_{str(uuid.uuid4())}"
 JSON = args.JSON
 SPLUNK = args.SPLUNK
 SPLUNKTOKEN = args.SPLUNKTOKEN
@@ -103,7 +105,8 @@ if COLLECT_DATA:
 
     allEdges = traci.edge.getIDList()
     for edgeId in allEdges:
-        edgeStatsCollector.registerEdge(edgeId)
+        if edgeId.startswith("e"):
+            edgeStatsCollector.registerEdge(edgeId)
 
 while step < SIM_STEPS:
     traci.simulationStep()
@@ -121,10 +124,7 @@ while step < SIM_STEPS:
                 if DEBUG:
                     logging.debug(e)
 
-            if (
-                    distance < 50
-                    or bus.isJammed()
-            ):
+            if distance < 50 or bus.isJammed():
                 if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
                     tls = bus.getNextTrafficLight()
                     if tls is not None:
