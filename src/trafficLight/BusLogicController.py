@@ -1,6 +1,5 @@
 import logging
-import src.trafficLight.JunctionMutex
-from src.trafficLight.JunctionFactory import JunctionMutexFactory
+from src.trafficLight.JunctionMutexFactory import JunctionMutexFactory
 
 
 class BusLogicController:
