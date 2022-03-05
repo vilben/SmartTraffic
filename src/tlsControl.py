@@ -59,9 +59,9 @@ class TLSControl:
         """
         Prints the traffic light state.
         """
-        logging.log(self.state_str)
-        logging.log(self.tls_state)
-        logging.log("\n")
+        logging.debug(self.state_str)
+        logging.debug(self.tls_state)
+        logging.debug("\n")
 
     def setState(self, state_str) -> None:
         """

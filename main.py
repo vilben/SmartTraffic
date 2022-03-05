@@ -68,7 +68,7 @@ while step < SIM_STEPS:
     for bus in allBusses:
 
         if bus.isOnTrack():
-            print("bus", bus)
+            logging.debug(f'bus {bus}')
             tls = bus.getNextTrafficLight()[0]
 
             tlsId = tls[0]
