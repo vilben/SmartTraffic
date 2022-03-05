@@ -3,10 +3,11 @@ from src.trafficLight.JunctionMutexFactory import JunctionMutexFactory
 
 
 class BusLogicController:
-    def __init__(self, junctionMutexFactory):
+    def __init__(self, junctionMutexFactory, distance):
         self.allBusses = []
         self.junctionMutexFactory = junctionMutexFactory
         self.approaches = {}
+        self.__distance = distance
 
     @property
     def junctionMutexFactory(self) -> JunctionMutexFactory:
@@ -49,13 +50,12 @@ class BusLogicController:
                 try:
                     distance = bus.getNextTrafficLight().getDistanceFromVehicle()
                 except Exception as e:
-                    distance = 101
+                    distance = self.__distance + 1
 
-                if distance < 100 or bus.isJammed():
-
-                    if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
-                        nextTrafficLight = bus.getNextTrafficLight()
-                        if nextTrafficLight.isControllingLane(bus.getCurrentLane()):
+                if distance < self.__distance or bus.isJammed():
+                    nextTrafficLight = bus.getNextTrafficLight()
+                    if nextTrafficLight.isControllingLane(bus.getCurrentLane()):
+                        if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
                             logging.debug(f"Bus {bus.getId()} is approaching {nextTrafficLight.getId()}")
                             if nextTrafficLight is not None:
                                 self.declareBusApproachingTls(bus, nextTrafficLight.getId())

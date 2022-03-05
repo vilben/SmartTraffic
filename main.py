@@ -1,7 +1,6 @@
 import argparse
 import logging
 import time
-import uuid
 import sumolib
 import traci
 from src.edgeStats import EdgeStatsCollector
@@ -52,6 +51,11 @@ parser.add_argument(
     type=str,
     help="Splunk Dataset Name",
 )
+parser.add_argument(
+    "--DISTANCE",
+    type=int,
+    help="distance",
+)
 
 args = parser.parse_args()
 
@@ -61,6 +65,7 @@ GUI = args.GUI
 DIAGS = args.DIAGS
 JSON = args.JSON
 SPLUNK = args.SPLUNK
+DISTANCE = args.DISTANCE
 SPLUNKTOKEN = args.SPLUNKTOKEN
 SPLUNKDEST = args.SPLUNKDEST
 SPLUNKDATASETNAME = args.SPLUNKDATASETNAME
@@ -108,7 +113,7 @@ allBusses = [
     Bus("busRouteZugHorw1"),
     Bus("busRouteZugHorw2"),
 ]
-busLogicController = BusLogicController(junctionMutexFactory)
+busLogicController = BusLogicController(junctionMutexFactory, DISTANCE)
 busLogicController.addBusRange(allBusses)
 
 step = 0
