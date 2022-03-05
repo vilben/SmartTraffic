@@ -37,3 +37,14 @@ class TrafficLight:
         # skip phases until phase is either 'G', 'R' or 'Y'
         if self.getCurrentPhase() != color and self.getCurrentPhase() != color.lower():
             traci.trafficlight.setPhaseDuration(self.getId(), 0)
+
+    def __getControlledLinks(self):
+        return traci.trafficlight.getControlledLinks(self.__id)
+
+    def isControllingLane(self, laneId):
+        for controlledLanes in self.__getControlledLinks():
+            for controlledLaneTuple in controlledLanes:
+                if controlledLaneTuple.__contains__(laneId):
+                    return True
+
+        return False

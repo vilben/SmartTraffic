@@ -49,32 +49,34 @@ class BusLogicController:
                 try:
                     distance = bus.getNextTrafficLight().getDistanceFromVehicle()
                 except Exception as e:
-                    distance = 51
+                    distance = 101
 
-                if distance < 50 or bus.isJammed():
+                if distance < 100 or bus.isJammed():
+
                     if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
-                        tls = bus.getNextTrafficLight()
-                        logging.debug(f"Bus {bus.getId()} is approaching {tls.getId()}")
-                        if tls is not None:
-                            self.declareBusApproachingTls(bus, tls.getId())
-                            junctionMutex = self.junctionMutexFactory.getJunctionMutex(
-                                tls.getId()
-                            )
-                            if junctionMutex.isOwner(
-                                bus.getId()
-                            ) or junctionMutex.acquireJunction(bus.getId()):
-                                tls.ensureAccess()
-                                logging.debug("Changing light because bus is jammed!!")
-                            else:
-                                junctionMutex.declareActive(
-                                    bus.getId(),
-                                    "bus may have detected jammed traffic ahead",
-                                    "",
-                                    "",
+                        nextTrafficLight = bus.getNextTrafficLight()
+                        if nextTrafficLight.isControllingLane(bus.getCurrentLane()):
+                            logging.debug(f"Bus {bus.getId()} is approaching {nextTrafficLight.getId()}")
+                            if nextTrafficLight is not None:
+                                self.declareBusApproachingTls(bus, nextTrafficLight.getId())
+                                junctionMutex = self.junctionMutexFactory.getJunctionMutex(
+                                    nextTrafficLight.getId()
                                 )
-                                logging.debug(
-                                    f"Bus {bus.getId()} wants to clear junction, but other busses appear to have priority"
-                                )
+                                if junctionMutex.isOwner(
+                                    bus.getId()
+                                ) or junctionMutex.acquireJunction(bus.getId()):
+                                    nextTrafficLight.ensureAccess()
+                                    logging.debug("Changing light because bus is jammed!!")
+                                else:
+                                    junctionMutex.declareActive(
+                                        bus.getId(),
+                                        "bus may have detected jammed traffic ahead",
+                                        "",
+                                        "",
+                                    )
+                                    logging.debug(
+                                        f"Bus {bus.getId()} wants to clear junction, but other busses appear to have priority"
+                                    )
 
     def declareBusApproachingTls(self, bus, tlsId):
         self.approaches[bus] = tlsId
