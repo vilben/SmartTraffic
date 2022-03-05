@@ -4,9 +4,11 @@ import os
 import traci
 from matplotlib import pyplot as plt
 
+from src.diagUtil import aggregateSeries
+
 
 class EdgeStats:
-    def __init__(self, edgeId, maxSimSteps):
+    def __init__(self, edgeId, maxSimSteps, namePrefix):
         self.edgeId = edgeId
         # index = simstep
         # [
@@ -17,6 +19,12 @@ class EdgeStats:
         # ]
         self.dataPoints = [{}] * maxSimSteps
         self.maxSimSteps = maxSimSteps
+        # self.aggrGroups = maxSimSteps // 10
+        self.aggrGroups = 100
+        self.seriesLength = self.aggrGroups
+        self.namePrefix = namePrefix
+        self.figSize = (20, 10)
+        self.dpi = 300
 
     def createDatapoint(self, simStep):
         self.dataPoints[simStep] = {
@@ -30,11 +38,14 @@ class EdgeStats:
             "lastStepMeanSpeed": traci.edge.getLastStepMeanSpeed(self.edgeId),
             "lastStepOccupancy": traci.edge.getLastStepOccupancy(self.edgeId),
             "lastStepLength": traci.edge.getLastStepLength(self.edgeId),
-            "lastStepVehicleIDs": traci.edge.getLastStepVehicleIDs(self.edgeId),
             "Noise": traci.edge.getNoiseEmission(self.edgeId),
             "WaitingTime": traci.edge.getWaitingTime(self.edgeId),
             "FuelConsumption": traci.edge.getFuelConsumption(self.edgeId),
         }
+
+    def writeJson(self, outputFolder):
+        with open(os.path.join(outputFolder, f"{self.namePrefix}_data.json"), "w") as f:
+            json.dump(self.dataPoints, f)
 
     def createPlots(self, outputFolder):
         self.createSpeedPlot(outputFolder)
@@ -49,153 +60,224 @@ class EdgeStats:
         self.createCombinedGraph(outputFolder)
 
     def createSpeedPlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("Speed")
         plt.xlabel("SimStep")
         plt.ylabel("avg Speed [m/s]")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["speed"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["speed"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "speed.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_speed.png"), dpi=self.dpi
+        )
         plt.close()
 
     def createOccupancyPlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("Occupancy")
         plt.xlabel("SimStep")
         plt.ylabel("Occupancy")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["occupancy"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["occupancy"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "occupancy.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_occupancy.png"), dpi=self.dpi
+        )
         plt.close()
 
     def createEmissionsPlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("Emissions")
         plt.xlabel("SimStep")
         plt.ylabel("Emissions [mg]")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["emissions"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["emissions"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "emissions.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_emissions.png"), dpi=self.dpi
+        )
         plt.close()
 
     def createTraveltimePlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("Traveltime")
         plt.xlabel("SimStep")
         plt.ylabel("Traveltime")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["traveltime"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["traveltime"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "traveltime.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_traveltime.png"),
+            dpi=self.dpi,
+        )
         plt.close()
 
     def createVehicleNumberPlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("VehicleNumber")
         plt.xlabel("SimStep")
         plt.ylabel("number of vehicles")
         plt.plot(
-            range(self.maxSimSteps),
-            [
-                self.dataPoints[i]["lastStepVehicleNumber"]
-                for i in range(self.maxSimSteps)
-            ],
+            range(self.seriesLength),
+            aggregateSeries(
+                [
+                    self.dataPoints[i]["lastStepVehicleNumber"]
+                    for i in range(self.maxSimSteps)
+                ],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "vehicleNumber.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_vehicleNumber.png"),
+            dpi=self.dpi,
+        )
         plt.close()
 
     def createHaltingNumberPlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("HaltingNumber")
         plt.xlabel("SimStep")
         plt.ylabel("number of halting vehicles (speed < 0.1 [m/s]")
         plt.plot(
-            range(self.maxSimSteps),
-            [
-                self.dataPoints[i]["lastStepHaltingNumber"]
-                for i in range(self.maxSimSteps)
-            ],
+            range(self.seriesLength),
+            aggregateSeries(
+                [
+                    self.dataPoints[i]["lastStepHaltingNumber"]
+                    for i in range(self.maxSimSteps)
+                ],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "haltingNumber.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_haltingNumber.png"),
+            dpi=self.dpi,
+        )
         plt.close()
 
     def createNoisePlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("Noise")
         plt.xlabel("SimStep")
         plt.ylabel("Noise [db]")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["Noise"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["Noise"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "noise.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_noise.png"), dpi=self.dpi
+        )
         plt.close()
 
     def createWaitingTimePlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("WaitingTime")
         plt.xlabel("SimStep")
         plt.ylabel("sum of vehicle waiting time")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["WaitingTime"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["WaitingTime"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "waitingTime.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_waitingTime.png"),
+            dpi=self.dpi,
+        )
         plt.close()
 
     def createFuelConsumptionPlot(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("FuelConsumption")
         plt.xlabel("SimStep")
         plt.ylabel("FuelConsumption [ml]")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["FuelConsumption"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [
+                    self.dataPoints[i]["FuelConsumption"]
+                    for i in range(self.maxSimSteps)
+                ],
+                self.aggrGroups,
+            ),
         )
-        plt.savefig(os.path.join(outputFolder, "fuelConsumption.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_fuelConsumption.png"),
+            dpi=600,
+        )
         plt.close()
 
     def createCombinedGraph(self, outputFolder):
-        plt.figure(figsize=(20, 10))
+        plt.figure(figsize=self.figSize)
         plt.title("Overview")
         plt.xlabel("SimStep")
         plt.ylabel("Overview")
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["speed"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["speed"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
             label="Speed [m/s]",
         )
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["emissions"] * 0.001 for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [
+                    self.dataPoints[i]["emissions"] * 0.001
+                    for i in range(self.maxSimSteps)
+                ],
+                self.aggrGroups,
+            ),
             label="Emissions [kg]",
         )
         plt.plot(
-            range(self.maxSimSteps),
-            [self.dataPoints[i]["Noise"] for i in range(self.maxSimSteps)],
+            range(self.seriesLength),
+            aggregateSeries(
+                [self.dataPoints[i]["Noise"] for i in range(self.maxSimSteps)],
+                self.aggrGroups,
+            ),
             label="Noise [db]",
         )
         plt.plot(
-            range(self.maxSimSteps),
-            [
-                self.dataPoints[i]["lastStepVehicleNumber"]
-                for i in range(self.maxSimSteps)
-            ],
+            range(self.seriesLength),
+            aggregateSeries(
+                [
+                    self.dataPoints[i]["lastStepVehicleNumber"]
+                    for i in range(self.maxSimSteps)
+                ],
+                self.aggrGroups,
+            ),
             label="VehicleNumber",
         )
         plt.plot(
-            range(self.maxSimSteps),
-            [
-                self.dataPoints[i]["lastStepHaltingNumber"]
-                for i in range(self.maxSimSteps)
-            ],
+            range(self.seriesLength),
+            aggregateSeries(
+                [
+                    self.dataPoints[i]["lastStepHaltingNumber"]
+                    for i in range(self.maxSimSteps)
+                ],
+                self.aggrGroups,
+            ),
             label="HaltingNumber",
         )
         plt.legend(
@@ -205,17 +287,20 @@ class EdgeStats:
             fancybox=True,
             shadow=True,
         )
-        plt.savefig(os.path.join(outputFolder, "combined.png"), dpi=600)
+        plt.savefig(
+            os.path.join(outputFolder, f"{self.namePrefix}_combined.png"), dpi=self.dpi
+        )
         plt.close()
 
 
 class EdgeStatsCollector:
-    def __init__(self, maxSimSteps):
+    def __init__(self, maxSimSteps, namePrefix=""):
         self.maxSimSteps = maxSimSteps
         self.edgeStats = {}
+        self.namePrefix = namePrefix
 
     def registerEdge(self, edgeId):
-        self.edgeStats[edgeId] = EdgeStats(edgeId, self.maxSimSteps)
+        self.edgeStats[edgeId] = EdgeStats(edgeId, self.maxSimSteps, self.namePrefix)
 
     def collect(self, simStep):
         for edgeId in self.edgeStats:
@@ -233,6 +318,7 @@ class EdgeStatsCollector:
             self.__ensureFolder(outFolder + "/" + edgeId)
             edgeStats = self.edgeStats[edgeId]
             edgeStats.createPlots(outFolder + "/" + edgeId)
+            edgeStats.writeJson(outFolder + "/" + edgeId)
 
     def __ensureFolder(self, path):
         try:

@@ -5,7 +5,6 @@ from src.vehicleControl import isVehicleKnown
 
 
 class AbstractVehicle:
-
     def __init__(self, id):
         self.__id = id
 
@@ -21,6 +20,9 @@ class AbstractVehicle:
     def getNextTrafficLight(self):
         return TrafficLight(traci.vehicle.getNextTLS(self.__id)[0])
 
+    def getNextTrafficLightFromTraci(self):
+        return traci.vehicle.getNextTLS(self.__id)
+
     def getNthTrafficLightAhead(self, n=1):
         n -= 1
         return TrafficLight(traci.vehicle.getNextTLS(self.__id)[n])
@@ -32,7 +34,7 @@ class AbstractVehicle:
         try:
             return traci.vehicle.getRoute(self.__id)
         except:
-            return 0,
+            return (0,)
 
     def getNextEdgeId(self):
         if self.isOnTrack():
@@ -51,7 +53,10 @@ class AbstractVehicle:
     def getFollowerWithDistance(self):
         follower = traci.vehicle.getFollower(self.__id)
         if follower[1] != -1:
-            return AbstractVehicle(traci.vehicle.getFollower(self.__id)[0]), traci.vehicle.getFollower(self.__id)[1]
+            return (
+                AbstractVehicle(traci.vehicle.getFollower(self.__id)[0]),
+                traci.vehicle.getFollower(self.__id)[1],
+            )
         else:
             return None, -1
 
@@ -72,7 +77,10 @@ class AbstractVehicle:
     def getLeaderWithDistance(self):
         leader = traci.vehicle.getLeader(self.__id)
         if leader:
-            return AbstractVehicle(traci.vehicle.getLeader(self.__id)[0]), traci.vehicle.getLeader(self.__id)[1]
+            return (
+                AbstractVehicle(traci.vehicle.getLeader(self.__id)[0]),
+                traci.vehicle.getLeader(self.__id)[1],
+            )
         else:
             return None, -1
 
@@ -96,12 +104,12 @@ class AbstractVehicle:
 
         follower, followerDistance = self.getFollowerWithDistance()
         leader, leaderDistance = self.getLeaderWithDistance()
-        
+
         if follower and follower.isOnTrack():
-            return  follower.isStopped() and followerDistance < 10
+            return follower.isStopped() and followerDistance < 10
 
         if leader and leader.isOnTrack():
-            return  leader.isStopped() and leaderDistance < 10
+            return leader.isStopped() and leaderDistance < 10
 
     # Probably not needed
 

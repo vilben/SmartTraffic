@@ -32,6 +32,12 @@ parser.add_argument(
     help="Output folder for DIAGS. If ommited, no diags will be generated. Requires STATS",
 )
 
+parser.add_argument(
+    "--DIAGNAMEPREFIX",
+    type=str,
+    help="Prefix for diag file name",
+)
+
 args = parser.parse_args()
 
 SIM_STEPS = args.STEPS
@@ -39,6 +45,7 @@ DEBUG = args.DEBUG
 GUI = args.GUI
 STATS = args.STATS
 DIAGS = args.DIAGS
+DIAGNAMEPREFIX = args.DIAGNAMEPREFIX
 
 if GUI:
     sumoBinary = sumolib.checkBinary("sumo-gui")
@@ -80,7 +87,7 @@ allBusses = [
 
 step = 0
 if STATS:
-    edgeStatsCollector = EdgeStatsCollector(SIM_STEPS)
+    edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, DIAGNAMEPREFIX)
     edgeStatsCollector.registerEdge("e1")
     edgeStatsCollector.registerEdge("e2")
     edgeStatsCollector.registerEdge("e13")
@@ -95,19 +102,20 @@ while step < SIM_STEPS:
     for bus in allBusses:
 
         if bus.isOnTrack():
-            
-            
-            tls = bus.getNextTrafficLight()[0]
 
-            tlsId = tls[0]
-            tlsIndex = tls[1]
-            tlsPhase = tls[3]
-            tlsDistance = tls[2]
-            
-            if bus.getAcceleration() < 0 and tlsDistance < 50 or bus.isJammed():
-                logging.debug("Changing light because bus is jammed!!")
-                followVehicleWithGUI(bus.getId(), VIEW_ID)
-                traci.trafficlight.setPhaseDuration(tlsId, 0)
+            actualTLS = bus.getNextTrafficLightFromTraci()
+            if len(actualTLS) > 0:
+                tls = bus.getNextTrafficLightFromTraci()[0]
+
+                tlsId = tls[0]
+                tlsIndex = tls[1]
+                tlsPhase = tls[3]
+                tlsDistance = tls[2]
+
+                if bus.getAcceleration() < 0 and tlsDistance < 50 or bus.isJammed():
+                    logging.debug("Changing light because bus is jammed!!")
+                    # followVehicleWithGUI(bus.getId(), VIEW_ID)
+                    traci.trafficlight.setPhaseDuration(tlsId, 0)
 
     if STATS:
         edgeStatsCollector.collect(step)
