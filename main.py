@@ -9,6 +9,8 @@ from src.context.SimulationContext import setStep
 from src.edgeStats import EdgeStatsCollector
 
 from src.vehicles.Bus import Bus
+from src.trafficLight.BusLogicController import BusLogicController
+from src.trafficLight.JunctionFactory import JunctionMutexFactory
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
@@ -47,6 +49,11 @@ parser.add_argument(
     type=str,
     help="Splunk HEC Collector",
 )
+parser.add_argument(
+    "--SPLUNKDATASETNAME",
+    type=str,
+    help="Splunk Dataset Name",
+)
 
 args = parser.parse_args()
 
@@ -54,12 +61,13 @@ SIM_STEPS = args.STEPS
 DEBUG = args.DEBUG
 GUI = args.GUI
 DIAGS = args.DIAGS
-TIMESTAMP = time.time()
-SIMID = f"{TIMESTAMP}_{str(uuid.uuid4())}"
 JSON = args.JSON
 SPLUNK = args.SPLUNK
 SPLUNKTOKEN = args.SPLUNKTOKEN
 SPLUNKDEST = args.SPLUNKDEST
+SPLUNKDATASETNAME = args.SPLUNKDATASETNAME
+TIMESTAMP = time.time()
+SIMID = f"{TIMESTAMP}_{SPLUNKDATASETNAME}"
 
 COLLECT_DATA = DIAGS or JSON or SPLUNK
 
@@ -86,6 +94,8 @@ logging.info(f"SIM-ID: {SIMID}")
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
 
+junctionMutexFactory = JunctionMutexFactory()
+
 allBusses = [
     Bus("busRouteHorwLuzern1"),
     Bus("busRouteHorwLuzern2"),
@@ -100,6 +110,8 @@ allBusses = [
     Bus("busRouteZugHorw1"),
     Bus("busRouteZugHorw2"),
 ]
+busLogicController = BusLogicController(junctionMutexFactory)
+busLogicController.addBusRange(allBusses)
 
 step = 0
 if COLLECT_DATA:
@@ -108,30 +120,11 @@ if COLLECT_DATA:
 
 while step < SIM_STEPS:
     traci.simulationStep()
+    busLogicController.executeLogic()
 
     if COLLECT_DATA:
         edgeStatsCollector.collect(step)
 
-    for bus in allBusses:
-        if bus.isOnTrack():
-
-            # maybe fixme?
-            try:
-                distance = bus.getNextTrafficLight().getDistanceFromVehicle()
-            except Exception as e:
-                distance = 51
-                if DEBUG:
-                    logging.debug(e)
-
-            if distance < 50 or bus.isJammed():
-                if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
-                    tls = bus.getNextTrafficLight()
-                    if tls is not None:
-                        tls.ensureAccess()
-                        # tls.setToYellowOrGreen()
-                        logging.debug("Changing light because bus is jammed!!")
-
-    logging.debug(f"---- finished step {step} ----")
     step += 1
     setStep(step)
 
