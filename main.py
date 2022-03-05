@@ -150,6 +150,7 @@ if STATS:
     )
 
     if DIAGS:
-        edgeStatsCollector.createDiags("diags")
+        #edgeStatsCollector.createDiags("diags")
+        edgeStatsCollector.sendJsonToSplunk()
 
 traci.close()
