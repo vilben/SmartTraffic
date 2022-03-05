@@ -1,4 +1,5 @@
 from cgitb import text
+import logging
 
 
 class TLSControl:
@@ -54,13 +55,13 @@ class TLSControl:
 
         return state
 
-    def printState(self) -> None:
+    def logState(self) -> None:
         """
         Prints the traffic light state.
         """
-        print(self.state_str)
-        print(self.tls_state)
-        print("\n")
+        logging.debug(self.state_str)
+        logging.debug(self.tls_state)
+        logging.debug("\n")
 
     def setState(self, state_str) -> None:
         """

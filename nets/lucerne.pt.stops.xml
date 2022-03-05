@@ -1,0 +1,14 @@
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <busStop id="Horw_busStop" lane="e46_1" startPos="10.00" endPos="20.00"/>
+    <busStop id="Bahnhof_busStop" lane="e42_1" startPos="50.00" endPos="60.00"/>
+    <busStop id="Au_busStop" lane="e48_1" startPos="10.00" endPos="20.00"/>
+    <busStop id="Schwanenplatz_busStop" lane="e16_1" startPos="50.00" endPos="60.00"/>
+    <busStop id="Emmen_busStop" lane="e4_1" startPos="300.00" endPos="310.00"/>
+    <busStop id="Helvetiaplatz_busStop" lane="e30_1" startPos="10.00" endPos="20.00"/>
+    <busStop id="Ebikon_busStop" lane="e6_1" startPos="50.00" endPos="60.00"/>
+    <busStop id="Wuerzenbach_busStop" lane="e18_1" startPos="400.00" endPos="410.00"/>
+    <busStop id="Kasernenplatz_busStop" lane="e13_1" startPos="10.00" endPos="20.00"/>
+    <busStop id="Zug_busStop" lane="e2_1" startPos="400.00" endPos="410.00"/>
+</additional>

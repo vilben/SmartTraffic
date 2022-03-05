@@ -1,4 +1,5 @@
 from distutils.log import error
+import logging
 import traci
 import random
 
@@ -73,8 +74,6 @@ def getVehicleStats(veh_ids, vehicleClass=""):
                 or traci.vehicle.getVehicleClass(veh_id) == vehicleClass
             ):
                 veh_stats.append(getSingleVehilceStats(veh_id))
-            # else:
-            # print(f"{veh_id} is not of class {vehicleClass}, its {traci.vehicle.getVehicleClass(veh_id)}")
         except:
             pass
     return veh_stats
@@ -125,9 +124,9 @@ def getTotalVehicleStats(vehStats):
     return total_veh_stats
 
 
-def printAllTlsStates():
+def logAllTlsStates():
     for tls_id in traci.trafficlight.getIDList():
-        print(f"{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}")
+        logging.info(f"{tls_id}:  {traci.trafficlight.getRedYellowGreenState(tls_id)}")
 
 
 def getRandomColor():
