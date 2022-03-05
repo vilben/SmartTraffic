@@ -34,7 +34,7 @@ class EdgeStats:
     def createDatapoint(self, simStep):
         self.dataPoints[simStep] = {
             "edgeId": self.edgeId,
-            "simdId": self.simId,
+            "simId": self.simId,
             "simSteps": self.maxSimSteps,
             "simStep": simStep,
             "emissions": traci.edge.getCO2Emission(self.edgeId),
@@ -305,6 +305,12 @@ class EdgeStatsCollector:
     def registerEdge(self, edgeId):
         self.edgeStats[edgeId] = EdgeStats(edgeId, self.maxSimSteps, self.simId)
 
+    def registerAllRelevantEdges(self):
+        allEdges = traci.edge.getIDList()
+        for edgeId in allEdges:
+            if edgeId.startswith("e") and "_t" not in edgeId:
+                self.registerEdge(edgeId)
+
     def collect(self, simStep):
         for edgeId in self.edgeStats:
             self.edgeStats[edgeId].createDatapoint(simStep)
@@ -329,6 +335,7 @@ class EdgeStatsCollector:
             edgeStats.writeJson(self.jsonOut)
 
     def sendJsonToSplunk(self, dest, token):
+        logging.info("Sending JSON to Splunk")
         with requests.Session() as s:
             for edgeId, edgeStat in self.edgeStats.items():
                 url = "https://{}/services/collector/event".format(dest)
@@ -344,9 +351,7 @@ class EdgeStatsCollector:
                     )
                 else:
                     logging.debug(
-                        "Successfully sent json to splunk for edge {}".format(
-                            edgeId
-                        )
+                        "Successfully sent json to splunk for edge {}".format(edgeId)
                     )
 
     def __ensureFolder(self, path):

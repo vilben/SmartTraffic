@@ -61,8 +61,6 @@ SPLUNK = args.SPLUNK
 SPLUNKTOKEN = args.SPLUNKTOKEN
 SPLUNKDEST = args.SPLUNKDEST
 
-logging.info(f"SIM-ID: {SIMID}")
-
 COLLECT_DATA = DIAGS or JSON or SPLUNK
 
 if GUI:
@@ -82,6 +80,8 @@ else:
         datefmt="%m/%d/%Y %I:%M:%S %p",
         level=logging.INFO,
     )
+
+logging.info(f"SIM-ID: {SIMID}")
 
 cmd = [sumoBinary, "-c", CONFIG_FILE_NAME]
 traci.start(cmd)
@@ -104,11 +104,7 @@ allBusses = [
 step = 0
 if COLLECT_DATA:
     edgeStatsCollector = EdgeStatsCollector(SIM_STEPS, "diags", "json", SIMID)
-
-    allEdges = traci.edge.getIDList()
-    for edgeId in allEdges:
-        if edgeId.startswith("e"):
-            edgeStatsCollector.registerEdge(edgeId)
+    edgeStatsCollector.registerAllRelevantEdges()
 
 while step < SIM_STEPS:
     traci.simulationStep()
