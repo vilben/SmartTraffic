@@ -1,3 +1,4 @@
+from time import sleep
 import traci
 
 
@@ -13,10 +14,18 @@ class TrafficLight:
         return self.__id
 
     def setToRed(self):
-        self.__skipPhasesUntil('R')
+        self.__skipPhasesUntil("R")
 
     def setToGreen(self):
-        self.__skipPhasesUntil('G')
+        self.__skipPhasesUntil("G")
+
+    def advanceToAnyYellow(self):
+        if "y" not in traci.trafficlight.getRedYellowGreenState(self.getId()).lower():
+            traci.trafficlight.setPhaseDuration(self.getId(), 0)
+
+    def ensureAccess(self):
+        if self.getCurrentPhase().lower() != "g":
+            self.advanceToAnyYellow()
 
     def getCurrentPhase(self):
         return self.__currentPhase
@@ -24,7 +33,7 @@ class TrafficLight:
     def getDistanceFromVehicle(self):
         return self.__distanceFromBus
 
-    def __skipPhasesUntil(self, color='G'):
+    def __skipPhasesUntil(self, color="G"):
         # skip phases until phase is either 'G', 'R' or 'Y'
         if self.getCurrentPhase() != color and self.getCurrentPhase() != color.lower():
             traci.trafficlight.setPhaseDuration(self.getId(), 0)

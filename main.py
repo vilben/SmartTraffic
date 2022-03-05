@@ -128,7 +128,7 @@ while step < SIM_STEPS:
                 if not bus.hasBusStopAheadOnSameLane() or bus.isJammed():
                     tls = bus.getNextTrafficLight()
                     if tls is not None:
-                        tls.setToGreen()
+                        tls.ensureAccess()
                         logging.debug("Changing light because bus is jammed!!")
 
     logging.debug(f"---- finished step {step} ----")
