@@ -14,7 +14,7 @@ from src.xmlUtil import insertAttrAtTopNode
 
 VIEW_ID = "View #0"
 ENABLE_STATS = False
-CONFIG_FILE_NAME = "lucerne-real/osm.sumocfg"
+CONFIG_FILE_NAME = "lucerne-real2/osm.sumocfg"
 
 parser = argparse.ArgumentParser(description="Yes something")
 

@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-03-06 12:42:04 by Eclipse SUMO netconvert Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="C:\Program%20Files%20(x86)\Eclipse\Sumo\data\typemap\osmNetconvert.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <edge_removal>
+        <keep-edges.by-vclass value="passenger,bus,tram,rail_urban,rail"/>
+    </edge_removal>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="10329506" name="Flixbus N33: Kiel, Interims-ZOB =&gt; Luzern, Inseli" line="N33" type="bus" vClass="bus" completeness="0.07">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="10330274" name="Flixbus N33: Luzern, Inseli =&gt; Kiel, Interims-ZOB" line="N33" type="bus" vClass="bus" completeness="0.06">
+        <route edges="-115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968765#0 10426676 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="10615201" name="Bus 30: Littau, Bahnhof → Ebikon, Bahnhof" line="30" type="bus" vClass="bus" completeness="0.48">
+        <route edges="19803517#0 36723787#0 190192157#1 190192157#5 190192157#8 553460094#0 135572695#0 135572695#2 98947219#0 98947219#1 146343280 24980035 24980036#0 866030035#0 866030035#1 22386331#0 22386331#2 887914950#1 -22385351#6 -22385351#5 -22385351#4 93720121#0 93720121#1 93720121#2 136641146#0 136641146#4 -330757768#7 -330757768#3"/>
+        <busStop id="984024105" name="Blattenmoos"/>
+        <busStop id="311606402" name="Michaelshof"/>
+        <busStop id="206372728" name="Längweiher"/>
+        <busStop id="206372731" name="Rönnimoosrain"/>
+        <busStop id="426860182" name="Grenzhof"/>
+        <busStop id="1099877714" name="Kanonenstrasse"/>
+        <busStop id="1099807926" name="Kreuzstutz"/>
+        <busStop id="984024323" name="St. Karli"/>
+        <busStop id="1096064551" name="Kantonsspital"/>
+        <busStop id="984024066" name="Urnerhof"/>
+        <busStop id="-984024117" name="Rosenberg"/>
+        <busStop id="-7248262541" name="Schlossberg"/>
+        <busStop id="-7248262545" name="Weggismatt"/>
+        <busStop id="-1485039517" name="Maihofmatte-Rotsee"/>
+    </ptLine>
+    <ptLine id="10684058" name="Flixbus 1524: Basel, Bahnhof SBB =&gt; Rom, Anagnina" line="1524" type="bus" vClass="bus" completeness="0.05">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="10684059" name="Flixbus 1524: Rom, Ananigna =&gt; Basel, Bahnhof SBB" line="1524" type="bus" vClass="bus" completeness="0.05">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 -115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968765#0 10426676 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="10724333" name="S3: Brunnen → Luzern" line="S3" type="train" vClass="rail" completeness="0.18">
+        <route edges="-103893220 -27601634#2 -27601634#1 -27601634#0 -135207290 -10853494#1 -10853494#0 116828437 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 773813396 86320760"/>
+        <busStop id="-1398732992" name="Luzern Verkehrshaus"/>
+        <busStop id="1002463599" name="Luzern"/>
+    </ptLine>
+    <ptLine id="10736535" name="S4: Wolfenschiessen → Luzern" line="S4" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="10736574" name="S5: Giswil → Luzern" line="S5" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="10757967" name="Bus 30: Ebikon, Bahnhof → Littau, Bahnhof" line="30" type="bus" vClass="bus" completeness="0.48">
+        <route edges="330757768#0 330757768#4 -136641146#5 -136641146#3 93720121#0 93720121#1 93720121#2 22385351#0 22385351#5 22385351#6 -887914950#2 -22386331#5 -22386331#1 -866030035#4 -866030035#0 -24980036#2 -24980035 -146343280 -98947219#1 -98947219#0 -135572695#2 -135572695#1 -553460094#1 -190192157#10 -190192157#7 -190192157#3 -190192157#0 -19803517#2"/>
+        <busStop id="1485039517" name="Maihofmatte-Rotsee"/>
+        <busStop id="7248262544" name="Weggismatt"/>
+        <busStop id="-1499118015" name="Schlossberg"/>
+        <busStop id="984024117" name="Rosenberg"/>
+        <busStop id="-984024066" name="Urnerhof"/>
+        <busStop id="-206372754" name="Kantonsspital"/>
+        <busStop id="-7248262564" name="St. Karli"/>
+        <busStop id="-1099807926" name="Kreuzstutz"/>
+        <busStop id="-1099877741" name="Kanonenstrasse"/>
+        <busStop id="-1099877676" name="Grenzhof"/>
+        <busStop id="-311606391" name="Rönnimoosrain"/>
+        <busStop id="-311606396" name="Längweiher"/>
+        <busStop id="-206372726" name="Michaelshof"/>
+        <busStop id="-7248262568" name="Blattenmoos"/>
+    </ptLine>
+    <ptLine id="10791684" name="Bus 73: Udligenswil → Luzern" line="73" type="bus" vClass="bus" color="255,204,0" completeness="0.18">
+        <route edges="283174677#0 -557814530#1 -557814530#0 -80446532#2 -80446534 -364075852#6 -452510952 134989567#0 134989592#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 35964673 94721113#0 94721113#2 94602911 94602990 94603047 93752629"/>
+        <busStop id="-984023532" name="Haldensteig"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="598172359" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="10791685" name="Bus 73: Luzern → Udligenswil" line="73" type="bus" vClass="bus" color="255,204,0" completeness="0.18">
+        <route edges="93752629 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="598172359" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+    </ptLine>
+    <ptLine id="10799090" name="Bus 5: Emmenbrücke, Bahnhof Süd → Kriens, Busschleife" line="5" type="trolleybus" vClass="ignoring" completeness="0.45">
+        <route edges="-560703491#2 -560703491#0 -94721106#4 -94721106#2 -94721106#0 -24980031#1 -43418075#8 -43418075#3 -43418075#1 32846420#0 32846420#1 32846420#3 97664100#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="-4441508552" name="Schiff"/>
+        <busStop id="-7276028336" name="Fluhmühle"/>
+        <busStop id="-7276082784" name="Kreuzstutz"/>
+        <busStop id="-7276028335" name="Gütsch"/>
+        <busStop id="311287459" name="Kasernenplatz"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172345" name="Moosegg"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="1101075" name="Bus 2: Emmenbrücke, Sprengi → Luzern, Bahnhof" line="2" type="trolleybus" vClass="ignoring" completeness="0.56">
+        <route edges="-560703491#2 -560703491#0 -94721106#4 -94721106#2 -94721106#0 -24980031#1 -43418075#8 -43418075#3 -43418075#1 32846420#0 32846420#1 32846420#3 97664100#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721108"/>
+        <busStop id="-4441508552" name="Schiff"/>
+        <busStop id="-7276028336" name="Fluhmühle"/>
+        <busStop id="-7276082784" name="Kreuzstutz"/>
+        <busStop id="-7276028335" name="Gütsch"/>
+        <busStop id="311287459" name="Kasernenplatz"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="598172356" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1128779" name="Bus 4: Luzern, Bahnhof → Hubelmatt" line="4" type="trolleybus" vClass="ignoring" completeness="0.56">
+        <route edges="94727480#0 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 -397546364#2 -772705476 -772705478 -305482859#3 -305482859#1 -305482859#0 4538163#0 305482857 30808996 658509487 305482863 305482879 305647816 305482861#0 305482861#2 305482861#3 305482861#4"/>
+        <busStop id="598172353" name="Luzern Bahnhof"/>
+        <busStop id="-7274331909" name="Kantonalbank"/>
+        <busStop id="-472459433" name="Bundesplatz"/>
+        <busStop id="984024081" name="Brünigstrasse"/>
+        <busStop id="1485039575" name="Tiefe"/>
+    </ptLine>
+    <ptLine id="1128782" name="Bus 6: Luzern, Büttenenhalde → Matthof" line="6" type="trolleybus" vClass="ignoring" completeness="0.48">
+        <route edges="283174677#0 -557814530#1 -557814530#0 -80446532#2 -80446534 -364075852#6 -452510952 134989567#0 134989592#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 44129718 31264893 184818318#0 206490679 120517467#0 -397546364#2 -772705476 -772705478 -305482859#3 -305482859#1 -305482859#0 4538163#0 305482857 30808996 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 705286368#0"/>
+        <busStop id="2870822828" name="Verkehrshaus/Lido"/>
+        <busStop id="-1098133696" name="Dietschiberg"/>
+        <busStop id="-984024077" name="Europe"/>
+        <busStop id="-300652646" name="Casino-Palace"/>
+        <busStop id="-984023532" name="Haldensteig"/>
+        <busStop id="1096064554" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="2117444912" name="Luzern Bahnhof"/>
+        <busStop id="-7274331909" name="Kantonalbank"/>
+        <busStop id="-472459433" name="Bundesplatz"/>
+        <busStop id="506671071" name="Werkhofstrasse"/>
+    </ptLine>
+    <ptLine id="1136823" name="Bus 73: Rotkreuz → Luzern" line="73" type="bus" vClass="bus" color="255,204,0" completeness="0.09">
+        <route edges="283174677#0 -557814530#1 -557814530#0 -80446532#2 -80446534 -364075852#6 -452510952 134989567#0 134989592#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 35964673 94721113#0 94721113#2 94602911 94602990 94603047 93752629"/>
+        <busStop id="-984023532" name="Haldensteig"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="598172359" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1136882" line="IR 70" type="train" vClass="rail" completeness="0.00">
+        <route edges="-834322750 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2 24937540 96928627 430415318 194752640"/>
+    </ptLine>
+    <ptLine id="1144939" name="Bus 72: Luzern → Neuenkirch" line="72" type="bus" vClass="bus" color="255,204,0" completeness="0.20">
+        <route edges="93752640 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172367" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="11627662" name="S77: Willisau → Luzern" line="S77" type="train" vClass="rail" completeness="0.17">
+        <route edges="25921504 25921503 -96928655 -96928644 -197135813 -116828436 116828438 773836909#0 773836909#1 116828439 194672511#0 194672511#1"/>
+        <busStop id="7908898589" name="Luzern"/>
+    </ptLine>
+    <ptLine id="11627663" name="S77: Luzern → Willisau" line="S77" type="train" vClass="rail" completeness="0.17">
+        <route edges="-834322754 -194672511#0 -116828439 -773836909#1 -773836909#0 -116828438 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1"/>
+        <busStop id="7908898589" name="Luzern"/>
+    </ptLine>
+    <ptLine id="11820569" name="Bus 21: Horw, Zentrum → Luzern, Bahnhof" line="21" type="bus" vClass="bus" completeness="0.14">
+        <route edges="-705286368#4 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482860#0 305482859#0 305482859#1 305482859#2 305482859#4 772705476 397546364#0 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 94602925 93752650"/>
+        <busStop id="-506671368" name="Werkhofstrasse"/>
+        <busStop id="472459432" name="Kantonalbank"/>
+        <busStop id="598172366" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11820570" name="Bus 21: Luzern, Bahnhof → Horw, Zentrum" line="21" type="bus" vClass="bus" completeness="0.14">
+        <route edges="93752650 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 -397546364#2 -772705476 -772705478 -305482859#3 -305482859#1 -305482859#0 4538163#0 305482857 30808996 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 705286368#0"/>
+        <busStop id="598172366" name="Luzern Bahnhof"/>
+        <busStop id="-7274331909" name="Kantonalbank"/>
+        <busStop id="506671071" name="Werkhofstrasse"/>
+    </ptLine>
+    <ptLine id="11820571" name="Bus 20: Horw, Zentrum → Luzern, Bahnhof" line="20" type="bus" vClass="bus" completeness="0.36">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 94602935"/>
+        <busStop id="-598172343" name="Paulusplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="1098666350" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11820572" name="Bus 20: Luzern, Bahnhof → Horw, Zentrum" line="20" type="bus" vClass="bus" completeness="0.36">
+        <route edges="94602933 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="1098666350" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="11820573" name="Bus 20: Luzern, Bahnhof → Horw, Technikumstrasse" line="20" type="bus" vClass="bus" completeness="0.27">
+        <route edges="94602933 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="1098666350" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="11820574" name="Bus 20: Horw, Technikumstrasse → Luzern, Bahnhof" line="20" type="bus" vClass="bus" completeness="0.27">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 94602935"/>
+        <busStop id="-598172343" name="Paulusplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="1098666350" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11820575" name="Bus 9: Luzern, Bramberg → St. Karli → Bahnhof" line="9" type="bus" vClass="bus" completeness="1.00">
+        <route edges="-96095209 -135207193#0 -31909900#1 -31909900#0 96095213#0 96095213#2 -22386331#5 -22386331#1 -866030035#4 -866030035#0 -520249845 -31970639#5 -31970639#4 -539627094#1 -53620026 -33113038 -539627105#1 -146343279 -539627120#1 32846420#0 32846420#1 32846420#3 97664100#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 779101387#0"/>
+        <busStop id="-984024084" name="Bramberg"/>
+        <busStop id="-364790072" name="Friedbergstrasse"/>
+        <busStop id="-357455545" name="Geissmatthöhe"/>
+        <busStop id="-206372754" name="Kantonsspital"/>
+        <busStop id="-7248262564" name="St. Karli"/>
+        <busStop id="-984024083" name="Brüggligasse"/>
+        <busStop id="311287459" name="Kasernenplatz"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="1099877607" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11820576" name="Bus 9: Luzern, Bahnhof → St. Karli → Bramberg" line="9" type="bus" vClass="bus" completeness="1.00">
+        <route edges="779101387#0 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 146343279 539627119 33113038 539627101 539627094#0 539627094#2 31970639#5 520249845 866030035#0 866030035#1 22386331#0 22386331#2 -96095213#3 -96095213#0 31909897 31909900#1 135207193#0 135207193#1 33531819"/>
+        <busStop id="1099877607" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="-984024152" name="Hirzenhof"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+        <busStop id="984024083" name="Brüggligasse"/>
+        <busStop id="984024323" name="St. Karli"/>
+        <busStop id="1096064551" name="Kantonsspital"/>
+        <busStop id="357455545" name="Geissmatthöhe"/>
+        <busStop id="364790072" name="Friedbergstrasse"/>
+        <busStop id="984024084@11820576" name="Bramberg"/>
+    </ptLine>
+    <ptLine id="11820577" name="Bus 14: Luzern, Brüelstrasse → Bahnhof" line="14" type="bus" vClass="bus" completeness="0.93">
+        <route edges="-27602527#2 -27602527#1 -27602527#0 -27602528#1 -27602528#0 -622473970#1 -622473970#0 -27582119#5 -27582119#3 27582118 27601327#0 27601327#2 27603102#0 27603102#1 27603102#3 27603102#6 27603102#7 72740995 143232900#2 134989595#2 712687105#0 609003150#0 94545446#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 94728204"/>
+        <busStop id="-303097162" name="Schlösslihalde"/>
+        <busStop id="-984739332" name="Schlösslirain"/>
+        <busStop id="-984739217" name="Leumatt"/>
+        <busStop id="-984739234" name="Rigistrasse"/>
+        <busStop id="-984024118" name="Lützelmattstrasse"/>
+        <busStop id="-984023516" name="Klinik St. Anna"/>
+        <busStop id="1098191319" name="Konservatorium"/>
+        <busStop id="1098191373" name="Gärtnerstrasse"/>
+        <busStop id="1483240181" name="Kapuzinerweg"/>
+        <busStop id="1165748363" name="Wey"/>
+        <busStop id="1483240183" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="6776962333" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11820578" name="Bus 14: Luzern, Bahnhof → Brüelstrasse" line="14" type="bus" vClass="bus" completeness="0.92">
+        <route edges="94728204 779101386 44129709#0 93720113 100873454#0 35857085#0 452510297 94522272#0 134989578#0 134989556#0 134989556#1 -143232900#5 -143232900#1 -27603102#7 -27603102#6 -27603102#5 -27603102#2 -27603102#0 -27601327#2 -27601327#1 -27582118 27582119#0 27582119#4 622473971 622473970#1 27602528#0 27602528#1 27602527#0 27602527#1 27602527#2"/>
+        <busStop id="6776962333@11820578" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1483240188" name="Wey"/>
+        <busStop id="-1483240181" name="Kapuzinerweg"/>
+        <busStop id="-984023828" name="Gärtnerstrasse"/>
+        <busStop id="-984024126" name="Konservatorium"/>
+        <busStop id="984023516" name="Klinik St. Anna"/>
+        <busStop id="984024118" name="Lützelmattstrasse"/>
+        <busStop id="8072044973" name="Rigistrasse"/>
+        <busStop id="8072044974" name="Leumatt"/>
+        <busStop id="984739332" name="Schlösslirain"/>
+        <busStop id="303097162" name="Schlösslihalde"/>
+    </ptLine>
+    <ptLine id="11820579" name="Bus 10: Luzern, Bahnhof → Obergütsch → Kriens, Dattenberg" line="10" type="bus" vClass="bus" completeness="0.89">
+        <route edges="94728202 94728340#0 779101386 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 4496451#0 4496451#2 4496451#3 179476011#1 4491576#0 49303772#1 49303772#2 49303772#5 49302769 -49302771#3 -49302771#1 28050002 37930437#0 108358836 108358756#3 108358756#4 108358756#6 108358756#8 108358756#11 95095003 -95095002 -108358756#11 -108358756#10 -108358756#7 -108358756#5 -108358756#3 -108358756#2 -37930437#1 95094996 -220487398#3 -220487398#2"/>
+        <busStop id="598172354" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="984024292" name="Zähringerstrasse"/>
+        <busStop id="866201064" name="Berglistrasse"/>
+        <busStop id="866201060" name="Panoramic View"/>
+        <busStop id="-866201055" name="Untergütsch"/>
+        <busStop id="866201047" name="Steinhofstrasse"/>
+        <busStop id="866201067" name="Gigeliwald"/>
+        <busStop id="866206946" name="Obergütschstrasse"/>
+        <busStop id="445336532" name="Obergütschrain"/>
+        <busStop id="845290448" name="Obergütschhalde"/>
+        <busStop id="845290451" name="Obergütsch"/>
+        <busStop id="845290448" name="Obergütschhalde"/>
+        <busStop id="445336532" name="Obergütschrain"/>
+        <busStop id="866206946" name="Obergütschstrasse"/>
+        <busStop id="-308898923" name="Steinhofrain"/>
+    </ptLine>
+    <ptLine id="11820580" name="Bus 10: Kriens, Dattenberg → Luzern, Bahnhof" line="10" type="bus" vClass="bus" completeness="0.85">
+        <route edges="220487398#0 220487398#3 -179477993#2 -28050002 49302771#0 49302771#2 -49302769 -49303772#5 -49303772#4 -49303772#1 -4491576#3 -179476011#2 -4496451#4 -4496451#2 -4496451#1 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 94728202"/>
+        <busStop id="308898923" name="Steinhofrain"/>
+        <busStop id="1132161194" name="Sonnenbergstrasse"/>
+        <busStop id="-866201047" name="Steinhofstrasse"/>
+        <busStop id="866201055" name="Untergütsch"/>
+        <busStop id="-866201060" name="Panoramic View"/>
+        <busStop id="-866201064" name="Berglistrasse"/>
+        <busStop id="-984024292" name="Zähringerstrasse"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="598172354" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11821842" name="Bus 52: Luzern → Rain → Rickenbach LU" line="52" type="bus" vClass="bus" completeness="0.10">
+        <route edges="93752648 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="11821843" name="Bus 52: Rickenbach LU → Rain → Luzern" line="52" type="bus" vClass="bus" completeness="0.10">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 93752648"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11821844" name="Bus 52: Luzern → Rickenbach LU, Bohler" line="52" type="bus" vClass="bus" completeness="0.10">
+        <route edges="93752648 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="11821845" name="Bus 52: Rickenbach LU, Bohler → Luzern" line="52" type="bus" vClass="bus" completeness="0.10">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 93752648"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11821846" name="Bus 52: Rain → Luzern" line="52" type="bus" vClass="bus" completeness="0.21">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 93752648"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11821847" name="Bus 52: Luzern → Rain" line="52" type="bus" vClass="bus" completeness="0.21">
+        <route edges="93752648 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="11835885" name="Bus 71: Luzern, Bahnhof → Kriens, Zentrum Pilatus" line="71" type="bus" vClass="bus" color="255,204,0" completeness="0.50">
+        <route edges="93752631 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="598172365" name="Luzern Bahnhof"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+    </ptLine>
+    <ptLine id="11835886" name="Bus 71: Kriens, Busschleife → Luzern, Bahnhof" line="71" type="bus" vClass="bus" color="255,204,0" completeness="0.50">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 93752631"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172365" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="11930851" name="S55: Luzern → Sachseln" line="S55" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="11930852" name="S55: Sachseln → Luzern" line="S55" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="12083981" name="Bus 1: Luzern, Bahnhof → Luzern, Maihof" line="1" type="trolleybus" vClass="ignoring" completeness="0.89">
+        <route edges="93752636 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522272#0 134989578#0 94545447#1 712687104#0 712687104#1 712687104#2 712687104#3 22384595#0 22384595#2 22384595#4 22384595#5 22384595#6 22384595#7 22384595#8 93720122#0 -330757768#7 -330757768#3"/>
+        <busStop id="598172362" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1483240184" name="Luzernerhof"/>
+        <busStop id="308240450" name="Löwenplatz"/>
+        <busStop id="7274196194" name="Wesemlinrain"/>
+        <busStop id="-7248262541" name="Schlossberg"/>
+        <busStop id="-7248262545" name="Weggismatt"/>
+        <busStop id="-1485039517" name="Maihofmatte-Rotsee"/>
+    </ptLine>
+    <ptLine id="12083982" name="Bus 1: Luzern, Maihof → Luzern, Bahnhof" line="1" type="trolleybus" vClass="ignoring" completeness="0.89">
+        <route edges="330757768#0 330757768#4 -93720122#2 -22384595#8 -22384595#7 -22384595#6 -22384595#5 -22384595#4 -22384595#3 -22384595#1 134989604#0 134989604#3 134989604#4 134989603#0 134989603#3 134989550#0 609003150#0 94545446#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 93752636"/>
+        <busStop id="1485039517" name="Maihofmatte-Rotsee"/>
+        <busStop id="7248262544" name="Weggismatt"/>
+        <busStop id="-1356968579" name="Schlossberg"/>
+        <busStop id="-1483240187" name="Wesemlinrain"/>
+        <busStop id="1483240185" name="Löwenplatz"/>
+        <busStop id="1483240183" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="598172362" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="12083983" name="Bus 73: Adligenswil → Luzern" line="73" type="bus" vClass="bus" color="255,204,0" completeness="0.30">
+        <route edges="283174677#0 -557814530#1 -557814530#0 -80446532#2 -80446534 -364075852#6 -452510952 134989567#0 134989592#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 35964673 94721113#0 94721113#2 94602911 94602990 94603047 93752629"/>
+        <busStop id="-984023532" name="Haldensteig"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="598172359" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="12083984" name="Bus 73: Luzern → Adligenswil" line="73" type="bus" vClass="bus" color="255,204,0" completeness="0.30">
+        <route edges="93752629 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="598172359" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+    </ptLine>
+    <ptLine id="12084782" name="Bus 52: Rickenbach LU → Luzern" line="52" type="bus" vClass="bus" completeness="0.11">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 93752648"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="12084783" name="Bus 52: Luzern → Rickenbach LU" line="52" type="bus" vClass="bus" completeness="0.11">
+        <route edges="93752648 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="12231329" name="S44: Stans → Luzern" line="S44" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="12244342" name="S99: Luzern → Hochdorf" line="S99" type="train" vClass="rail" completeness="0.14">
+        <route edges="-834322745 -773813396 122805790#0 122805790#1 196910662#0 196910662#1 196355343 773836910 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1 430415323#0 430415323#1 32031419"/>
+        <busStop id="1002463599" name="Luzern"/>
+    </ptLine>
+    <ptLine id="12244343" name="S99: Hochdorf → Luzern" line="S99" type="train" vClass="rail" completeness="0.14">
+        <route edges="87230791#0 87230791#1 -430415318 -87230768 -96928645 -135207290 -10853494#1 -10853494#0 116828437 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 773813396 86320760"/>
+        <busStop id="1002463599" name="Luzern"/>
+    </ptLine>
+    <ptLine id="12245979" name="S6: Wolhusen → Luzern" line="S6" type="train" vClass="rail" completeness="0.17">
+        <route edges="25921504 25921503 -96928655 -96928644 -197135813 -116828436 116828438 773836909#0 773836909#1 86320968#0 86320968#1 86320687 86320371"/>
+        <busStop id="1002465533" name="Luzern"/>
+    </ptLine>
+    <ptLine id="12245980" name="S6: Luzern → Wolhusen" line="S6" type="train" vClass="rail" completeness="0.17">
+        <route edges="-834322751 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -116828438 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1"/>
+        <busStop id="1002465533" name="Luzern"/>
+    </ptLine>
+    <ptLine id="12359776" name="Bus PE: Hochdorf → Luzern" line="PE" type="bus" vClass="bus" nightService="only" color="10,143,64" completeness="0.40">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="1088752236" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="12359777" name="Bus PE: Luzern → Hochdorf → Ermensee" line="PE" type="bus" vClass="bus" nightService="only" color="10,143,64" completeness="0.12">
+        <route edges="94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="1088752236" name="Luzern Bahnhof"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="1361391" name="Bus 19: Luzern, Friedental → Bahnhof" line="19" type="bus" vClass="bus" completeness="1.00">
+        <route edges="93720120 -93720105#2 -436156031 -436156035 -436156037#2 -436156037#0 -677460472#1 -32997891#2 866030035#0 866030035#1 22386331#0 22386331#2 887914950#1 -22385351#6 -22385351#5 -22385351#4 93720121#0 93720121#1 93720121#2 136641146#0 136641146#4 -93720122#2 -22384595#8 -22384595#7 -22384595#6 -22384595#5 -22384595#4 -22384595#3 -22384595#1 134989604#0 134989604#3 134989604#4 134989603#0 134989603#3 134989550#0 609003150#0 94545446#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 35964673 94721113#0 94721113#2 93752639"/>
+        <busStop id="984024073" name="Friedental"/>
+        <busStop id="-371753766" name="Reussport"/>
+        <busStop id="984024323" name="St. Karli"/>
+        <busStop id="1096064551" name="Kantonsspital"/>
+        <busStop id="984024066" name="Urnerhof"/>
+        <busStop id="-984024117" name="Rosenberg"/>
+        <busStop id="-1356968579" name="Schlossberg"/>
+        <busStop id="-1483240187" name="Wesemlinrain"/>
+        <busStop id="1483240185" name="Löwenplatz"/>
+        <busStop id="1483240183" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="1098666400" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1362777" name="Bus 19: Luzern, Bahnhof → Friedental" line="19" type="bus" vClass="bus" completeness="1.00">
+        <route edges="93752639 94602920 94602958 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522272#0 134989578#0 94545447#1 712687104#0 712687104#1 712687104#2 712687104#3 22384595#0 22384595#2 22384595#4 22384595#5 22384595#6 22384595#7 22384595#8 93720122#0 -136641146#5 -136641146#3 93720121#0 93720121#1 93720121#2 22385351#0 22385351#5 22385351#6 -887914950#2 -22386331#5 -22386331#1 -866030035#4 -866030035#0 436156036#0 677460472#0 436156037#0 436156037#1 436156035 32998042 93720120"/>
+        <busStop id="1098666400" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1483240184" name="Luzernerhof"/>
+        <busStop id="308240450" name="Löwenplatz"/>
+        <busStop id="7274196194" name="Wesemlinrain"/>
+        <busStop id="-1499118015" name="Schlossberg"/>
+        <busStop id="984024117" name="Rosenberg"/>
+        <busStop id="-984024066" name="Urnerhof"/>
+        <busStop id="-206372754" name="Kantonsspital"/>
+        <busStop id="-7248262564" name="St. Karli"/>
+        <busStop id="371753766" name="Reussport"/>
+        <busStop id="984024073" name="Friedental"/>
+    </ptLine>
+    <ptLine id="1363294" name="IR VAE: St. Gallen → Luzern" line="VAE" type="train" vClass="rail" color="179,165,124" completeness="0.14">
+        <route edges="-103893220 -27601634#2 -27601634#1 -27601634#0 -135207290 -10853494#1 -10853494#0 116828437 -116828436 116828438 773836909#0 773836909#1 116828439 194672511#0 194672511#1"/>
+        <busStop id="-1398732992" name="Luzern Verkehrshaus"/>
+        <busStop id="7908898589" name="Luzern"/>
+    </ptLine>
+    <ptLine id="1370390" name="Bus 72: Neuenkirch → Luzern" line="72" type="bus" vClass="bus" color="255,204,0" completeness="0.20">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 93752640"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172367" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1370467" name="Bus 6: Luzern, Matthof → Büttenenhalde" line="6" type="trolleybus" vClass="ignoring" completeness="0.48">
+        <route edges="-705286368#4 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482860#0 305482859#0 305482859#1 305482859#2 305482859#4 772705476 397546364#0 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 74320149#0 144968179#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="-506671368" name="Werkhofstrasse"/>
+        <busStop id="3715907112" name="Bundesplatz"/>
+        <busStop id="472459432" name="Kantonalbank"/>
+        <busStop id="598172352" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+        <busStop id="984023532" name="Haldensteig"/>
+        <busStop id="300652646" name="Casino-Palace"/>
+        <busStop id="7276059611" name="Europe"/>
+        <busStop id="984023307" name="Dietschiberg"/>
+        <busStop id="1485039604" name="Verkehrshaus/Lido"/>
+    </ptLine>
+    <ptLine id="1370636" name="Bus 8: Luzern, Hirtenhof → Würzenbach" line="8" type="trolleybus" vClass="ignoring" completeness="0.55">
+        <route edges="-705286368#4 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482860#0 305482859#0 305482859#1 305482859#2 305482859#4 772705476 397546364#0 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 74320149#0 144968179#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="-506671368" name="Werkhofstrasse"/>
+        <busStop id="3715907112" name="Bundesplatz"/>
+        <busStop id="472459432" name="Kantonalbank"/>
+        <busStop id="598172352" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+        <busStop id="984023532" name="Haldensteig"/>
+        <busStop id="300652646" name="Casino-Palace"/>
+        <busStop id="7276059611" name="Europe"/>
+        <busStop id="984023307" name="Dietschiberg"/>
+        <busStop id="1485039604" name="Verkehrshaus/Lido"/>
+    </ptLine>
+    <ptLine id="1370637" name="Bus 8: Luzern, Würzenbach → Hirtenhof" line="8" type="trolleybus" vClass="ignoring" completeness="0.55">
+        <route edges="283174677#0 -557814530#1 -557814530#0 -80446532#2 -80446534 -364075852#6 -452510952 134989567#0 134989592#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 44129718 31264893 184818318#0 206490679 120517467#0 -397546364#2 -772705476 -772705478 -305482859#3 -305482859#1 -305482859#0 4538163#0 305482857 30808996 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 705286368#0"/>
+        <busStop id="2870822828" name="Verkehrshaus/Lido"/>
+        <busStop id="-1098133696" name="Dietschiberg"/>
+        <busStop id="-984024077" name="Europe"/>
+        <busStop id="-300652646" name="Casino-Palace"/>
+        <busStop id="-984023532" name="Haldensteig"/>
+        <busStop id="1096064554" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="2117444912" name="Luzern Bahnhof"/>
+        <busStop id="-7274331909" name="Kantonalbank"/>
+        <busStop id="-472459433" name="Bundesplatz"/>
+        <busStop id="506671071" name="Werkhofstrasse"/>
+    </ptLine>
+    <ptLine id="1370683" name="Bus 7: Horw, Biregghof → Luzern, Unterlöchli" line="7" type="trolleybus" vClass="ignoring" completeness="0.48">
+        <route edges="-705286368#4 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482860#0 305482859#0 305482859#1 305482859#2 305482859#4 772705476 397546364#0 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 74320149#0 144968179#0 93720113 100873454#0 35857085#0 452510297 94522272#0 134989578#0 134989556#0 134989556#1 -143232900#5 -143232900#1 134989549#0 134989549#1 134989549#2 134989549#4 135207223#0 135207223#1"/>
+        <busStop id="-506671368" name="Werkhofstrasse"/>
+        <busStop id="3715907112" name="Bundesplatz"/>
+        <busStop id="472459432" name="Kantonalbank"/>
+        <busStop id="598172352" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1483240188" name="Wey"/>
+        <busStop id="-1483240181" name="Kapuzinerweg"/>
+        <busStop id="1483240180" name="Dreilinden"/>
+        <busStop id="371757763" name="Felsberg"/>
+        <busStop id="1485039490" name="Kloster"/>
+        <busStop id="1485039535" name="Morgenweg"/>
+    </ptLine>
+    <ptLine id="1370684" name="Bus 7: Luzern, Unterlöchli → Horw, Biregghof" line="7" type="trolleybus" vClass="ignoring" completeness="0.54">
+        <route edges="-135207223#2 -135207223#0 -134989549#9 -134989549#3 -134989549#1 -134989549#0 72740995 143232900#2 134989595#2 712687105#0 609003150#0 94545446#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 44129718 31264893 184818318#0 206490679 120517467#0 -397546364#2 -772705476 -772705478 -305482859#3 -305482859#1 -305482859#0 4538163#0 305482857 30808996 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 705286368#0"/>
+        <busStop id="-1485039627" name="Zwyssigplatz"/>
+        <busStop id="-1485039535" name="Morgenweg"/>
+        <busStop id="-1483240182" name="Kloster"/>
+        <busStop id="-7279189827" name="Felsberg"/>
+        <busStop id="-1483240180" name="Dreilinden"/>
+        <busStop id="1483240181" name="Kapuzinerweg"/>
+        <busStop id="1165748363" name="Wey"/>
+        <busStop id="1483240183" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="2117444912" name="Luzern Bahnhof"/>
+        <busStop id="-7274331909" name="Kantonalbank"/>
+        <busStop id="-472459433" name="Bundesplatz"/>
+        <busStop id="506671071" name="Werkhofstrasse"/>
+    </ptLine>
+    <ptLine id="1370685" name="Bus 4: Luzern, Hubelmatt → Bahnhof" line="4" type="trolleybus" vClass="ignoring" completeness="0.44">
+        <route edges="135207246 20331091#0 20331090 305482853 305482855 164358766 305482860#0 305482859#0 305482859#1 305482859#2 305482859#4 772705476 397546364#0 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 94727480#0"/>
+        <busStop id="-7274331913" name="Brünigstrasse"/>
+        <busStop id="3715907112" name="Bundesplatz"/>
+        <busStop id="472459432" name="Kantonalbank"/>
+        <busStop id="598172353" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1371307" name="Bus 21: Kriens, Busschleife → Luzern, Bahnhof" line="21" type="bus" vClass="bus" completeness="0.08">
+        <route edges="-705286368#4 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482860#0 305482859#0 305482859#1 305482859#2 305482859#4 772705476 397546364#0 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 94602925 93752650"/>
+        <busStop id="-506671368" name="Werkhofstrasse"/>
+        <busStop id="472459432" name="Kantonalbank"/>
+        <busStop id="598172366" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1372289" name="Bus 1: Obernau, Dorf → Ebikon, Fildern" line="1" type="trolleybus" vClass="ignoring" completeness="0.31">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 74320149#0 144968179#0 93720113 100873454#0 35857085#0 452510297 94522272#0 134989578#0 94545447#1 712687104#0 712687104#1 712687104#2 712687104#3 22384595#0 22384595#2 22384595#4 22384595#5 22384595#6 22384595#7 22384595#8 93720122#0 -330757768#7 -330757768#3"/>
+        <busStop id="-598172343" name="Paulusplatz"/>
+        <busStop id="-598172346" name="Moosegg"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="598172352" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1483240184" name="Luzernerhof"/>
+        <busStop id="308240450" name="Löwenplatz"/>
+        <busStop id="7274196194" name="Wesemlinrain"/>
+        <busStop id="-7248262541" name="Schlossberg"/>
+        <busStop id="-7248262545" name="Weggismatt"/>
+        <busStop id="-1485039517" name="Maihofmatte-Rotsee"/>
+    </ptLine>
+    <ptLine id="1372369" name="Bus 2: Luzern, Bahnhof → Emmenbrücke, Sprengi" line="2" type="trolleybus" vClass="ignoring" completeness="0.47">
+        <route edges="94721108 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 -539627120#1 43418075#0 43418075#2 43418075#4 -24980031#1 1013074042#0 94721106#0 94721106#1 94721106#3 560703491#0 560703491#1"/>
+        <busStop id="598172356" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="-984024152" name="Hirzenhof"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+        <busStop id="311606385" name="Gütsch"/>
+        <busStop id="627053218" name="Fluhmühle"/>
+    </ptLine>
+    <ptLine id="1372437" name="Bus 12: Littau, Gasshof → Luzern, Bahnhof" line="12" type="bus" vClass="bus" completeness="0.87">
+        <route edges="19803517#0 36723787#0 190192157#1 190192157#5 190192157#8 553460094#0 -43418075#8 -43418075#3 -43418075#1 32846420#0 32846420#1 32846420#3 97664100#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 95094999#0"/>
+        <busStop id="984024105" name="Blattenmoos"/>
+        <busStop id="311606402" name="Michaelshof"/>
+        <busStop id="206372728" name="Längweiher"/>
+        <busStop id="206372731" name="Rönnimoosrain"/>
+        <busStop id="1099877676" name="Grenzhof"/>
+        <busStop id="1099877714" name="Kanonenstrasse"/>
+        <busStop id="1099807926" name="Kreuzstutz"/>
+        <busStop id="-7276028335" name="Gütsch"/>
+        <busStop id="311287459" name="Kasernenplatz"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="598172357" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1375637" name="Bus 61: Ettiswil → Luzern" line="61" type="bus" vClass="bus" completeness="0.10">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 93752645"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172360" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1375759" name="Bus 10: Luzern, Bahnhof → Obergütsch" line="10" type="bus" vClass="bus" completeness="1.00">
+        <route edges="94728202 94728340#0 779101386 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 4496451#0 4496451#2 4496451#3 179476011#1 4491576#0 49303772#1 49303772#2 49303772#5 49302769 -49302771#3 -49302771#1 28050002 37930437#0 108358836 108358756#3 108358756#4 108358756#6 108358756#8 108358756#11 95095003"/>
+        <busStop id="598172354" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="984024292" name="Zähringerstrasse"/>
+        <busStop id="866201064" name="Berglistrasse"/>
+        <busStop id="866201060" name="Panoramic View"/>
+        <busStop id="-866201055" name="Untergütsch"/>
+        <busStop id="866201047" name="Steinhofstrasse"/>
+        <busStop id="866201067" name="Gigeliwald"/>
+        <busStop id="866206946" name="Obergütschstrasse"/>
+        <busStop id="445336532" name="Obergütschrain"/>
+        <busStop id="845290448" name="Obergütschhalde"/>
+        <busStop id="845290451" name="Obergütsch"/>
+    </ptLine>
+    <ptLine id="1375760" name="Bus 10: Luzern, Obergütsch → Bahnhof" line="10" type="bus" vClass="bus" completeness="1.00">
+        <route edges="95095003 -95095002 -108358756#11 -108358756#10 -108358756#7 -108358756#5 -108358756#3 -108358756#2 -37930437#1 -28050002 49302771#0 49302771#2 -49302769 -49303772#5 -49303772#4 -49303772#1 -4491576#3 -179476011#2 -4496451#4 -4496451#2 -4496451#1 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 94728202"/>
+        <busStop id="845290451" name="Obergütsch"/>
+        <busStop id="-845290448" name="Obergütschhalde"/>
+        <busStop id="-9442245040" name="Obergütschrain"/>
+        <busStop id="-9442245063" name="Obergütschstrasse"/>
+        <busStop id="-866201047" name="Steinhofstrasse"/>
+        <busStop id="866201055" name="Untergütsch"/>
+        <busStop id="-866201060" name="Panoramic View"/>
+        <busStop id="-866201064" name="Berglistrasse"/>
+        <busStop id="-984024292" name="Zähringerstrasse"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="598172354" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1375761" name="Bus 14: Luzern, Brüelstrasse → Horw, Zentrum" line="14" type="bus" vClass="bus" completeness="0.57">
+        <route edges="-27602527#2 -27602527#1 -27602527#0 -27602528#1 -27602528#0 -622473970#1 -622473970#0 -27582119#5 -27582119#3 27582118 27601327#0 27601327#2 27603102#0 27603102#1 27603102#3 27603102#6 27603102#7 72740995 143232900#2 134989595#2 712687105#0 609003150#0 94545446#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="-303097162" name="Schlösslihalde"/>
+        <busStop id="-984739332" name="Schlösslirain"/>
+        <busStop id="-984739217" name="Leumatt"/>
+        <busStop id="-984739234" name="Rigistrasse"/>
+        <busStop id="-984024118" name="Lützelmattstrasse"/>
+        <busStop id="-984023516" name="Klinik St. Anna"/>
+        <busStop id="1098191319" name="Konservatorium"/>
+        <busStop id="1098191373" name="Gärtnerstrasse"/>
+        <busStop id="1483240181" name="Kapuzinerweg"/>
+        <busStop id="1165748363" name="Wey"/>
+        <busStop id="1483240183" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="2117444912" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172345" name="Moosegg"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="1375762" name="Bus 14: Horw, Zentrum → Luzern, Brüelstrasse" line="14" type="bus" vClass="bus" completeness="0.55">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 94728204 779101386 44129709#0 93720113 100873454#0 35857085#0 452510297 94522272#0 134989578#0 134989556#0 134989556#1 -143232900#5 -143232900#1 -27603102#7 -27603102#6 -27603102#5 -27603102#2 -27603102#0 -27601327#2 -27601327#1 -27582118 27582119#0 27582119#4 622473971 622473970#1 27602528#0 27602528#1 27602527#0 27602527#1 27602527#2"/>
+        <busStop id="-598172343" name="Paulusplatz"/>
+        <busStop id="-598172346" name="Moosegg"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="6776962333" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1483240188" name="Wey"/>
+        <busStop id="-1483240181" name="Kapuzinerweg"/>
+        <busStop id="-984023828" name="Gärtnerstrasse"/>
+        <busStop id="-984024126" name="Konservatorium"/>
+        <busStop id="984023516" name="Klinik St. Anna"/>
+        <busStop id="984024118" name="Lützelmattstrasse"/>
+        <busStop id="8072044973" name="Rigistrasse"/>
+        <busStop id="8072044974" name="Leumatt"/>
+        <busStop id="984739332" name="Schlösslirain"/>
+        <busStop id="303097162" name="Schlösslihalde"/>
+    </ptLine>
+    <ptLine id="1375797" name="Bus 71: Eigenthal → Luzern" line="71" type="bus" vClass="bus" color="255,204,0" completeness="0.12">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 93752631"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172365" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1375798" name="Bus 71: Luzern → Eigenthal" line="71" type="bus" vClass="bus" color="255,204,0" completeness="0.12">
+        <route edges="93752631 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="598172365" name="Luzern Bahnhof"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+    </ptLine>
+    <ptLine id="1385887" name="Bus 9: Luzern, Bramberg → Bahnhof" line="9" type="bus" vClass="bus" completeness="1.00">
+        <route edges="-96095209 -135207193#0 -31909900#1 -31909900#0 -31909886#5 -31909886#4 -866030037#2 -866030037#0 -31970640#2 -53620026 -33113038 -539627105#1 -146343279 -539627120#1 32846420#0 32846420#1 32846420#3 97664100#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 779101387#0"/>
+        <busStop id="-984024084" name="Bramberg"/>
+        <busStop id="-364790072" name="Friedbergstrasse"/>
+        <busStop id="-357455545" name="Geissmatthöhe"/>
+        <busStop id="-357471926" name="Mühlemattstrasse"/>
+        <busStop id="-984024083" name="Brüggligasse"/>
+        <busStop id="311287459" name="Kasernenplatz"/>
+        <busStop id="1096064553" name="Hirzenhof"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="1099877607" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1385888" name="Bus 9: Luzern, Bahnhof → Bramberg" line="9" type="bus" vClass="bus" completeness="1.00">
+        <route edges="779101387#0 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 146343279 539627119 33113038 539627101 31970640#0 31970640#3 866030037#1 31909886#0 31909886#5 31909897 31909900#1 135207193#0 135207193#1 33531819"/>
+        <busStop id="1099877607" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="-984024152" name="Hirzenhof"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+        <busStop id="984024083" name="Brüggligasse"/>
+        <busStop id="357471926" name="Mühlemattstrasse"/>
+        <busStop id="357455545" name="Geissmatthöhe"/>
+        <busStop id="364790072" name="Friedbergstrasse"/>
+        <busStop id="984024084@11820576" name="Bramberg"/>
+    </ptLine>
+    <ptLine id="1401499" name="Bus 73: Luzern → Rotkreuz" line="73" type="bus" vClass="bus" color="255,204,0" completeness="0.09">
+        <route edges="93752629 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="598172359" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+    </ptLine>
+    <ptLine id="1402538" name="Bus 20: Ennethorw → Luzern, Bahnhof" line="20" type="bus" vClass="bus" completeness="0.27">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 94602935"/>
+        <busStop id="-598172343" name="Paulusplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="-27329497" name="Kantonalbank"/>
+        <busStop id="1098666350" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1402539" name="Bus 20: Luzern, Bahnhof → Ennethorw" line="20" type="bus" vClass="bus" completeness="0.27">
+        <route edges="94602933 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="1098666350" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="1403905" name="Bus 11: Luzern, Bahnhof → Kriens, Dattenberg" line="11" type="bus" vClass="bus" completeness="0.45">
+        <route edges="779101387#0 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602 -97804890#4 -97804890#2 -97804890#0 -220487398#3 -220487398#2"/>
+        <busStop id="1099877607" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172345" name="Moosegg"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="1403907" name="Bus 11: Kriens, Dattenberg → Luzern, Bahnhof" line="11" type="bus" vClass="bus" completeness="0.27">
+        <route edges="220487398#0 220487398#3 97804890#0 97804890#1 97804890#3 -51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 779101387#0"/>
+        <busStop id="308898923" name="Steinhofrain"/>
+        <busStop id="1132161194" name="Sonnenbergstrasse"/>
+        <busStop id="750648181" name="Steinhof"/>
+    </ptLine>
+    <ptLine id="1407240" name="Bus 50: Menziken → Luzern" line="50" type="bus" vClass="bus" completeness="0.12">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 93752643 94602977 94603032#0 93752627 94603021 94603039 94603084 93752648"/>
+        <busStop id="97765117" name="Kasernenplatz"/>
+        <busStop id="-260019054" name="Pilatusplatz"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1407241" name="Bus 50: Luzern → Menziken" line="50" type="bus" vClass="bus" completeness="0.12">
+        <route edges="93752648 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172363" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="1414003" name="Bus 24: Luzern, Bahnhof → Meggen, Tschädigen" line="24" type="bus" vClass="bus" completeness="0.25">
+        <route edges="93752655 94602920 94602958 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="598172358" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+        <busStop id="300652646" name="Casino-Palace"/>
+        <busStop id="1485039604" name="Verkehrshaus/Lido"/>
+    </ptLine>
+    <ptLine id="1414004" name="Bus 24: Meggen, Tschädigen → Luzern, Bahnhof" line="24" type="bus" vClass="bus" completeness="0.26">
+        <route edges="283174677#0 -557814530#1 -557814530#0 -80446532#2 -80446534 -364075852#6 -452510952 134989567#0 134989592#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 35964673 94721113#0 94721113#2 94602911 93752655"/>
+        <busStop id="2870822828" name="Verkehrshaus/Lido"/>
+        <busStop id="-300652646" name="Casino-Palace"/>
+        <busStop id="1096064554" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="598172358" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="1414006" name="Bus 24: Luzern, Bahnhof → Gottlieben → Meggen, Tschädigen" line="24" type="bus" vClass="bus" completeness="0.24">
+        <route edges="93752655 94602920 94602958 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 44129709#0 93720113 100873454#0 35857085#0 452510297 94522261 94522275#0 364075852#0 364075852#7 80446532#0 557814529 557814530#1 283174676#0 283174676#1"/>
+        <busStop id="598172358" name="Luzern Bahnhof"/>
+        <busStop id="1165748197" name="Schwanenplatz"/>
+        <busStop id="1098133697" name="Luzernerhof"/>
+        <busStop id="300652646" name="Casino-Palace"/>
+        <busStop id="1485039604" name="Verkehrshaus/Lido"/>
+    </ptLine>
+    <ptLine id="1609097" name="S1: Luzern → Sursee" line="S1" type="train" vClass="rail" completeness="0.11">
+        <route edges="118745125 194672510 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -116828438 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1 430415323#0 430415323#1 32031419"/>
+        <busStop id="1002465031" name="Luzern"/>
+    </ptLine>
+    <ptLine id="1609609" name="S1: Sursee =&gt; Luzern" line="S1" type="train" vClass="rail" completeness="0.11">
+        <route edges="87230791#0 87230791#1 430415311#0 430415311#1 197445064 196352165 196352164 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 773813396 194675922"/>
+        <busStop id="333555694" name="Luzern"/>
+    </ptLine>
+    <ptLine id="1617952" name="S9: Luzern → Lenzburg" line="S9" type="train" vClass="rail" completeness="0.05">
+        <route edges="-834322746 -773813396 122805790#0 122805790#1 196910662#0 196910662#1 196355343 773836910 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1 430415323#0 430415323#1 32031419"/>
+        <busStop id="333555694" name="Luzern"/>
+    </ptLine>
+    <ptLine id="1617953" name="S9: Lenzburg → Luzern" line="S9" type="train" vClass="rail" completeness="0.05">
+        <route edges="87230791#0 87230791#1 -430415318 -87230768 -96928645 -135207290 -10853494#1 -10853494#0 116828437 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 773813396 194675922"/>
+        <busStop id="333555694" name="Luzern"/>
+    </ptLine>
+    <ptLine id="1752870" name="Bus 42: Reussbühl, Waldstrasse → Emmenbrücke, Schönbühl" line="42" type="bus" vClass="bus" completeness="0.10">
+        <route edges="-866204098 -19803072 -866204097 -19803068#1"/>
+        <busStop id="-7184667178" name="Waldstrasse"/>
+        <busStop id="-7184667176" name="Obermättlistrasse"/>
+    </ptLine>
+    <ptLine id="1752871" name="Bus 42: Emmenbrücke, Schönbühl → Reussbühl, Waldstrasse" line="42" type="bus" vClass="bus" completeness="0.05">
+        <route edges="19803068#0 -39074665#1"/>
+        <busStop id="-7184667178" name="Waldstrasse"/>
+    </ptLine>
+    <ptLine id="1752872" name="Bus 43: Emmenbrücke, Bösfeld → Reussbühl, Waldstrasse" line="43" type="bus" vClass="bus" completeness="0.05">
+        <route edges="19803068#0 -39074665#1"/>
+        <busStop id="-7184667178" name="Waldstrasse"/>
+    </ptLine>
+    <ptLine id="1752873" name="Bus 43: Reussbühl, Waldstrasse → Emmenbrücke, Bösfeld" line="43" type="bus" vClass="bus" completeness="0.10">
+        <route edges="-866204098 -19803072 -866204097 -19803068#1"/>
+        <busStop id="-7184667178" name="Waldstrasse"/>
+        <busStop id="-7184667176" name="Obermättlistrasse"/>
+    </ptLine>
+    <ptLine id="215034" name="Bus 21: Luzern, Bahnhof → Kriens, Busschleife" line="21" type="bus" vClass="bus" completeness="0.08">
+        <route edges="93752650 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 -397546364#2 -772705476 -772705478 -305482859#3 -305482859#1 -305482859#0 4538163#0 305482857 30808996 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 705286368#0"/>
+        <busStop id="598172366" name="Luzern Bahnhof"/>
+        <busStop id="-7274331909" name="Kantonalbank"/>
+        <busStop id="506671071" name="Werkhofstrasse"/>
+    </ptLine>
+    <ptLine id="2344785" name="IR 470: Luzern-Interlaken Express" line="470" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="2344787" name="IR 470: Luzern-Interlaken Express" line="470" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="2647974" line="600" type="train" vClass="rail" completeness="0.14">
+        <route edges="194752640 116828440 10853494#1 10853494#2 116828440 24937540 -135207290 86320928 773836909#0 773836909#1 86320968#0 86320968#1 86320687 118745118 24937540 96928627"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="3512235" name="S44: Luzern → Stans" line="S44" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="3531823" name="IR VAE: Luzern → St. Gallen" line="VAE" type="train" vClass="rail" color="179,165,124" completeness="0.14">
+        <route edges="-834322754 -194672511#0 -116828439 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2 19802208 27601634#1 27601634#2 126092202"/>
+        <busStop id="-7908898589" name="Luzern"/>
+        <busStop id="1398733007" name="Luzern Verkehrshaus"/>
+    </ptLine>
+    <ptLine id="368227" name="Bus 1: Ebikon, Fildern → Obernau, Dorf" line="1" type="trolleybus" vClass="ignoring" completeness="0.31">
+        <route edges="330757768#0 330757768#4 -93720122#2 -22384595#8 -22384595#7 -22384595#6 -22384595#5 -22384595#4 -22384595#3 -22384595#1 134989604#0 134989604#3 134989604#4 134989603#0 134989603#3 134989550#0 609003150#0 94545446#0 134989591#0 134989591#1 45857097#0 45857096 100873436 74320153 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="1485039517" name="Maihofmatte-Rotsee"/>
+        <busStop id="7248262544" name="Weggismatt"/>
+        <busStop id="-1356968579" name="Schlossberg"/>
+        <busStop id="-1483240187" name="Wesemlinrain"/>
+        <busStop id="1483240185" name="Löwenplatz"/>
+        <busStop id="1483240183" name="Luzernerhof"/>
+        <busStop id="27329561" name="Schwanenplatz"/>
+        <busStop id="2117444912" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="28197903" name="Pilatusplatz"/>
+        <busStop id="598172345" name="Moosegg"/>
+        <busStop id="598172343" name="Paulusplatz"/>
+    </ptLine>
+    <ptLine id="4069249" line="480" type="train" vClass="rail" completeness="0.08">
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="51077" name="Bus 12: Luzern, Bahnhof → Littau, Gasshof" line="12" type="bus" vClass="bus" completeness="0.87">
+        <route edges="95094999#0 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 -539627120#1 43418075#0 43418075#2 43418075#4 -553460094#1 -190192157#10 -190192157#7 -190192157#3 -190192157#0 -19803517#2"/>
+        <busStop id="598172357" name="Luzern Bahnhof"/>
+        <busStop id="472459430" name="Kantonalbank"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="-984024152" name="Hirzenhof"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+        <busStop id="311606385" name="Gütsch"/>
+        <busStop id="-1099807926" name="Kreuzstutz"/>
+        <busStop id="-1099877741" name="Kanonenstrasse"/>
+        <busStop id="-426860182" name="Grenzhof"/>
+        <busStop id="-311606391" name="Rönnimoosrain"/>
+        <busStop id="-311606396" name="Längweiher"/>
+        <busStop id="-206372726" name="Michaelshof"/>
+        <busStop id="-984024105" name="Blattenmoos"/>
+    </ptLine>
+    <ptLine id="6782128" line="IC 21" type="train" vClass="rail" completeness="0.14">
+        <route edges="87230791#0 87230791#1 430415311#0 430415311#1 197445064 196352165 196352164 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 -641872993#0 -194675923 -834322750 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2 24937540 96928627 430415318 194752640"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="6820373" name="Bus 5: Kriens, Busschleife → Emmenbrücke, Bahnhof Süd" line="5" type="trolleybus" vClass="ignoring" completeness="0.37">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 -539627120#1 43418075#0 43418075#2 43418075#4 -24980031#1 1013074042#0 94721106#0 94721106#1 94721106#3 560703491#0 560703491#1"/>
+        <busStop id="-598172343" name="Paulusplatz"/>
+        <busStop id="-598172346" name="Moosegg"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="-984024152" name="Hirzenhof"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+        <busStop id="311606385" name="Gütsch"/>
+        <busStop id="627053218" name="Fluhmühle"/>
+    </ptLine>
+    <ptLine id="7782329" line="IC 21" type="train" vClass="rail" completeness="0.14">
+        <route edges="-430415323#1 -430415323#0 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 -641872993#0 -194675923 -834322750 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2 24937540 96928627 430415318 194752640"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7782599" line="IR 26" type="train" vClass="rail" completeness="0.06">
+        <route edges="87230791#0 87230791#1 430415311#0 430415311#1 197445064 196352165 196352164 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 -641872993#0 -194675923 118745107 641872993#0 641872993#1 196910662#0 196910662#1 196355343 773836910 116828436 87230766 -32997881 -430415318 -87230768 -96928645 -135207290 -10853494#1 -10853494#0 86320928 773836909#0 773836909#1 86320968#0 86320968#1 86320687 118745118 -834322750 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7782600" line="IR 26" type="train" vClass="rail" completeness="0.06">
+        <route edges="-430415323#1 -430415323#0 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 -641872993#0 -194675923 118745107 641872993#0 641872993#1 196910662#0 196910662#1 196355343 773836910 116828436 87230766 86320928 773836909#0 773836909#1 86320968#0 86320968#1 86320687 118745118 -834322750 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2 -135207290 -10853494#1 -10853494#0 24937540 96928627 430415318 194752640"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7782644" line="IR 27" type="train" vClass="rail" completeness="0.14">
+        <route edges="118745107 641872993#0 641872993#1 196910662#0 196910662#1 196355343 773836910 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1 430415323#0 430415323#1 32031419"/>
+        <busStop id="2051794005@7782644" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7782645" line="IR 27" type="train" vClass="rail" completeness="0.14">
+        <route edges="87230791#0 87230791#1 430415311#0 430415311#1 197445064 196352165 196352164 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 -641872993#0 -194675923"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7787496" line="IR 70" type="train" vClass="rail" completeness="0.14">
+        <route edges="-834322750 -86320687 -86320968#1 -86320968#0 -773836909#1 -773836909#0 -86320928 116828440 10853494#1 10853494#2 24937540 96928627 430415318 194752640"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7793335" line="IR 15" type="train" vClass="rail" completeness="0.08">
+        <route edges="118745107 641872993#0 641872993#1 196910662#0 196910662#1 196355343 116828436 87230766 87230806#0 87230806#1 96928656 87230773 87230807#1 430415323#0 430415323#1 32031419"/>
+        <busStop id="2051794005@7782644" name="Luzern"/>
+    </ptLine>
+    <ptLine id="7793336" line="IR 15" type="train" vClass="rail" completeness="0.08">
+        <route edges="87230791#0 87230791#1 430415311#0 430415311#1 197445064 196352165 196352164 -96928655 -96928644 -197135813 -116828436 -196355343 -196910662#1 -196910662#0 -641872993#0 -194675923"/>
+        <busStop id="2051794005" name="Luzern"/>
+    </ptLine>
+    <ptLine id="79347" name="Bus 61: Luzern → Ettiswil" line="61" type="bus" vClass="bus" completeness="0.10">
+        <route edges="93752645 94602958 94603051 94603086 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968767#0 10968767#3 201725670#0 32846421#0 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="598172360" name="Luzern Bahnhof"/>
+        <busStop id="1483240186" name="Pilatusplatz"/>
+        <busStop id="311606382" name="Kasernenplatz"/>
+    </ptLine>
+    <ptLine id="8392115" name="EC 151: Frankfurt =&gt; Milano" line="EC 151" type="train" vClass="rail" period="86400" completeness="0.06">
+        <route edges="87230791#0 87230791#1 430415311#0 430415311#1 197445064 196352165 196352164 -96928655 -96928644 -197135813 -116828436 -773836910 -196355343 -196910662#1 -196910662#0 -641872993#0 86320713 -834322747 641872993#0 641872993#1 196910662#0 196910662#1 196355343 773836910 116828436 -116828437 116828440 10853494#1 10853494#2 24937540 96928627 430415318 194752640"/>
+        <busStop id="1002466274" name="Luzern"/>
+    </ptLine>
+    <ptLine id="88438" name="S3: Luzern → Brunnen" line="S3" type="train" vClass="rail" completeness="0.18">
+        <route edges="-834322745 -773813396 122805790#0 122805790#1 196910662#0 196910662#1 196355343 773836910 116828436 -116828437 116828440 10853494#1 10853494#2 19802208 27601634#1 27601634#2 126092202"/>
+        <busStop id="-1002463599" name="Luzern"/>
+        <busStop id="1398733007" name="Luzern Verkehrshaus"/>
+    </ptLine>
+    <ptLine id="91227" name="S4: Luzern → Wolfenschiessen" line="S4" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="91229" name="S5: Luzern → Giswil" line="S5" type="train" vClass="rail" completeness="0.00"/>
+    <ptLine id="9370318" name="Flixbus N401: Venedig, Tronchetto =&gt; Straßburg, Busbahnhof" line="N401" type="bus" vClass="bus" completeness="0.05">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 -115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968765#0 10426676 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9370320" name="Flixbus N401: Straßburg, Busbahnhof =&gt; Venedig, Tronchetto" line="N401" type="bus" vClass="bus" completeness="0.05">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9382088" name="Flixbus 417: Udine, Autostazione =&gt; Fribourg, BCF Arena" line="417" type="bus" vClass="bus" completeness="0.07">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 164358764 94522277 305482855 30808994#0 30808995#0 30808995#1 30808995#3 30808995#6 153756400 35964674#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9382089" name="Flixbus 417: Fribourg, BCF Arena =&gt; Udine, Autostazione" line="417" type="bus" vClass="bus" completeness="0.07">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 -115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9382135" name="Flixbus 437: Fribourg, BCF Arena =&gt; Mailand, Lampugnano" line="437" type="bus" vClass="bus" completeness="0.07">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9382136" name="Flixbus 437: Mailand, Lampugnano =&gt; Fribourg, BCF Arena" line="437" type="bus" vClass="bus" completeness="0.07">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 164358764 94522277 305482855 30808994#0 30808995#0 30808995#1 30808995#3 30808995#6 153756400 35964674#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9491462" name="Tellbus: Luzern, Bahnhof → Altdorf UR, Telldenkmal" line="TEL" type="bus" vClass="bus" completeness="0.50">
+        <route edges="93752651 94602977 94603032#0 94602925 94603015 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 397705245#0 8428661#0 8428661#3 8428661#5 386850954#0 10426673 51080602"/>
+        <busStop id="598172361" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="9491463" name="Tellbus: Altdorf UR, Telldenkmal → Luzern, Bahnhof" line="TEL" type="bus" vClass="bus" completeness="0.50">
+        <route edges="-51080602 -10426673 -386850954#2 -8428661#7 -8428661#4 -8428661#1 -397705250 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 93752651"/>
+        <busStop id="598172361" name="Luzern Bahnhof"/>
+    </ptLine>
+    <ptLine id="9759073" name="Flixbus 477: Mailand, Lampugnano =&gt; Bern, Car-Terminal Neufeld" line="477" type="bus" vClass="bus" completeness="0.09">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 164358764 94522277 305482855 30808994#0 30808995#0 30808995#1 30808995#3 30808995#6 153756400 35964674#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9759074" name="Flixbus 477: Bern, Car-Terminal Neufeld =&gt; Mailand, Lampugnano" line="477" type="bus" vClass="bus" completeness="0.09">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9820035" name="Flixbus 497: Mailand, Lampugnano =&gt; Straßburg, Busbahnhof" line="497" type="bus" vClass="bus" completeness="0.05">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 -115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968765#0 10426676 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9820036" name="Flixbus 497: Straßburg, Busbahnhof =&gt; Mailand, Lampugnano" line="497" type="bus" vClass="bus" completeness="0.05">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9820214" name="Flixbus K188: Lugano, Via Ciani =&gt; EuroAirport Basel" line="K188" type="bus" vClass="bus" completeness="0.09">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 -115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968765#0 10426676 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9820215" name="Flixbus K188: EuroAirport Basel =&gt; Lugano, Via Ciani" line="K188" type="bus" vClass="bus" completeness="0.09">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9846870" name="Flixbus 506: Bologna, Autostazione =&gt; Zürich HB (Carpark Sihlquai)" line="506" type="bus" vClass="bus" completeness="0.11">
+        <route edges="-51080602 714739743#0 986336002 746434519#0 746434519#3 401703302 115257607#0 115257607#1 115257606 658509487 305482863 305482879 305647816 305482878 305482877#0 305482877#4 -42369811#2 -25640514#2 -25640514#1 -25640514#0 -33113326#2 -29730000#5 -29730000#3 -658451348 -115953540#4 -25640511 134989551#0 179839873#0 94603025 94603075 94603000 94603059 94602900 94602944 94602961#0 94728338 94721111#0 144968178 53620033 44129718 31264893 184818318#0 206490679 120517467#0 39447057#0 96652797#0 305482866#0 134989584#0 134989584#2 121516958#0 452295145 452295147#0 -95094998#1 -179476008#1 -32787503#3 10968765#0 10426676 74320151 298490058 24544092 10306683 42264604"/>
+        <busStop id="-7005106863@10330274" name="Luzern, Inseli"/>
+    </ptLine>
+    <ptLine id="9846871" name="Flixbus 506: Zürich HB (Carpark Sihlquai) =&gt; Bologna, Autostazione" line="506" type="bus" vClass="bus" completeness="0.11">
+        <route edges="42265219 184750474 24544096 24544097 24544094 24544099 542954995 201725697 420302482#0 43418077#0 32787503#0 179476008#0 95094998#0 134989618 157304012#0 157304012#3 201725669#0 -305482866#3 -96652797#2 -39447057#1 -120517467#2 -206490679 -184818318#1 -444584961#2 35964675#0 35964673 94721113#0 94721113#2 94602911 94602990 94603047 94603062 94603096 94602949 94603009#0 94603009#1 31264906#0 25640511 115953540#0 115953541#0 -658451348 115953541#0 29730000#0 29730000#4 33113326#0 25640514#0 25640514#1 25640514#2 42369811#0 -305482877#6 -305482877#3 94545457 135207246 20331091#0 20331090 305482853 305482855 164358766 305482854 394162166 394162152 10426675 450022337 -401703302 -746434519#5 -746434519#2 -772496328 51080603#0 10426673 51080602"/>
+        <busStop id="7005106863" name="Luzern, Inseli"/>
+    </ptLine>
+</ptLines>
